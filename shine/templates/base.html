@@ -65,11 +65,12 @@
         <ul class="nav navbar-nav">
           <li class="{{ active_page }}"><a class="" href="{{ url_for('index') }}" title=""><span class="glyphicon glyphicon-globe"></span> Map</a></li>
           <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='downloads') }}" title=""><span class="glyphicon glyphicon-save"></span> Download</a></li>
+          <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='facilities') }}" title=""><span class="glyphicon glyphicon-fire"></span> Facilities</a></li>
         </ul>
       </nav>
     </header>
     
-    <div id="map"></div>
+    <div id="map" data-latitude="{{ page.latitude }}" data-longitude="{{ page.longitude }}"></div>
     
     <main class="site-content" role="main">
       {% block content %}
@@ -92,8 +93,9 @@
       </p>
     </footer>
     
+    <script src="/static/lib/jquery/jquery-1.10.1.min.js" charset="utf-8"></script>
     <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
-    <script src="/static/js/application.js"></script>
+    <script src='/static/js/application.js'></script>
 
     <script type="text/javascript">
 

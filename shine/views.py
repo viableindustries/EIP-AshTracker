@@ -31,7 +31,7 @@ Other pages
 def page(path):
     page = pages.get_or_404(path)
     template = page.meta.get('template', 'page.html')
-    return render_template(template, page=page);
+    return render_template(template, page=page, pages=pages);
 
 
 """
