@@ -40,4 +40,5 @@ if __name__ == "__main__":
     elif len(sys.argv) > 1 and sys.argv[1] == "build":
         cube.freeze()
     else:
+        os.system('open http://127.0.0.1:36477/')
         shine.run(port=CONFIG.PORT)

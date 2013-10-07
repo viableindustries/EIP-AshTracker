@@ -1,8 +1,10 @@
-{% set site_name = 'The Shine Site' %}
-{% set copyright = '2103' %}
+{% set site_name = 'Ashtracker' %}
+{% set copyright = '2013' %}
+{% set site_credit = 'is brought to you by the Environmental Integrity Project' %}
 {% set google_site_verification = '' %}
 {% set google_analytics_account = 'UA-00000000-1' %}
 {% set google_analytics_domain = '' %}
+{% set gauges_data_site_id = '1234567890' %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -42,33 +44,56 @@
 
     <title>{{ page.page_title }} | {{ site_name }}</title>
 
-    <link href="/static/css/global.css" rel="stylesheet" type="text/css" /> 
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
 
-    <!--[if lt IE 9]>
+    <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lte IE 8]>
         <script src="/static/js/html5.js"></script>
+      <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
     <![endif]-->
 
   </head>
 
   <body class="{{ page.page_class }}">
     
-    <header>
-      <h1>{{ site_name }}</h1>
+    <header class="site-header navbar" role="banner">
+      <h1><a class="navbar-brand" href="{{ url_for('index') }}" title="Return to the {{ site_name }} home page">{{ site_name }}</a></h1>
+      
+      <nav class="navbar">
+        <ul class="nav navbar-nav">
+          <li class="{{ active_page }}"><a class="" href="{{ url_for('index') }}" title=""><span class="glyphicon glyphicon-globe"></span> Map</a></li>
+          <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='downloads') }}" title=""><span class="glyphicon glyphicon-save"></span> Download</a></li>
+        </ul>
+      </nav>
     </header>
     
-    <article>
+    <div id="map"></div>
+    
+    <main class="site-content" role="main">
       {% block content %}
         {{ content }}
       {% endblock content %}
-    </article>
+    </main>
 
-    <footer>
+    <footer class="site-footer">
+      <a href="http://www.environmentalintegrity.org/" target="_blank" title="Visit the Enviornmental Integrity Project's home page (This will take you away from www.ashtracker.org)"><img src="/static/img/logo-EnviornmentalIntegrityProject-footer.png" alt="Environmental Integrity Project Logo" title="Visit the Enviornmental Integrity Project's home page (This will take you away from www.ashtracker.org)" /></a>
+      <address>
+        1 Thomas Circle, Suite 900 — Washington, DC 20005
+      </address>
+      <p><a href="tel:1-202-296-8800" title="Call the Enviornmental Integrity Project">202-296-8800</a></p>
+      <p><a href="1-202-296-8822" title="Fax the Enviornmental Integrity Project">202-296-8822</a></p>
+      <p><a href="mailto:officemanager@environmentalintegrity.org" title="Email the Environmental Integrity Project">Email us</a></p>
       <p>
         <small>
-          Copyright &copy; {{ copyright }} {{ site_name }}. All rights reserved.
+          Copyright &copy; {{ copyright }} {{ site_name }} {{ site_credit }}. All rights reserved.
         </small>
       </p>
     </footer>
+    
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+    <script src="/static/js/application.js"></script>
 
     <script type="text/javascript">
 
@@ -83,6 +108,19 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
+    </script>
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '{{ gauges_data_site_id }}');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
     </script>
     
   </body>

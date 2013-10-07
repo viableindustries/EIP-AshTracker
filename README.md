@@ -35,4 +35,4 @@ Completing this tutorial assumes that you are running a Mac OS X, have access to
 
     $ python shine.py 
     
-2. At this point you can view the running application at http://127.0.0.1:5000
+2. At this point you can view the running application at http://127.0.0.1:36477
