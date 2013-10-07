@@ -1,0 +1,90 @@
+{% set site_name = 'The Shine Site' %}
+{% set copyright = '2103' %}
+{% set google_site_verification = '' %}
+{% set google_analytics_account = 'UA-00000000-1' %}
+{% set google_analytics_domain = '' %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else: %}{{ 'index,follow,archive' }}{% endif %}" />
+
+    <meta name="google-site-verification" content="{{ google_site_verification }}" />
+
+    <meta name="author" content="{{ page.page_author }}" />
+    <meta name="description" content="{{ page.page_description }}" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    <meta property="twitter:url" content="{{ page.path }}" />
+
+    <meta name="author" content="{{ page.page_author }}" />
+    <meta name="description" content="{{ page.page_description }}" />
+
+    <meta property="og:site_name" content="{{ site_name }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.path }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="{{ page.path }}" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="{{ page.title }}" />
+
+    <meta name="generator" content="Shine, a static site generator." />
+
+    <title>{{ page.page_title }} | {{ site_name }}</title>
+
+    <link href="/static/css/global.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="{{ page.page_class }}">
+    
+    <header>
+      <h1>{{ site_name }}</h1>
+    </header>
+    
+    <article>
+      {% block content %}
+        {{ content }}
+      {% endblock content %}
+    </article>
+
+    <footer>
+      <p>
+        <small>
+          Copyright &copy; {{ copyright }} {{ site_name }}. All rights reserved.
+        </small>
+      </p>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ google_analytics_account }}']);
+      _gaq.push(['_setDomainName', '{{ google_analytics_domain }}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+
+</html>
