@@ -13,8 +13,8 @@
     
     var map = L.mapbox.map('map', mapbox_map_id);
 
-    latitude = jQuery('#map').attr('data-latitude');
-    longitude = jQuery('#map').attr('data-longitude');
+    latitude = d3.select('#map').attr('data-latitude');
+    longitude = d3.select('#map').attr('data-longitude');
     
     if (latitude && longitude) {
       map.setView([latitude, longitude], 13);    
