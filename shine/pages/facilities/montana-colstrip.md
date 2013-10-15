@@ -11,13 +11,31 @@ owner_operator: 'Tampa Electric Company (TECO)'
 impoundment_hazard_rating: 'One pond is “high hazard”; two ponds are “significant hazard.'
 pollutants: [
     {
+      type: 'As'
+    },
+    {
+      type: 'Mn'
+    },
+    {
+      type: 'Sb'
+    },
+    {
+      type: 'Cd'
+    },
+    {
       type: 'Co'
     },
     {
-      type: 'Sr'
+      type: 'Pb'
     },
     {
-      type: 'Pb'
+      type: 'Mo'
+    },
+    {
+      type: 'Ce'
+    },
+    {
+      type: 'Cr'
     }
 ]
 latitude: '40.620444'

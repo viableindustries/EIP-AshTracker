@@ -10,9 +10,15 @@ address: [{
 owner_operator: ''
 impoundment_hazard_rating: 'No impoundments present.'
 pollutants: [
-  {
-    type: ''
-  }
+     {
+       type: 'Co'
+     },
+     {
+       type: 'Cd'
+     },
+    {
+     type: 'Pb'
+    }
   
 ]
 latitude: '40.620444'

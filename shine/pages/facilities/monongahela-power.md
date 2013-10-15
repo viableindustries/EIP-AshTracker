@@ -11,7 +11,7 @@ owner_operator: ''
 impoundment_hazard_rating: 'Impoundments at this site not rated.'
 pollutants: [
   {
-    type: ''
+    type: 'Co'
   }
   
 ]
