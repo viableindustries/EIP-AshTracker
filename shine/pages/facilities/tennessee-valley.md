@@ -14,8 +14,8 @@ pollutants: 'All contaminants of concern being monitored.' [
       type: ''
     }
 ]
-latitude: '40.620444'
-longitude: '-80.506028'
+latitude: '34.72622600000'
+longitude: '-87.82832100000'
 data_zip: ''
 geojson: ''
 

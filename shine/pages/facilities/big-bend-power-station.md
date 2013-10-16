@@ -5,23 +5,20 @@ address: [{
   city: 'Apollo Beach',
   state: 'FL',
   zipcode: 33572
+  county: 'Hillsborough County'
 }]
 owner_operator: 'Tampa Electric Company (TECO)'
 impoundment_hazard_rating: 'All four impoundments have a low hazard ranking.'
 pollutants: [
   {
     type: 'Co'
-  },
-  {
-    type: 'Sr'
-  },
-  {
-    type: 'Pb'
   }
 ]
-latitude: '27.7808666666666'
-longitude: '-82.3956583333333'
-data_zip: 'http://www.sldkfjslkdfjlskdjf.lcom/jsldfjslkdf.zip'
-geojson: 'http://api.commonscloud.org/ashtracker/static/data/big-bend-power-station.geojson'
+latitude: '27.78086667'
+longitude: '-82.39565833'
+data_zip: ''
+geojson: ''
 
-TECO operates on a network of 11 coal ash impoundments and one landfill to accommodate ash and FGD waste produced by the Big Bend Station. Most of these impoundments are unlined. Florida DEP issued a consent order in 2001 citing contamination of ground and surface waters, including arsenic levels 11 times greater than the drinking water standard. Data collected almost ten yeards later (in October 2010) show that many monitoring wells still exceed health based standards for arsenic. For more information about Big Bend, see EIP's report [“Out of Control”, available here]()
+Little Blue Run is the nation’s largest coal ash impoundment. At nearly 1,700 acres it straddles land in West Virginia and Pennsylvania. It is also completely unlined. In July of 2012, the Pennsylvania DEP filed a complaint and consent decree, finding that the impoundment’s seeps and associated discharges to groundwater “may present an imminent and substantial endangerment to health or the environment,” in violation of federal law.
+
+This action came 59 days after EIP, along with co-counsel at Public Justice, announced its intention to sue FirstEnergy, on behalf of community members with contaminated drinking water wells and property damage from seeps.  The impoundment has also contaminated local creeks and streams with toxic pollution.  Under the terms of the consent decree, FirstEnergy has agreed to close Little Blue Run by 2016. For more about information about Little Blue Run, see EIP’s report In Harm’s Way. Available here. In 2012, the EPA identified LBR as a location where coal ash disposal activities had been proven to contaminate ground and surface water.

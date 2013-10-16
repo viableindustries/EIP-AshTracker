@@ -38,8 +38,8 @@ pollutants: [
       type: 'Cr'
     }
 ]
-latitude: '40.620444'
-longitude: '-80.506028'
+latitude: '45.8842896'
+longitude: '-106.6150072'
 data_zip: ''
 geojson: ''
 

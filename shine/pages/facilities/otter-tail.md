@@ -18,8 +18,8 @@ pollutants: [
    }
   
 ]
-latitude: '40.620444'
-longitude: '-80.506028'
+latitude: '47.21781389'
+longitude: '-101.8088556'
 data_zip: ''
 geojson: ''
 
