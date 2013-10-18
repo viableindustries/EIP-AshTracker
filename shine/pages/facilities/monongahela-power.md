@@ -4,7 +4,7 @@ address: [{
   street: '530 Power Plant Road',
   city: 'Albright',
   state: 'WV',
-  zipcode: '26519'
+  zipcode: '26519',
   county: 'Preston County'
 }]
 owner_operator: ''
@@ -13,7 +13,6 @@ pollutants: [
   {
     type: 'Co'
   }
-  
 ]
 latitude: '39.49138889'
 longitude: '-79.60416667'

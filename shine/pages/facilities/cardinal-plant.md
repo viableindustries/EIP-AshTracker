@@ -4,16 +4,15 @@ address: [{
   street: '306 County Road 7 East',  
   city: 'Brilliant',
   state: 'OH',
-  zipcode: '43913'
+  zipcode: '43913',
   county: 'Jefferson County'
 }]
 owner_operator: ''
 impoundment_hazard_rating: 'High (Reservoir 2)'
-pollutants: 'All contaminants of concern being monitored.' [
+pollutants: [
   {
     type: ''
   }
-  
 ]
 latitude: ''
 longitude: ''

@@ -4,7 +4,7 @@ address: [{
   street: '13031 Wyandotte Road',
   city: 'Apollo Beach',
   state: 'FL',
-  zipcode: 33572
+  zipcode: 33572,
   county: 'Hillsborough County'
 }]
 owner_operator: 'Tampa Electric Company (TECO)'

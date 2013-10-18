@@ -4,16 +4,15 @@ address: [{
   street: '2907 East Roy Furman Highway',
   city: 'Masontown',
   state: 'PA',
-  zipcode: '15461'
+  zipcode: '15461',
   county: 'Greene County'
 }]
 owner_operator: ''
 impoundment_hazard_rating: 'No impoundment present at this site.'
-pollutants: 'All contaminants of concern being monitored.' [
+pollutants: [
   {
     type: 'Co'
   }
-  
 ]
 latitude: '39.85611100000'
 longitude: '-79.94572200000'

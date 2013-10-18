@@ -4,7 +4,7 @@ address: [{
   street: '580 Willow Ave',
   city: 'Colstrip',
   state: 'MT',
-  zipcode: '59323,'
+  zipcode: '59323',
   county: 'Rosebud County'
 }]
 owner_operator: 'Tampa Electric Company (TECO)'

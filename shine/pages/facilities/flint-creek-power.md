@@ -4,7 +4,7 @@ address: [{
   street: '21797 SWEPCO Plant Road',  
   city: 'Gentry',
   state: 'AR',
-  zipcode: ''
+  zipcode: '',
   county: 'Benton County'
 }]
 owner_operator: ''
@@ -16,7 +16,6 @@ pollutants: [
     {
      type: 'Sb'
     }
-  
 ]
 latitude: '36.260697'
 longitude: '-94.513442'

@@ -4,7 +4,7 @@ address: [{
   street: '17000 Croswell Street',  
   city: 'West Olive',
   state: 'MI',
-  zipcode: '49460'
+  zipcode: '49460',
   county: 'Ottawa County'
 }]
 owner_operator: ''
@@ -19,7 +19,6 @@ pollutants: [
     {
      type: 'Pb'
     }
-  
 ]
 latitude: ''
 longitude: ''

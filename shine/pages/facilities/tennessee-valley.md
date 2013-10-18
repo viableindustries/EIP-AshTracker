@@ -4,12 +4,12 @@ address: [{
   street: '900 Colbert Steam Plant Road',
   city: 'Tuscumbia',
   state: 'AL',
-  zipcode: '35674,'
+  zipcode: '35674',
   county: 'Colbert County'
 }]
 owner_operator: 'Tampa Electric Company (TECO)'
 impoundment_hazard_rating: 'High hazard'
-pollutants: 'All contaminants of concern being monitored.' [
+pollutants: [
     {
       type: ''
     }

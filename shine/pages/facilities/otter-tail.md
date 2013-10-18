@@ -4,7 +4,7 @@ address: [{
   street: '6240 13th Street Southwest',  
   city: 'Beulah',
   state: 'ND',
-  zipcode: '58523'
+  zipcode: '58523',
   county: 'Mercer County'
 }]
 owner_operator: ''
@@ -16,7 +16,6 @@ pollutants: [
    {
     type: 'Sb'
    }
-  
 ]
 latitude: '47.21781389'
 longitude: '-101.8088556'
