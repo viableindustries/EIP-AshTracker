@@ -2,6 +2,83 @@
 {% set page = page %}
 
 {% block content %}
-    <h2>{{ page.title }}</h2>
-    {{ page.html|safe }}
+
+
+		<div class="container">
+
+			<div class="row">
+				{% if page.image %}
+				<div class="col-lg-4">
+					<img class="img-responsive" src="{{ page.image }}" alt="{{ page.title }}" />
+				</div>
+				{% endif %}
+				<div {% if page.image %}class="col-lg-8"{% else %}class="col-lg-12"{% endif %}>
+			    <h1>{{ page.title }}</h1>
+					{% if page.address[0].street %}
+				  <address>
+							{{ page.address[0].street }}<br >
+							{{ page.address[0].city }}, {{ page.address[0].state }} {{ page.address[0].zipcode }}
+					</address>
+					{% endif %}
+				</div>
+			</div>
+
+			{% if page.owner_operator %}
+			<div class="row">
+			  <div class="col-lg-12">
+			  	<h3>Owner - Operator</h3>
+					<h2 class="text-center">{{ page.owner_operator }}</h2>					
+			  </div>
+			</div>
+			{% endif %}
+
+			{% if page.impoundment_hazard_rating %}
+			<div class="row">
+			  <div class="col-lg-12">
+			  	<h3>Impoundment Hazard Rating</h3>
+					<p class="text-center"><strong>{{ page.impoundment_hazard_rating }}</strong></p>
+			  </div>
+			</div>
+			{% endif %}
+
+			{% if page.pollutants|length >= 0 %}
+			<div class="row">
+			  <div class="col-lg-12">
+				  	<h3>Pollutants not monitored</h3>
+						{% for element in page.pollutants %}
+							<div class="pollutant">{{ element.type }}</div>
+						{% endfor %}
+				  </div>
+			</div>
+			{% endif %}
+			
+			{% if page.html %}
+			<div class="row">
+			  <div class="col-lg-12">
+			    <h3>About {{ page.title }}</h3>
+			    {{ page.html|safe }}
+				  </div>
+			</div>
+			{% endif %}
+			
+			{% if page.downloads %}
+			<div class="row">
+			  <div class="col-lg-12">
+			      <h3>Data Downloads</h3>
+						<table class="table">
+						{% for download in page.downloads %}
+							<tr>
+								<td width="80%">{{ download.title }}</td>
+								<td><a class="btn btn-small btn-info" href="{{ download.url }}"><span class="glyphicon glyphicon-download"></span> Download</a></td>
+						{% endfor %}
+						</table>
+				  </div>
+			</div>
+			{% endif %}
+
+		</div>
+
+
+
+
 {% endblock content %}
