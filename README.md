@@ -33,6 +33,7 @@ Completing this tutorial assumes that you are running a Mac OS X, have access to
 
 1. Now that we've got the files from Github, setup the Virtual Enviornment, and installed the necessary dependents, we can start the Shine application
 
+    $ source venv/bin/activate
     $ python shine.py 
     
 2. At this point you can view the running application at http://127.0.0.1:36477
