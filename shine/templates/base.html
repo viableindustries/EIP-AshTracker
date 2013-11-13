@@ -60,16 +60,38 @@
   <body class="{{ page.page_class }}">
     
     <header class="site-header" role="banner">
-        <div class="container">
-      <h1><a class="navbar-brand" href="{{ url_for('index') }}" title="Return to the {{ site_name }} home page">{{ site_name }}</a></h1>
-      
-      <nav class="navbar">
-        <ul class="nav navbar-nav">
-          <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='downloads') }}" title="">Download</a></li>
-          <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='facilities') }}" title="">Facilities</a></li>
-        </ul>
-      </nav>
-     </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <a class="navbar-brand" href="{{ url_for('index') }}" title="Return to the {{ site_name }} home page">{{ site_name }}</a>
+            </div><!-- col -->
+            
+            <div class="col-sm-7">
+                <div class="row topnav">
+                    <div class="col-sm-4">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilities <b class="caret"></b></a>
+                                  <ul class="dropdown-menu">
+                                      {% for page in pages %}
+                                        {% if page.path.startswith('facilities') and not page.path.endswith('facilities') %}
+                                          <li><a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></li>
+                                        {% endif %}
+                                      {% endfor %}
+                                  </ul>
+                                </li>
+                            </div>
+                    
+                    <div class="col-sm-8">
+                        <nav>
+                            <ul>
+                                <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='downloads') }}" title="">Download</a></li>
+                                <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='downloads') }}" title="">Glossary</a></li>
+                                <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='facilities') }}" title="">Help</a></li>
+                            </ul>
+                        </nav>
+                    </div><!-- Col-sm-8 -->
+                 
+                 </div>
+             </div>
+         </div><!-- Row -->
     </header>
     
     
@@ -80,7 +102,7 @@
                 {{ content }}
               {% endblock content %}
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-7 mapcontainer">
                 <div class="map" id="map" data-latitude="{{ page.latitude }}" data-longitude="{{ page.longitude }}">
                 </div>
             </div>
@@ -102,7 +124,9 @@
       </p>
     </footer>
     
-    <script src="/static/lib/d3/d3.v3.min.js" charset="utf-8"></script>
+    <script src="/static/lib/jquery/jquery-1.10.1.min.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/lib/d3/d3.v3.min.js"></script>
     <script src="/static/lib/mapbox/mapbox-1.3.1.min.js"></script>
     <script src='/static/js/application.js'></script>
 

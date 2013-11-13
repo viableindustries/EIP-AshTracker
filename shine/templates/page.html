@@ -33,16 +33,16 @@
 			{% endif %}
 
 			{% if page.impoundment_hazard_rating %}
-			<div class="row">
+			<div class="row owner">
 			  <div class="col-lg-12">
 			  	<h3>Impoundment Hazard Rating</h3>
-					<p class="text-center"><strong>{{ page.impoundment_hazard_rating }}</strong></p>
+					<p><strong>{{ page.impoundment_hazard_rating }}</strong></p>
 			  </div>
 			</div>
 			{% endif %}
 
 			{% if page.pollutants|length >= 0 %}
-			<div class="row">
+			<div class="row owner-hazard-block">
 			  <div class="col-lg-12">
 				  	<h3>Pollutants not monitored</h3>
 						{% for element in page.pollutants %}
@@ -54,7 +54,7 @@
 			
 			{% if page.html %}
 			<div class="row">
-			  <div class="col-lg-12">
+			  <div class="col-lg-12 about">
 			    <h3>About {{ page.title }}</h3>
 			    {{ page.html|safe }}
 				  </div>

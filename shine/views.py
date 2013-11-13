@@ -21,7 +21,7 @@ Front page
 @shine.route('/')
 def index():
     page = pages.get_or_404('index')
-    return render_template('index.html', page=page)
+    return render_template('index.html', page=page, pages=pages)
 
 
 """

@@ -7,7 +7,7 @@
 
     {% for page in pages %}
       {% if page.path.startswith('facilities') and not page.path.endswith('facilities') %}
-        <li>
+        <li class="facilities">
             <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
         </li>
       {% endif %}
