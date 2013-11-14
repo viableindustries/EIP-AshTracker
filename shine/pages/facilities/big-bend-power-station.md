@@ -26,7 +26,7 @@ downloads: [
 }
 ]
 geojson: ''
-image: '/static/img/big-bend-power-station.png'
+
 
 Little Blue Run is the nation’s largest coal ash impoundment. At nearly 1,700 acres it straddles land in West Virginia and Pennsylvania. It is also completely unlined. In July of 2012, the Pennsylvania DEP filed a complaint and consent decree, finding that the impoundment’s seeps and associated discharges to groundwater “may present an imminent and substantial endangerment to health or the environment,” in violation of federal law.
 
