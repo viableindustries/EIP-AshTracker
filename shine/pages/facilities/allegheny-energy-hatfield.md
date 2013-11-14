@@ -1,5 +1,6 @@
 title: 'FirstEnergy – Bruce Mansfield Power Plant’s Little Blue Run Disposal Area'
 page_title: 'Bruce Mansfield Power « Facilities'
+page_class: 'facility'
 address: [{
   street: '2907 East Roy Furman Highway',
   city: 'Masontown',

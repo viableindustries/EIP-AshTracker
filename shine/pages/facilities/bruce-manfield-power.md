@@ -1,5 +1,6 @@
 title: 'Allegheny Energy'
 page_title: 'Allegheny Energy - Hatfield Ash Disposal Site « Facilities'
+page_class: 'facility'
 address: [{
   street: 'P.O. Box 128',
   city: 'Greene Township','Grant District',

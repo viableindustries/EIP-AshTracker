@@ -1,5 +1,6 @@
 title: 'American Electric Power (AEP)- Flint Creek Power Plant'
 page_title: 'American Electric Power (AEP)- Flint Creek Power Plant  « Facilities'
+page_class: 'facility'
 address: [{
   street: '21797 SWEPCO Plant Road',  
   city: 'Gentry',

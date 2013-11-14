@@ -1,5 +1,6 @@
 title: 'Otter Tail Power Company- Coyote Station'
 page_title: 'Otter Tail Power Company- Coyote Station « Facilities'
+page_class: 'facility'
 address: [{
   street: '6240 13th Street Southwest',  
   city: 'Beulah',

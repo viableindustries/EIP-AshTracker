@@ -1,5 +1,6 @@
 title: 'Big Bend Power Station'
 page_title: 'Big Bend Power Station « Facilities'
+page_class: 'facility'
 address: [{
   street: '13031 Wyandotte Road',
   city: 'Apollo Beach',

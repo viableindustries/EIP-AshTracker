@@ -1,5 +1,6 @@
 title: 'Tennessee Valley Authority (TVA)- Colbert Fossil Plant '
 page_title: 'Tennessee Valley Authority (TVA)- Colbert Fossil Plant  « Facilities'
+page_class: 'facility'
 address: [{
   street: '900 Colbert Steam Plant Road',
   city: 'Tuscumbia',

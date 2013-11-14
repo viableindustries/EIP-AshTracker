@@ -1,5 +1,6 @@
 title: 'FirstEnergy/Monongahela Power Company – Albright Ash Disposal Site'
 page_title: 'FirstEnergy/Monongahela Power Company – Albright Ash Disposal Site « Facilities'
+page_class: 'facility'
 address: [{
   street: '530 Power Plant Road',
   city: 'Albright',

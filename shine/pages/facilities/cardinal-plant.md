@@ -1,5 +1,6 @@
 title: 'Cardinal Plant Ash Disposal Complex '
 page_title: 'Cardinal Plant Ash Disposal Complex   « Facilities'
+page_class: 'facility'
 address: [{
   street: '306 County Road 7 East',  
   city: 'Brilliant',

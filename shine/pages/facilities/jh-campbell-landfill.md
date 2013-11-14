@@ -1,5 +1,6 @@
 title: 'Consumer’s Energy Company- JH Campbell Landfill '
 page_title: 'Consumer’s Energy Company- JH Campbell Landfill  « Facilities'
+page_class: 'facility'
 address: [{
   street: '17000 Croswell Street',  
   city: 'West Olive',

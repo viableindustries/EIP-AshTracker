@@ -1,5 +1,6 @@
 title: 'PPL Montana- Colstrip Power Plant'
 page_title: 'PPL Montana- Colstrip Power Plant « Facilities'
+page_class: 'facility'
 address: [{
   street: '580 Willow Ave',
   city: 'Colstrip',
