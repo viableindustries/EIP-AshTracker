@@ -7,13 +7,42 @@
 
 
 {% if page.pollutants|length >= 0 %}
-<div class="row owner-hazard-block">
-  <div class="col-lg-12">
-	  	<h3>Pollutants not monitored</h3>
-			{% for element in page.pollutants %}
-				<div class="pollutant">{{ element.type }}</div>
-			{% endfor %}
-	  </div>
-</div>
+
+
+    <div class="container">
+
+            <div class="row">
+                  <div class="col-lg-12">
+                	  	<h3>{{ page.facility }}</h3>
+                	 </div>
+                 </div>
+     
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="wellid">
+                	  	    <h3>{{ page.well_id }}</h3>
+                        </div>
+                        
+                        <div class="coordinates">
+                            <h3>{{ page.coordinates }}</h3>
+                        </div>
+                	 </div>
+                </div>
+                
+                <div class="row">
+                      <div class="col-lg-12">
+                    	  	<h3>{{ page.designation }}</h3>
+                    	 </div>
+                     </div>
+    
+              <div class="col-lg-12">
+            	  	<h3>Contaminant Status</h3>
+            			{% for element in page.pollutants %}
+            				<div class="pollutant">{{ element.type }}</div>
+            			{% endfor %}
+            	  </div>
+  
+            </div>
+
 {% endif %}
 {% endblock content %}
