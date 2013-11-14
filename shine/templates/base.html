@@ -48,7 +48,7 @@
 
     <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/static/css/layout.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/css/layout.css" type="text/css" media="screen">
     
 
     <!--[if lte IE 8]>
@@ -67,10 +67,11 @@
             </div><!-- col -->
             
             <div class="col-sm-7">
-                <div class="row topnav">
+                <div class="row">
                     <div class="col-sm-4">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Facilities <b class="caret"></b></a>
-                                  <ul class="dropdown-menu">
+                        <div class="btn btn-primary btn-sm btn-block facilitybutton">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="buttontext">Facilities</span> <b class="caret"></b></a>
+                                   <ul class="dropdown-menu">
                                       {% for page in pages %}
                                         {% if page.path.startswith('facilities') and not page.path.endswith('facilities') %}
                                           <li><a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></li>
@@ -78,9 +79,10 @@
                                       {% endfor %}
                                   </ul>
                                 </li>
+                              </div>
                             </div>
                     
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 topnav">
                         <nav>
                             <ul>
                                 <li class="{{ active_page }}"><a class="" href="{{ url_for('page', path='downloads') }}" title="">Download</a></li>
