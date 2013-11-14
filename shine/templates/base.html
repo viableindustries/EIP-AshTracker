@@ -108,10 +108,18 @@
                 {{ content }}
               {% endblock content %}
             </div>
+            {% if page.page_class == 'glossary' %}
+            <div class="col-sm-7 glossary-container">
+                {% block glossary_content %}
+                  {{ content }}
+                {% endblock glossary_content %}
+            </div>
+            {% else %}
             <div class="col-sm-7 mapcontainer">
                 <div class="map" id="map" data-latitude="{{ page.latitude }}" data-longitude="{{ page.longitude }}">
                 </div>
             </div>
+            {% endif %}
       </div>
     </main>
 
