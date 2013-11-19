@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+
+<script>
+var well_information = {
+    "type": "Point",
+    "coordinates": [
+        {{ page.coordinates[0] }},
+        {{ page.coordinates[1] }}
+    ]
+}
+</script>
+
+
+<div class="post">
+{{ content }}
+</div>

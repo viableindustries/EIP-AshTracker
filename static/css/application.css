@@ -1,0 +1,561 @@
+/**
+ * (c) Copyright 2013 Viable Industries, L.L.C.
+ */
+
+
+/**
+ * Import Frameworks
+ */
+@import url(../lib/bootstrap/3.0.2/css/bootstrap.css);
+
+html {
+  height: 100%;
+}
+
+/**
+ * Generic System Defaults
+ */
+body {
+  background-color: #f2f2f2;
+  min-height: 100%;
+  height: auto !important; 
+  height: 100%; /** NEED FOR IE **/
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Site Header Layout
+ */
+.site-header {
+  background-color: rgb(24,34,43);
+  left: 0;
+  min-height: 36px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.brand-container {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 41.66666666666667%;
+}
+
+.brand {
+  background-image: url(../img/logo-dark-blue.png);
+  background-repeat: no-repeat;
+  color: #3d3d3d;
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  min-height: 72px;
+  padding-left: 72px;
+  padding-top: 5px;
+  width: 278px;
+  z-index: 5;
+}
+
+.brand:hover {
+  background-image: url(../img/logo-icon-color.png);
+  color: #0e3e92;
+  text-decoration: none;
+}
+
+.nav {
+  float: left;
+  padding: 18px 0 0;
+  margin: 0;
+  width: 58.333333333333336%;
+}
+
+.nav a {
+  color: rgb(242,242,242);
+  font-size: 14px;
+  font-weight: 500;  
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav .glyphicon {
+  font-weight: normal;
+  font-size: 15px;
+  top: 3px;
+}
+
+.nav .open > a .caret,
+.nav .open > a:hover .caret,
+.nav .open > a:focus .caret,
+.nav .caret,
+.nav a:hover .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  margin-top: -3px;
+  vertical-align: middle;
+  border-top: 5px solid rgb(242,242,242);
+  border-right: 5px solid transparent;
+  border-bottom: 0 dotted;
+  border-left: 5px solid transparent;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li.active a,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: rgb(24,34,43);
+  background-color: rgb(41,132,189);
+  color: rgb(242,242,242);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-decoration: none;
+}
+
+.nav .facilities,
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li.active a,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: rgb(44,54,63);
+  color: rgb(242,242,242);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-decoration: none;
+}
+
+.nav .facilities,
+.nav > li > .facilities:hover,
+.nav > li > .facilities:focus,
+.nav > li.active > .facilities {
+  background-color: rgb(41,132,189);
+}
+
+.nav li a {
+  margin-right: 3px;
+}
+
+
+.dropdown-menu {
+  background-color: rgb(24,34,43);
+  background-color: rgb(41,132,189);
+  color: rgb(242,242,242);
+  margin-top: 8px;
+  width: 100%;
+}
+
+.dropdown-menu > li > a {
+  color: rgb(242,242,242);
+  margin-right: 0;
+  text-transform: none;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: transparent;
+  color: rgb(242,242,242);
+  text-decoration: none;
+}
+
+.nav > li > .dropdown-menu::before {
+  position: absolute;
+  top: -7px;
+  right: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgb(41,132,189);
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+
+.nav > li > .dropdown-menu::after {
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid rgb(41,132,189);
+  border-left: 6px solid transparent;
+  content: '';
+}
+
+
+/**
+ * Site Mission
+ */
+.site-mission {
+  color: white;
+  position: relative;
+  z-index: 2; }
+
+/**
+ * Site Search Tools
+ */
+.search {
+  background-color: #c9c9c9;
+  display: block;
+  position: absolute;
+  height: 60px;
+  left: 0;
+  text-align: center;
+  top: 90px;
+  width: 60px;
+  z-index: 5; }
+
+.search:hover {
+  background-color: #a3d0e5; }
+
+.search .glyphicon {
+  color: #3d3d3d;
+  font-size: 36px;
+  margin-left: -2px;
+  padding-top: 11px; }
+
+.search:hover .glyphicon {
+  color: #0e3e92; }
+
+.searchtools-enabled .brand {
+  left: 320px; }
+
+.searchtools-enabled .search {
+  background-color: #f2f2f2;
+  color: #0e3e92;
+  left: 320px;
+  position: fixed; }
+
+.site-searchtools {
+  background-color: #f2f2f2;
+  height: 100%;
+  left: -320px;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  width: 320px;
+  z-index: 100; }
+
+.site-searchtools form {
+  padding: 16px 16px 24px; }
+
+.searchtools-enabled .site-searchtools {
+  left: 0; }
+
+/**
+ * Site Content Layout
+ */
+.site-content {
+  background-color: transparent;
+  padding-top: 36px; }
+
+.template {
+  background-color: whitesmoke;
+  border: 1px solid #ececec;
+  border-top: 3px solid #60c2db;
+  border-bottom: 3px solid gainsboro;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0 0 48px;
+  min-height: 355px;
+  padding: 30px 40px;
+  position: relative; }
+
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:last-child > a {
+  border-radius: 0;
+  -mox-border-radius: 0;
+  -webkit-border-radius: 0; }
+
+.pagination {
+  margin: 16px 0 48px; }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  z-index: 2;
+  color: white;
+  cursor: default;
+  background-color: #60c2db;
+  border-color: #60c2db; }
+
+/**
+ * Site Statistics Layout
+ */
+.site-statistics {
+  background-color: #404040;
+  background-color: #005896;
+  color: #f2f2f2;
+  padding-bottom: 48px;
+  padding-top: 36px; }
+
+/**
+ * Site Footer Layout
+ */
+.site-footer {
+  background-color: #242424;
+  color: #f2f2f2;
+  padding-bottom: 16px;
+  padding-top: 64px; }
+
+.site-footer .copyright {
+  border-top: 1px dotted #404040;
+  margin-top: 24px;
+  padding-top: 24px;
+  padding-bottom: 16px; }
+
+/**
+ * (c) Copyright 2013 Viable Industries, L.L.C.
+ */
+body {
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-weight: 700; }
+
+p {
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif; }
+
+a,
+a:hover {
+  color: #60c2db; }
+
+a:hover {
+  text-decoration: underline; }
+
+/**
+ * Site Content Typography
+ */
+.template h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  margin-top: 6px; }
+
+.template h2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 6px;
+  margin-bottom: 24px; }
+
+/**
+ * Site Statistics Typography
+ */
+.site-statistics .statistic {
+  text-align: center; }
+
+.site-statistics h4 {
+  border-bottom: 1px dotted #0076c9;
+  color: #8ad2e4;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  text-transform: uppercase; }
+
+.site-statistics p {
+  font-size: 16px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase; }
+
+.site-statistics .number {
+  border-bottom: 1px dotted #0076c9;
+  font-family: "league-gothic", "HelveticaNeue-CondensedBold", Helvetica, Arial, sans-serif;
+  font-size: 96px;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin-bottom: 0;
+  padding-bottom: 24px; }
+
+@media (min-width: 768px) {
+.site-statistics .dollars .number {
+  font-size: 128px;
+}
+}
+
+@media (min-width: 481px and max-width: 767px) {
+.site-statistics .dollars .number {
+  font-size: 108px; }
+}
+
+@media (max-width: 320px) {
+.site-statistics .dollars .number {
+  font-size: 78px; }
+}
+
+
+/**
+ * Site Footer Typography
+ */
+.site-footer h3 {
+  font-size: 28px;
+  font-weight: 100;
+  color: #60c2db;
+  margin-bottom: 32px;
+  margin-top: 0; }
+
+.site-footer p,
+.site-footer address {
+  color: gray;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 14px; }
+
+.copyright p,
+.copyright a {
+  color: gray;
+  font-size: 11px; }
+
+/**
+ * (c) Copyright 2013 Viable Industries, L.L.C.
+ */
+.form-control {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0; }
+
+.leaflet-bar {
+  border: 0; }
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  height: auto;
+  margin-bottom: 4px;
+  padding: 4px 10px 6px;
+  width: auto; }
+
+.leaflet-bar a:first-child,
+.leaflet-bar a:last-child {
+  border-radius: 0;
+  -mox-border-radius: 0;
+  -webkit-border-radius: 0; }
+
+.leaflet-left {
+  right: 0;
+  left: auto; }
+
+.leaflet-top {
+  top: 72px;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 15px; }
+
+.leaflet-left .leaflet-control {
+  margin-right: 30px; }
+
+/**
+ * Marker clustering
+ */
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+  -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-out, opacity 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-out, opacity 0.2s ease-in;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-in; }
+
+.marker-cluster {
+  background-clip: padding-box;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  height: 60px !important;
+  width: 60px !important; }
+
+.marker-cluster div {
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  width: 50px; }
+
+.marker-cluster span {
+  line-height: 50px; }
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background-color: rgba(96, 194, 219, 0.6); }
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  color: #fcfcfc;
+  background-color: rgba(96, 194, 219, 0.6); }
+
+/**
+ * Import Module Dependencies
+ */
+
+.leaflet-popup-content {
+margin: 12px 36px 12px 16px
+}
+.leaflet-container a.leaflet-popup-close-button {
+	padding: 10px 22px 0 0;
+}
+
+
+/**
+ * Other
+ */
+.site-map {
+  right: 0;
+  height: 100%;
+  min-height: 100%;
+  height: auto !important;
+  position: fixed;
+  top: 0;
+  width: 58.333333333333336%;
+}
+
+.site-content {
+  left: 0;
+  height: 100%;
+  min-height: 100%;
+  height: auto !important;
+  padding: 72px 24px;
+  position: absolute;
+  top: 0;
+  width: 41.66666666666667%;
+}
+
+.site-footer {
+  background-color: green;
+  display: none;
+  left: 0;
+  min-height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+@media (max-width: 640px) {
+  
+  .site-map {
+    width: 100%;
+  }
+  
+  .site-content {
+    left: -100%;
+    width: 100%;
+  }
+  
+}
