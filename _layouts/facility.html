@@ -10,7 +10,11 @@ layout: default
 </address>
 
 <script>
-var well_information = {
+
+/**
+ * GeoJSON for the Facility
+ */
+var facility = {
     "type": "Point",
     "coordinates": [
         {{ page.coordinates[0] }},
@@ -18,7 +22,29 @@ var well_information = {
     ]
 }
 
-// alert(well_information.coordinates[0] + '/' + well_information.coordinates[1])
+/**
+ * GeoJSON for the Facilities' Wells
+ */
+var facility_wells = {
+  "type": "FeatureCollection",
+  "features" : [
+    {% for well in pages %}
+      {% if well.layout == 'well' && page.url == well.facility_url  %}
+      {
+        "type": "Point",
+        "coordinates": [
+            {{ well.coordinates[0] }},
+            {{ well.coordinates[1] }}
+        ],
+        "properties" : {
+          "title": {{ well.title }} 
+        }
+      },
+      {% endif %}
+    {% endfor %}
+  ]
+}
+
 </script>
 
 
