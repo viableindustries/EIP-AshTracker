@@ -1,15 +1,24 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-
-<address>
-  {{ page.address.street }}<br />
-  {{ page.address.city }}, {{ page.address.state }} {{ page.address.zipcode }}<br >
-  {{ page.address.county }}
-</address>
-
 <script>
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var map;
+
+var cc_mapboxid   = "developedsimple.g7pfo3pa",
+    cc_mapid      = "map",
+    cc_mapextent  = [{{ page.coordinates[1] }}, {{ page.coordinates[0] }}],
+    cc_mapzoom    = 13;
+
+map = L.mapbox.map(cc_mapid, cc_mapboxid).setView(cc_mapextent, cc_mapzoom);
+
+map.scrollWheelZoom.disable();
+
+var markers = new L.MarkerClusterGroup();
 
 /**
  * GeoJSON for the Facility
@@ -44,9 +53,72 @@ var facility_wells = {
   ]
 }
 
+/**
+ * Add each of our wells to the list
+ */
+{% for well in site.posts %}
+  {% if well.layout == 'well' && page.url == well.facility_url  %}
+  var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }}), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       {% if well.drinking_water_health_standards_exceeded_1 == '' %}
+       'marker-color': '29A909'
+       {% else %}
+       'marker-color': 'A92909'
+       {% endif %}
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '{{ well.url }}';
+
+    // console.log(temp_baseurl + '{{ well.url }}');
+  });
+
+  markers.addLayer(well_{{ forloop.index }});
+  {% endif %}
+{% endfor %}
+
+/**
+ * Add the facility to the marker list
+ */
+var facility = L.marker(new L.LatLng({{ page.coordinates[1] }}, {{ page.coordinates[0] }}), {
+   icon: L.mapbox.marker.icon({
+     'marker-size': 'large',
+     'marker-color': '2984BD'
+   })
+});
+map.addLayer(facility);
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
 </script>
 
+<h5><strong>Facility</strong> View</h5>
 
-<div class="post">
+<h1>{{ page.title }}</h1>
+
+<address>
+  {{ page.address.street }}<br />
+  {{ page.address.city }}, {{ page.address.state }} {{ page.address.zipcode }}<br >
+  {{ page.address.county }}
+</address>
+
+<h4>Owner - Operator</h4>
+<h2>{{ page.owner_operator }}</h2>
+
+<h4>Impoundment Hazard Rating</h4>
+<h2>{{ page.impoundment_hazard_rating }}</h2>
+
+<h4>Pollutants Not Monitored</h4>
+<h2>{{ page.monitoring }}</h2>
+
+<h3>About <strong>{{ page.title }}</strong></h3>
 {{ content }}
-</div>
+
+<h4>Download Data</h4>
+<p class="text-center"><a class="button download" href="{{ page.data_url }}" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>

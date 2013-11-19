@@ -149,15 +149,24 @@
     <div id="map" class="site-map"></div>
 
     <main role="content" class="site-content">
-      <h1>Colbert Fossil Plant</h1>
+      <script>
 
-<address>
-  900 Colbert Steam Plant Road<br />
-  Tuscumbia, AL 35674<br >
-  Colbert County
-</address>
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var map;
 
-<script>
+var cc_mapboxid   = "developedsimple.g7pfo3pa",
+    cc_mapid      = "map",
+    cc_mapextent  = [34.72622600000, -87.82832100000],
+    cc_mapzoom    = 13;
+
+map = L.mapbox.map(cc_mapid, cc_mapboxid).setView(cc_mapextent, cc_mapzoom);
+
+map.scrollWheelZoom.disable();
+
+var markers = new L.MarkerClusterGroup();
 
 /**
  * GeoJSON for the Facility
@@ -504,15 +513,540 @@ var facility_wells = {
   ]
 }
 
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_5 = L.marker(new L.LatLng(34.7226878, -87.8210783), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-p8';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-p8');
+  });
+
+  markers.addLayer(well_5);
+  
+
+  
+  var well_6 = L.marker(new L.LatLng(34.7368547, -87.8305219), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-p2';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-p2');
+  });
+
+  markers.addLayer(well_6);
+  
+
+  
+  var well_7 = L.marker(new L.LatLng(34.7330361, -87.8538172), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc5c';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-mc5c');
+  });
+
+  markers.addLayer(well_7);
+  
+
+  
+  var well_8 = L.marker(new L.LatLng(34.7330908, -87.8537867), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc5a';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-mc5a');
+  });
+
+  markers.addLayer(well_8);
+  
+
+  
+  var well_9 = L.marker(new L.LatLng(34.7343944, -87.8535519), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc4';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-mc4');
+  });
+
+  markers.addLayer(well_9);
+  
+
+  
+  var well_10 = L.marker(new L.LatLng(34.7343256, -87.8537344), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc1';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-mc1');
+  });
+
+  markers.addLayer(well_10);
+  
+
+  
+  var well_11 = L.marker(new L.LatLng(34.7350739, -87.8348989), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca9r';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca9r');
+  });
+
+  markers.addLayer(well_11);
+  
+
+  
+  var well_12 = L.marker(new L.LatLng(34.7263889, -87.8480556), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca6';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca6');
+  });
+
+  markers.addLayer(well_12);
+  
+
+  
+  var well_13 = L.marker(new L.LatLng(34.7263889, -87.8480556), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca5';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca5');
+  });
+
+  markers.addLayer(well_13);
+  
+
+  
+  var well_14 = L.marker(new L.LatLng(34.7390842, -87.8508211), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca31a';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca31a');
+  });
+
+  markers.addLayer(well_14);
+  
+
+  
+  var well_15 = L.marker(new L.LatLng(34.7312728, -87.8452033), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca30b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca30b');
+  });
+
+  markers.addLayer(well_15);
+  
+
+  
+  var well_16 = L.marker(new L.LatLng(34.7320456, -87.8546719), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca29br';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca29br');
+  });
+
+  markers.addLayer(well_16);
+  
+
+  
+  var well_17 = L.marker(new L.LatLng(34.7319944, -87.8547247), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca29ar';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca29ar');
+  });
+
+  markers.addLayer(well_17);
+  
+
+  
+  var well_18 = L.marker(new L.LatLng(34.7492969, -87.8537656), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca28b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca28b');
+  });
+
+  markers.addLayer(well_18);
+  
+
+  
+  var well_19 = L.marker(new L.LatLng(34.7500397, -87.8595886), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca27br';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca27br');
+  });
+
+  markers.addLayer(well_19);
+  
+
+  
+  var well_20 = L.marker(new L.LatLng(34.7394842, -87.8384236), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca22b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca22b');
+  });
+
+  markers.addLayer(well_20);
+  
+
+  
+  var well_21 = L.marker(new L.LatLng(34.7275, -87.8333333), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca21b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca21b');
+  });
+
+  markers.addLayer(well_21);
+  
+
+  
+  var well_22 = L.marker(new L.LatLng(34.7313303, -87.8287664), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca20b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca20b');
+  });
+
+  markers.addLayer(well_22);
+  
+
+  
+  var well_23 = L.marker(new L.LatLng(34.7309681, -87.8292878), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca20a';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca20a');
+  });
+
+  markers.addLayer(well_23);
+  
+
+  
+  var well_24 = L.marker(new L.LatLng(34.7369053, -87.8362842), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca19b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca19b');
+  });
+
+  markers.addLayer(well_24);
+  
+
+  
+  var well_25 = L.marker(new L.LatLng(34.7346303, -87.8471814), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca17b';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca17b');
+  });
+
+  markers.addLayer(well_25);
+  
+
+  
+  var well_26 = L.marker(new L.LatLng(34.7347222, -87.8472222), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca17a';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca17a');
+  });
+
+  markers.addLayer(well_26);
+  
+
+  
+  var well_27 = L.marker(new L.LatLng(34.7291667, -87.8402778), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca16';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca16');
+  });
+
+  markers.addLayer(well_27);
+  
+
+  
+  var well_28 = L.marker(new L.LatLng(34.7317492, -87.8436472), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': 'A92909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca12a';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca12a');
+  });
+
+  markers.addLayer(well_28);
+  
+
+  
+  var well_29 = L.marker(new L.LatLng(34.7262258, -87.8283206), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       
+       'marker-color': '29A909'
+       
+     })
+  }).on('click', function (e) {
+    
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca11';
+
+    // console.log(temp_baseurl + '/facilities/colbert/cof-ca11');
+  });
+
+  markers.addLayer(well_29);
+  
+
+
+/**
+ * Add the facility to the marker list
+ */
+var facility = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
+   icon: L.mapbox.marker.icon({
+     'marker-size': 'large',
+     'marker-color': '2984BD'
+   })
+});
+map.addLayer(facility);
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
 </script>
 
+<h5><strong>Facility</strong> View</h5>
 
-<div class="post">
+<h1>Colbert Fossil Plant</h1>
+
+<address>
+  900 Colbert Steam Plant Road<br />
+  Tuscumbia, AL 35674<br >
+  Colbert County
+</address>
+
+<h4>Owner - Operator</h4>
+<h2>Tennessee Valley Authority (TVA)</h2>
+
+<h4>Impoundment Hazard Rating</h4>
+<h2>High hazard</h2>
+
+<h4>Pollutants Not Monitored</h4>
+<h2>All contaminants of concern being monitored.</h2>
+
+<h3>About <strong>Colbert Fossil Plant</strong></h3>
 <p>The Colbert Fossil Plant houses two unlined ash impoundments that cover a 127 acre area on the Tennessee River in rural northwest Alabama. These impoundments have been seeping contaminants into the Tennessee River and one of its tributaries for almost 30 years, according to research conducted by EIP and its partner, the Southern Environmental Law Center (SELC).</p>
 
 <p>In February 2013, SELC notified TVA of their intention to file a Clean Water Act citizen suit on behalf of local conservation organizations. In May 2013, The Alabama Department of Environmental Management found that discharges from the Colbert Fossil plant contaminated local waters in violation of state law; unfortunately, the settlement agreement that is the result of this action fails to require compliance with the law or remediation of contaminated areas. For more information about Colbert, see EIP’s report Risky Business. Available here.</p>
 
-</div>
+
+<h4>Download Data</h4>
+<p class="text-center"><a class="button download" href="" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
 
     </main>
     
