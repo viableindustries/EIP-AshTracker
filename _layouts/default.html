@@ -69,7 +69,7 @@
             <a href="/facilities" class="facilities dropdown-toggle" data-toggle="dropdown">Facilities <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               {% for facility in site.posts %}
-                {% if facility.url contains 'facilities' %}
+                {% if facility.layout == 'facility' %}
                  {% if page.url == facility.url %}
                    <li class="active"><a href="{{ facility.url }}">{{ facility.title }}</a></li>
                  {% else %}
