@@ -27,21 +27,20 @@ var facility = {
  */
 var facility_wells = {
   "type": "FeatureCollection",
-  "features" : [
-    {% for well in pages %}
-      {% if well.layout == 'well' && page.url == well.facility_url  %}
+  "features" : [{% for well in site.posts %}{% if well.layout == 'well' && page.url == well.facility_url  %}
       {
-        "type": "Point",
-        "coordinates": [
-            {{ well.coordinates[0] }},
-            {{ well.coordinates[1] }}
-        ],
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+              {{ well.coordinates[0] }},
+              {{ well.coordinates[1] }}
+          ]
+        },
         "properties" : {
-          "title": {{ well.title }} 
+          "title": "{{ well.title }}"
         }
-      },
-      {% endif %}
-    {% endfor %}
+      }{% if forloop.last %}{% else %},{% endif %}{% endif %}{% endfor %}
   ]
 }
 
