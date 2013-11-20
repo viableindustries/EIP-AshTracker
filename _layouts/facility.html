@@ -81,9 +81,12 @@ var icon_downgradient_violation = {
     
     var map_center = map.getCenter();
     
-    console.log(map_center)
-
-    window.location.href = '{{ well.url }}?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
+    if (top.location.host.toString() == 'viableindustries.github.io') {
+      window.location.href = '/ashtracker{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
+    }
+    else {
+      window.location.href = '{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';        
+    }
 
   });
 

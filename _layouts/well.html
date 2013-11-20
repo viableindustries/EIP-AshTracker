@@ -81,8 +81,14 @@ var icon_downgradient_violation = {
   var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
+        
+    if (top.location.host.toString() == 'viableindustries.github.io') {
+      window.location.href = '/ashtracker{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
+    }
+    else {
+      window.location.href = '{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';        
+    }
     
-    window.location.href = '{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
     map.setView([{{ well.coordinates[1] }}, {{ well.coordinates[0] }}], map_current_zoom);
 
   });
