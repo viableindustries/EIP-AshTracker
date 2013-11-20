@@ -5,6 +5,8 @@ layout: default
 
 var params, map;
 
+console.log('{{ site.baseurl }}')
+
 /**
  * Grab all of the URL parameters so that we can begin using
  * data from them to set the map extent and zoom
@@ -79,10 +81,11 @@ var icon_downgradient_violation = {
   {% if well.layout == 'well' && page.url == well.facility_url  %}
   var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
     
-    var map_center = map.getCenter();
-    
-    if (top.location.host.toString() == 'viableindustries.github.io') {
-      window.location.href = '/ashtracker{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
+    var map_current_zoom = map.getZoom();
+
+    if ('{{ site.baseurl }}' == 'http://viableindustries.github.io/ashtracker') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '{{ site.baseurl }}{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
     }
     else {
       window.location.href = '{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';        
