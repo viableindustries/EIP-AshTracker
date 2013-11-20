@@ -71,9 +71,9 @@
               {% for facility in site.posts %}
                 {% if facility.layout == 'facility' %}
                  {% if page.url == facility.url %}
-                   <li class="active"><a href="{{ site.baseurl }}{{ facility.url }}">{{ facility.title }}</a></li>
+                   <li class="active"><a href="{{ facility.url }}">{{ facility.title }}</a></li>
                  {% else %}
-                   <li><a href="{{ site.baseurl }}{{ facility.url }}">{{ facility.title }}</a></li>
+                   <li><a href="{{ facility.url }}">{{ facility.title }}</a></li>
                  {% endif %}
                 {% endif %}
               {% endfor %}
