@@ -2,12 +2,81 @@
 layout: default
 title: Tracking Groundwater Contamination at Coal Combustion Waste Disposal Sites « Ashtracker
 ---
+<script>
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+var params, map;
+
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [39.8282, -98.5795],
+    mapbox_zoom    = 4;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+// /**
+//  * Add each of our wells to the list
+//  */
+// {% for well in site.posts %}
+//   {% if well.layout == 'well' && page.url == well.facility_url  %}
+//   var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
+//     
+//     var map_center = map.getCenter();
+//     
+//     console.log(map_center)
+// 
+//     var temp_baseurl = top.location.host.toString();
+//     window.location.href = 'http://' + temp_baseurl + '{{ well.url }}?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
+// 
+//   });
+// 
+//   {% if well.legend == 'Downgradient, In Compliance' %}
+//     well_{{ forloop.index }}.setIcon(L.icon(icon_downgradient_compliant));
+//   {% elsif well.legend == 'Upgradient, In Compliance' %}
+//     well_{{ forloop.index }}.setIcon(L.icon(icon_upgradient_compliant));
+//   {% elsif well.legend == 'Downgradient, Not in Compliance' %}
+//     well_{{ forloop.index }}.setIcon(L.icon(icon_downgradient_violation));
+//   {% elsif well.legend == 'Upgradient, Not in Compliance' %}
+//     well_{{ forloop.index }}.setIcon(L.icon(icon_upgradient_violation));
+//   {% endif %}
+// 
+// 
+// 
+//   markers.addLayer(well_{{ forloop.index }});
+//   {% endif %}
+// {% endfor %}
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h1>Ashtracker</h1>
+
+<p class="lead">Ashtracker is tracking groundwater contamination at coal combustion waste disposal sites.</p>
+
+<p>A longer description about Ashtracker's mission, involvement, or progress to date. This description should be at least two or three short paragraphs long. Perhaps a total of 12-15 sentences broken down into three very small paragraphs.</p>
+
+<p>The content in this section is intended to inform and education the user on the basics of the site, perhaps first time visitors from outside sources that are new to the subject of coal ash, or perhaps a message directly to long time supports of the Environmental Integrity Project.</p>
+
+<p>Regardless of what is put here, it has one primary purpose in life and that is "to make the person visiting the want to engage further by selecting a facility to learn more about".</p>
+
+<div class="row">
+  <div class="col-sm-6">
+    <h4>Total <strong>Facilities</strong></h4>
+    <span class="statistic">10</span>
+  </div>
+  <div class="col-sm-6">
+    <h4>Total <strong>Wells</strong></h4>
+    <span class="statistic">283</span>
+  </div>
 </div>

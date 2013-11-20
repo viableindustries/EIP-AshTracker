@@ -3,54 +3,73 @@ layout: default
 ---
 <script>
 
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent and zoom
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
 /**
  * Setup MapBox and load our default map so that we can begin
  * placing the pins we need to display search results
  */
-var map;
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || {{ page.coordinates[1] }}, params.lng || {{ page.coordinates[0] }}],
+    mapbox_zoom    = params.zoom || 13;    
 
-var cc_mapboxid   = "developedsimple.g7pfo3pa",
-    cc_mapid      = "map",
-    cc_mapextent  = [{{ page.coordinates[1] }}, {{ page.coordinates[0] }}],
-    cc_mapzoom    = 13;
-
-map = L.mapbox.map(cc_mapid, cc_mapboxid).setView(cc_mapextent, cc_mapzoom);
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
 map.scrollWheelZoom.disable();
 
-var markers = new L.MarkerClusterGroup();
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
 
 /**
- * GeoJSON for the Facility
+ * Setup Markers
  */
-var facility = {
-    "type": "Point",
-    "coordinates": [
-        {{ page.coordinates[0] }},
-        {{ page.coordinates[1] }}
-    ]
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "upgradient-compliant"
 }
 
-/**
- * GeoJSON for the Facilities' Wells
- */
-var facility_wells = {
-  "type": "FeatureCollection",
-  "features" : [{% for well in site.posts %}{% if well.layout == 'well' && page.url == well.facility_url  %}
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-              {{ well.coordinates[0] }},
-              {{ well.coordinates[1] }}
-          ]
-        },
-        "properties" : {
-          "title": "{{ well.title }}"
-        }
-      }{% if forloop.last %}{% else %},{% endif %}{% endif %}{% endfor %}
-  ]
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "downgradient-violation"
 }
 
 /**
@@ -58,22 +77,28 @@ var facility_wells = {
  */
 {% for well in site.posts %}
   {% if well.layout == 'well' && page.url == well.facility_url  %}
-  var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }}), {
-     icon: L.mapbox.marker.icon({
-       'marker-size': 'large',
-       {% if well.drinking_water_health_standards_exceeded_1 == '' %}
-       'marker-color': '29A909'
-       {% else %}
-       'marker-color': 'A92909'
-       {% endif %}
-     })
-  }).on('click', function (e) {
+  var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
     
-    var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '{{ well.url }}';
+    var map_center = map.getCenter();
+    
+    console.log(map_center)
 
-    // console.log(temp_baseurl + '{{ well.url }}');
+    var temp_baseurl = top.location.host.toString();
+    window.location.href = 'http://' + temp_baseurl + '{{ well.url }}?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
+
   });
+
+  {% if well.legend == 'Downgradient, In Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_downgradient_compliant));
+  {% elsif well.legend == 'Upgradient, In Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_upgradient_compliant));
+  {% elsif well.legend == 'Downgradient, Not in Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_downgradient_violation));
+  {% elsif well.legend == 'Upgradient, Not in Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_upgradient_violation));
+  {% endif %}
+
+
 
   markers.addLayer(well_{{ forloop.index }});
   {% endif %}
@@ -85,7 +110,8 @@ var facility_wells = {
 var facility = L.marker(new L.LatLng({{ page.coordinates[1] }}, {{ page.coordinates[0] }}), {
    icon: L.mapbox.marker.icon({
      'marker-size': 'large',
-     'marker-color': '2984BD'
+     'marker-color': '2984BD',
+     'marker-symbol': 'industrial'
    })
 });
 map.addLayer(facility);
