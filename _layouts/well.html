@@ -83,6 +83,11 @@ var icon_downgradient_violation = {
     var map_current_zoom = map.getZoom();
     
     var temp_baseurl = top.location.host.toString();
+    
+    if (temp_baseurl == 'viableindustries.github.io') {
+      temp_baseurl = temp_baseurl + '/ashtracker/';
+    }
+    
     window.location.href = 'http://' + temp_baseurl + '{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
     map.setView([{{ well.coordinates[1] }}, {{ well.coordinates[0] }}], map_current_zoom);
 

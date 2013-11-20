@@ -41,7 +41,7 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOn
  * Setup Markers
  */
 var icon_upgradient_compliant = {
-  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconUrl": "{{ site.baseurl }}static/img/pin-upgradient-compliant.png",
   "iconSize": [35, 90],
   "iconAnchor": [35, 35],
   "popupAnchor": [0, -55],
@@ -49,7 +49,7 @@ var icon_upgradient_compliant = {
 }
 
 var icon_upgradient_violation = {
-  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconUrl": "{{ site.baseurl }}static/img/pin-upgradient-violation.png",
   "iconSize": [35, 90],
   "iconAnchor": [35, 35],
   "popupAnchor": [0, -55],
@@ -57,7 +57,7 @@ var icon_upgradient_violation = {
 }
 
 var icon_downgradient_compliant = {
-  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconUrl": "{{ site.baseurl }}static/img/pin-downgradient-compliant.png",
   "iconSize": [35, 90],
   "iconAnchor": [35, 35],
   "popupAnchor": [0, -55],
@@ -65,7 +65,7 @@ var icon_downgradient_compliant = {
 }
 
 var icon_downgradient_violation = {
-  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconUrl": "{{ site.baseurl }}static/img/pin-downgradient-violation.png",
   "iconSize": [35, 90],
   "iconAnchor": [35, 35],
   "popupAnchor": [0, -55],
@@ -84,6 +84,11 @@ var icon_downgradient_violation = {
     console.log(map_center)
 
     var temp_baseurl = top.location.host.toString();
+    
+    if (temp_baseurl == 'viableindustries.github.io') {
+      temp_baseurl = temp_baseurl + '/ashtracker/';
+    }
+    
     window.location.href = 'http://' + temp_baseurl + '{{ well.url }}?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
