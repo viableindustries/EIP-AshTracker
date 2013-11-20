@@ -83,13 +83,7 @@ var icon_downgradient_violation = {
     
     console.log(map_center)
 
-    var temp_baseurl = top.location.host.toString();
-    
-    if (temp_baseurl == 'viableindustries.github.io') {
-      temp_baseurl = temp_baseurl + '/ashtracker/';
-    }
-    
-    window.location.href = 'http://' + temp_baseurl + '{{ well.url }}?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
+    window.location.href = '{{ well.url }}?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
