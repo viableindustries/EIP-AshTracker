@@ -18,25 +18,25 @@
     <meta name="description" content="" />
 
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:title" content="COF-P2" />
-    <meta property="twitter:url" content="_posts/2013-11-01-COF-P2.md" />
+    <meta property="twitter:title" content="Little Blue Run Disposal Area" />
+    <meta property="twitter:url" content="_posts/2013-11-01-allegheny-energy-hatfield.md" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
     <meta property="og:site_name" content="" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="_posts/2013-11-01-COF-P2.md" />
-    <meta property="og:title" content="COF-P2" />
+    <meta property="og:url" content="_posts/2013-11-01-allegheny-energy-hatfield.md" />
+    <meta property="og:title" content="Little Blue Run Disposal Area" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="_posts/2013-11-01-COF-P2.md" />
+    <meta name="dcterms.identifier" content="_posts/2013-11-01-allegheny-energy-hatfield.md" />
     <meta name="dcterms.format" content="text/html" />
-    <meta name="dcterms.title" content="COF-P2" />
+    <meta name="dcterms.title" content="Little Blue Run Disposal Area" />
 
     <meta name="fragment" content="!" />
 
-    <title>COF-P2 | Ashtracker</title>
+    <title>Little Blue Run Disposal Area | Ashtracker</title>
 
     <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
     <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
@@ -57,7 +57,7 @@
 
   </head>
 
-  <body class="">
+  <body class="facility">
     
     <header class="site-header">
       <div class="brand-container">
@@ -83,7 +83,7 @@
               
                 
                  
-                   <li><a href="//2013/11/01/allegheny-energy-hatfield.html">Little Blue Run Disposal Area</a></li>
+                   <li class="active"><a href="//2013/11/01/allegheny-energy-hatfield.html">Little Blue Run Disposal Area</a></li>
                  
                 
               
@@ -179,13 +179,12 @@ get_url_parameters();
  */
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
-    mapbox_extent  = [params.lat || 34.7368547, params.lng || -87.8305219],
+    mapbox_extent  = [params.lat || , params.lng || ],
     mapbox_zoom    = params.zoom || 13;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
 map.scrollWheelZoom.disable();
-
 
 /**
  * Setup marker clustering
@@ -244,11 +243,12 @@ var icon_downgradient_violation = {
   
   var well_6 = L.marker(new L.LatLng(34.7226878, -87.8210783)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-p8?zoom=' + map_current_zoom + '&lat=34.7226878&lng=-87.8210783';  
-    map.setView([34.7226878, -87.8210783], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-p8?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -264,11 +264,12 @@ var icon_downgradient_violation = {
   
   var well_7 = L.marker(new L.LatLng(34.7368547, -87.8305219)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-p2?zoom=' + map_current_zoom + '&lat=34.7368547&lng=-87.8305219';  
-    map.setView([34.7368547, -87.8305219], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-p2?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -284,11 +285,12 @@ var icon_downgradient_violation = {
   
   var well_8 = L.marker(new L.LatLng(34.7330361, -87.8538172)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc5c?zoom=' + map_current_zoom + '&lat=34.7330361&lng=-87.8538172';  
-    map.setView([34.7330361, -87.8538172], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc5c?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -304,11 +306,12 @@ var icon_downgradient_violation = {
   
   var well_9 = L.marker(new L.LatLng(34.7330908, -87.8537867)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc5a?zoom=' + map_current_zoom + '&lat=34.7330908&lng=-87.8537867';  
-    map.setView([34.7330908, -87.8537867], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc5a?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -324,11 +327,12 @@ var icon_downgradient_violation = {
   
   var well_10 = L.marker(new L.LatLng(34.7343944, -87.8535519)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc4?zoom=' + map_current_zoom + '&lat=34.7343944&lng=-87.8535519';  
-    map.setView([34.7343944, -87.8535519], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc4?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -344,11 +348,12 @@ var icon_downgradient_violation = {
   
   var well_11 = L.marker(new L.LatLng(34.7343256, -87.8537344)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc1?zoom=' + map_current_zoom + '&lat=34.7343256&lng=-87.8537344';  
-    map.setView([34.7343256, -87.8537344], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-mc1?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -364,11 +369,12 @@ var icon_downgradient_violation = {
   
   var well_12 = L.marker(new L.LatLng(34.7350739, -87.8348989)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca9r?zoom=' + map_current_zoom + '&lat=34.7350739&lng=-87.8348989';  
-    map.setView([34.7350739, -87.8348989], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca9r?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -384,11 +390,12 @@ var icon_downgradient_violation = {
   
   var well_13 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca6?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
-    map.setView([34.7263889, -87.8480556], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca6?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -404,11 +411,12 @@ var icon_downgradient_violation = {
   
   var well_14 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
-    map.setView([34.7263889, -87.8480556], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca5?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -424,11 +432,12 @@ var icon_downgradient_violation = {
   
   var well_15 = L.marker(new L.LatLng(34.7390842, -87.8508211)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca31a?zoom=' + map_current_zoom + '&lat=34.7390842&lng=-87.8508211';  
-    map.setView([34.7390842, -87.8508211], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca31a?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -444,11 +453,12 @@ var icon_downgradient_violation = {
   
   var well_16 = L.marker(new L.LatLng(34.7312728, -87.8452033)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca30b?zoom=' + map_current_zoom + '&lat=34.7312728&lng=-87.8452033';  
-    map.setView([34.7312728, -87.8452033], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca30b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -464,11 +474,12 @@ var icon_downgradient_violation = {
   
   var well_17 = L.marker(new L.LatLng(34.7320456, -87.8546719)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca29br?zoom=' + map_current_zoom + '&lat=34.7320456&lng=-87.8546719';  
-    map.setView([34.7320456, -87.8546719], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca29br?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -484,11 +495,12 @@ var icon_downgradient_violation = {
   
   var well_18 = L.marker(new L.LatLng(34.7319944, -87.8547247)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca29ar?zoom=' + map_current_zoom + '&lat=34.7319944&lng=-87.8547247';  
-    map.setView([34.7319944, -87.8547247], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca29ar?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -504,11 +516,12 @@ var icon_downgradient_violation = {
   
   var well_19 = L.marker(new L.LatLng(34.7492969, -87.8537656)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca28b?zoom=' + map_current_zoom + '&lat=34.7492969&lng=-87.8537656';  
-    map.setView([34.7492969, -87.8537656], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca28b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -524,11 +537,12 @@ var icon_downgradient_violation = {
   
   var well_20 = L.marker(new L.LatLng(34.7500397, -87.8595886)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca27br?zoom=' + map_current_zoom + '&lat=34.7500397&lng=-87.8595886';  
-    map.setView([34.7500397, -87.8595886], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca27br?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -544,11 +558,12 @@ var icon_downgradient_violation = {
   
   var well_21 = L.marker(new L.LatLng(34.7394842, -87.8384236)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca22b?zoom=' + map_current_zoom + '&lat=34.7394842&lng=-87.8384236';  
-    map.setView([34.7394842, -87.8384236], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca22b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -564,11 +579,12 @@ var icon_downgradient_violation = {
   
   var well_22 = L.marker(new L.LatLng(34.7275, -87.8333333)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca21b?zoom=' + map_current_zoom + '&lat=34.7275&lng=-87.8333333';  
-    map.setView([34.7275, -87.8333333], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca21b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -584,11 +600,12 @@ var icon_downgradient_violation = {
   
   var well_23 = L.marker(new L.LatLng(34.7313303, -87.8287664)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca20b?zoom=' + map_current_zoom + '&lat=34.7313303&lng=-87.8287664';  
-    map.setView([34.7313303, -87.8287664], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca20b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -604,11 +621,12 @@ var icon_downgradient_violation = {
   
   var well_24 = L.marker(new L.LatLng(34.7309681, -87.8292878)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca20a?zoom=' + map_current_zoom + '&lat=34.7309681&lng=-87.8292878';  
-    map.setView([34.7309681, -87.8292878], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca20a?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -624,11 +642,12 @@ var icon_downgradient_violation = {
   
   var well_25 = L.marker(new L.LatLng(34.7369053, -87.8362842)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca19b?zoom=' + map_current_zoom + '&lat=34.7369053&lng=-87.8362842';  
-    map.setView([34.7369053, -87.8362842], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca19b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -644,11 +663,12 @@ var icon_downgradient_violation = {
   
   var well_26 = L.marker(new L.LatLng(34.7346303, -87.8471814)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca17b?zoom=' + map_current_zoom + '&lat=34.7346303&lng=-87.8471814';  
-    map.setView([34.7346303, -87.8471814], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca17b?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -664,11 +684,12 @@ var icon_downgradient_violation = {
   
   var well_27 = L.marker(new L.LatLng(34.7347222, -87.8472222)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca17a?zoom=' + map_current_zoom + '&lat=34.7347222&lng=-87.8472222';  
-    map.setView([34.7347222, -87.8472222], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca17a?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -684,11 +705,12 @@ var icon_downgradient_violation = {
   
   var well_28 = L.marker(new L.LatLng(34.7291667, -87.8402778)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca16?zoom=' + map_current_zoom + '&lat=34.7291667&lng=-87.8402778';  
-    map.setView([34.7291667, -87.8402778], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca16?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -704,11 +726,12 @@ var icon_downgradient_violation = {
   
   var well_29 = L.marker(new L.LatLng(34.7317492, -87.8436472)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca12a?zoom=' + map_current_zoom + '&lat=34.7317492&lng=-87.8436472';  
-    map.setView([34.7317492, -87.8436472], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca12a?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -724,11 +747,12 @@ var icon_downgradient_violation = {
   
   var well_30 = L.marker(new L.LatLng(34.7262258, -87.8283206)).on('click', function (e) {
     
-    var map_current_zoom = map.getZoom();
+    var map_center = map.getCenter();
     
+    console.log(map_center)
+
     var temp_baseurl = top.location.host.toString();
-    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca11?zoom=' + map_current_zoom + '&lat=34.7262258&lng=-87.8283206';  
-    map.setView([34.7262258, -87.8283206], map_current_zoom);
+    window.location.href = 'http://' + temp_baseurl + '/facilities/colbert/cof-ca11?zoom=' + map.getZoom() + '&lat=' + map_center.lat + '&lng=' + map_center.lng;
 
   });
 
@@ -742,143 +766,17 @@ var icon_downgradient_violation = {
   
 
 
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-  console.log("facilities/colbert == facilities/colbert  ... so ... Colbert Fossil Plant > 34.72622600000:34.72622600000 ");
-
-    /**
-     * Add the facility to the marker list
-     */
-    var this_facility = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
-       icon: L.mapbox.marker.icon({
-         'marker-size': 'large',
-         'marker-color': '2984BD',
-         'marker-symbol': 'industrial'
-       })
-    });
-    map.addLayer(this_facility);
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
+/**
+ * Add the facility to the marker list
+ */
+var facility = L.marker(new L.LatLng(, ), {
+   icon: L.mapbox.marker.icon({
+     'marker-size': 'large',
+     'marker-color': '2984BD',
+     'marker-symbol': 'industrial'
+   })
+});
+map.addLayer(facility);
 
 
 /**
@@ -888,20 +786,32 @@ map.addLayer(markers);
 
 </script>
 
+<h5><strong>Facility</strong> View</h5>
 
-<h5><strong>Well</strong> View <a class="close-well pull-right" href="/facilities/colbert">&times;</a></h5>
+<h1>Little Blue Run Disposal Area</h1>
 
-<h1>COF-P2</h1>
+<address>
+  2907 East Roy Furman Highway<br />
+  Masontown, PA 15461<br >
+  Greene County
+</address>
 
-<h4>Designation</h4>
-<h2>Downgradient</h2>
+<h4>Owner - Operator</h4>
+<h2>FirstEnergy, Bruce Mansfield Power Plant</h2>
 
-<h4>Contaiminant Status</h4>
-<h2>Downgradient, In Compliance</h2>
+<h4>Impoundment Hazard Rating</h4>
+<h2>No impoundment present at this site.</h2>
 
-<div class="content">
+<h4>Pollutants Not Monitored</h4>
+<h2></h2>
 
-</div>
+<h3>About <strong>Little Blue Run Disposal Area</strong></h3>
+<p>The Hatfield’s Ferry Power plant disposes of its ash waste in an unlined 40 acre landfill near the Little Whitely Creek in southwest Pennsylvania. The landfill has been contaminating one of the creek’s tributaries for almost ten years, threatening the safety of private drinking water wells in the area. In 2008, the Pennsylvania DEP issued a Consent Order and Agreement requiring Allegheny Energy to implement a corrective action plan and pay civil penalties of more than $20,000. In July 2013 FirstEnergy announced that it would be deactivating the power plant by the end of 2013. The company said, however, that the landfill may stay open and accept waste from other facilities. For more about information about Hatfield, see EIP’s report In Harm’s Way. Available here. In 2012, the EPA identified Hatfield’s Ferry as a location where coal ash disposal activities have been proven to contaminate ground and surface water. For more information, check this report.</p>
+
+
+<h4>Download Data</h4>
+<p class="text-center"><a class="button download" href="" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+
     </main>
     
     <footer role="complementary" class="site-footer">
