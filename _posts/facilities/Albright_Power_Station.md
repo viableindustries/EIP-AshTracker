@@ -20,15 +20,10 @@ impoundment_hazard_rating: Impoundments at this site not rated.
 monitoring: Cobalt
 pollutants: 
   - type: Sb
-  - type: As
   - type: B
   - type: Cr
-  - type: F
-  - type: Pb
   - type: Mg
-  - type: Mo
   - type: Ni
-  - type: Se
   - type: Tl
 data_download: ""
 ---
