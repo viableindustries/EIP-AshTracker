@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<script>
+
+var params, map;
+
+console.log('{{ site.baseurl }}')
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [39.8282, -98.5795],
+    mapbox_zoom    = 4;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+</script>
+
+<h1>{{ page.title }}</h1>
+
+<div class="content">
+  {{ content }}
+</div>
