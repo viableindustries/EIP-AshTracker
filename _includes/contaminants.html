@@ -1,39 +1,38 @@
-<div class="row">
-  <div class="col-lg-2"><p class="element">NH-3</p></div>
-  <div class="col-lg-2"><p class="element">Sb</p></div>
-  <div class="col-lg-2"><p class="element">As</p></div>
-  <div class="col-lg-2"><p class="element">Ba</p></div>
-  <div class="col-lg-2"><p class="element">Be</p></div>
-  <div class="col-lg-2"><p class="element">B</p></div>
+<div class="contaminants">
+  <div class="element">NH-3</div>
+  <div class="element">Sb</div>
+  <div class="element">As</div>
+  <div class="element">Ba</div>
+  <div class="element">Be</div>
+  <div class="element">B</div>
+
+  <div class="element">Cd</div>
+  <div class="element">Cr</div>
+  <div class="element">Cu</div>
+  <div class="element">Cn</div>
+  <div class="element">F</div>
+  <div class="element">GAP</div>
+
+  <div class="element">GBP</div>
+  <div class="element">Pb</div>
+  <div class="element">Mg</div>
+  <div class="element">Hg</div>
+  <div class="element">Mo</div>
+  <div class="element">Ni</div>
+
+  <div class="element">Ra</div>
+  <div class="element">Se</div>
+  <div class="element">Ag</div>
+  <div class="element">Sr</div>
+  <div class="element">Tl</div>
+  <div class="element">H-3</div>
+
+  <div class="element">U</div>
+
+{% for pollutant in page.pollutants %}
+  {% if pollutant.type != '' %}
+    <div class="element">{{ pollutant.type }}</div>
+  {% endif %}
+{% endfor %}
 </div>
 
-<div class="row">
-  <div class="col-lg-2"><p class="element">Cd</p></div>
-  <div class="col-lg-2"><p class="element">Cr</p></div>
-  <div class="col-lg-2"><p class="element">Cu</p></div>
-  <div class="col-lg-2"><p class="element">Cn</p></div>
-  <div class="col-lg-2"><p class="element">F</p></div>
-  <div class="col-lg-2"><p class="element">GAP</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">GBP</p></div>
-  <div class="col-lg-2"><p class="element">Pb</p></div>
-  <div class="col-lg-2"><p class="element">Mg</p></div>
-  <div class="col-lg-2"><p class="element">Hg</p></div>
-  <div class="col-lg-2"><p class="element">Mo</p></div>
-  <div class="col-lg-2"><p class="element">Ni</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">Ra</p></div>
-  <div class="col-lg-2"><p class="element">Se</p></div>
-  <div class="col-lg-2"><p class="element">Ag</p></div>
-  <div class="col-lg-2"><p class="element">Sr</p></div>
-  <div class="col-lg-2"><p class="element">Tl</p></div>
-  <div class="col-lg-2"><p class="element">H-3</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">U</p></div>
-</div>

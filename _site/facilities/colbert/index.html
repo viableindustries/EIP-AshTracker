@@ -111,7 +111,7 @@
               
                 
                  
-                   <li><a href="/facility/big-bend">Big Bend Power Station</a></li>
+                   <li><a href="/facilities/big-bend">Big Bend Power Station</a></li>
                  
                 
               
@@ -215,7 +215,7 @@ get_url_parameters();
  */
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
-    mapbox_extent  = [params.lat || 34.72622600000, params.lng || -87.82832100000],
+    mapbox_extent  = [params.lat || 34.741, params.lng || -87.849389],
     mapbox_zoom    = params.zoom || 13;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
@@ -898,7 +898,7 @@ var icon_downgradient_violation = {
 /**
  * Add the facility to the marker list
  */
-var facility = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
+var facility = L.marker(new L.LatLng(34.741, -87.849389), {
    icon: L.mapbox.marker.icon({
      'marker-size': 'large',
      'marker-color': '2984BD',
@@ -915,7 +915,7 @@ map.addLayer(markers);
 
 </script>
 
-<h5><strong>Facility</strong> View</h5>
+<h5><strong>Facility</strong> View <a title="Return to the National view" class="close-well pull-right" href="/">&times;</a></h5>
 
 <h1>Colbert Fossil Plant</h1>
 
@@ -934,7 +934,55 @@ map.addLayer(markers);
 <h4>Pollutants Not Monitored</h4>
 <h2>All contaminants of concern being monitored.</h2>
 
-<h3>About <strong>Colbert Fossil Plant</strong></h3>
+<div class="contaminants">
+
+  
+    <div class="element">Sb</div>
+  
+
+  
+    <div class="element">As</div>
+  
+
+  
+    <div class="element">B</div>
+  
+
+  
+    <div class="element">Cr</div>
+  
+
+  
+    <div class="element">F</div>
+  
+
+  
+    <div class="element">Pb</div>
+  
+
+  
+    <div class="element">Mg</div>
+  
+
+  
+    <div class="element">Mo</div>
+  
+
+  
+    <div class="element">Ni</div>
+  
+
+  
+    <div class="element">Se</div>
+  
+
+  
+    <div class="element">Tl</div>
+  
+
+</div>
+
+<h3 class="clear">About <strong>Colbert Fossil Plant</strong></h3>
 <p>The Colbert Fossil Plant houses two unlined ash impoundments that cover a 127 acre area on the Tennessee River in rural northwest Alabama. These impoundments have been seeping contaminants into the Tennessee River and one of its tributaries for almost 30 years, according to research conducted by EIP and its partner, the Southern Environmental Law Center (SELC).</p>
 
 <p>In February 2013, SELC notified TVA of their intention to file a Clean Water Act citizen suit on behalf of local conservation organizations. In May 2013, The Alabama Department of Environmental Management found that discharges from the Colbert Fossil plant contaminated local waters in violation of state law; unfortunately, the settlement agreement that is the result of this action fails to require compliance with the law or remediation of contaminated areas. For more information about Colbert, see EIP’s report Risky Business. Available here.</p>
