@@ -18,25 +18,25 @@
     <meta name="description" content="" />
 
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:title" content="COF-CA29BR" />
-    <meta property="twitter:url" content="_posts/2013-11-01-COF-CA29BR.md" />
+    <meta property="twitter:title" content="Cardinal Plant Ash Disposal Complex" />
+    <meta property="twitter:url" content="_posts/2013-11-01-cardinal-plant.md" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
     <meta property="og:site_name" content="" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="_posts/2013-11-01-COF-CA29BR.md" />
-    <meta property="og:title" content="COF-CA29BR" />
+    <meta property="og:url" content="_posts/2013-11-01-cardinal-plant.md" />
+    <meta property="og:title" content="Cardinal Plant Ash Disposal Complex" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="_posts/2013-11-01-COF-CA29BR.md" />
+    <meta name="dcterms.identifier" content="_posts/2013-11-01-cardinal-plant.md" />
     <meta name="dcterms.format" content="text/html" />
-    <meta name="dcterms.title" content="COF-CA29BR" />
+    <meta name="dcterms.title" content="Cardinal Plant Ash Disposal Complex" />
 
     <meta name="fragment" content="!" />
 
-    <title>COF-CA29BR | Ashtracker</title>
+    <title>Cardinal Plant Ash Disposal Complex | Ashtracker</title>
 
     <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
     <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
@@ -57,7 +57,7 @@
 
   </head>
 
-  <body class="">
+  <body class="facility">
     
     <header class="site-header">
       <div class="brand-container">
@@ -95,7 +95,7 @@
               
                 
                  
-                   <li><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></li>
+                   <li class="active"><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></li>
                  
                 
               
@@ -207,13 +207,12 @@ get_url_parameters();
  */
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
-    mapbox_extent  = [params.lat || 34.7320456, params.lng || -87.8546719],
+    mapbox_extent  = [params.lat || 40.2462, params.lng || -80.6526],
     mapbox_zoom    = params.zoom || 13;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
 map.scrollWheelZoom.disable();
-
 
 /**
  * Setup marker clustering
@@ -291,7 +290,7 @@ var icon_downgradient_violation = {
   var well_15 = L.marker(new L.LatLng(34.7226878, -87.8210783)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-p8?zoom=' + map_current_zoom + '&lat=34.7226878&lng=-87.8210783';  
@@ -299,8 +298,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-p8?zoom=' + map_current_zoom + '&lat=34.7226878&lng=-87.8210783';        
     }
-    
-    map.setView([34.7226878, -87.8210783], map_current_zoom);
 
   });
 
@@ -317,7 +314,7 @@ var icon_downgradient_violation = {
   var well_16 = L.marker(new L.LatLng(34.7368547, -87.8305219)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-p2?zoom=' + map_current_zoom + '&lat=34.7368547&lng=-87.8305219';  
@@ -325,8 +322,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-p2?zoom=' + map_current_zoom + '&lat=34.7368547&lng=-87.8305219';        
     }
-    
-    map.setView([34.7368547, -87.8305219], map_current_zoom);
 
   });
 
@@ -343,7 +338,7 @@ var icon_downgradient_violation = {
   var well_17 = L.marker(new L.LatLng(34.7330361, -87.8538172)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-mc5c?zoom=' + map_current_zoom + '&lat=34.7330361&lng=-87.8538172';  
@@ -351,8 +346,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-mc5c?zoom=' + map_current_zoom + '&lat=34.7330361&lng=-87.8538172';        
     }
-    
-    map.setView([34.7330361, -87.8538172], map_current_zoom);
 
   });
 
@@ -369,7 +362,7 @@ var icon_downgradient_violation = {
   var well_18 = L.marker(new L.LatLng(34.7330908, -87.8537867)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-mc5a?zoom=' + map_current_zoom + '&lat=34.7330908&lng=-87.8537867';  
@@ -377,8 +370,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-mc5a?zoom=' + map_current_zoom + '&lat=34.7330908&lng=-87.8537867';        
     }
-    
-    map.setView([34.7330908, -87.8537867], map_current_zoom);
 
   });
 
@@ -395,7 +386,7 @@ var icon_downgradient_violation = {
   var well_19 = L.marker(new L.LatLng(34.7343944, -87.8535519)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-mc4?zoom=' + map_current_zoom + '&lat=34.7343944&lng=-87.8535519';  
@@ -403,8 +394,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-mc4?zoom=' + map_current_zoom + '&lat=34.7343944&lng=-87.8535519';        
     }
-    
-    map.setView([34.7343944, -87.8535519], map_current_zoom);
 
   });
 
@@ -421,7 +410,7 @@ var icon_downgradient_violation = {
   var well_20 = L.marker(new L.LatLng(34.7343256, -87.8537344)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-mc1?zoom=' + map_current_zoom + '&lat=34.7343256&lng=-87.8537344';  
@@ -429,8 +418,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-mc1?zoom=' + map_current_zoom + '&lat=34.7343256&lng=-87.8537344';        
     }
-    
-    map.setView([34.7343256, -87.8537344], map_current_zoom);
 
   });
 
@@ -447,7 +434,7 @@ var icon_downgradient_violation = {
   var well_21 = L.marker(new L.LatLng(34.7350739, -87.8348989)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca9r?zoom=' + map_current_zoom + '&lat=34.7350739&lng=-87.8348989';  
@@ -455,8 +442,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca9r?zoom=' + map_current_zoom + '&lat=34.7350739&lng=-87.8348989';        
     }
-    
-    map.setView([34.7350739, -87.8348989], map_current_zoom);
 
   });
 
@@ -473,7 +458,7 @@ var icon_downgradient_violation = {
   var well_22 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca6?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
@@ -481,8 +466,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca6?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';        
     }
-    
-    map.setView([34.7263889, -87.8480556], map_current_zoom);
 
   });
 
@@ -499,7 +482,7 @@ var icon_downgradient_violation = {
   var well_23 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
@@ -507,8 +490,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';        
     }
-    
-    map.setView([34.7263889, -87.8480556], map_current_zoom);
 
   });
 
@@ -525,7 +506,7 @@ var icon_downgradient_violation = {
   var well_24 = L.marker(new L.LatLng(34.7390842, -87.8508211)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca31a?zoom=' + map_current_zoom + '&lat=34.7390842&lng=-87.8508211';  
@@ -533,8 +514,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca31a?zoom=' + map_current_zoom + '&lat=34.7390842&lng=-87.8508211';        
     }
-    
-    map.setView([34.7390842, -87.8508211], map_current_zoom);
 
   });
 
@@ -551,7 +530,7 @@ var icon_downgradient_violation = {
   var well_25 = L.marker(new L.LatLng(34.7312728, -87.8452033)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca30b?zoom=' + map_current_zoom + '&lat=34.7312728&lng=-87.8452033';  
@@ -559,8 +538,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca30b?zoom=' + map_current_zoom + '&lat=34.7312728&lng=-87.8452033';        
     }
-    
-    map.setView([34.7312728, -87.8452033], map_current_zoom);
 
   });
 
@@ -577,7 +554,7 @@ var icon_downgradient_violation = {
   var well_26 = L.marker(new L.LatLng(34.7320456, -87.8546719)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca29br?zoom=' + map_current_zoom + '&lat=34.7320456&lng=-87.8546719';  
@@ -585,8 +562,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca29br?zoom=' + map_current_zoom + '&lat=34.7320456&lng=-87.8546719';        
     }
-    
-    map.setView([34.7320456, -87.8546719], map_current_zoom);
 
   });
 
@@ -603,7 +578,7 @@ var icon_downgradient_violation = {
   var well_27 = L.marker(new L.LatLng(34.7319944, -87.8547247)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca29ar?zoom=' + map_current_zoom + '&lat=34.7319944&lng=-87.8547247';  
@@ -611,8 +586,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca29ar?zoom=' + map_current_zoom + '&lat=34.7319944&lng=-87.8547247';        
     }
-    
-    map.setView([34.7319944, -87.8547247], map_current_zoom);
 
   });
 
@@ -629,7 +602,7 @@ var icon_downgradient_violation = {
   var well_28 = L.marker(new L.LatLng(34.7492969, -87.8537656)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca28b?zoom=' + map_current_zoom + '&lat=34.7492969&lng=-87.8537656';  
@@ -637,8 +610,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca28b?zoom=' + map_current_zoom + '&lat=34.7492969&lng=-87.8537656';        
     }
-    
-    map.setView([34.7492969, -87.8537656], map_current_zoom);
 
   });
 
@@ -655,7 +626,7 @@ var icon_downgradient_violation = {
   var well_29 = L.marker(new L.LatLng(34.7500397, -87.8595886)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca27br?zoom=' + map_current_zoom + '&lat=34.7500397&lng=-87.8595886';  
@@ -663,8 +634,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca27br?zoom=' + map_current_zoom + '&lat=34.7500397&lng=-87.8595886';        
     }
-    
-    map.setView([34.7500397, -87.8595886], map_current_zoom);
 
   });
 
@@ -681,7 +650,7 @@ var icon_downgradient_violation = {
   var well_30 = L.marker(new L.LatLng(34.7394842, -87.8384236)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca22b?zoom=' + map_current_zoom + '&lat=34.7394842&lng=-87.8384236';  
@@ -689,8 +658,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca22b?zoom=' + map_current_zoom + '&lat=34.7394842&lng=-87.8384236';        
     }
-    
-    map.setView([34.7394842, -87.8384236], map_current_zoom);
 
   });
 
@@ -707,7 +674,7 @@ var icon_downgradient_violation = {
   var well_31 = L.marker(new L.LatLng(34.7275, -87.8333333)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca21b?zoom=' + map_current_zoom + '&lat=34.7275&lng=-87.8333333';  
@@ -715,8 +682,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca21b?zoom=' + map_current_zoom + '&lat=34.7275&lng=-87.8333333';        
     }
-    
-    map.setView([34.7275, -87.8333333], map_current_zoom);
 
   });
 
@@ -733,7 +698,7 @@ var icon_downgradient_violation = {
   var well_32 = L.marker(new L.LatLng(34.7313303, -87.8287664)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca20b?zoom=' + map_current_zoom + '&lat=34.7313303&lng=-87.8287664';  
@@ -741,8 +706,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca20b?zoom=' + map_current_zoom + '&lat=34.7313303&lng=-87.8287664';        
     }
-    
-    map.setView([34.7313303, -87.8287664], map_current_zoom);
 
   });
 
@@ -759,7 +722,7 @@ var icon_downgradient_violation = {
   var well_33 = L.marker(new L.LatLng(34.7309681, -87.8292878)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca20a?zoom=' + map_current_zoom + '&lat=34.7309681&lng=-87.8292878';  
@@ -767,8 +730,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca20a?zoom=' + map_current_zoom + '&lat=34.7309681&lng=-87.8292878';        
     }
-    
-    map.setView([34.7309681, -87.8292878], map_current_zoom);
 
   });
 
@@ -785,7 +746,7 @@ var icon_downgradient_violation = {
   var well_34 = L.marker(new L.LatLng(34.7369053, -87.8362842)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca19b?zoom=' + map_current_zoom + '&lat=34.7369053&lng=-87.8362842';  
@@ -793,8 +754,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca19b?zoom=' + map_current_zoom + '&lat=34.7369053&lng=-87.8362842';        
     }
-    
-    map.setView([34.7369053, -87.8362842], map_current_zoom);
 
   });
 
@@ -811,7 +770,7 @@ var icon_downgradient_violation = {
   var well_35 = L.marker(new L.LatLng(34.7346303, -87.8471814)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca17b?zoom=' + map_current_zoom + '&lat=34.7346303&lng=-87.8471814';  
@@ -819,8 +778,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca17b?zoom=' + map_current_zoom + '&lat=34.7346303&lng=-87.8471814';        
     }
-    
-    map.setView([34.7346303, -87.8471814], map_current_zoom);
 
   });
 
@@ -837,7 +794,7 @@ var icon_downgradient_violation = {
   var well_36 = L.marker(new L.LatLng(34.7347222, -87.8472222)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca17a?zoom=' + map_current_zoom + '&lat=34.7347222&lng=-87.8472222';  
@@ -845,8 +802,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca17a?zoom=' + map_current_zoom + '&lat=34.7347222&lng=-87.8472222';        
     }
-    
-    map.setView([34.7347222, -87.8472222], map_current_zoom);
 
   });
 
@@ -863,7 +818,7 @@ var icon_downgradient_violation = {
   var well_37 = L.marker(new L.LatLng(34.7291667, -87.8402778)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca16?zoom=' + map_current_zoom + '&lat=34.7291667&lng=-87.8402778';  
@@ -871,8 +826,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca16?zoom=' + map_current_zoom + '&lat=34.7291667&lng=-87.8402778';        
     }
-    
-    map.setView([34.7291667, -87.8402778], map_current_zoom);
 
   });
 
@@ -889,7 +842,7 @@ var icon_downgradient_violation = {
   var well_38 = L.marker(new L.LatLng(34.7317492, -87.8436472)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca12a?zoom=' + map_current_zoom + '&lat=34.7317492&lng=-87.8436472';  
@@ -897,8 +850,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca12a?zoom=' + map_current_zoom + '&lat=34.7317492&lng=-87.8436472';        
     }
-    
-    map.setView([34.7317492, -87.8436472], map_current_zoom);
 
   });
 
@@ -915,7 +866,7 @@ var icon_downgradient_violation = {
   var well_39 = L.marker(new L.LatLng(34.7262258, -87.8283206)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
-    
+
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
       window.location.href = '//facilities/colbert/cof-ca11?zoom=' + map_current_zoom + '&lat=34.7262258&lng=-87.8283206';  
@@ -923,8 +874,6 @@ var icon_downgradient_violation = {
     else {
       window.location.href = '/facilities/colbert/cof-ca11?zoom=' + map_current_zoom + '&lat=34.7262258&lng=-87.8283206';        
     }
-    
-    map.setView([34.7262258, -87.8283206], map_current_zoom);
 
   });
 
@@ -938,177 +887,17 @@ var icon_downgradient_violation = {
   
 
 
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-    /**
-     * Add the facility to the marker list
-     */
-    var this_facility = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
-       icon: L.mapbox.marker.icon({
-         'marker-size': 'large',
-         'marker-color': '2984BD',
-         'marker-symbol': 'industrial'
-       })
-    });
-    map.addLayer(this_facility);
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
+/**
+ * Add the facility to the marker list
+ */
+var facility = L.marker(new L.LatLng(40.2462, -80.6526), {
+   icon: L.mapbox.marker.icon({
+     'marker-size': 'large',
+     'marker-color': '2984BD',
+     'marker-symbol': 'industrial'
+   })
+});
+map.addLayer(facility);
 
 
 /**
@@ -1118,71 +907,34 @@ map.addLayer(markers);
 
 </script>
 
+<h5><strong>Facility</strong> View</h5>
 
-<h5><strong>Well</strong> View <a class="close-well pull-right" href="/facilities/colbert">&times;</a></h5>
+<h1>Cardinal Plant Ash Disposal Complex</h1>
 
-<h1>COF-CA29BR</h1>
+<address>
+  306 County Road 7 East<br />
+  Brilliant, OH 43913<br >
+  Jefferson County
+</address>
 
-<h4>Designation</h4>
-<h2>Downgradient</h2>
+<h4>Owner - Operator</h4>
+<h2>American Electric Power (AEP)</h2>
 
-<div class="row content contaminant-status">
-  <div class="col-sm-10">
-    <h4>Contaiminant Status</h4>
-    <h2>Downgradient, Not in Compliance</h2>
-  </div>
-  <div class="col-sm-2">
-    
-    <div class="indicator violation downgradient"><span class="caret"></span></div>
-    
-  </div>
-</div>
+<h4>Impoundment Hazard Rating</h4>
+<h2>High (Reservoir 2)</h2>
 
-<div class="content contaminants">
+<h4>Pollutants Not Monitored</h4>
+<h2></h2>
 
+<h3>About <strong>Cardinal Plant Ash Disposal Complex</strong></h3>
+<p>The AEP facility and CCW disposal sites sit on the edge of the bluffs overlooking the Ohio River. The disposal areas include the Bottom Ash Complex (Bottom Ash Pond and Recirculation Pond), Fly Ash Reservoir 1 (decomissioned) and Fly Ash Reservoir 2. In May of 2012, AEP applied for permission to raise the dam height of Reservoir 2 by 13 feet to accommodate waste disposal plans through 2019.</p>
 
-<div class="row">
-  <div class="col-lg-2"><p class="element">NH-3</p></div>
-  <div class="col-lg-2"><p class="element">Sb</p></div>
-  <div class="col-lg-2"><p class="element">As</p></div>
-  <div class="col-lg-2"><p class="element">Ba</p></div>
-  <div class="col-lg-2"><p class="element">Be</p></div>
-  <div class="col-lg-2"><p class="element">B</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">Cd</p></div>
-  <div class="col-lg-2"><p class="element">Cr</p></div>
-  <div class="col-lg-2"><p class="element">Cu</p></div>
-  <div class="col-lg-2"><p class="element">Cn</p></div>
-  <div class="col-lg-2"><p class="element">F</p></div>
-  <div class="col-lg-2"><p class="element">GAP</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">GBP</p></div>
-  <div class="col-lg-2"><p class="element">Pb</p></div>
-  <div class="col-lg-2"><p class="element">Mg</p></div>
-  <div class="col-lg-2"><p class="element">Hg</p></div>
-  <div class="col-lg-2"><p class="element">Mo</p></div>
-  <div class="col-lg-2"><p class="element">Ni</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">Ra</p></div>
-  <div class="col-lg-2"><p class="element">Se</p></div>
-  <div class="col-lg-2"><p class="element">Ag</p></div>
-  <div class="col-lg-2"><p class="element">Sr</p></div>
-  <div class="col-lg-2"><p class="element">Tl</p></div>
-  <div class="col-lg-2"><p class="element">H-3</p></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"><p class="element">U</p></div>
-</div>
+<p>Hydrogeological reports document that the two reservoirs have “significantly impacted the site geomorphology and hydrogeologic conditions” due to the filling of two branches of Block House Hollow and valley fills of saturated fly ash; the reservoirs likely contribute recharge (and contamination) to upper aquifers, which are themselves hydrologically connected to lower aquifers shared by nearby residential wells. For more about information about Cardinal, see EIP’s report In Harm’s Way. Available here</p>
 
 
-</div>
+<h4>Download Data</h4>
+<p class="text-center"><a class="button download" href="" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+
     </main>
     
     <footer role="complementary" class="site-footer">

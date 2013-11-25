@@ -21,6 +21,41 @@ map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent
 
 map.scrollWheelZoom.disable();
 
+
+/**
+ * Setup all of the facilities
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+
+{% for facility in site.posts %}
+  {% if facility.layout == 'facility' %}
+  var facility_{{ forloop.index }} = L.marker(new L.LatLng({{ facility.coordinates[1] }}, {{ facility.coordinates[0] }}), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    var map_current_zoom = map.getZoom();
+
+    if ('{{ site.baseurl }}' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '{{ site.baseurl }}{{ facility.url }}?zoom=' + map_current_zoom + '&lat={{ facility.coordinates[1]}}&lng={{ facility.coordinates[0] }}';  
+    }
+    else {
+      window.location.href = '{{ facility.url }}?zoom=' + map_current_zoom + '&lat={{ facility.coordinates[1]}}&lng={{ facility.coordinates[0] }}';        
+    }
+
+  });
+
+  markers.addLayer(facility_{{ forloop.index }});
+  
+  {% endif %}
+{% endfor %}
+
+map.addLayer(markers);
+
 </script>
 
 <h1>Ashtracker</h1>
