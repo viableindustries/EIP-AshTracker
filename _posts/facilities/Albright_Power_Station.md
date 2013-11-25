@@ -1,23 +1,23 @@
 ---
 published: false
 layout: facility
-permalink: facilities/colbert
-facility_class: colbert
+permalink: facilities/Albright_Power_Station
+facility_class: Albright_Power_Station
 date: {}
 coordinates: 
-  - "-87.849389"
-  - "34.741"
-page_title: Colbert Fossil Plant « Tennessee Valley Authority (TVA) « Facilities
+  - "-79.639389"
+  - "39.489694"
+page_title: "Albright Power Station « FirstEnergy - Monongahela Power « Facilities"
 page_class: facility
 address: 
-  street: 900 Colbert Steam Plant Road
-  city: Tuscumbia
-  state: AL
-  zipcode: "35674"
-  county: Colbert County
-owner_operator: Tennessee Valley Authority (TVA)
-impoundment_hazard_rating: High hazard
-monitoring: All contaminants of concern being monitored.
+  street: 530 Power Plant Road
+  city: Albright
+  state: WV
+  zipcode: "26519"
+  county: Preston County
+owner_operator: "FirstEnergy - Monongahela Power)"
+impoundment_hazard_rating: Impoundments at this site not rated.
+monitoring: Cobalt
 pollutants: 
   - type: Sb
   - type: As
