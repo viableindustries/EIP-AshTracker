@@ -90,7 +90,15 @@
                 
               
                 
+                 
+                   <li><a href="/facilities/campbell">JH Campbell Landfill </a></li>
+                 
+                
               
+                
+                 
+                   <li><a href="/facilities/flint-creek">Flint Creek Power Plant</a></li>
+                 
                 
               
                 
@@ -247,7 +255,53 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
+  var facility_9 = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    var map_current_zoom = map.getZoom();
 
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/campbell?zoom=' + map_current_zoom + '&lat=34.72622600000&lng=-87.82832100000';  
+    }
+    else {
+      window.location.href = '/facilities/campbell?zoom=' + map_current_zoom + '&lat=34.72622600000&lng=-87.82832100000';        
+    }
+
+  });
+
+  markers.addLayer(facility_9);
+  
+  
+
+  
+  var facility_10 = L.marker(new L.LatLng(36.260697, -94.513442), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    var map_current_zoom = map.getZoom();
+
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/flint-creek?zoom=' + map_current_zoom + '&lat=36.260697&lng=-94.513442';  
+    }
+    else {
+      window.location.href = '/facilities/flint-creek?zoom=' + map_current_zoom + '&lat=36.260697&lng=-94.513442';        
+    }
+
+  });
+
+  markers.addLayer(facility_10);
+  
   
 
   
