@@ -2,7 +2,7 @@
 published: true
 layout: facility
 permalink: facilities/Albright_Power_Station
-facility_class: Albright_Power_Station
+facility_class: albright
 date: {}
 coordinates: 
   - "-79.639389"
