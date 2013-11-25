@@ -1,38 +1,67 @@
 <div class="contaminants">
-  <div class="element">NH-3</div>
-  <div class="element">Sb</div>
-  <div class="element">As</div>
-  <div class="element">Ba</div>
-  <div class="element">Be</div>
-  <div class="element">B</div>
-
-  <div class="element">Cd</div>
-  <div class="element">Cr</div>
-  <div class="element">Cu</div>
-  <div class="element">Cn</div>
-  <div class="element">F</div>
-  <div class="element">GAP</div>
-
-  <div class="element">GBP</div>
-  <div class="element">Pb</div>
-  <div class="element">Mg</div>
-  <div class="element">Hg</div>
-  <div class="element">Mo</div>
-  <div class="element">Ni</div>
-
-  <div class="element">Ra</div>
-  <div class="element">Se</div>
-  <div class="element">Ag</div>
-  <div class="element">Sr</div>
-  <div class="element">Tl</div>
-  <div class="element">H-3</div>
-
-  <div class="element">U</div>
-
 {% for pollutant in page.pollutants %}
-  {% if pollutant.type != '' %}
-    <div class="element">{{ pollutant.type }}</div>
-  {% endif %}
+  <div {% if pollutant.health_base_standard_exceeded %}class="element element-clickable violation" data-toggle="element-{{ pollutant.type }}"{% else %}class="element"{% endif %}>{{ pollutant.type }}</div>
 {% endfor %}
 </div>
 
+{% for pollutant in page.pollutants %}
+  {% if pollutant.health_base_standard_exceeded %}
+  <div id="element-{{ pollutant.type }}" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-{{ pollutant.type }}">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>{{ pollutant.type }}</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>{{ pollutant.name }}</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Exceedance Type</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>{{ pollutant.health_base_standard_exceeded }}</h2>
+        </div>
+      </div>
+
+      <div class="row other last">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>{{ pollutant.number_of_times_in_exceedance }} / {{ pollutant.number_of_times_monitored }}</h2>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-6">
+          <h4><strong>Threshold</strong></h4>
+          <span class="statistic">{{ pollutant.max_allowable_amount }} {{ pollutant.unit_of_measurement }}</span>
+        </div>
+        <div class="col-sm-6">
+          <h4><strong>Maximum Reading</strong></h4>
+          <span class="statistic">{{ pollutant.max_exceedance_amount }} {{ pollutant.unit_of_measurement }}</span>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+  {% endif %}
+{% endfor %}

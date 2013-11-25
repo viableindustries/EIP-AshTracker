@@ -189,6 +189,7 @@
     <div id="map" class="site-map"></div>
 
     <main role="content" class="site-content">
+      <a name="content-top" id="content-top"></a>
       <script>
 
 var params, map;
@@ -215,7 +216,7 @@ get_url_parameters();
  */
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
-    mapbox_extent  = [params.lat || 34.7263889, params.lng || -87.8480556],
+    mapbox_extent  = [params.lat || 34.7263889, params.lng || -87.8481916],
     mapbox_zoom    = params.zoom || 13;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
@@ -504,19 +505,19 @@ var icon_downgradient_violation = {
   
 
   
-  var well_23 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
+  var well_23 = L.marker(new L.LatLng(34.7263889, -87.8481916)).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
     
     if ('/' == 'http://viableindustries.github.io/ashtracker/') {
       console.log('GITHUB ACTIVATED')
-      window.location.href = '//facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
+      window.location.href = '//facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8481916';  
     }
     else {
-      window.location.href = '/facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';        
+      window.location.href = '/facilities/colbert/cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8481916';        
     }
     
-    map.setView([34.7263889, -87.8480556], map_current_zoom);
+    map.setView([34.7263889, -87.8481916], map_current_zoom);
 
   });
 
@@ -1150,38 +1151,225 @@ map.addLayer(markers);
 
 
 <div class="contaminants">
+
   <div class="element">NH-3</div>
+
   <div class="element">Sb</div>
+
   <div class="element">As</div>
+
   <div class="element">Ba</div>
+
   <div class="element">Be</div>
+
   <div class="element">B</div>
 
   <div class="element">Cd</div>
+
   <div class="element">Cr</div>
+
   <div class="element">Cu</div>
+
   <div class="element">Cn</div>
+
   <div class="element">F</div>
+
   <div class="element">GAP</div>
 
   <div class="element">GBP</div>
-  <div class="element">Pb</div>
-  <div class="element">Mg</div>
+
+  <div class="element element-clickable violation" data-toggle="element-Pb">Pb</div>
+
+  <div class="element element-clickable violation" data-toggle="element-Mg">Mg</div>
+
   <div class="element">Hg</div>
+
   <div class="element">Mo</div>
+
   <div class="element">Ni</div>
 
   <div class="element">Ra</div>
+
   <div class="element">Se</div>
+
   <div class="element">Ag</div>
+
   <div class="element">Sr</div>
+
   <div class="element">Tl</div>
+
   <div class="element">H-3</div>
 
   <div class="element">U</div>
 
-
 </div>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div id="element-Pb" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Pb">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Pb</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Lead</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Exceedance Type</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>MCL</h2>
+        </div>
+      </div>
+
+      <div class="row other last">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>1 / 7</h2>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-6">
+          <h4><strong>Threshold</strong></h4>
+          <span class="statistic">0.015 mg/L</span>
+        </div>
+        <div class="col-sm-6">
+          <h4><strong>Maximum Reading</strong></h4>
+          <span class="statistic">0.1 mg/L</span>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+  
+
+  
+  <div id="element-Mg" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mg">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Mg</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Manganese</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Exceedance Type</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>LHA</h2>
+        </div>
+      </div>
+
+      <div class="row other last">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>1 / 7</h2>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-6">
+          <h4><strong>Threshold</strong></h4>
+          <span class="statistic">0.3 mg/L</span>
+        </div>
+        <div class="col-sm-6">
+          <h4><strong>Maximum Reading</strong></h4>
+          <span class="statistic">0.34 mg/L</span>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
