@@ -1,0 +1,7 @@
+<div class="contaminants">
+{% for pollutant in page.pollutants %}
+  {% if pollutant.type != '' %}
+    <div class="element">{{ pollutant.type }}</div>
+  {% endif %}
+{% endfor %}
+</div>

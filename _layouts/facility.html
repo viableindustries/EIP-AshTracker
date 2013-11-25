@@ -78,7 +78,7 @@ var icon_downgradient_violation = {
  * Add each of our wells to the list
  */
 {% for well in site.posts %}
-  {% if well.layout == 'well' && page.url == well.facility_url  %}
+  {% if well.layout == 'well' and well.facility_class == page.facility_class %}
   var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
     
     var map_current_zoom = map.getZoom();
@@ -129,7 +129,7 @@ map.addLayer(markers);
 
 </script>
 
-<h5><strong>Facility</strong> View</h5>
+<h5><strong>Facility</strong> View <a title="Return to the National view" class="close-well pull-right" href="{{ site.baseurl }}">&times;</a></h5>
 
 <h1>{{ page.title }}</h1>
 
@@ -148,7 +148,9 @@ map.addLayer(markers);
 <h4>Pollutants Not Monitored</h4>
 <h2>{{ page.monitoring }}</h2>
 
-<h3>About <strong>{{ page.title }}</strong></h3>
+{% include facility-contaminants.html %}
+
+<h3 class="clear">About <strong>{{ page.title }}</strong></h3>
 {{ content }}
 
 <h4>Download Data</h4>

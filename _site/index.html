@@ -82,8 +82,42 @@
                 
               
                 
+              
+                
+              
+                
+              
+                
+              
+                
                  
-                   <li><a href="/">Little Blue Run Disposal Area</a></li>
+                   <li><a href="/facilities/campbell">JH Campbell Landfill </a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/flint-creek">Flint Creek Power Plant</a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></li>
+                 
+                
+              
+                
+              
+                
+                 
+                   <li><a href="/facilities/big-bend">Big Bend Power Station</a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/hatfield">Hatfield Ash Disposal Site</a></li>
                  
                 
               
@@ -173,6 +207,220 @@ var mapbox_id      = "developedsimple.g7pfo3pa",
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
 map.scrollWheelZoom.disable();
+
+
+/**
+ * Setup all of the facilities
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+
+
+  
+
+  
+
+  
+
+  
+  var facility_4 = L.marker(new L.LatLng(34.741, -87.849389), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/colbert?zoom=13&lat=34.741&lng=-87.849389';  
+    }
+    else {
+      window.location.href = '/facilities/colbert?zoom=13&lat=34.741&lng=-87.849389';        
+    }
+
+  });
+
+  markers.addLayer(facility_4);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_9 = L.marker(new L.LatLng(42.920909, -86.206292), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/campbell?zoom=13&lat=42.920909&lng=-86.206292';  
+    }
+    else {
+      window.location.href = '/facilities/campbell?zoom=13&lat=42.920909&lng=-86.206292';        
+    }
+
+  });
+
+  markers.addLayer(facility_9);
+  
+  
+
+  
+  var facility_10 = L.marker(new L.LatLng(36.260697, -94.513442), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/flint-creek?zoom=13&lat=36.260697&lng=-94.513442';  
+    }
+    else {
+      window.location.href = '/facilities/flint-creek?zoom=13&lat=36.260697&lng=-94.513442';        
+    }
+
+  });
+
+  markers.addLayer(facility_10);
+  
+  
+
+  
+  var facility_11 = L.marker(new L.LatLng(40.2462, -80.6526), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/cardinal?zoom=13&lat=40.2462&lng=-80.6526';  
+    }
+    else {
+      window.location.href = '/facilities/cardinal?zoom=13&lat=40.2462&lng=-80.6526';        
+    }
+
+  });
+
+  markers.addLayer(facility_11);
+  
+  
+
+  
+
+  
+  var facility_13 = L.marker(new L.LatLng(27.78086667, -82.39565833), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/big-bend?zoom=13&lat=27.78086667&lng=-82.39565833';  
+    }
+    else {
+      window.location.href = '/facilities/big-bend?zoom=13&lat=27.78086667&lng=-82.39565833';        
+    }
+
+  });
+
+  markers.addLayer(facility_13);
+  
+  
+
+  
+  var facility_14 = L.marker(new L.LatLng(39.85611100000, -79.94572200000), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    
+    if ('/' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '//facilities/hatfield?zoom=13&lat=39.85611100000&lng=-79.94572200000';  
+    }
+    else {
+      window.location.href = '/facilities/hatfield?zoom=13&lat=39.85611100000&lng=-79.94572200000';        
+    }
+
+  });
+
+  markers.addLayer(facility_14);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+map.addLayer(markers);
 
 </script>
 
