@@ -1,24 +1,37 @@
 ---
 layout: facility
-permalink: "facilities/big-bend"
+permalink: facilities/bigbend
 title: Big Bend Power Station
-page_title: Big Bend Power Station « Facilities
+page_title: Big Bend Station « Tampa Electric Company (TECO) « Facilities
 page_class: facility
 address: 
   street: 13031 Wyandotte Road
   city: Apollo Beach
   state: FL
-  zipcode: 33572
-  county: Hillsborough County
+  zipcode: "33572"
+  county: Hillsborough  County
 owner_operator: Tampa Electric Company (TECO)
 impoundment_hazard_rating: All four impoundments have a low hazard ranking.
 pollutants: 
-  - type: Co
+  - type: Sb
+  - type: As
+  - type: B
+  - type: Cr
+  - type: F
+  - type: Pb
+  - type: Mg
+  - type: Mo
+  - type: Ni
+  - type: Se
+  - type: Tl
 coordinates: 
-  - "-82.39565833"
-  - "27.78086667"
+  - "-82.405194"
+  - "27.797444"
 data_download: ""
 published: true
+facility_class: bigbend
+date: null
+monitoring: Cobalt.
 ---
 
 Little Blue Run is the nation’s largest coal ash impoundment. At nearly 1,700 acres it straddles land in West Virginia and Pennsylvania. It is also completely unlined. In July of 2012, the Pennsylvania DEP filed a complaint and consent decree, finding that the impoundment’s seeps and associated discharges to groundwater “may present an imminent and substantial endangerment to health or the environment,” in violation of federal law.
