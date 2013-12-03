@@ -1,6 +1,136 @@
 ---
 layout: default
 ---
+<script>
+
+var params, map;
+
+console.log('{{ site.baseurl }}')
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent and zoom
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || {{ page.coordinates[1] }}, params.lng || {{ page.coordinates[0] }}],
+    mapbox_zoom    = params.zoom || 13;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "{{ site.baseurl }}static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "upgradient-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "{{ site.baseurl }}static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "{{ site.baseurl }}static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "{{ site.baseurl }}static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "downgradient-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+{% for well in site.posts %}
+  {% if well.layout == 'well' and well.facility_class == page.facility_class %}
+  var well_{{ forloop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
+    
+    var map_current_zoom = map.getZoom();
+
+    if ('{{ site.baseurl }}' == 'http://viableindustries.github.io/ashtracker/') {
+      console.log('GITHUB ACTIVATED')
+      window.location.href = '{{ site.baseurl }}{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
+    }
+    else {
+      window.location.href = '{{ well.url }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';        
+    }
+
+  });
+
+  {% if well.legend == 'Downgradient, In Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_downgradient_compliant));
+  {% elsif well.legend == 'Upgradient, In Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_upgradient_compliant));
+  {% elsif well.legend == 'Downgradient, Not in Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_downgradient_violation));
+  {% elsif well.legend == 'Upgradient, Not in Compliance' %}
+    well_{{ forloop.index }}.setIcon(L.icon(icon_upgradient_violation));
+  {% endif %}
+
+
+
+  markers.addLayer(well_{{ forloop.index }});
+  {% endif %}
+{% endfor %}
+
+/**
+ * Add the facility to the marker list
+ */
+var facility = L.marker(new L.LatLng({{ page.coordinates[1] }}, {{ page.coordinates[0] }}), {
+   icon: L.mapbox.marker.icon({
+     'marker-size': 'large',
+     'marker-color': '2984BD',
+     'marker-symbol': 'industrial'
+   })
+});
+map.addLayer(facility);
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Facility</strong> View <a title="Return to the National view" class="close-well pull-right" href="{{ site.baseurl }}">&times;</a></h5>
+
 <h1>{{ page.title }}</h1>
 
 <address>
@@ -9,19 +139,19 @@ layout: default
   {{ page.address.county }}
 </address>
 
-<script>
-var well_information = {
-    "type": "Point",
-    "coordinates": [
-        {{ page.coordinates[0] }},
-        {{ page.coordinates[1] }}
-    ]
-}
+<h4>Owner - Operator</h4>
+<h2>{{ page.owner_operator }}</h2>
 
-// alert(well_information.coordinates[0] + '/' + well_information.coordinates[1])
-</script>
+<h4>Impoundment Hazard Rating</h4>
+<h2>{{ page.impoundment_hazard_rating }}</h2>
 
+<h4>Pollutants Not Monitored</h4>
+<h2>{{ page.monitoring }}</h2>
 
-<div class="post">
+{% include facility-contaminants.html %}
+
+<h3 class="clear">About <strong>{{ page.title }}</strong></h3>
 {{ content }}
-</div>
+
+<h4>Download Data</h4>
+<p class="text-center"><a class="button download" href="{{ page.data_url }}" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>

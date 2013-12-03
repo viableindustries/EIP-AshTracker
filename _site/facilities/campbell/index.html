@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="JH Campbell Landfill " />
+    <meta property="twitter:url" content="_posts/facilities/2013-11-01-jh-campbell-landfill.md" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="_posts/facilities/2013-11-01-jh-campbell-landfill.md" />
+    <meta property="og:title" content="JH Campbell Landfill " />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="_posts/facilities/2013-11-01-jh-campbell-landfill.md" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="JH Campbell Landfill " />
+
+    <meta name="fragment" content="!" />
+
+    <title>JH Campbell Landfill  | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="facility">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+      <nav role="navigation">
+        <ul class="nav nav-justified">
+          <li class="dropdown">
+            <a href="/facilities" class="facilities dropdown-toggle" data-toggle="dropdown">Facilities <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              
+                
+              
+                
+              
+                
+              
+                
+                 
+                   <li><a href="/facilities/colbert">Colbert Fossil Plant</a></li>
+                 
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                 
+                   <li class="active"><a href="/facilities/campbell">JH Campbell Landfill </a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/flint-creek">Flint Creek Power Plant</a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></li>
+                 
+                
+              
+                
+              
+                
+                 
+                   <li><a href="/facilities/big-bend">Big Bend Power Station</a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/hatfield">Hatfield Ash Disposal Site</a></li>
+                 
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </ul>
+          </li>
+          
+            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+          
+          
+            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+          
+          
+            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    
+    <div id="map" class="site-map"></div>
+
+    <main role="content" class="site-content">
+      <a name="content-top" id="content-top"></a>
+      <script>
+
+var params, map;
+
+console.log('/')
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent and zoom
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 42.920909, params.lng || -86.206292],
+    mapbox_zoom    = params.zoom || 13;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "upgradient-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [0, -55],
+  "className": "downgradient-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+/**
+ * Add the facility to the marker list
+ */
+var facility = L.marker(new L.LatLng(42.920909, -86.206292), {
+   icon: L.mapbox.marker.icon({
+     'marker-size': 'large',
+     'marker-color': '2984BD',
+     'marker-symbol': 'industrial'
+   })
+});
+map.addLayer(facility);
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Facility</strong> View <a title="Return to the National view" class="close-well pull-right" href="/">&times;</a></h5>
+
+<h1>JH Campbell Landfill </h1>
+
+<address>
+  17000 Croswell Street<br />
+  West Olive, MI 49460<br >
+  Ottawa County
+</address>
+
+<h4>Owner - Operator</h4>
+<h2>Consumer’s Energy Company</h2>
+
+<h4>Impoundment Hazard Rating</h4>
+<h2>No impoundments present.</h2>
+
+<h4>Pollutants Not Monitored</h4>
+<h2></h2>
+
+<div class="contaminants">
+
+  
+    <div class="element">Co</div>
+  
+
+  
+    <div class="element">Cd</div>
+  
+
+  
+    <div class="element">Pb</div>
+  
+
+</div>
+
+<h3 class="clear">About <strong>JH Campbell Landfill </strong></h3>
+<p>The JH Campbell Generating Complex contains a 410 acre landfill, and is located about one mile east of Lake Michigan. In response to an EPA request for data in 2010, Consumer’s Energy admitted that discharges from the Complex contaminated groundwater in excess of state standards or federal standards for antimony, boron, chromium, lead, selenium, vanadium, cadmium, lead, manganese and zinc- though the facility does not routinely analyze groundwater samples for cadmium or lead.</p>
+
+
+<h4>Download Data</h4>
+<p class="text-center"><a class="button download" href="" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+
+    </main>
+    
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              1 Thomas Circle<br />
+              Washington, D.C. 20005
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: <br />
+              Fax: 202-296-8822
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; Copyright (c) 2013 Ashtracker is brought to you by the Environmental Integrity Project. All rights reserved. Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '']);
+      _gaq.push(['_setDomainName', '']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+
+</html>

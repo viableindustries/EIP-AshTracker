@@ -66,33 +66,33 @@
       <nav role="navigation">
         <ul class="nav nav-justified">
           <li class="dropdown">
-            <a href="/facilities" class="facilities dropdown-toggle" data-toggle="dropdown">Facilities <span class="caret"></span></a>
+            <a href="{{ site.baseurl }}facilities" class="facilities dropdown-toggle" data-toggle="dropdown">Facilities <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               {% for facility in site.posts %}
                 {% if facility.layout == 'facility' %}
                  {% if page.url == facility.url %}
-                   <li class="active"><a href="{{ facility.url }}">{{ facility.title }}</a></li>
+                   <li class="active"><a href="{{ site.baseurl }}{{ facility.permalink }}">{{ facility.title }}</a></li>
                  {% else %}
-                   <li><a href="{{ facility.url }}">{{ facility.title }}</a></li>
+                   <li><a href="{{ site.baseurl }}{{ facility.permalink }}">{{ facility.title }}</a></li>
                  {% endif %}
                 {% endif %}
               {% endfor %}
             </ul>
           </li>
           {% if page.url == '/downloads' %}
-            <li class="active" role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+            <li class="active" role="presentation"><a href="{{ site.baseurl }}downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
           {% else %}
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+            <li role="presentation"><a href="{{ site.baseurl }}downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
           {% endif %}
           {% if page.url == '/glossary' %}
-            <li class="active" role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            <li class="active" role="presentation"><a href="{{ site.baseurl }}glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
           {% else %}
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            <li role="presentation"><a href="{{ site.baseurl }}glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
           {% endif %}
           {% if page.url == '/help' %}
-            <li class="active" role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <li class="active" role="presentation"><a href="{{ site.baseurl }}help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
           {% else %}
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <li role="presentation"><a href="{{ site.baseurl }}help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
           {% endif %}
         </ul>
       </nav>
@@ -101,6 +101,7 @@
     <div id="map" class="site-map"></div>
 
     <main role="content" class="site-content">
+      <a name="content-top" id="content-top"></a>
       {{ content }}
     </main>
     

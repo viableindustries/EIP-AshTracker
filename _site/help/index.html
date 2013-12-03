@@ -19,18 +19,18 @@
 
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Help" />
-    <meta property="twitter:url" content="_posts/2013-11-01-help.markdown" />
+    <meta property="twitter:url" content="_posts/2013-11-01-help.md" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
     <meta property="og:site_name" content="" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="_posts/2013-11-01-help.markdown" />
+    <meta property="og:url" content="_posts/2013-11-01-help.md" />
     <meta property="og:title" content="Help" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="_posts/2013-11-01-help.markdown" />
+    <meta name="dcterms.identifier" content="_posts/2013-11-01-help.md" />
     <meta name="dcterms.format" content="text/html" />
     <meta name="dcterms.title" content="Help" />
 
@@ -78,6 +78,46 @@
                 
                  
                    <li><a href="/facilities/colbert">Colbert Fossil Plant</a></li>
+                 
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                 
+                   <li><a href="/facilities/campbell">JH Campbell Landfill </a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/flint-creek">Flint Creek Power Plant</a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></li>
+                 
+                
+              
+                
+              
+                
+                 
+                   <li><a href="/facilities/big-bend">Big Bend Power Station</a></li>
+                 
+                
+              
+                
+                 
+                   <li><a href="/facilities/hatfield">Hatfield Ash Disposal Site</a></li>
                  
                 
               
@@ -149,21 +189,32 @@
     <div id="map" class="site-map"></div>
 
     <main role="content" class="site-content">
-      <h2>Help</h2>
+      <a name="content-top" id="content-top"></a>
+      <script>
 
-<script>
-var well_information = {
-    "type": "Point",
-    "coordinates": [
-        ,
-        
-    ]
-}
+var params, map;
+
+console.log('/')
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [39.8282, -98.5795],
+    mapbox_zoom    = 4;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
 </script>
 
+<h1>Help</h1>
 
-<div class="post">
-
+<div class="content">
+  
 </div>
 
     </main>
