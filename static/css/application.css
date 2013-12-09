@@ -95,6 +95,7 @@ main h3.clear,
   z-index: 5;
 }
 
+
 nav {
   float: left;
   padding: 18px 8px 0;
@@ -173,6 +174,11 @@ nav {
 
 .nav li a {
   margin-right: 3px;
+}
+
+.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 
@@ -548,21 +554,6 @@ margin: 12px 36px 12px 16px
 }
 
 
-@media (max-width: 640px) {
-  
-  .brand-container,
-  .site-header nav,
-  .site-map {
-    width: 100%;
-  }
-  
-  main {
-    left: -100%;
-    width: 100%;
-  }
-  
-}
-
 
 /**
  * Contamination Status Indicator
@@ -771,4 +762,43 @@ main .element-details .chemical-name h2:first-child {
   -webkit-border-radius: 0;
   padding: 10px;
   max-width: 256px;
+}
+
+@media (max-width: 767px){
+ .navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  background-color: #4D5A63;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px;}
+  
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: black;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    left: -100%;
+    width: 100%;
+  }
+  
+}
+
+
+@media (max-width: 767px) {
+  .brand-container .site-map {
+  width: 41.66666666666667%;
+ }
+ .navbar-collapse {
+   clear: both;
+ }
+ .site-header nav {
+   width: 100%;
+ }
 }

@@ -75,27 +75,38 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- {% if page.permalink == '/downloads' %}
-            <li class="active" role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-          {% else %}
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-          {% endif %} -->
-          {% if page.permalink == '/glossary' %}
-            <li class="active" role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          {% else %}
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          {% endif %}
-          {% if page.permalink == '/help' %}
-            <li class="active" role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          {% else %}
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- {% if page.permalink == '/downloads' %}
+              <li class="active" role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+            {% else %}
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+            {% endif %} -->
+            {% if page.permalink == '/glossary' %}
+              <li class="active" role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            {% else %}
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            {% endif %}
+            {% if page.permalink == '/help' %}
+              <li class="active" role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            {% else %}
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     {% if page.page_class != 'glossary' and page.page_class != 'help' %}
       <div id="map" class="site-map"></div>
