@@ -1,0 +1,36 @@
+template: well.html
+facility_url: facilities/johnsonville-fossil-plant
+facility_class: johnsonville_fossil_plant
+permalink: facilities/johnsonville-fossil-plant/b6
+location: "Humphreys County, TN"
+site_name: "Johnsonville Fossil Plant"
+owner/operator: "Tennessee Valley Authority (TVA)"
+title: "B6"
+coordinates: [
+  -87.980309,
+  36.023656
+]
+designation: "Downgradient"
+legend: "Downgradient, Not In Compliance"
+pollutants: [
+  {
+  type: "B",
+  name: "Boron",
+  health_base_standard_exceeded: "LHA",
+  number_of_times_in_exceedance: "3",
+  number_of_times_monitored: "6",
+  max_exceedance_amount: "6.5",
+  max_allowable_amount: "6",
+  unit_of_measurement: "mg/L"
+  },
+  {
+  type: "Mg",
+  name: "Manganese",
+  health_base_standard_exceeded: "LHA",
+  number_of_times_in_exceedance: "1",
+  number_of_times_monitored: "6",
+  max_exceedance_amount: "0.39",
+  max_allowable_amount: "0.3",
+  unit_of_measurement: "mg/L"
+  }
+]

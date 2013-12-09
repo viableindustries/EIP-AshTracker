@@ -1,37 +1,25 @@
----
-published: false
-layout: facility
-permalink: "facilities/ashville-steam"
-facility_class: ashville_steam
-date: null
-coordinates: 
-  - "-82.550278"
-  - "35.465556"
-page_title: Asheville Steam Electric Generating Plant « Progress Energy Carolinas Inc. « Facilities
-page_class: facility
+template: facility.html
+permalink: facilities/ashville-steam
+title: "Asheville Steam Electric Generating Plant"
+page_title: 'Asheville Steam Electric Generating Plant'
+date: 2013-11-25 09:52:50
+published: true
+page_class: 'facility'
+facility_class: 'ashville_steam'
 address: 
   street: null
   city: null
-  state: NC
+  state: 'NC'
   zipcode: ""
-  county: Buncombe County
-owner_operator: Progress Energy Carolinas Inc.
+  county: 'Buncombe County'
+owner_operator: 'Progress Energy Carolinas Inc.'
 impoundment_hazard_rating: null
 monitoring: null
-pollutants: 
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
+pollutants: []
+coordinates: 
+  - "-82.550278"
+  - "35.465556"
 data_download: ""
----
 
 Information Available Soon
 

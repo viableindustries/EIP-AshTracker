@@ -1,0 +1,170 @@
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || {{ page.coordinates[1] }}, params.lng || {{ page.coordinates[0] }}],
+    mapbox_zoom    = params.zoom || 13;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+{% for well in pages %}
+  {% if well.template == 'well.html' and well.facility_class == page.facility_class and well.coordinates %}
+  var well_{{ loop.index }} = L.marker(new L.LatLng({{ well.coordinates[1] }}, {{ well.coordinates[0] }})).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/{{ well.permalink }}?zoom=' + map_current_zoom + '&lat={{ well.coordinates[1]}}&lng={{ well.coordinates[0] }}';  
+    });
+  }).on('mouseover', function (e) {
+    well_{{ loop.index }}.openPopup()
+  });
+
+  {% if well.legend == 'Downgradient, In Compliance' %}
+    well_{{ loop.index }}.setIcon(L.icon(icon_downgradient_compliant));
+  {% elif well.legend == 'Upgradient, In Compliance' %}
+    well_{{ loop.index }}.setIcon(L.icon(icon_upgradient_compliant));
+  {% elif well.legend == 'Downgradient, Not In Compliance' %}
+    well_{{ loop.index }}.setIcon(L.icon(icon_downgradient_violation));
+  {% elif well.legend == 'Upgradient, Not In Compliance' %}
+    well_{{ loop.index }}.setIcon(L.icon(icon_upgradient_violation));
+  {% elif well.legend == 'Other Designation, Not In Compliance' or well.legend == 'Neither, Not In Compliance' or well.legend == 'Neither,  Not In Compliance' %}
+    well_{{ loop.index }}.setIcon(L.icon(icon_other_violation));
+  {% elif well.legend == 'Other Designation, In Compliance' or well.legend == 'Neither, In Compliance' or well.legend == 'Neither,  In Compliance' %}
+    well_{{ loop.index }}.setIcon(L.icon(icon_other_compliant));  
+  {% endif %}
+
+  well_{{ loop.index }}.bindPopup('{{ well.title }}')
+
+  markers.addLayer(well_{{ loop.index }});
+  oms.addMarker(well_{{ loop.index }});
+  {% endif %}
+{% endfor %}
+
+
+{% if page.template == 'facility.html' %}
+
+  /**
+   * Add the facility to the marker list
+   */
+  var this_facility = L.marker(new L.LatLng({{ page.coordinates[1] }}, {{ page.coordinates[0] }}), {
+     icon: L.mapbox.marker.icon({
+       'marker-size': 'large',
+       'marker-color': '2984BD',
+       'marker-symbol': 'industrial'
+     })
+  });
+  map.addLayer(this_facility);
+  
+{% else %}
+  {% for facility in pages %}
+
+    {% if facility.template == 'facility.html' and page.facility_url == facility.permalink  %}
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng({{ facility.coordinates[1] }}, {{ facility.coordinates[0] }}), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>

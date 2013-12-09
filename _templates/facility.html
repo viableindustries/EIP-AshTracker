@@ -1,0 +1,45 @@
+{% extends 'default.html' %}
+{% set page = page %}
+
+{% block content %}
+
+{% include 'includes/map-facility.html' %}
+
+<h5><strong>Facility</strong> View <a title="Return to the National view" class="close-well pull-right" href="/facilities">&times;</a></h5>
+
+<h1>{{ page.title }}</h1>
+
+<address>
+  {% if page.address.street %}{{ page.address.street }}<br />{% endif %}
+  {% if page.address.city %}{{ page.address.city }}, {{ page.address.state }} {{ page.address.zipcode }}<br >{% endif %}
+  {% if  page.address.county %}{{ page.address.county }}{% endif %}
+</address>
+
+{% if page.owner_operator %}
+<h4>Owner - Operator</h4>
+<h2>{{ page.owner_operator }}</h2>
+{% endif %}
+
+{% if page.impoundment_hazard_rating %}
+<h4>Impoundment Hazard Rating</h4>
+<h2>{{ page.impoundment_hazard_rating }}</h2>
+{% endif %}
+
+{% if page.pollutants %}
+<h4>Pollutant Details</h4>
+<br />
+{% endif %}
+
+{% include 'includes/facility-contaminants.html' %}
+
+{% if page.html %}
+<h3 class="clear">About <strong>{{ page.title }}</strong></h3>
+{{ page.html|safe }}
+{% endif %}
+
+{% if page.data_download != '' %}
+<h4 class="clear">Download Data</h4>
+<p class="text-center"><a class="button download" href="{{ page.data_download }}" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+{% endif %}
+
+{% endblock %}

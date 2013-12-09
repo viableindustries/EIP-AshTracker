@@ -1,36 +1,24 @@
----
-published: false
-layout: facility
+template: facility.html
 permalink: facilities/riverbend
-facility_class: riverbend
-date: {}
-coordinates: 
-  - "-80.97"
-  - "35.357778"
-page_title: Riverbend Steam Station « Duke Energy Carolinas LLC « Facilities
-page_class: facility
+title: "Riverbend Steam Station"
+page_title: 'Riverbend Steam Station'
+date: 2013-11-25 09:52:50
+published: true
+page_class: 'facility'
+facility_class: 'riverbend'
 address: 
   street: null
   city: null
-  state: NC
+  state: 'NC'
   zipcode: ""
-  county: Gaston County
-owner_operator: Duke Energy Carolinas LLC
+  county: 'Gaston County'
+owner_operator: 'Duke Energy Carolinas LLC'
 impoundment_hazard_rating: null
 monitoring: null
-pollutants: 
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
+pollutants: []
+coordinates: 
+  - "-80.97"
+  - "35.357778"
 data_download: ""
----
 
 Information Available Soon

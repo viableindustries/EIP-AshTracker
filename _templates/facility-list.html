@@ -1,0 +1,29 @@
+{% extends 'default.html' %}
+{% set page = page %}
+
+{% block content %}
+
+{% include 'includes/map-national.html' %}
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+{% for facility in pages|sort(attribute='title') %}
+  {% if facility.template == 'facility.html' %}
+    <div class="row content contaminant-status">
+      <div class="col-sm-10">
+        <h4>{{ facility.owner_operator }}</h4>
+        <h2><a href="/{{ facility.permalink }}">{{ facility.title }}</a></h2>
+        {% if facility.data_download != '' %}
+        <a class="button download small" href="{{ facility.data_download }}" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        {% endif %}
+      </div>
+      <div class="col-sm-2">
+        <div class="indicator{% if facility.has_wells %} has-wells{% else %} has-no-wells{% endif %}"></div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+{% endblock %}

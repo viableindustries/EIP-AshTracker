@@ -1,0 +1,5637 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="MW10b" />
+    <meta property="twitter:url" content="wells/jh_campbell/2013-12-04-jh-campbell-15" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="Ashtracker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="wells/jh_campbell/2013-12-04-jh-campbell-15" />
+    <meta property="og:title" content="MW10b" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="wells/jh_campbell/2013-12-04-jh-campbell-15" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="MW10b" />
+
+    <meta name="fragment" content="!" />
+
+    <title>MW10b | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+      <nav role="navigation">
+        <ul class="nav nav-justified">
+          <li><a href="/facilities" class="facilities">Facility Data</a></li>
+          <!-- 
+            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+           -->
+          
+            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+          
+          
+            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+        
+    
+      <div id="map" class="site-map"></div>
+
+      <main role="content" class="site-content">
+        <a name="content-top" id="content-top"></a>
+    
+
+    
+
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 42.90641389, params.lng || -86.18357222],
+    mapbox_zoom    = params.zoom || 13;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_199 = L.marker(new L.LatLng(42.90683889, -86.17808056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw12?zoom=' + map_current_zoom + '&lat=42.90683889&lng=-86.17808056';  
+    });
+  }).on('mouseover', function (e) {
+    well_199.openPopup()
+  });
+
+  
+    well_199.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_199.bindPopup('MW12')
+
+  markers.addLayer(well_199);
+  oms.addMarker(well_199);
+  
+
+  
+
+  
+  var well_201 = L.marker(new L.LatLng(42.90415278, -86.18255556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw14?zoom=' + map_current_zoom + '&lat=42.90415278&lng=-86.18255556';  
+    });
+  }).on('mouseover', function (e) {
+    well_201.openPopup()
+  });
+
+  
+    well_201.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_201.bindPopup('MW14')
+
+  markers.addLayer(well_201);
+  oms.addMarker(well_201);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_239 = L.marker(new L.LatLng(42.90515833, -86.18235278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw13?zoom=' + map_current_zoom + '&lat=42.90515833&lng=-86.18235278';  
+    });
+  }).on('mouseover', function (e) {
+    well_239.openPopup()
+  });
+
+  
+    well_239.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_239.bindPopup('MW13')
+
+  markers.addLayer(well_239);
+  oms.addMarker(well_239);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_307 = L.marker(new L.LatLng(42.91291111, -86.18175278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb4?zoom=' + map_current_zoom + '&lat=42.91291111&lng=-86.18175278';  
+    });
+  }).on('mouseover', function (e) {
+    well_307.openPopup()
+  });
+
+  
+    well_307.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_307.bindPopup('MWB4')
+
+  markers.addLayer(well_307);
+  oms.addMarker(well_307);
+  
+
+  
+
+  
+
+  
+
+  
+  var well_311 = L.marker(new L.LatLng(42.91304722, -86.17803056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb6?zoom=' + map_current_zoom + '&lat=42.91304722&lng=-86.17803056';  
+    });
+  }).on('mouseover', function (e) {
+    well_311.openPopup()
+  });
+
+  
+    well_311.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_311.bindPopup('MWB6')
+
+  markers.addLayer(well_311);
+  oms.addMarker(well_311);
+  
+
+  
+
+  
+  var well_313 = L.marker(new L.LatLng(42.90236389, -86.18981667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/pz40?zoom=' + map_current_zoom + '&lat=42.90236389&lng=-86.18981667';  
+    });
+  }).on('mouseover', function (e) {
+    well_313.openPopup()
+  });
+
+  
+    well_313.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_313.bindPopup('PZ40')
+
+  markers.addLayer(well_313);
+  oms.addMarker(well_313);
+  
+
+  
+  var well_314 = L.marker(new L.LatLng(42.90265, -86.18542222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/pz24?zoom=' + map_current_zoom + '&lat=42.90265&lng=-86.18542222';  
+    });
+  }).on('mouseover', function (e) {
+    well_314.openPopup()
+  });
+
+  
+    well_314.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_314.bindPopup('PZ24')
+
+  markers.addLayer(well_314);
+  oms.addMarker(well_314);
+  
+
+  
+  var well_315 = L.marker(new L.LatLng(42.90487222, -86.19575556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/pz23?zoom=' + map_current_zoom + '&lat=42.90487222&lng=-86.19575556';  
+    });
+  }).on('mouseover', function (e) {
+    well_315.openPopup()
+  });
+
+  
+    well_315.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_315.bindPopup('PZ23')
+
+  markers.addLayer(well_315);
+  oms.addMarker(well_315);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_325 = L.marker(new L.LatLng(42.91274167, -86.18568333)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb2?zoom=' + map_current_zoom + '&lat=42.91274167&lng=-86.18568333';  
+    });
+  }).on('mouseover', function (e) {
+    well_325.openPopup()
+  });
+
+  
+    well_325.setIcon(L.icon(icon_other_violation));
+  
+
+  well_325.bindPopup('MWB2')
+
+  markers.addLayer(well_325);
+  oms.addMarker(well_325);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_427 = L.marker(new L.LatLng(42.90959444, -86.17742778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw11a?zoom=' + map_current_zoom + '&lat=42.90959444&lng=-86.17742778';  
+    });
+  }).on('mouseover', function (e) {
+    well_427.openPopup()
+  });
+
+  
+    well_427.setIcon(L.icon(icon_other_violation));
+  
+
+  well_427.bindPopup('MW11a')
+
+  markers.addLayer(well_427);
+  oms.addMarker(well_427);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_494 = L.marker(new L.LatLng(42.91020278, -86.17681944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/rw3?zoom=' + map_current_zoom + '&lat=42.91020278&lng=-86.17681944';  
+    });
+  }).on('mouseover', function (e) {
+    well_494.openPopup()
+  });
+
+  
+    well_494.setIcon(L.icon(icon_other_violation));
+  
+
+  well_494.bindPopup('RW3')
+
+  markers.addLayer(well_494);
+  oms.addMarker(well_494);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_565 = L.marker(new L.LatLng(42.91513333, -86.18733611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwa1?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18733611';  
+    });
+  }).on('mouseover', function (e) {
+    well_565.openPopup()
+  });
+
+  
+    well_565.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_565.bindPopup('MWA1')
+
+  markers.addLayer(well_565);
+  oms.addMarker(well_565);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_574 = L.marker(new L.LatLng(42.90934722, -86.19809444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/pz37?zoom=' + map_current_zoom + '&lat=42.90934722&lng=-86.19809444';  
+    });
+  }).on('mouseover', function (e) {
+    well_574.openPopup()
+  });
+
+  
+    well_574.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_574.bindPopup('PZ37')
+
+  markers.addLayer(well_574);
+  oms.addMarker(well_574);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_594 = L.marker(new L.LatLng(42.915125, -86.18563333)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwa2?zoom=' + map_current_zoom + '&lat=42.915125&lng=-86.18563333';  
+    });
+  }).on('mouseover', function (e) {
+    well_594.openPopup()
+  });
+
+  
+    well_594.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_594.bindPopup('MWA2')
+
+  markers.addLayer(well_594);
+  oms.addMarker(well_594);
+  
+
+  
+  var well_595 = L.marker(new L.LatLng(42.91513333, -86.18409722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwa3?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18409722';  
+    });
+  }).on('mouseover', function (e) {
+    well_595.openPopup()
+  });
+
+  
+    well_595.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_595.bindPopup('MWA3')
+
+  markers.addLayer(well_595);
+  oms.addMarker(well_595);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_607 = L.marker(new L.LatLng(42.91745833, -86.19421667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/pz3?zoom=' + map_current_zoom + '&lat=42.91745833&lng=-86.19421667';  
+    });
+  }).on('mouseover', function (e) {
+    well_607.openPopup()
+  });
+
+  
+    well_607.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_607.bindPopup('PZ3')
+
+  markers.addLayer(well_607);
+  oms.addMarker(well_607);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_702 = L.marker(new L.LatLng(42.914675, -86.19635833)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw-st1?zoom=' + map_current_zoom + '&lat=42.914675&lng=-86.19635833';  
+    });
+  }).on('mouseover', function (e) {
+    well_702.openPopup()
+  });
+
+  
+    well_702.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_702.bindPopup('MW-ST1')
+
+  markers.addLayer(well_702);
+  oms.addMarker(well_702);
+  
+
+  
+
+  
+
+  
+  var well_705 = L.marker(new L.LatLng(42.91468056, -86.19558056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw-st2?zoom=' + map_current_zoom + '&lat=42.91468056&lng=-86.19558056';  
+    });
+  }).on('mouseover', function (e) {
+    well_705.openPopup()
+  });
+
+  
+    well_705.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_705.bindPopup('MW-ST2')
+
+  markers.addLayer(well_705);
+  oms.addMarker(well_705);
+  
+
+  
+
+  
+  var well_707 = L.marker(new L.LatLng(42.90641389, -86.18357222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw10b?zoom=' + map_current_zoom + '&lat=42.90641389&lng=-86.18357222';  
+    });
+  }).on('mouseover', function (e) {
+    well_707.openPopup()
+  });
+
+  
+    well_707.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_707.bindPopup('MW10b')
+
+  markers.addLayer(well_707);
+  oms.addMarker(well_707);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_748 = L.marker(new L.LatLng(42.910875, -86.17788889)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/rw1?zoom=' + map_current_zoom + '&lat=42.910875&lng=-86.17788889';  
+    });
+  }).on('mouseover', function (e) {
+    well_748.openPopup()
+  });
+
+  
+    well_748.setIcon(L.icon(icon_other_violation));
+  
+
+  well_748.bindPopup('RW1')
+
+  markers.addLayer(well_748);
+  oms.addMarker(well_748);
+  
+
+  
+
+  
+
+  
+
+  
+  var well_752 = L.marker(new L.LatLng(42.90992778, -86.17738056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/rw5?zoom=' + map_current_zoom + '&lat=42.90992778&lng=-86.17738056';  
+    });
+  }).on('mouseover', function (e) {
+    well_752.openPopup()
+  });
+
+  
+    well_752.setIcon(L.icon(icon_other_violation));
+  
+
+  well_752.bindPopup('RW5')
+
+  markers.addLayer(well_752);
+  oms.addMarker(well_752);
+  
+
+  
+
+  
+
+  
+  var well_755 = L.marker(new L.LatLng(42.91047778, -86.17756389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/rw6?zoom=' + map_current_zoom + '&lat=42.91047778&lng=-86.17756389';  
+    });
+  }).on('mouseover', function (e) {
+    well_755.openPopup()
+  });
+
+  
+    well_755.setIcon(L.icon(icon_other_violation));
+  
+
+  well_755.bindPopup('RW6')
+
+  markers.addLayer(well_755);
+  oms.addMarker(well_755);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_764 = L.marker(new L.LatLng(42.91075556, -86.17804722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/rw2?zoom=' + map_current_zoom + '&lat=42.91075556&lng=-86.17804722';  
+    });
+  }).on('mouseover', function (e) {
+    well_764.openPopup()
+  });
+
+  
+    well_764.setIcon(L.icon(icon_other_violation));
+  
+
+  well_764.bindPopup('RW2')
+
+  markers.addLayer(well_764);
+  oms.addMarker(well_764);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_772 = L.marker(new L.LatLng(42.91038056, -86.17777222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/rw4?zoom=' + map_current_zoom + '&lat=42.91038056&lng=-86.17777222';  
+    });
+  }).on('mouseover', function (e) {
+    well_772.openPopup()
+  });
+
+  
+    well_772.setIcon(L.icon(icon_other_violation));
+  
+
+  well_772.bindPopup('RW4')
+
+  markers.addLayer(well_772);
+  oms.addMarker(well_772);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_822 = L.marker(new L.LatLng(42.91296667, -86.180125)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb5?zoom=' + map_current_zoom + '&lat=42.91296667&lng=-86.180125';  
+    });
+  }).on('mouseover', function (e) {
+    well_822.openPopup()
+  });
+
+  
+    well_822.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_822.bindPopup('MWB5')
+
+  markers.addLayer(well_822);
+  oms.addMarker(well_822);
+  
+
+  
+
+  
+  var well_824 = L.marker(new L.LatLng(42.913175, -86.17563611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb7?zoom=' + map_current_zoom + '&lat=42.913175&lng=-86.17563611';  
+    });
+  }).on('mouseover', function (e) {
+    well_824.openPopup()
+  });
+
+  
+    well_824.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_824.bindPopup('MWB7')
+
+  markers.addLayer(well_824);
+  oms.addMarker(well_824);
+  
+
+  
+
+  
+  var well_826 = L.marker(new L.LatLng(42.91269167, -86.18754722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb1?zoom=' + map_current_zoom + '&lat=42.91269167&lng=-86.18754722';  
+    });
+  }).on('mouseover', function (e) {
+    well_826.openPopup()
+  });
+
+  
+    well_826.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_826.bindPopup('MWB1')
+
+  markers.addLayer(well_826);
+  oms.addMarker(well_826);
+  
+
+  
+  var well_827 = L.marker(new L.LatLng(42.91285278, -86.18374722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwb3?zoom=' + map_current_zoom + '&lat=42.91285278&lng=-86.18374722';  
+    });
+  }).on('mouseover', function (e) {
+    well_827.openPopup()
+  });
+
+  
+    well_827.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_827.bindPopup('MWB3')
+
+  markers.addLayer(well_827);
+  oms.addMarker(well_827);
+  
+
+  
+
+  
+
+  
+  var well_830 = L.marker(new L.LatLng(42.91637778, -86.19117778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw1?zoom=' + map_current_zoom + '&lat=42.91637778&lng=-86.19117778';  
+    });
+  }).on('mouseover', function (e) {
+    well_830.openPopup()
+  });
+
+  
+    well_830.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_830.bindPopup('MW1')
+
+  markers.addLayer(well_830);
+  oms.addMarker(well_830);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_854 = L.marker(new L.LatLng(42.90915278, -86.17841944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw9d?zoom=' + map_current_zoom + '&lat=42.90915278&lng=-86.17841944';  
+    });
+  }).on('mouseover', function (e) {
+    well_854.openPopup()
+  });
+
+  
+    well_854.setIcon(L.icon(icon_other_violation));
+  
+
+  well_854.bindPopup('MW9d')
+
+  markers.addLayer(well_854);
+  oms.addMarker(well_854);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_910 = L.marker(new L.LatLng(42.91348333, -86.19639167)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw8?zoom=' + map_current_zoom + '&lat=42.91348333&lng=-86.19639167';  
+    });
+  }).on('mouseover', function (e) {
+    well_910.openPopup()
+  });
+
+  
+    well_910.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_910.bindPopup('MW8')
+
+  markers.addLayer(well_910);
+  oms.addMarker(well_910);
+  
+
+  
+
+  
+
+  
+  var well_913 = L.marker(new L.LatLng(42.91991944, -86.18439444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw3?zoom=' + map_current_zoom + '&lat=42.91991944&lng=-86.18439444';  
+    });
+  }).on('mouseover', function (e) {
+    well_913.openPopup()
+  });
+
+  
+    well_913.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_913.bindPopup('MW3')
+
+  markers.addLayer(well_913);
+  oms.addMarker(well_913);
+  
+
+  
+
+  
+  var well_915 = L.marker(new L.LatLng(42.918125, -86.18020278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw4?zoom=' + map_current_zoom + '&lat=42.918125&lng=-86.18020278';  
+    });
+  }).on('mouseover', function (e) {
+    well_915.openPopup()
+  });
+
+  
+    well_915.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_915.bindPopup('MW4')
+
+  markers.addLayer(well_915);
+  oms.addMarker(well_915);
+  
+
+  
+  var well_916 = L.marker(new L.LatLng(42.91819722, -86.17835278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mw5?zoom=' + map_current_zoom + '&lat=42.91819722&lng=-86.17835278';  
+    });
+  }).on('mouseover', function (e) {
+    well_916.openPopup()
+  });
+
+  
+    well_916.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_916.bindPopup('MW5')
+
+  markers.addLayer(well_916);
+  oms.addMarker(well_916);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(42.920909, -86.206292), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Well</strong> View <a class="close-well pull-right" href="/facilities/jh-campbell">&times;</a></h5>
+
+<h1>MW10b</h1>
+
+
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaiminant Status</h4>
+    <h2>Neither, In Compliance</h2>
+  </div>
+  <div class="col-sm-2">
+    
+    <div class="indicator compliance"></div>
+    
+  </div>
+</div>
+
+<div class="content contaminants">
+
+<h4 class="thin">Pollutant Details</h4>
+<br />
+
+
+
+<div class="contaminants">
+
+  
+    <div class="element  ">NO3</div>
+  
+    <div class="element  ">NH-3</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Sb at this facility">Sb</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of As at this facility">As</div>
+  
+    <div class="element  ">Ba</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Be at this facility">Be</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of B at this facility">B</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cd at this facility">Cd</div>
+  
+    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Co</div>
+  
+    <div class="element  ">Cr</div>
+  
+    <div class="element  ">Cu</div>
+  
+    <div class="element  ">Cn</div>
+  
+    <div class="element  ">F</div>
+  
+    <div class="element  ">GAP</div>
+  
+    <div class="element  ">GBP</div>
+  
+    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Pb</div>
+  
+    <div class="element  ">Mn</div>
+  
+    <div class="element  ">Hg</div>
+  
+    <div class="element  ">Mo</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Ni at this facility">Ni</div>
+  
+    <div class="element  ">Ra</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility">Se</div>
+  
+    <div class="element  ">Ag</div>
+  
+    <div class="element  ">Sr</div>
+  
+    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Tl at this facility">Tl</div>
+  
+    <div class="element  ">H-3</div>
+  
+    <div class="element  ">U</div>
+  
+
+</div>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+</div>
+
+
+    
+      </main>
+    
+    
+
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'google_analytics_account']);
+      _gaq.push(['_setDomainName', 'google_analytics_domain']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+
+</html>

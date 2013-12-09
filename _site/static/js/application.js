@@ -12,6 +12,12 @@
       });
     });
     
+    jQuery('.element.not-tracked, .element.exceeded').tooltip();
+    
+    jQuery('.element.element-clickable.violation').hover(function () {
+      jQuery(this).tooltip('toggle');
+    });
+    
   };
   
   jQuery(document).ready(init_app);

@@ -1,36 +1,24 @@
----
-published: false
-layout: facility
+template: facility.html
 permalink: facilities/reidgardner
-facility_class: reidgardner
-date: {}
-coordinates: 
-  - "-114.6364"
-  - "36.6531"
-page_title: Reid Gardner Generating Station « NV Energy « Facilities
-page_class: facility
+title: "Reid Gardner Generating Station"
+page_title: 'Reid Gardner Generating Station'
+date: 2013-11-25 09:52:50
+published: true
+page_class: 'facility'
+facility_class: 'reidgardner'
 address: 
   street: null
   city: null
-  state: NV
+  state: 'NV'
   zipcode: ""
-  county: Clark County
-owner_operator: NV Energy
+  county: 'Clark County'
+owner_operator: 'NV Energy'
 impoundment_hazard_rating: null
 monitoring: null
-pollutants: 
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
+pollutants: []
+coordinates: 
+  - "-114.6364"
+  - "36.6531"
 data_download: ""
----
 
 Information Available Soon

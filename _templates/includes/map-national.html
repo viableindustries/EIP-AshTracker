@@ -1,0 +1,46 @@
+<script>
+
+var params, map;
+
+/**
+ * Setup MapBox and load our default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [39.8282, -98.5795],
+    mapbox_zoom    = 4;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+
+/**
+ * Setup all of the facilities
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+
+{% for facility in pages %}
+  {% if facility.template == 'facility.html' %}
+  var facility_{{ loop.index }} = L.marker(new L.LatLng({{ facility.coordinates[1] }}, {{ facility.coordinates[0] }}), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': {% if facility.has_wells == 'true' %}'2984BD'{% else %}'BBBBBB'{% endif %},
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/{{ facility.permalink }}?zoom=13&lat={{ facility.coordinates[1]}}&lng={{ facility.coordinates[0] }}';  
+  }).on('mouseover', function (e) {
+    facility_{{ loop.index }}.openPopup()
+  });
+  facility_{{ loop.index }}.bindPopup('{{ facility.title }}')
+
+  markers.addLayer(facility_{{ loop.index }});
+  
+  {% endif %}
+{% endfor %}
+
+map.addLayer(markers);
+
+</script>

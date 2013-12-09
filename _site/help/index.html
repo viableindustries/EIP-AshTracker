@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -19,18 +30,18 @@
 
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Help" />
-    <meta property="twitter:url" content="_posts/2013-11-01-help.md" />
+    <meta property="twitter:url" content="help" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
-    <meta property="og:site_name" content="" />
+    <meta property="og:site_name" content="Ashtracker" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="_posts/2013-11-01-help.md" />
+    <meta property="og:url" content="help" />
     <meta property="og:title" content="Help" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="_posts/2013-11-01-help.md" />
+    <meta name="dcterms.identifier" content="help" />
     <meta name="dcterms.format" content="text/html" />
     <meta name="dcterms.title" content="Help" />
 
@@ -40,6 +51,7 @@
 
     <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
     <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     
@@ -57,7 +69,7 @@
 
   </head>
 
-  <body class="">
+  <body class="help">
     
     <header class="site-header">
       <div class="brand-container">
@@ -65,160 +77,51 @@
       </div>
       <nav role="navigation">
         <ul class="nav nav-justified">
-          <li class="dropdown">
-            <a href="/facilities" class="facilities dropdown-toggle" data-toggle="dropdown">Facilities <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              
-                
-              
-                
-              
-                
-              
-                
-                 
-                   <li><a href="/facilities/colbert">Colbert Fossil Plant</a></li>
-                 
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-                 
-                   <li><a href="/facilities/campbell">JH Campbell Landfill </a></li>
-                 
-                
-              
-                
-                 
-                   <li><a href="/facilities/flint-creek">Flint Creek Power Plant</a></li>
-                 
-                
-              
-                
-                 
-                   <li><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></li>
-                 
-                
-              
-                
-              
-                
-                 
-                   <li><a href="/facilities/big-bend">Big Bend Power Station</a></li>
-                 
-                
-              
-                
-                 
-                   <li><a href="/facilities/hatfield">Hatfield Ash Disposal Site</a></li>
-                 
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-            </ul>
-          </li>
-          
+          <li><a href="/facilities" class="facilities">Facility Data</a></li>
+          <!-- 
             <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-          
+           -->
           
             <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
           
           
-            <li class="active" role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
           
         </ul>
       </nav>
     </header>
+        
     
-    <div id="map" class="site-map"></div>
+      <main role="content" class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+    
 
-    <main role="content" class="site-content">
-      <a name="content-top" id="content-top"></a>
-      <script>
-
-var params, map;
-
-console.log('/')
-
-/**
- * Setup MapBox and load our default map so that we can begin
- * placing the pins we need to display search results
- */
-var mapbox_id      = "developedsimple.g7pfo3pa",
-    mapbox_mapid   = "map",
-    mapbox_extent  = [39.8282, -98.5795],
-    mapbox_zoom    = 4;    
-
-map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
-
-map.scrollWheelZoom.disable();
-
-</script>
-
+    
 <h1>Help</h1>
 
 <div class="content">
-  
+  <p>EIP’s Ash Tracker is designed to help the public access detailed information about groundwater contamination near coal ash disposal areas.  It’s built around a map so that people can not only understand where the disposal sites are located in the community, but also where the groundwater samples are taken from in relation to disposal facilities. </p>
+<h2>Where EIP Gets Information for Coal Ash Tracker</h2>
+<p><strong>Site Information and Groundwater Monitoring Data:</strong> Coal ash disposal facilities are generally regulated by state environmental agencies. States that require facilities to monitor groundwater also require facilities to submit copies of monitoring reports to state agencies.  To obtain this information, EIP submits requests to these agencies pursuant to state “Right to Know” laws (similar to the federal Freedom of Information Act). This process can be long and expensive- requiring fees to agencies and document delivery services. A handful of states- such as Florida and Louisiana- provide this information online. But navigating these systems can be difficult if requestors are not certain what they are looking for or how the information is filed. Ash Tracker is designed to bridge this gap and make public information accessible to concerned citizens.</p>
+<p>Once EIP obtains raw data from state agencies, it is entered into a large database. This allows us to manipulate and analyze data. This database also provides the backbone for  Ash Tracker Visual interface and statistical summaries. Ash Tracker provides summaries of data available at each monitoring well in reference to whether values exceeded health-based screening levels. The site also provides a link to a spreadsheet with the underlying values for citizens to examine or use as a basis for their own analyses. While EIP has been meticulous in its efforts to identify data entry errors, this work is done by actual humans, and it is possible that errors are present. If you would like an electronic copy of any original document we used in this project, or suspect that you have identified an error, please email <a href="mailto:officemanager@environmentalintegrity.org">officemanager@environmentalintegrity.org</a> or call 202-296-8800 and we will send you the documents.</p>
+<p>Please note that this is a work in progress. We will be uploading more site-specific data over the course of the next year. </p>
+<h2>Accessing Raw Data</h2>
+<p>Ash Tracker provides access to raw (transcribed) data. The information in these downloads provides the backbone for our summary data and allows users to do their own analyses. <strong>Please note that data in these tables has been manually entered or transferred from original data sources by EIP staff. While we have worked hard to make sure to avoid presenting erroneous information; errors may be present. If you suspect that raw data in the data downloads is erroneous, please notify us at once at <a href="mailto:officemanager@environmentalintegrity.org">officemanager@environmentalintegrity.org</a> or call 202-296-8800.</strong></p>
+<h2>About “Up” and “Down” Gradients</h2>
+<p>Gradient designations on the Ash Tracker are based on information provided by facilities to state agencies in groundwater monitoring reports. If gradients were not available in the groundwater monitoring reports, we reviewed other documents filed by operators, such as permit applications and maps. For some wells for which no gradient information was available, we provide well-level data in spreadsheets, but do not present this information visually or in summaries. </p>
+<p>Users should be aware that up and down gradient designations are self-reported by the operators and may not be accurate. Many disposal facilities are located near large bodies of water and groundwater flow can be influenced by time, seasonality, temperature, and other environmental factors. Coal ash disposal sites themselves can also impact groundwater flow over time. When leachate infiltrates soil under facilities shaped like a bowl, it can cause the water table underneath the bottom of the bowel to rise. This can cause groundwater to flow radially from the center to the edge of the facility’s foot print, contaminating wells that were previously upgradient and therefore outside the path of contaminant flow. </p>
+<p>For more information about gradient designations, <a href="/glossary">please see our glossary</a>.</p>
 </div>
 
-    </main>
+
     
+          </div>
+        </div>
+      </main>
+    
+    
+
     <footer role="complementary" class="site-footer">
       <div class="container">
         <div class="row about">
@@ -228,21 +131,21 @@ map.scrollWheelZoom.disable();
 
           <div class="col-sm-4">
             <address>
-              1 Thomas Circle<br />
-              Washington, D.C. 20005
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
             </address>
           </div>
 
           <div class="col-sm-4">
             <p>
-              Phone: <br />
-              Fax: 202-296-8822
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
             </p>
           </div>
         </div>
         <div class="row copyright">
           <div class="col-sm-6">
-            <p>&copy; Copyright (c) 2013 Ashtracker is brought to you by the Environmental Integrity Project. All rights reserved. Ashtracker, All rights reserved.</p>
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
           </div>
           <div class="col-sm-6">
             <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
@@ -256,8 +159,8 @@ map.scrollWheelZoom.disable();
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '']);
-      _gaq.push(['_setDomainName', '']);
+      _gaq.push(['_setAccount', 'google_analytics_account']);
+      _gaq.push(['_setDomainName', 'google_analytics_domain']);
       _gaq.push(['_trackPageview']);
 
       (function() {

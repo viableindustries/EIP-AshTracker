@@ -1,36 +1,24 @@
----
-published: true
-layout: facility
+template: facility.html
 permalink: facilities/lelandolds
-facility_class: lelandolds
-date: {}
-coordinates: 
-  - "-101.319444"
-  - "47.281667"
-page_title: Leland Olds Station « Basin Electric Power Cooperative « Facilities
-page_class: facility
+title: "Leland Olds Station"
+page_title: 'Leland Olds Station'
+date: 2013-11-01 09:52:50
+published: true
+page_class: 'facility'
+facility_class: 'lelandolds'
 address: 
   street: null
   city: null
-  state: ND
+  state: 'ND'
   zipcode: ""
-  county: Mercer County
-owner_operator: Basin Electric Power Cooperative
+  county: 'Mercer County'
+owner_operator: 'Basin Electric Power Cooperative'
 impoundment_hazard_rating: null
 monitoring: null
-pollutants: 
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
+pollutants: []
+coordinates: 
+  - "-101.319444"
+  - "47.281667"
 data_download: ""
----
 
 Information Available Soon

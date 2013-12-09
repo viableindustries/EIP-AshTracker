@@ -24,13 +24,27 @@ body {
   padding: 0;
 }
 
-ul li {
-  text-decoration: none;
-  list-style-type: none;
+ul, ol {
+  padding-left: 24px;
 }
 
- {
-    padding-right: 25px;
+ul li {
+  list-style-type: square;
+  padding-bottom: 16px;
+}
+
+ol li {
+  list-style-type: decimal;
+  padding-bottom: 16px;
+}
+
+ul li:last-child,
+ol li:last-child {
+  padding-bottom: 0;
+}
+
+.navigation li {
+  list-style-type: none;
 }
 
 .glossaryterms >.glyphicon {
@@ -42,11 +56,8 @@ ul li {
     padding: 0 0 20px;
     margin: 0 0 24px;
 }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 63f07a5e2ca66a9cc83face195e28d8a48490154
+main h3.clear,
 .clear {
   clear: both;
 }
@@ -225,12 +236,14 @@ nav {
   height: 100%;
   min-height: 100%;
   height: auto !important;
-  padding: 72px 24px;
   position: absolute;
   top: 0;
   width: 41.66666666666667%;
 }
 
+main {
+  padding: 72px 24px;
+}
 
 /**
  * Site Footer Layout
@@ -269,13 +282,13 @@ h6 {
   font-weight: bold;
 }
 
-.site-content .statistic {
+main .statistic {
   font-family: "league-gothic", "HelventicaNeue-CondensedBold", Helvetica, Arial, sans-serif;
   font-size: 64px;
   font-weight: normal;
 }
 
-.site-content h2 {
+main h2 {
   font-size: 16px;
   line-height: 1;
   letter-spacing: 2px;
@@ -284,7 +297,19 @@ h6 {
   text-transform: uppercase;
 }
 
-.site-content h3 {
+main .content h2 {
+  border-top: 1px dotted rgb(24,34,43);
+  margin: 24px 0 0;
+  padding: 24px 0 16px;
+}
+
+main .content h2:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+main h3 {
   border-top: 1px dotted rgb(24,34,43);
   font-size: 12px;
   font-weight: 400;
@@ -295,7 +320,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.site-content h4 {
+main h4 {
   border-top: 1px dotted rgb(24,34,43);
   font-size: 10px;
   font-weight: 400;
@@ -306,7 +331,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.site-content h5 {
+main h5 {
   background-color: rgb(44,54,63);
   color: rgb(242,242,242);
   font-size: 12px;
@@ -319,7 +344,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.site-content p.lead {
+main p.lead {
   border-bottom: 1px dotted rgb(24,34,43);
   font-size: 21px;
   font-weight: 400;
@@ -373,6 +398,13 @@ strong {
   text-transform: uppercase;
 }
 
+.button.small,
+.button.small:hover {
+  font-size: 12px;
+  padding: 4px 14px;
+  margin-left: -16px;
+}
+
 .button:hover {
   background-color: rgb(24,34,43);
 }
@@ -385,6 +417,9 @@ strong {
   background-color: rgb(21,149,0);
 }
 
+.space-below {
+  margin-bottom: 16px;
+}
 
 /**
  * Site Footer Typography
@@ -496,6 +531,21 @@ margin: 12px 36px 12px 16px
 	padding: 10px 22px 0 0;
 }
 
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.leaflet-popup-content {
+  margin: 8px 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
 
 
 @media (max-width: 640px) {
@@ -506,7 +556,7 @@ margin: 12px 36px 12px 16px
     width: 100%;
   }
   
-  .site-content {
+  main {
     left: -100%;
     width: 100%;
   }
@@ -518,13 +568,16 @@ margin: 12px 36px 12px 16px
  * Contamination Status Indicator
  */
 .content.contaminant-status {
-  margin: 10px 0 24px;
+  margin: 10px 0 16px;
   padding: 12px 0 0;
 }
 
 .content.contaminant-status h2 {
   padding-bottom: 0;
   margin-left: -15px;
+  margin: 0 0 0 -15px;
+  border: 0;
+  padding: 0;
 }
 
 .content.contaminant-status h4 {
@@ -541,6 +594,14 @@ margin: 12px 36px 12px 16px
   margin: 10px 0 0;
   text-align: center;
   width: 40px;
+}
+
+.indicator.has-wells {
+  background-color: #2984BD;
+}
+
+.indicator.has-no-wells {
+  background-color: #BBBBBB;
 }
 
 .compliance {
@@ -578,6 +639,12 @@ margin: 12px 36px 12px 16px
   float: left;
   margin-bottom: 16px;
   width: 100%;
+}
+
+h4.thin {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .element {
@@ -624,11 +691,13 @@ margin: 12px 36px 12px 16px
   padding: 16px 0;
 }
 
-.element-details .other h2 {
+main .element-details .other h2,
+main .element-details .other h2:first-child {
   padding: 18px 0 16px;
   font-size: 24px;
 }
-.element-details .other.last h2 {
+main .element-details .other.last h2,
+main .element-details .other.last h2:first-child {
   padding-top: 24px;
 }
 
@@ -636,7 +705,8 @@ margin: 12px 36px 12px 16px
   margin-bottom: 24px;  
 }
 
-.element-details .chemical-name h2 {
+main .element-details .chemical-name h2,
+main .element-details .chemical-name h2:first-child {
   margin: 16px 0 0;
 }
 .element-details .chemical-name h4 {
@@ -684,4 +754,21 @@ margin: 12px 36px 12px 16px
 
 .element-details.visible {
   display: block;
+}
+
+.element.exceeded {
+  background-color: rgb(255, 235, 235);
+  border-bottom-color: rgb(169, 41, 9);
+}
+.element.not-tracked {
+  background-color: rgb(255, 255, 235);
+  border-bottom-color: rgb(255, 235, 0);
+}
+
+.tooltip-inner {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  padding: 10px;
+  max-width: 256px;
 }

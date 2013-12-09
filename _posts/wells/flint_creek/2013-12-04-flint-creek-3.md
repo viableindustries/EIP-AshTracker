@@ -1,0 +1,76 @@
+template: well.html
+facility_url: facilities/flint-creek
+facility_class: flint_creek
+permalink: facilities/flint-creek/ne-8
+location: "Benton County, AR"
+site_name: "Flint Creek Power Plant"
+owner/operator: "American Electric Power (AEP)"
+title: "NE-8"
+coordinates: [
+  -94.518009,
+  36.258044
+]
+designation: "Downgradient"
+legend: "Downgradient, Not In Compliance"
+pollutants: [
+  {
+    type: As,
+    name: Arsenic
+  },
+  {
+    type: Ba,
+    name: Barium
+  },
+  {
+    type: B,
+    name: Boron
+  },
+  {
+    type: Cr,
+    name: Chromium
+  },
+  {
+    type: GAPA,
+    name: Gross Alpha Particle Activity
+  },
+  {
+    type: GBPA,
+    name: Gross Beta Particle Activity
+  },
+  {
+    type: Pb,
+    name: Lead
+  },
+  {
+    type: Mn,
+    name: Manganese
+  },
+  {
+    type: Mo,
+    name: Molybdenum
+  },
+  {
+    type: Se,
+    name: Selenium
+  },
+  {
+  health_base_standard_exceeded: "LHA",
+  type: "Mg",
+  name: "Manganese (Total)",
+  number_of_times_in_exceedance: "2",
+  number_of_times_monitored: "3",
+  max_exceedance_amount: "0.835",
+  max_allowable_amount: "0.3",
+  unit_of_measurement: "mg/l"
+  },
+  {
+  health_base_standard_exceeded: "MCL",
+  type: "GAP",
+  name: "Gross Alpha Particle Activity",
+  number_of_times_in_exceedance: "1",
+  number_of_times_monitored: "1",
+  max_exceedance_amount: "42",
+  max_allowable_amount: "15",
+  unit_of_measurement: "pCi/L"
+  }
+]

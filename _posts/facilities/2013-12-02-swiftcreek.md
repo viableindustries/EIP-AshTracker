@@ -1,36 +1,24 @@
----
-published: false
-layout: facility
+template: facility.html
 permalink: facilities/swiftcreek
-facility_class: swiftcreek
-date: {}
-coordinates: 
-  - "-77.746263"
-  - "36.081148"
-page_title: "Swift Creek Structural Fill « Full Circle Solutions, Inc. « Facilities"
-page_class: facility
+title: "Swift Creek Structural Fill"
+page_title: "Swift Creek Structural Fill"
+date: 2013-11-25 09:52:50
+published: true
+page_class: 'facility'
+facility_class: 'swiftcreek'
 address: 
   street: null
   city: null
-  state: NC
+  state: 'NC'
   zipcode: ""
-  county: Nash County
+  county: 'Nash County'
 owner_operator: "Full Circle Solutions, Inc."
 impoundment_hazard_rating: null
 monitoring: null
-pollutants: 
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
-  - type: null
+pollutants: []
+coordinates: 
+  - "-77.746263"
+  - "36.081148"
 data_download: ""
----
 
 Information Available Soon

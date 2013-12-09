@@ -1,0 +1,49 @@
+{% extends 'default.html' %}
+{% set page = page %}
+
+{% block content %}
+
+{% include 'includes/map-facility.html' %}
+
+<h5><strong>Well</strong> View <a class="close-well pull-right" href="/{{ page.facility_url }}">&times;</a></h5>
+
+<h1>{{ page.title }}</h1>
+
+{% if page.designation %}
+<h4>Designation</h4>
+<h2>{{ page.designation }}</h2>
+{% endif %}
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaiminant Status</h4>
+    <h2>{{ page.legend }}</h2>
+  </div>
+  <div class="col-sm-2">
+    {% if page.legend == 'Downgradient, In Compliance' %}
+    <div class="indicator compliance downgradient"><span class="caret"></span></div>
+    {% elif page.legend == 'Upgradient, In Compliance' %}
+    <div class="indicator compliance upgradient"><span class="caret"></span></div>
+    {% elif page.legend == 'Downgradient, Not In Compliance' %}
+    <div class="indicator violation downgradient"><span class="caret"></span></div>
+    {% elif page.legend == 'Upgradient, Not In Compliance' %}
+    <div class="indicator violation upgradient"><span class="caret"></span></div>
+    {% elif page.legend == 'Other Designation, Not In Compliance' or page.legend == 'Neither, Not In Compliance' or page.legend == 'Neither,  Not In Compliance' %}
+    <div class="indicator violation"></div>
+    {% elif page.legend == 'Other Designation, In Compliance' or page.legend == 'Neither, In Compliance' or page.legend == 'Neither,  In Compliance' %}
+    <div class="indicator compliance"></div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="content contaminants">
+{% if page.pollutants %}
+<h4 class="thin">Pollutant Details</h4>
+<br />
+{% endif %}
+
+
+{% include 'includes/contaminants.html' %}
+
+</div>
+{% endblock %}
