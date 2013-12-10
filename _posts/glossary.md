@@ -8,37 +8,37 @@ page_class: glossary
 
 <div class="row space-below">
   <div class="col-xs-4">
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=10&tid=2">Ammonia </a> (ATSDR<sup>1</sup>)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/antimony.cfm">Antimony</a> (EPA<sup>2</sup>)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/arsenic.cfm">Arsenic</a> (EPA)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=326&tid=57">Barium </a>(ATSDR)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/beryllium.cfm">Beryllium</a> (EPA)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=452&tid=80">Boron </a>(ATSDR)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=47&tid=15">Cadmium </a>(ATSDR)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=61&tid=17">Chromium </a>(ATSDR)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/copper.cfm">Copper</a> (EPA)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/cyanide.cfm">Cyanide</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=10&tid=2" target="_blank">Ammonia </a> (ATSDR<sup>1</sup>)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/antimony.cfm" target="_blank">Antimony</a> (EPA<sup>2</sup>)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/arsenic.cfm" target="_blank">Arsenic</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=326&tid=57" target="_blank">Barium </a>(ATSDR)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/beryllium.cfm" target="_blank">Beryllium</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=452&tid=80" target="_blank">Boron </a>(ATSDR)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=47&tid=15" target="_blank">Cadmium </a>(ATSDR)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=61&tid=17" target="_blank">Chromium </a>(ATSDR)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/copper.cfm" target="_blank">Copper</a> (EPA)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/cyanide.cfm" target="_blank">Cyanide</a> (EPA)<br>
   </div>
   <div class="col-xs-4">
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/fluoride.cfm">Fluoride</a> (EPA)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm">Gross Alpha Particle</a> (EPA)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm">Gross Beta Particle</a> (EPA)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/lead.cfm">Lead</a> (EPA)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=101&tid=23">Manganese</a> (ATSDR)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/mercury.cfm">Mercury</a> (EPA)<br>
-    <a href="http://www.who.int/water_sanitation_health/dwq/chemicals/molybdenum.pdf">Molybdenum</a> (WHO<sup>3</sup>)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=244&tid=44">Nickel</a> (ATSDR)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tfacts204.pdf">Nitrate</a> (ATSDR)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tfacts204.pdf">Nitrite</a> (ATSDR)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/fluoride.cfm" target="_blank">Fluoride</a> (EPA)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm" target="_blank">Gross Alpha Particle</a> (EPA)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm" target="_blank">Gross Beta Particle</a> (EPA)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/lead.cfm" target="_blank">Lead</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=101&tid=23" target="_blank">Manganese</a> (ATSDR)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/mercury.cfm" target="_blank">Mercury</a> (EPA)<br>
+    <a href="http://www.who.int/water_sanitation_health/dwq/chemicals/molybdenum.pdf" target="_blank">Molybdenum</a> (WHO<sup>3</sup>)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=244&tid=44" target="_blank">Nickel</a> (ATSDR)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tfacts204.pdf" target="_blank">Nitrate</a> (ATSDR)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tfacts204.pdf" target="_blank">Nitrite</a> (ATSDR)<br>
   </div>
   <div class="col-xs-4">
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm">Radium</a> 226 & 228 (EPA)<br>
-    <a href="http://water.epa.gov/drink/contaminants/basicinformation/selenium.cfm">Selenium</a> (EPA)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=538&tid=97">Silver</a> (ATSDR)<br>
-    <a href="http://www.epa.gov/radiation/radionuclides/strontium.html">Strontium</a> (EPA)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=308&tid=49">Thallium</a> (ATSDR)<br>
-    <a href="http://www.epa.gov/radiation/radionuclides/tritium.html">Tritium</a> (EPA)<br>
-    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=439&tid=77">Uranium</a> (ATSDR)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm" target="_blank">Radium</a> 226 & 228 (EPA)<br>
+    <a href="http://water.epa.gov/drink/contaminants/basicinformation/selenium.cfm" target="_blank">Selenium</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=538&tid=97" target="_blank">Silver</a> (ATSDR)<br>
+    <a href="http://www.epa.gov/radiation/radionuclides/strontium.html" target="_blank">Strontium</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=308&tid=49" target="_blank">Thallium</a> (ATSDR)<br>
+    <a href="http://www.epa.gov/radiation/radionuclides/tritium.html" target="_blank">Tritium</a> (EPA)<br>
+    <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=439&tid=77" target="_blank">Uranium</a> (ATSDR)<br>
   </div>
 </div>
 
@@ -47,10 +47,10 @@ page_class: glossary
 <a name="drinking-water-standards-and-health-advisories" id="Drinking Water Standards and Health Advisories"></a>
 ## Drinking Water Standards and Health Advisories
 
-- [Maximum Contaminant Level (MCL)](http://www.epa.gov/safewater/consumer/pdf/mcl.pdf) – The highest level of a contaminant that is allowed in drinking water. MCLs are set as close to Maximum Contaminant Level Goals (MCLG) as feasible using the best available treatment technology and taking cost into consideration. MCLs are enforceable standards.</li>
-- [Maximum Contaminant Level Goal (MCLG)](http://www.epa.gov/safewater/consumer/pdf/mcl.pdf) – The level of a contaminant in drinking water below which there is no known or expected risk to health. MCLGs allow for a margin of safety and are non–enforceable public health goals.</li>
-- [Lifetime Health Advisory (LHA)](http://water.epa.gov/action/advisories/drinking/upload/dwstandards2012.pdf) – The concentration in drinking water that is not expected to cause any adverse non–carcinogenic effects for a lifetime of exposure. LHAs are based on the assumed drinking water consumption rate of 2 liters of water per day for a 70kg (154 lbs.) adult.</li>
-- [Child Health Advisory (CHA)](http://water.epa.gov/action/advisories/drinking/upload/dwstandards2012.pdf) – The concentration in drinking water that is not expected to cause any adverse non-carcinogenic effects during a one or ten day exposure period. CHAs are based on the assumed drinking water consumption rate of 1 liter per day for a 10kg (22 lbs.) child.</li>
+- <a href="http://www.epa.gov/safewater/consumer/pdf/mcl.pdf" target="_blank">Maximum Contaminant Level (MCL)</a> – The highest level of a contaminant that is allowed in drinking water. MCLs are set as close to Maximum Contaminant Level Goals (MCLG) as feasible using the best available treatment technology and taking cost into consideration. MCLs are enforceable standards.</li>
+- <a href="http://www.epa.gov/safewater/consumer/pdf/mcl.pdf" target="_blank">Maximum Contaminant Level Goal (MCLG)</a> - The level of a contaminant in drinking water below which there is no known or expected risk to health. MCLGs allow for a margin of safety and are non–enforceable public health goals.</li>
+- <a href="http://water.epa.gov/action/advisories/drinking/upload/dwstandards2012.pdf" target="_blank">Lifetime Health Advisory (LHA)</a> – The concentration in drinking water that is not expected to cause any adverse non–carcinogenic effects for a lifetime of exposure. LHAs are based on the assumed drinking water consumption rate of 2 liters of water per day for a 70kg (154 lbs.) adult.</li>
+- <a href="http://water.epa.gov/action/advisories/drinking/upload/dwstandards2012.pdf" target="_blank">Child Health Advisory (CHA)</a>  – The concentration in drinking water that is not expected to cause any adverse non-carcinogenic effects during a one or ten day exposure period. CHAs are based on the assumed drinking water consumption rate of 1 liter per day for a 10kg (22 lbs.) child.</li>
 
 <a name="well-designations" id="Well Designations"></a>
 ## Well Designations
@@ -63,9 +63,9 @@ page_class: glossary
 - **Intermediate Well**  – Groundwater wells situated at a depth between the shallow and deep aquifer.
 - **Sentinel Well**  – Groundwater wells located between an upgradient and downgradient well that warn of groundwater contamination moving down the hydraulic gradient of an aquifer toward a downgradient well.
 - **Monitoring Point/Assessment Well**  – Groundwater wells in which the designation (upgradient or downgradient) of the well is not defined; however, groundwater is tested from these wells determine to contaminant concentrations.
-- [**Groundwater-Surface Water Interface (GSI) Well**](http://www.ch2m.com/corporate/markets/environmental/conferences/battelle/CH2M-HILL-groundwater-surface-interface.pdf)
+- <a href="http://www.ch2m.com/corporate/markets/environmental/conferences/battelle/CH2M-HILL-groundwater-surface-interface.pdf" target="_blank">**Groundwater-Surface Water Interface (GSI) Well**</a>
 – Well that collect water samples from the area between the shallow surface water column and the shallow groundwater zone.<br>
-- [**Purge/Capture Well**](http://www.ch2m.com/corporate/markets/environmental/conferences/battelle/CH2M-HILL-groundwater-surface-interface.pdf)  – Groundwater is removed from an aquifer using these types of wells in order to obtain water samples that characterize local groundwater quality.
+- <a href="http://www.ch2m.com/corporate/markets/environmental/conferences/battelle/CH2M-HILL-groundwater-surface-interface.pdf" target="_blank">**Purge/Capture Well**</a>  – Groundwater is removed from an aquifer using these types of wells in order to obtain water samples that characterize local groundwater quality.
 
 
 
