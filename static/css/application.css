@@ -210,29 +210,6 @@ nav {
   text-decoration: none;
 }
 
-/*.nav > li > .dropdown-menu::before {
-  position: absolute;
-  top: -7px;
-  left: 9px;
-  display: inline-block;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid rgb(41,132,189);
-  border-left: 7px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  content: '';
-}
-
-.nav > li > .dropdown-menu::after {
-  position: absolute;
-  top: -6px;
-  left: 10px;
-  display: inline-block;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid rgb(41,132,189);
-  border-left: 6px solid transparent;
-  content: '';
-}*/
-
 
 .site-map {
   right: 0;
@@ -434,6 +411,7 @@ strong {
   margin-bottom: 16px;
 }
 
+
 /**
  * Site Footer Typography
  */
@@ -456,6 +434,7 @@ strong {
   color: gray;
   font-size: 11px;
 }
+
 
 /**
  * Leaflet Overrides
@@ -771,8 +750,18 @@ main .element-details .chemical-name h2:first-child {
   max-width: 256px;
 }
 
+/**
+ * Media
+ */
 
-@media (max-width: 767px){
+
+@media (max-width: 992px){ 
+  .element {
+    width: 26.666667%
+  }
+}
+
+@media (max-width: 768px){
  .navbar-toggle {
     margin-top: 19px;
     position: relative;
@@ -781,16 +770,28 @@ main .element-details .chemical-name h2:first-child {
     background-color: rgb(128,128,128);
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 2px;}
+    border-radius: 2px;
+  }
+  
+  main p.lead {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
   
   .icon-bar {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: black;}
+    background-color: black;
+  }
   
   .brand-container .site-map {
-    width: 41.66666666666667%;}
+    width: 41.66666666666667%;
+  }
   
   .navbar-collapse {
     clear: both;}
@@ -798,6 +799,10 @@ main .element-details .chemical-name h2:first-child {
   .site-header nav {
     width: 100%;
  }
+ 
+  .element {
+    width: 40%;
+  }
 }
 
 
@@ -807,6 +812,7 @@ main .element-details .chemical-name h2:first-child {
     width: 100%;
   }
 }
+
 
 @media (max-width: 480px){
   .site-map {
@@ -822,15 +828,6 @@ main .element-details .chemical-name h2:first-child {
   }
   
   .info_area .glyphicon-info-sign {
-    font-size: 32px;
-    font-weight: normal;
-    display: block;
-    color: rgb(128,128,128);
-    top: 21px;
-    left: 18px;
-  }
-  
-  .map-area .glyphicon-map-marker{
     font-size: 30px;
     font-weight: normal;
     display: block;
@@ -839,12 +836,15 @@ main .element-details .chemical-name h2:first-child {
     left: 18px;
   }
   
-  
-/*  .help .info_area .glyphicon-info-sign, 
-  .glossary .info_area .glyphicon-info-sign {
-    display: none;
+  .map-area .glyphicon-map-marker{
+    font-size: 32px;
+    font-weight: normal;
+    display: block;
+    color: rgb(128,128,128);
+    top: 21px;
+    left: 18px;
   }
-*/
+  
   .map-area {
     display: block;
   }
