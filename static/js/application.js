@@ -18,8 +18,28 @@
       jQuery(this).tooltip('toggle');
     });
     
-    jQuery('#info_area').click(function() {
-      jQuery(".site-content").toggle();
+    jQuery('.map-area').click(function() {
+      
+      // Hide the site content so that we can show the map
+      jQuery(".site-content").hide();
+      
+      // Since we just clicked the "map-area button" we should hide it
+      // and then display the info button so we can go back
+      jQuery(".map-area").hide();
+      
+      jQuery(".info_area").show();
+    });
+
+    jQuery('.info_area').click(function() {
+      
+      // Show the site content and hide the map
+      jQuery(".site-content").show();
+      
+      // Since we just clicked the "map-area button" we should hide it
+      // and then display the info button so we can go back
+      jQuery(".map-area").show();
+      
+      jQuery(".info_area").hide();
     });
     
   };

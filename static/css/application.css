@@ -95,11 +95,11 @@ main h3.clear,
   z-index: 5;
 }
 
-.map-area .glyphicon-map-marker,
-.info_area .glyphicon-info-sign {
+.map-area,
+.info_area,
+.nav > .about {
   display: none;
 }
-
 
 nav {
   float: left;
@@ -816,11 +816,21 @@ main .element-details .chemical-name h2:first-child {
     display: none;
   }
   .help .brand,
-  .glossary .brand {
+  .glossary .brand,
+  .nav > .about {
     display: block;
   }
   
   .info_area .glyphicon-info-sign {
+    font-size: 32px;
+    font-weight: normal;
+    display: block;
+    color: rgb(128,128,128);
+    top: 21px;
+    left: 18px;
+  }
+  
+  .map-area .glyphicon-map-marker{
     font-size: 30px;
     font-weight: normal;
     display: block;
@@ -829,10 +839,20 @@ main .element-details .chemical-name h2:first-child {
     left: 18px;
   }
   
-  .help .info_area .glyphicon-info-sign, 
+  
+/*  .help .info_area .glyphicon-info-sign, 
   .glossary .info_area .glyphicon-info-sign {
     display: none;
   }
+*/
+  .map-area {
+    display: block;
+  }
+  
+  .info_area {
+    display: none;
+  }
+
   .site-content { 
     width: 100%;
     background-color: rgb(242, 242, 242);
