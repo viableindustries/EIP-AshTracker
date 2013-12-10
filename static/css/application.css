@@ -95,6 +95,11 @@ main h3.clear,
   z-index: 5;
 }
 
+.brand-container .glyphicon-info-sign {
+  display: none;
+  top: 0;
+}
+
 
 nav {
   float: left;
@@ -247,6 +252,14 @@ nav {
   position: absolute;
   top: 0;
   width: 41.66666666666667%;
+}
+
+.brand-container .glyphicon-info-sign {
+  font-weight: normal;
+  font-size: 26px;
+  padding: 25px 15px;
+  top: 3px;
+  display: hidden;
 }
 
 main {
@@ -800,5 +813,22 @@ main .element-details .chemical-name h2:first-child {
   main {
     left: -100%;
     width: 100%;
+  }
+}
+
+@media (max-width: 480px){
+  .site-map {
+    width: 100%;
+  }
+  .brand {
+    display: none;
+  }
+  .brand-container .glyphicon-info-sign {
+    display: block;
+  }
+  
+  .site-content { 
+    width: 100%;
+    background-color: rgb(242, 242, 242);
   }
 }

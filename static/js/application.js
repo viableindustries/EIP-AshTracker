@@ -18,6 +18,10 @@
       jQuery(this).tooltip('toggle');
     });
     
+    jQuery('#info_area').click(function() {
+      jQuery(".site-content").toggle();
+    });
+    
   };
   
   jQuery(document).ready(init_app);
