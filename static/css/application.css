@@ -751,10 +751,12 @@ main .element-details .chemical-name h2:first-child {
   max-width: 256px;
 }
 
-.three-col-glossary {
-  width: 75%;
-  padding: 20px 0px;
-  margin: 10px auto 10px auto;
+.glossary-col-layout {
+  -moz-column-count: 3;
+  -moz-column-gap: 4px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 4px;
+  margin-left: 16px;
 }
 
 /**
@@ -780,6 +782,14 @@ main .element-details .chemical-name h2:first-child {
     border-radius: 2px;
   }
   
+  .glossary-col-layout {
+    -moz-column-count: 2;
+    -moz-column-gap: 4px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 4px;
+    margin: 16px;
+  }
+  
   main p.lead {
     font-size: 18px;
     font-weight: 400;
@@ -788,13 +798,7 @@ main .element-details .chemical-name h2:first-child {
   h1 {
     font-size: 32px;
   }
-  
-  .row .element-table {
-    width: 70%;
-    padding: 25px 0px;
-    margin: 10px auto 10px auto;
-  }
-  
+
   .help {
     padding-right: 40px;
     padding-left: 40px;
@@ -840,6 +844,15 @@ main .element-details .chemical-name h2:first-child {
   .site-map {
     width: 100%;
   }
+  
+  .glossary-col-layout {
+    -moz-column-count: 1;
+    -moz-column-gap: 4px;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 4px;
+    margin-left: 16px;
+  }
+  
   
   .button,
   .button:hover {
