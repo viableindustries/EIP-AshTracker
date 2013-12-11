@@ -18,7 +18,9 @@ page_class: glossary
     <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=61&tid=17" target="_blank">Chromium </a>(ATSDR)<br>
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/copper.cfm" target="_blank">Copper</a> (EPA)<br>
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/cyanide.cfm" target="_blank">Cyanide</a> (EPA)<br>
+  </div>
   
+  <div class="glossary-col-layout">
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/fluoride.cfm" target="_blank">Fluoride</a> (EPA)<br>
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm" target="_blank">Gross Alpha Particle</a> (EPA)<br>
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm" target="_blank">Gross Beta Particle</a> (EPA)<br>
@@ -29,7 +31,9 @@ page_class: glossary
     <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=244&tid=44" target="_blank">Nickel</a> (ATSDR)<br>
     <a href="http://www.atsdr.cdc.gov/toxfaqs/tfacts204.pdf" target="_blank">Nitrate</a> (ATSDR)<br>
     <a href="http://www.atsdr.cdc.gov/toxfaqs/tfacts204.pdf" target="_blank">Nitrite</a> (ATSDR)<br>
+  </div>
   
+  <div class="glossary-col-layout">
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/radionuclides.cfm" target="_blank">Radium</a> 226 & 228 (EPA)<br>
     <a href="http://water.epa.gov/drink/contaminants/basicinformation/selenium.cfm" target="_blank">Selenium</a> (EPA)<br>
     <a href="http://www.atsdr.cdc.gov/toxfaqs/tf.asp?id=538&tid=97" target="_blank">Silver</a> (ATSDR)<br>
