@@ -48,13 +48,13 @@ ol li:last-child {
 }
 
 .glossaryterms >.glyphicon {
-    color: darkgray;
-    font-size: 21px;
-    border-bottom: 1px dotted rgb(24,34,43);
-    font-size: 18px;
-    font-weight: 400;
-    padding: 0 0 20px;
-    margin: 0 0 24px;
+  color: darkgray;
+  font-size: 21px;
+  border-bottom: 1px dotted rgb(24,34,43);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 0 20px;
+  margin: 0 0 24px;
 }
 
 main h3.clear,
@@ -187,7 +187,6 @@ nav {
   border-top: 0;
   box-shadow: 0 0 0;
 }
-
 
 .dropdown-menu {
   background-color: rgb(24,34,43);
@@ -769,6 +768,10 @@ main .element-details .chemical-name h2:first-child {
 
 
 @media (max-width: 768px){
+  
+  h4 {
+    margin-top: 0;
+  }
  .navbar-toggle {
     margin-top: 19px;
     position: relative;
@@ -780,6 +783,27 @@ main .element-details .chemical-name h2:first-child {
     border-radius: 2px;
   }
   
+  .element-details .other h4,
+  .element-details .chemical-symbol h4,
+  .element-details .chemical-name h4 {
+    text-align: left;
+    padding: 2px 0px;
+    margin: 16px 0 5px 0;
+  }
+  .other br {
+  display: none;
+}
+  
+  .element-details .other h2, main .element-details .other h2:first-child {
+   padding: 0 0 16px;
+ }
+  
+   .element-details .other h2, .element-details .other.last h2, 
+   main .element-details .other.last h2:first-child, .other h2:first-child  {
+    padding: 0 0 12px;
+  }
+  
+    
   .element {
     width: 30.666667%
   }
@@ -846,6 +870,7 @@ main .element-details .chemical-name h2:first-child {
 
 
 @media (max-width: 480px){
+  
   .site-map {
     width: 100%;
   }
