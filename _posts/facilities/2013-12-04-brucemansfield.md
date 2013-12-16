@@ -6,7 +6,7 @@ date: 2013-12-04 12:12:12
 coordinates: 
   - "-80.416111"
   - "40.638056"
-page_title: Bruce Mansfield Power Plant Little Blue Run Impoundment « FirstEnergy « Facilities
+page_title: 'Bruce Mansfield Power Plant Little Blue Run Impoundment &raquo; FirstEnergy | Ashtracker'
 page_class: facility
 address: 
   street: P.O. Box 128

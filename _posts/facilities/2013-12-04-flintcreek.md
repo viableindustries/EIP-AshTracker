@@ -6,7 +6,7 @@ title: Flint Creek Power Plant
 coordinates: 
   - "-94.523592"
   - "36.256268"
-page_title: Flint Creek Power Plant « American Electric Power (AEP) « Facilities
+page_title: 'Flint Creek Power Plant &raquo; American Electric Power (AEP) | Ashtracker'
 page_class: facility
 address: 
   street: 21797 SWEPCO Plant Road

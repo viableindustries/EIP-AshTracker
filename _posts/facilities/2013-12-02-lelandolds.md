@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/lelandolds
 title: "Leland Olds Station"
-page_title: 'Leland Olds Station'
+page_title: 'Leland Olds Station &raquo; Basin Electric Power Cooperative | Ashtracker'
 date: 2013-11-01 09:52:50
 published: true
 page_class: 'facility'

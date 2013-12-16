@@ -5,7 +5,7 @@ page_title: 'Cumberland Fossil Plant &raquo; Tennessee Valley Authority (TVA) | 
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'
-facility_class: cumberland_fossil_plant
+facility_class: 'cumberland_fossil_plant'
 address: 
   street: null
   city: null

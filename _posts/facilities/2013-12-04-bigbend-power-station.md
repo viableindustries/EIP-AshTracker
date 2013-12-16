@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/big-bend-station
 title: Big Bend Station
-page_title: Big Bend Station « Tampa Electric Company (TECO) « Facilities
+page_title: 'Big Bend Station &raquo; Tampa Electric Company (TECO) | Ashtracker'
 date: 2013-11-01 09:52:50
 published: true
 page_class: facility

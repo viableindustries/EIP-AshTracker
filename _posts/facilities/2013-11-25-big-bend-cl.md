@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/big-bend-cl
 title: "Big Bend Closed Landfill"
-page_title: 'Big Bend Closed Landfill'
+page_title: 'Big Bend Closed Landfill &raquo; Interstate Power and Light Company | Ashtracker'
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'

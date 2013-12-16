@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/reidgardner
 title: "Reid Gardner Generating Station"
-page_title: 'Reid Gardner Generating Station'
+page_title: 'Reid Gardner Generating Station &raquo; NV Energy | Ashtracker'
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'

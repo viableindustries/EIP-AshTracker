@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/cliffside-station
 title: "Cliffside Steam Station"
-page_title: 'Cliffside Steam Station'
+page_title: 'Cliffside Steam Station &raquo; PPL Montana | Ashtracker'
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'

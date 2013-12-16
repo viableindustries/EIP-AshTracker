@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/weatherspoon
 title: 'Weatherspoon Power Plant'
-page_title: 'Weatherspoon Power Plant'
+page_title: 'Weatherspoon Power Plant &raquo; Progress Energy Carolinas Inc. | Ashtracker'
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'

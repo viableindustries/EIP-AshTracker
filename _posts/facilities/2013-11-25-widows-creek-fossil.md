@@ -5,7 +5,7 @@ page_title: 'Widows Creek Fossil Plant &raquo; Tennessee Valley Authority (TVA) 
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'
-facility_class: widows_creek_fossil_plant
+facility_class: 'widows_creek_fossil_plant'
 address: 
   street: null
   city: null

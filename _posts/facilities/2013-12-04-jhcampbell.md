@@ -2,7 +2,7 @@ template: facility.html
 permalink: facilities/jh-campbell
 title: J.H. Campbell Landfill
 date: 2013-12-04 11:11:11
-page_title: "Consumer's Energy Company- JH Campbell Landfill « Facilities"
+page_title: "JH Campbell Landfill &raquo; Consumer's Energy Company | Ashtracker"
 page_class: facility
 facility_class: jh_campbell
 address: 

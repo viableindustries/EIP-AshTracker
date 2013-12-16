@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/hatfields-ferry
 title: Hatfield's Ferry
-page_title: "Hatfield's Ferry « Allegheny Energy « Facilities"
+page_title: "Hatfield's Ferry &raquo; Allegheny Energy | Ashtracker"
 page_class: facility
 address: 
   street: 2907 East Roy Furman Highway

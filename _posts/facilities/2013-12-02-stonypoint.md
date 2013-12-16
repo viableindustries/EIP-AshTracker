@@ -1,7 +1,7 @@
 template: facility.html
 permalink: facilities/stonypoint
 title: "Stony Point Coal Combustion Plant"
-page_title: "Stony Point Coal Combustion Plant"
+page_title: "Stony Point Coal Combustion Plant &raquo; Iowa Electric Light & Power Co. | Ashtracker"
 date: 2013-11-25 09:52:50
 published: true
 page_class: 'facility'
