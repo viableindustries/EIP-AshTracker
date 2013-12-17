@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 36.391944, params.lng || -87.655556],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -917,23 +932,25 @@ var icon_other_violation = {
   
 
   
-  var well_316 = L.marker(new L.LatLng(36.395192, -87.659122)).on('click', function (e) {
+
+  
+  var well_317 = L.marker(new L.LatLng(36.395192, -87.659122)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cumberland-fossil-plant/cuf-10-2?zoom=' + map_current_zoom + '&lat=36.395192&lng=-87.659122';  
     });
   }).on('mouseover', function (e) {
-    well_316.openPopup()
+    well_317.openPopup()
   });
 
   
-    well_316.setIcon(L.icon(icon_downgradient_violation));
+    well_317.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_316.bindPopup('CUF-10-2')
+  well_317.bindPopup('CUF-10-2')
 
-  markers.addLayer(well_316);
-  oms.addMarker(well_316);
+  markers.addLayer(well_317);
+  oms.addMarker(well_317);
   
 
   
@@ -1191,23 +1208,23 @@ var icon_other_violation = {
   
 
   
-  var well_444 = L.marker(new L.LatLng(36.3922222, -87.6602778)).on('click', function (e) {
+  var well_445 = L.marker(new L.LatLng(36.3922222, -87.6602778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cumberland-fossil-plant/cuf-93-4?zoom=' + map_current_zoom + '&lat=36.3922222&lng=-87.6602778';  
     });
   }).on('mouseover', function (e) {
-    well_444.openPopup()
+    well_445.openPopup()
   });
 
   
-    well_444.setIcon(L.icon(icon_downgradient_violation));
+    well_445.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_444.bindPopup('CUF-93-4')
+  well_445.bindPopup('CUF-93-4')
 
-  markers.addLayer(well_444);
-  oms.addMarker(well_444);
+  markers.addLayer(well_445);
+  oms.addMarker(well_445);
   
 
   
@@ -1575,25 +1592,23 @@ var icon_other_violation = {
   
 
   
-  var well_627 = L.marker(new L.LatLng(36.3805556, -87.6452778)).on('click', function (e) {
+  var well_628 = L.marker(new L.LatLng(36.3805556, -87.6452778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cumberland-fossil-plant/cuf-rs?zoom=' + map_current_zoom + '&lat=36.3805556&lng=-87.6452778';  
     });
   }).on('mouseover', function (e) {
-    well_627.openPopup()
+    well_628.openPopup()
   });
 
   
-    well_627.setIcon(L.icon(icon_upgradient_violation));
+    well_628.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_627.bindPopup('CUF-RS')
+  well_628.bindPopup('CUF-RS')
 
-  markers.addLayer(well_627);
-  oms.addMarker(well_627);
-  
-
+  markers.addLayer(well_628);
+  oms.addMarker(well_628);
   
 
   
@@ -2242,8 +2257,12 @@ map.addLayer(markers);
 </div>
 
 
+
+
 <h3 class="clear">About <strong>Cumberland Fossil Plant</strong></h3>
-<p>Information Available Soon</p>
+<p>The Cumberland Fossil Plant is located on the shores of the Barkley Reservoir on the Cumberland River. It has two coal-fired generating units. Cumberland’s ash disposal area was originally one large ash pond.  TVA installed sulfur dioxide scrubbers in 1994, and in 1995-1996 separated the area into the current configuration:  The ash pond receives wet-sluiced bottom ash, which is dredged and stacked in the dry fly ash disposal area, and fly ash is dry-handled and stacked in the dry fly ash disposal area.  Gypsum is wet-sluiced to the gypsum disposal area or directly routed to a neighboring gypsum processing plant.  The dry fly ash and gypsum disposal areas are therefore built over an unknown amount of sluiced bottom and fly ash that was left in the original ash pond. TVA has had ongoing problems with seepage along the west perimeter dike, along the bank of Wells Creek.  Groundwater under the site is in contact with ash and, in some places, gypsum.</p>
+<p>The area surrounding TVA Cumberland is rural, and the overwhelming majority of drinking water sources in Stewart County are drawn from groundwater, according to the U.S. EPA’s Safe Drinking Water Information System.  Those that are not drawing from groundwater take water from the Cumberland River.</p>
+<p>More information can be found about this site in EIP’s report, TVA’s Toxic Legacy, available <a href="http://www.environmentalintegrity.org/news_reports/documents/20131107_tvagroundwaterreport_fulldraft_000.pdf" target="_blank">here.</a></p>
 
 
 

@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 35.904124, params.lng || -84.511698],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1331,23 +1346,25 @@ var icon_other_violation = {
   
 
   
-  var well_514 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
+
+  
+  var well_515 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/ad-1?zoom=' + map_current_zoom + '&lat=35.908929&lng=-84.519528';  
     });
   }).on('mouseover', function (e) {
-    well_514.openPopup()
+    well_515.openPopup()
   });
 
   
-    well_514.setIcon(L.icon(icon_upgradient_compliant));
+    well_515.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_514.bindPopup('AD-1')
+  well_515.bindPopup('AD-1')
 
-  markers.addLayer(well_514);
-  oms.addMarker(well_514);
+  markers.addLayer(well_515);
+  oms.addMarker(well_515);
   
 
   
@@ -1597,23 +1614,23 @@ var icon_other_violation = {
   
 
   
-  var well_638 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
+  var well_639 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g4b?zoom=' + map_current_zoom + '&lat=35.891652&lng=-84.508803';  
     });
   }).on('mouseover', function (e) {
-    well_638.openPopup()
+    well_639.openPopup()
   });
 
   
-    well_638.setIcon(L.icon(icon_downgradient_compliant));
+    well_639.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_638.bindPopup('KIF-G4B')
+  well_639.bindPopup('KIF-G4B')
 
-  markers.addLayer(well_638);
-  oms.addMarker(well_638);
+  markers.addLayer(well_639);
+  oms.addMarker(well_639);
   
 
   
@@ -1913,25 +1930,23 @@ var icon_other_violation = {
   
 
   
-  var well_787 = L.marker(new L.LatLng(35.892164, -84.504835)).on('click', function (e) {
+  var well_788 = L.marker(new L.LatLng(35.892164, -84.504835)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g6b?zoom=' + map_current_zoom + '&lat=35.892164&lng=-84.504835';  
     });
   }).on('mouseover', function (e) {
-    well_787.openPopup()
+    well_788.openPopup()
   });
 
   
-    well_787.setIcon(L.icon(icon_downgradient_violation));
+    well_788.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_787.bindPopup('KIF-G6B')
+  well_788.bindPopup('KIF-G6B')
 
-  markers.addLayer(well_787);
-  oms.addMarker(well_787);
-  
-
+  markers.addLayer(well_788);
+  oms.addMarker(well_788);
   
 
   
@@ -5087,59 +5102,61 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element  ">B</div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

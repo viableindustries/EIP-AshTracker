@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 34.899314, params.lng || -85.743839],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -971,25 +986,25 @@ var icon_other_violation = {
   
 
   
-  var well_379 = L.marker(new L.LatLng(34.891392, -85.743085)).on('click', function (e) {
+
+  
+  var well_380 = L.marker(new L.LatLng(34.891392, -85.743085)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/wcf-10-50?zoom=' + map_current_zoom + '&lat=34.891392&lng=-85.743085';  
     });
   }).on('mouseover', function (e) {
-    well_379.openPopup()
+    well_380.openPopup()
   });
 
   
-    well_379.setIcon(L.icon(icon_downgradient_violation));
+    well_380.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_379.bindPopup('WCF-10-50')
+  well_380.bindPopup('WCF-10-50')
 
-  markers.addLayer(well_379);
-  oms.addMarker(well_379);
-  
-
+  markers.addLayer(well_380);
+  oms.addMarker(well_380);
   
 
   
@@ -1025,25 +1040,25 @@ var icon_other_violation = {
   
 
   
-  var well_397 = L.marker(new L.LatLng(34.903928, -85.744564)).on('click', function (e) {
+
+  
+  var well_398 = L.marker(new L.LatLng(34.903928, -85.744564)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/wcf-10-51?zoom=' + map_current_zoom + '&lat=34.903928&lng=-85.744564';  
     });
   }).on('mouseover', function (e) {
-    well_397.openPopup()
+    well_398.openPopup()
   });
 
   
-    well_397.setIcon(L.icon(icon_downgradient_violation));
+    well_398.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_397.bindPopup('WCF-10-51')
+  well_398.bindPopup('WCF-10-51')
 
-  markers.addLayer(well_397);
-  oms.addMarker(well_397);
-  
-
+  markers.addLayer(well_398);
+  oms.addMarker(well_398);
   
 
   
@@ -1109,23 +1124,25 @@ var icon_other_violation = {
   
 
   
-  var well_430 = L.marker(new L.LatLng(34.899314, -85.743839)).on('click', function (e) {
+
+  
+  var well_431 = L.marker(new L.LatLng(34.899314, -85.743839)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/31?zoom=' + map_current_zoom + '&lat=34.899314&lng=-85.743839';  
     });
   }).on('mouseover', function (e) {
-    well_430.openPopup()
+    well_431.openPopup()
   });
 
   
-    well_430.setIcon(L.icon(icon_downgradient_compliant));
+    well_431.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_430.bindPopup('31')
+  well_431.bindPopup('31')
 
-  markers.addLayer(well_430);
-  oms.addMarker(well_430);
+  markers.addLayer(well_431);
+  oms.addMarker(well_431);
   
 
   
@@ -1403,25 +1420,23 @@ var icon_other_violation = {
   
 
   
-  var well_568 = L.marker(new L.LatLng(34.903162, -85.755266)).on('click', function (e) {
+  var well_569 = L.marker(new L.LatLng(34.903162, -85.755266)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/w-10?zoom=' + map_current_zoom + '&lat=34.903162&lng=-85.755266';  
     });
   }).on('mouseover', function (e) {
-    well_568.openPopup()
+    well_569.openPopup()
   });
 
   
-    well_568.setIcon(L.icon(icon_upgradient_compliant));
+    well_569.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_568.bindPopup('W-10')
+  well_569.bindPopup('W-10')
 
-  markers.addLayer(well_568);
-  oms.addMarker(well_568);
-  
-
+  markers.addLayer(well_569);
+  oms.addMarker(well_569);
   
 
   
@@ -2177,6 +2192,9 @@ var icon_other_violation = {
 
 
 
+  
+
+    
   
 
     
@@ -4968,9 +4986,6 @@ var icon_other_violation = {
     
   
 
-    
-  
-
 
 
 /**
@@ -5011,59 +5026,61 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element  ">B</div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

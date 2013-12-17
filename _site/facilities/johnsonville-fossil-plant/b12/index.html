@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 36.036371, params.lng || -87.980557],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1205,25 +1220,25 @@ var icon_other_violation = {
   
 
   
-  var well_433 = L.marker(new L.LatLng(36.024123, -87.996897)).on('click', function (e) {
+
+  
+  var well_434 = L.marker(new L.LatLng(36.024123, -87.996897)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/johnsonville-fossil-plant/jof-10-ap1?zoom=' + map_current_zoom + '&lat=36.024123&lng=-87.996897';  
     });
   }).on('mouseover', function (e) {
-    well_433.openPopup()
+    well_434.openPopup()
   });
 
   
-    well_433.setIcon(L.icon(icon_downgradient_violation));
+    well_434.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_433.bindPopup('JOF-10-AP1')
+  well_434.bindPopup('JOF-10-AP1')
 
-  markers.addLayer(well_433);
-  oms.addMarker(well_433);
-  
-
+  markers.addLayer(well_434);
+  oms.addMarker(well_434);
   
 
   
@@ -1305,23 +1320,25 @@ var icon_other_violation = {
   
 
   
-  var well_474 = L.marker(new L.LatLng(36.02347, -87.985026)).on('click', function (e) {
+
+  
+  var well_475 = L.marker(new L.LatLng(36.02347, -87.985026)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/johnsonville-fossil-plant/b5?zoom=' + map_current_zoom + '&lat=36.02347&lng=-87.985026';  
     });
   }).on('mouseover', function (e) {
-    well_474.openPopup()
+    well_475.openPopup()
   });
 
   
-    well_474.setIcon(L.icon(icon_downgradient_compliant));
+    well_475.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_474.bindPopup('B5')
+  well_475.bindPopup('B5')
 
-  markers.addLayer(well_474);
-  oms.addMarker(well_474);
+  markers.addLayer(well_475);
+  oms.addMarker(well_475);
   
 
   
@@ -1517,25 +1534,23 @@ var icon_other_violation = {
   
 
   
-  var well_571 = L.marker(new L.LatLng(36.024175, -87.992412)).on('click', function (e) {
+  var well_572 = L.marker(new L.LatLng(36.024175, -87.992412)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/johnsonville-fossil-plant/jof-10-ap3?zoom=' + map_current_zoom + '&lat=36.024175&lng=-87.992412';  
     });
   }).on('mouseover', function (e) {
-    well_571.openPopup()
+    well_572.openPopup()
   });
 
   
-    well_571.setIcon(L.icon(icon_downgradient_violation));
+    well_572.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_571.bindPopup('JOF-10-AP3')
+  well_572.bindPopup('JOF-10-AP3')
 
-  markers.addLayer(well_571);
-  oms.addMarker(well_571);
-  
-
+  markers.addLayer(well_572);
+  oms.addMarker(well_572);
   
 
   
@@ -1543,23 +1558,25 @@ var icon_other_violation = {
   
 
   
-  var well_575 = L.marker(new L.LatLng(36.026306, -87.973534)).on('click', function (e) {
+
+  
+  var well_576 = L.marker(new L.LatLng(36.026306, -87.973534)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/johnsonville-fossil-plant/b30?zoom=' + map_current_zoom + '&lat=36.026306&lng=-87.973534';  
     });
   }).on('mouseover', function (e) {
-    well_575.openPopup()
+    well_576.openPopup()
   });
 
   
-    well_575.setIcon(L.icon(icon_upgradient_violation));
+    well_576.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_575.bindPopup('B30')
+  well_576.bindPopup('B30')
 
-  markers.addLayer(well_575);
-  oms.addMarker(well_575);
+  markers.addLayer(well_576);
+  oms.addMarker(well_576);
   
 
   
@@ -1689,23 +1706,23 @@ var icon_other_violation = {
   
 
   
-  var well_639 = L.marker(new L.LatLng(36.033452, -87.977705)).on('click', function (e) {
+  var well_640 = L.marker(new L.LatLng(36.033452, -87.977705)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/johnsonville-fossil-plant/b13?zoom=' + map_current_zoom + '&lat=36.033452&lng=-87.977705';  
     });
   }).on('mouseover', function (e) {
-    well_639.openPopup()
+    well_640.openPopup()
   });
 
   
-    well_639.setIcon(L.icon(icon_upgradient_violation));
+    well_640.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_639.bindPopup('B13')
+  well_640.bindPopup('B13')
 
-  markers.addLayer(well_639);
-  oms.addMarker(well_639);
+  markers.addLayer(well_640);
+  oms.addMarker(well_640);
   
 
   
@@ -1941,25 +1958,23 @@ var icon_other_violation = {
   
 
   
-  var well_756 = L.marker(new L.LatLng(36.024268, -87.980237)).on('click', function (e) {
+  var well_757 = L.marker(new L.LatLng(36.024268, -87.980237)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/johnsonville-fossil-plant/b6r?zoom=' + map_current_zoom + '&lat=36.024268&lng=-87.980237';  
     });
   }).on('mouseover', function (e) {
-    well_756.openPopup()
+    well_757.openPopup()
   });
 
   
-    well_756.setIcon(L.icon(icon_downgradient_violation));
+    well_757.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_756.bindPopup('B6R')
+  well_757.bindPopup('B6R')
 
-  markers.addLayer(well_756);
-  oms.addMarker(well_756);
-  
-
+  markers.addLayer(well_757);
+  oms.addMarker(well_757);
   
 
   
@@ -5123,59 +5138,63 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="Exceendence of Ba at this well">Ba</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="Exceendence of Ba at this well"><span class="contaminant-symbol">Ba</span> <span class="contaminant-name">Barium</span></div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element  ">B</div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

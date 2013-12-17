@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 39.846389, params.lng || -79.953889],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1085,25 +1100,25 @@ var icon_other_violation = {
   
 
   
-  var well_418 = L.marker(new L.LatLng(39.85222222, -79.93916667)).on('click', function (e) {
+
+  
+  var well_419 = L.marker(new L.LatLng(39.85222222, -79.93916667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw218a?zoom=' + map_current_zoom + '&lat=39.85222222&lng=-79.93916667';  
     });
   }).on('mouseover', function (e) {
-    well_418.openPopup()
+    well_419.openPopup()
   });
 
   
-    well_418.setIcon(L.icon(icon_downgradient_violation));
+    well_419.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_418.bindPopup('MW218A')
+  well_419.bindPopup('MW218A')
 
-  markers.addLayer(well_418);
-  oms.addMarker(well_418);
-  
-
+  markers.addLayer(well_419);
+  oms.addMarker(well_419);
   
 
   
@@ -1201,25 +1216,25 @@ var icon_other_violation = {
   
 
   
-  var well_467 = L.marker(new L.LatLng(39.854556, -79.946556)).on('click', function (e) {
+
+  
+  var well_468 = L.marker(new L.LatLng(39.854556, -79.946556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw202b?zoom=' + map_current_zoom + '&lat=39.854556&lng=-79.946556';  
     });
   }).on('mouseover', function (e) {
-    well_467.openPopup()
+    well_468.openPopup()
   });
 
   
-    well_467.setIcon(L.icon(icon_downgradient_violation));
+    well_468.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_467.bindPopup('MW202B')
+  well_468.bindPopup('MW202B')
 
-  markers.addLayer(well_467);
-  oms.addMarker(well_467);
-  
-
+  markers.addLayer(well_468);
+  oms.addMarker(well_468);
   
 
   
@@ -1271,23 +1286,25 @@ var icon_other_violation = {
   
 
   
-  var well_493 = L.marker(new L.LatLng(39.85166667, -79.93916667)).on('click', function (e) {
+
+  
+  var well_494 = L.marker(new L.LatLng(39.85166667, -79.93916667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw217a?zoom=' + map_current_zoom + '&lat=39.85166667&lng=-79.93916667';  
     });
   }).on('mouseover', function (e) {
-    well_493.openPopup()
+    well_494.openPopup()
   });
 
   
-    well_493.setIcon(L.icon(icon_downgradient_violation));
+    well_494.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_493.bindPopup('MW217A')
+  well_494.bindPopup('MW217A')
 
-  markers.addLayer(well_493);
-  oms.addMarker(well_493);
+  markers.addLayer(well_494);
+  oms.addMarker(well_494);
   
 
   
@@ -1457,23 +1474,23 @@ var icon_other_violation = {
   
 
   
-  var well_577 = L.marker(new L.LatLng(39.856111, -79.945722)).on('click', function (e) {
+  var well_578 = L.marker(new L.LatLng(39.856111, -79.945722)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw201c?zoom=' + map_current_zoom + '&lat=39.856111&lng=-79.945722';  
     });
   }).on('mouseover', function (e) {
-    well_577.openPopup()
+    well_578.openPopup()
   });
 
   
-    well_577.setIcon(L.icon(icon_downgradient_violation));
+    well_578.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_577.bindPopup('MW201C')
+  well_578.bindPopup('MW201C')
 
-  markers.addLayer(well_577);
-  oms.addMarker(well_577);
+  markers.addLayer(well_578);
+  oms.addMarker(well_578);
   
 
   
@@ -1925,25 +1942,23 @@ var icon_other_violation = {
   
 
   
-  var well_802 = L.marker(new L.LatLng(39.85277778, -79.94194444)).on('click', function (e) {
+  var well_803 = L.marker(new L.LatLng(39.85277778, -79.94194444)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw216a?zoom=' + map_current_zoom + '&lat=39.85277778&lng=-79.94194444';  
     });
   }).on('mouseover', function (e) {
-    well_802.openPopup()
+    well_803.openPopup()
   });
 
   
-    well_802.setIcon(L.icon(icon_downgradient_violation));
+    well_803.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_802.bindPopup('MW216A')
+  well_803.bindPopup('MW216A')
 
-  markers.addLayer(well_802);
-  oms.addMarker(well_802);
-  
-
+  markers.addLayer(well_803);
+  oms.addMarker(well_803);
   
 
   
@@ -2019,25 +2034,25 @@ var icon_other_violation = {
   
 
   
-  var well_840 = L.marker(new L.LatLng(39.854, -79.946083)).on('click', function (e) {
+
+  
+  var well_841 = L.marker(new L.LatLng(39.854, -79.946083)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw204b?zoom=' + map_current_zoom + '&lat=39.854&lng=-79.946083';  
     });
   }).on('mouseover', function (e) {
-    well_840.openPopup()
+    well_841.openPopup()
   });
 
   
-    well_840.setIcon(L.icon(icon_downgradient_violation));
+    well_841.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_840.bindPopup('MW204B')
+  well_841.bindPopup('MW204B')
 
-  markers.addLayer(well_840);
-  oms.addMarker(well_840);
-  
-
+  markers.addLayer(well_841);
+  oms.addMarker(well_841);
   
 
   
@@ -2231,6 +2246,9 @@ var icon_other_violation = {
 
 
 
+  
+
+    
   
 
     
@@ -5022,9 +5040,6 @@ var icon_other_violation = {
     
   
 
-    
-  
-
 
 
 /**
@@ -5065,59 +5080,83 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="Exceendence of Sb at this well">Sb</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="Exceendence of Sb at this well"><span class="contaminant-symbol">Sb</span> <span class="contaminant-name">Antimony</span></div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="Exceendence of As at this well">As</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="Exceendence of As at this well"><span class="contaminant-symbol">As</span> <span class="contaminant-name">Arsenic</span></div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="Exceendence of B at this well">B</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="Exceendence of B at this well"><span class="contaminant-symbol">B</span> <span class="contaminant-name">Boron</span></div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cd at this facility">Cd</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cd at this facility"><span class="contaminant-symbol">Cd</span> <span class="contaminant-name">Cadmium</span></div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Co</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Co</span> <span class="contaminant-name">Cobalt</span></div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cr at this facility">Cr</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cr at this facility"><span class="contaminant-symbol">Cr</span> <span class="contaminant-name">Chromium</span></div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility">Mn</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility"><span class="contaminant-symbol">Mn</span> <span class="contaminant-name">Manganese</span></div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="Exceendence of Mo at this well">Mo</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="Exceendence of Mo at this well"><span class="contaminant-symbol">Mo</span> <span class="contaminant-name">Molybdenum</span></div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Ni at this facility">Ni</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of N at this facility"><span class="contaminant-symbol">N</span> <span class="contaminant-name">Nitrate (as N)</span></div>
+    
   
-    <div class="element  ">Ra</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Ni at this facility"><span class="contaminant-symbol">Ni</span> <span class="contaminant-name">Nickel</span></div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility"><span class="contaminant-symbol">Se</span> <span class="contaminant-name">Selenium</span></div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

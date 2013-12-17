@@ -29,7 +29,7 @@
     <meta name="description" content="" />
 
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Allen Steam Plant Ash Basin" />
+    <meta property="twitter:title" content="Allen Steam Plant" />
     <meta property="twitter:url" content="facilities/2013-11-25-allen" />
 
     <meta name="author" content="" />
@@ -38,16 +38,16 @@
     <meta property="og:site_name" content="Ashtracker" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="facilities/2013-11-25-allen" />
-    <meta property="og:title" content="Allen Steam Plant Ash Basin" />
+    <meta property="og:title" content="Allen Steam Plant" />
 
     <meta name="dcterms.type" content="Text" />
     <meta name="dcterms.identifier" content="facilities/2013-11-25-allen" />
     <meta name="dcterms.format" content="text/html" />
-    <meta name="dcterms.title" content="Allen Steam Plant Ash Basin" />
+    <meta name="dcterms.title" content="Allen Steam Plant" />
 
     <meta name="fragment" content="!" />
 
-    <title>Allen Steam Plant Ash Basin | Ashtracker</title>
+    <title>Allen Steam Plant | Ashtracker</title>
 
     <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
     <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 35.179529, params.lng || -81.006759],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -2076,7 +2091,7 @@ map.addLayer(markers);
 
 <h5><strong>Facility</strong> View <a title="Return to the National view" class="close-well pull-right" href="/facilities">&times;</a></h5>
 
-<h1>Allen Steam Plant Ash Basin</h1>
+<h1>Allen Steam Plant</h1>
 
 <address>
   
@@ -2098,8 +2113,10 @@ map.addLayer(markers);
 </div>
 
 
-<h3 class="clear">About <strong>Allen Steam Plant Ash Basin</strong></h3>
-<p>Information Available Soon</p>
+
+
+<h3 class="clear">About <strong>Allen Steam Plant</strong></h3>
+<p>The Allen Steam Plant has five coal-fired generating units; the newest of which began operating in 1961. It is located on the banks of the Catawba River. In its 2007 Damage Case Assessment, EPA found that there were documented exceedances of non-health based standards for manganese and iron in wells downstream from the facility based on historic data.  In the August 2013, the State of North Carolina entered into a consent decree regarding seeps and other unpermitted discharges to groundwater. Concerned that the State would not require Duke to implement any meaningful remedies, the Catawba Riverkeeper sought (and was granted) the opportunity to intervene in the ongoing case. </p>
 
 
 

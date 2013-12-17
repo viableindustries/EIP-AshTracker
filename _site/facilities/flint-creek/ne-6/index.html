@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 36.258858, params.lng || -94.518781],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1051,70 +1066,52 @@ var icon_other_violation = {
   
 
   
-  var well_401 = L.marker(new L.LatLng(36.257278, -94.516972)).on('click', function (e) {
+
+  
+  var well_402 = L.marker(new L.LatLng(36.257278, -94.516972)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/b-08?zoom=' + map_current_zoom + '&lat=36.257278&lng=-94.516972';  
-    });
-  }).on('mouseover', function (e) {
-    well_401.openPopup()
-  });
-
-  
-    well_401.setIcon(L.icon(icon_upgradient_violation));
-  
-
-  well_401.bindPopup('B-08')
-
-  markers.addLayer(well_401);
-  oms.addMarker(well_401);
-  
-
-  
-  var well_402 = L.marker(new L.LatLng(36.260864, -94.516081)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';  
     });
   }).on('mouseover', function (e) {
     well_402.openPopup()
   });
 
   
-    well_402.setIcon(L.icon(icon_downgradient_violation));
+    well_402.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_402.bindPopup('B-06')
+  well_402.bindPopup('B-08')
 
   markers.addLayer(well_402);
   oms.addMarker(well_402);
   
 
   
-  var well_403 = L.marker(new L.LatLng(36.257273, -94.513837)).on('click', function (e) {
+  var well_403 = L.marker(new L.LatLng(36.260864, -94.516081)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';  
+      window.location.href = '/facilities/flint-creek/b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';  
     });
   }).on('mouseover', function (e) {
     well_403.openPopup()
   });
 
   
-    well_403.setIcon(L.icon(icon_upgradient_compliant));
+    well_403.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_403.bindPopup('B-05')
+  well_403.bindPopup('B-06')
 
   markers.addLayer(well_403);
   oms.addMarker(well_403);
   
 
   
-  var well_404 = L.marker(new L.LatLng(36.258858, -94.511693)).on('click', function (e) {
+  var well_404 = L.marker(new L.LatLng(36.257273, -94.513837)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';  
+      window.location.href = '/facilities/flint-creek/b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';  
     });
   }).on('mouseover', function (e) {
     well_404.openPopup()
@@ -1124,32 +1121,52 @@ var icon_other_violation = {
     well_404.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_404.bindPopup('B-04')
+  well_404.bindPopup('B-05')
 
   markers.addLayer(well_404);
   oms.addMarker(well_404);
   
 
   
+  var well_405 = L.marker(new L.LatLng(36.258858, -94.511693)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';  
+    });
+  }).on('mouseover', function (e) {
+    well_405.openPopup()
+  });
 
   
-  var well_406 = L.marker(new L.LatLng(36.259546, -94.516108)).on('click', function (e) {
+    well_405.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_405.bindPopup('B-04')
+
+  markers.addLayer(well_405);
+  oms.addMarker(well_405);
+  
+
+  
+
+  
+  var well_407 = L.marker(new L.LatLng(36.259546, -94.516108)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/b-02?zoom=' + map_current_zoom + '&lat=36.259546&lng=-94.516108';  
     });
   }).on('mouseover', function (e) {
-    well_406.openPopup()
+    well_407.openPopup()
   });
 
   
-    well_406.setIcon(L.icon(icon_downgradient_violation));
+    well_407.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_406.bindPopup('B-02')
+  well_407.bindPopup('B-02')
 
-  markers.addLayer(well_406);
-  oms.addMarker(well_406);
+  markers.addLayer(well_407);
+  oms.addMarker(well_407);
   
 
   
@@ -1585,23 +1602,23 @@ var icon_other_violation = {
   
 
   
-  var well_623 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
+  var well_624 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-7d?zoom=' + map_current_zoom + '&lat=36.258296&lng=-94.518796';  
     });
   }).on('mouseover', function (e) {
-    well_623.openPopup()
+    well_624.openPopup()
   });
 
   
-    well_623.setIcon(L.icon(icon_downgradient_violation));
+    well_624.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_623.bindPopup('NE-7D')
+  well_624.bindPopup('NE-7D')
 
-  markers.addLayer(well_623);
-  oms.addMarker(well_623);
+  markers.addLayer(well_624);
+  oms.addMarker(well_624);
   
 
   
@@ -1747,25 +1764,23 @@ var icon_other_violation = {
   
 
   
-  var well_695 = L.marker(new L.LatLng(36.260861, -94.516727)).on('click', function (e) {
+  var well_696 = L.marker(new L.LatLng(36.260861, -94.516727)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-1?zoom=' + map_current_zoom + '&lat=36.260861&lng=-94.516727';  
     });
   }).on('mouseover', function (e) {
-    well_695.openPopup()
+    well_696.openPopup()
   });
 
   
-    well_695.setIcon(L.icon(icon_downgradient_violation));
+    well_696.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_695.bindPopup('NE-1')
+  well_696.bindPopup('NE-1')
 
-  markers.addLayer(well_695);
-  oms.addMarker(well_695);
-  
-
+  markers.addLayer(well_696);
+  oms.addMarker(well_696);
   
 
   
@@ -1781,25 +1796,25 @@ var icon_other_violation = {
   
 
   
-  var well_703 = L.marker(new L.LatLng(36.259574, -94.517474)).on('click', function (e) {
+
+  
+  var well_704 = L.marker(new L.LatLng(36.259574, -94.517474)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-2?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517474';  
     });
   }).on('mouseover', function (e) {
-    well_703.openPopup()
+    well_704.openPopup()
   });
 
   
-    well_703.setIcon(L.icon(icon_downgradient_compliant));
+    well_704.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_703.bindPopup('NE-2')
+  well_704.bindPopup('NE-2')
 
-  markers.addLayer(well_703);
-  oms.addMarker(well_703);
-  
-
+  markers.addLayer(well_704);
+  oms.addMarker(well_704);
   
 
   
@@ -5173,59 +5188,79 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="Exceendence of As at this well">As</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="Exceendence of As at this well"><span class="contaminant-symbol">As</span> <span class="contaminant-name">Arsenic (Total)</span></div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="Exceendence of Ba at this well">Ba</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="Exceendence of Ba at this well"><span class="contaminant-symbol">Ba</span> <span class="contaminant-name">Barium (Total)</span></div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of B at this facility">B</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of B at this facility"><span class="contaminant-symbol">B</span> <span class="contaminant-name">Boron</span></div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cr at this facility">Cr</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Cr at this facility"><span class="contaminant-symbol">Cr</span> <span class="contaminant-name">Chromium</span></div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Exceendence of GAP at this well">GAP</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Exceendence of GAP at this well"><span class="contaminant-symbol">GAP</span> <span class="contaminant-name">Gross Alpha Particle Activity</span></div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="Exceendence of Pb at this well">Pb</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="Exceendence of Pb at this well"><span class="contaminant-symbol">Pb</span> <span class="contaminant-name">Lead (Total)</span></div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility">Mn</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility"><span class="contaminant-symbol">Mn</span> <span class="contaminant-name">Manganese</span></div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mo at this facility">Mo</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mo at this facility"><span class="contaminant-symbol">Mo</span> <span class="contaminant-name">Molybdenum</span></div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility"><span class="contaminant-symbol">Se</span> <span class="contaminant-name">Selenium</span></div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

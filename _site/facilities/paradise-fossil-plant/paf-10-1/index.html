@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 37.240404, params.lng || -86.997893],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1251,25 +1266,25 @@ var icon_other_violation = {
   
 
   
-  var well_519 = L.marker(new L.LatLng(37.264505, -86.978586)).on('click', function (e) {
+
+  
+  var well_520 = L.marker(new L.LatLng(37.264505, -86.978586)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/95-47c?zoom=' + map_current_zoom + '&lat=37.264505&lng=-86.978586';  
     });
   }).on('mouseover', function (e) {
-    well_519.openPopup()
+    well_520.openPopup()
   });
 
   
-    well_519.setIcon(L.icon(icon_downgradient_compliant));
+    well_520.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_519.bindPopup('95-47C')
+  well_520.bindPopup('95-47C')
 
-  markers.addLayer(well_519);
-  oms.addMarker(well_519);
-  
-
+  markers.addLayer(well_520);
+  oms.addMarker(well_520);
   
 
   
@@ -1335,47 +1350,49 @@ var icon_other_violation = {
   
 
   
-  var well_552 = L.marker(new L.LatLng(37.263122, -86.996283)).on('click', function (e) {
+
+  
+  var well_553 = L.marker(new L.LatLng(37.263122, -86.996283)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/paf-10-7?zoom=' + map_current_zoom + '&lat=37.263122&lng=-86.996283';  
     });
   }).on('mouseover', function (e) {
-    well_552.openPopup()
+    well_553.openPopup()
   });
 
   
-    well_552.setIcon(L.icon(icon_upgradient_violation));
+    well_553.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_552.bindPopup('PAF-10-7')
+  well_553.bindPopup('PAF-10-7')
 
-  markers.addLayer(well_552);
-  oms.addMarker(well_552);
-  
-
+  markers.addLayer(well_553);
+  oms.addMarker(well_553);
   
 
   
 
   
-  var well_555 = L.marker(new L.LatLng(37.245653, -86.975477)).on('click', function (e) {
+
+  
+  var well_556 = L.marker(new L.LatLng(37.245653, -86.975477)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/paf-10-4?zoom=' + map_current_zoom + '&lat=37.245653&lng=-86.975477';  
     });
   }).on('mouseover', function (e) {
-    well_555.openPopup()
+    well_556.openPopup()
   });
 
   
-    well_555.setIcon(L.icon(icon_downgradient_violation));
+    well_556.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_555.bindPopup('PAF-10-4')
+  well_556.bindPopup('PAF-10-4')
 
-  markers.addLayer(well_555);
-  oms.addMarker(well_555);
+  markers.addLayer(well_556);
+  oms.addMarker(well_556);
   
 
   
@@ -1705,25 +1722,23 @@ var icon_other_violation = {
   
 
   
-  var well_719 = L.marker(new L.LatLng(37.251888, -87.003599)).on('click', function (e) {
+  var well_720 = L.marker(new L.LatLng(37.251888, -87.003599)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/97-45?zoom=' + map_current_zoom + '&lat=37.251888&lng=-87.003599';  
     });
   }).on('mouseover', function (e) {
-    well_719.openPopup()
+    well_720.openPopup()
   });
 
   
-    well_719.setIcon(L.icon(icon_upgradient_compliant));
+    well_720.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_719.bindPopup('97-45')
+  well_720.bindPopup('97-45')
 
-  markers.addLayer(well_719);
-  oms.addMarker(well_719);
-  
-
+  markers.addLayer(well_720);
+  oms.addMarker(well_720);
   
 
   
@@ -1841,25 +1856,25 @@ var icon_other_violation = {
   
 
   
-  var well_778 = L.marker(new L.LatLng(37.251343, -87.001378)).on('click', function (e) {
+
+  
+  var well_779 = L.marker(new L.LatLng(37.251343, -87.001378)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/94-42?zoom=' + map_current_zoom + '&lat=37.251343&lng=-87.001378';  
     });
   }).on('mouseover', function (e) {
-    well_778.openPopup()
+    well_779.openPopup()
   });
 
   
-    well_778.setIcon(L.icon(icon_upgradient_compliant));
+    well_779.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_778.bindPopup('94-42')
+  well_779.bindPopup('94-42')
 
-  markers.addLayer(well_778);
-  oms.addMarker(well_778);
-  
-
+  markers.addLayer(well_779);
+  oms.addMarker(well_779);
   
 
   
@@ -5105,59 +5120,63 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="Exceendence of B at this well">B</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="Exceendence of B at this well"><span class="contaminant-symbol">B</span> <span class="contaminant-name">Boron</span></div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

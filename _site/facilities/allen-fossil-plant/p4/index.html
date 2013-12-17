@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 35.074798, params.lng || -90.142416],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -949,21 +964,23 @@ var icon_other_violation = {
   
 
   
-  var well_377 = L.marker(new L.LatLng(35.071199, -90.149379)).on('click', function (e) {
+
+  
+  var well_378 = L.marker(new L.LatLng(35.071199, -90.149379)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/allen-fossil-plant/p1?zoom=' + map_current_zoom + '&lat=35.071199&lng=-90.149379';  
     });
   }).on('mouseover', function (e) {
-    well_377.openPopup()
+    well_378.openPopup()
   });
 
   
 
-  well_377.bindPopup('P1')
+  well_378.bindPopup('P1')
 
-  markers.addLayer(well_377);
-  oms.addMarker(well_377);
+  markers.addLayer(well_378);
+  oms.addMarker(well_378);
   
 
   
@@ -981,48 +998,30 @@ var icon_other_violation = {
   
 
   
-  var well_385 = L.marker(new L.LatLng(35.074899, -90.138542)).on('click', function (e) {
+  var well_386 = L.marker(new L.LatLng(35.074899, -90.138542)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/allen-fossil-plant/p6?zoom=' + map_current_zoom + '&lat=35.074899&lng=-90.138542';  
     });
   }).on('mouseover', function (e) {
-    well_385.openPopup()
+    well_386.openPopup()
   });
 
   
 
-  well_385.bindPopup('P6')
+  well_386.bindPopup('P6')
 
-  markers.addLayer(well_385);
-  oms.addMarker(well_385);
+  markers.addLayer(well_386);
+  oms.addMarker(well_386);
   
 
   
 
   
-  var well_387 = L.marker(new L.LatLng(35.074798, -90.142416)).on('click', function (e) {
+  var well_388 = L.marker(new L.LatLng(35.074798, -90.142416)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/allen-fossil-plant/p4?zoom=' + map_current_zoom + '&lat=35.074798&lng=-90.142416';  
-    });
-  }).on('mouseover', function (e) {
-    well_387.openPopup()
-  });
-
-  
-
-  well_387.bindPopup('P4')
-
-  markers.addLayer(well_387);
-  oms.addMarker(well_387);
-  
-
-  
-  var well_388 = L.marker(new L.LatLng(35.073632, -90.133827)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/allen-fossil-plant/p5?zoom=' + map_current_zoom + '&lat=35.073632&lng=-90.133827';  
     });
   }).on('mouseover', function (e) {
     well_388.openPopup()
@@ -1030,12 +1029,28 @@ var icon_other_violation = {
 
   
 
-  well_388.bindPopup('P5')
+  well_388.bindPopup('P4')
 
   markers.addLayer(well_388);
   oms.addMarker(well_388);
   
 
+  
+  var well_389 = L.marker(new L.LatLng(35.073632, -90.133827)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/allen-fossil-plant/p5?zoom=' + map_current_zoom + '&lat=35.073632&lng=-90.133827';  
+    });
+  }).on('mouseover', function (e) {
+    well_389.openPopup()
+  });
+
+  
+
+  well_389.bindPopup('P5')
+
+  markers.addLayer(well_389);
+  oms.addMarker(well_389);
   
 
   
@@ -4933,59 +4948,61 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element  ">B</div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

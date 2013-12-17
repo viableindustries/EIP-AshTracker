@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 47.2123, params.lng || -101.7942917],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -973,47 +988,45 @@ var icon_other_violation = {
   
 
   
-  var well_353 = L.marker(new L.LatLng(47.20938611, -101.7892)).on('click', function (e) {
+
+  
+  var well_354 = L.marker(new L.LatLng(47.20938611, -101.7892)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/blue-12?zoom=' + map_current_zoom + '&lat=47.20938611&lng=-101.7892';  
-    });
-  }).on('mouseover', function (e) {
-    well_353.openPopup()
-  });
-
-  
-    well_353.setIcon(L.icon(icon_downgradient_compliant));
-  
-
-  well_353.bindPopup('BLUE 12')
-
-  markers.addLayer(well_353);
-  oms.addMarker(well_353);
-  
-
-  
-  var well_354 = L.marker(new L.LatLng(47.20898056, -101.7863889)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/blue-13?zoom=' + map_current_zoom + '&lat=47.20898056&lng=-101.7863889';  
     });
   }).on('mouseover', function (e) {
     well_354.openPopup()
   });
 
   
-    well_354.setIcon(L.icon(icon_upgradient_compliant));
+    well_354.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_354.bindPopup('BLUE 13')
+  well_354.bindPopup('BLUE 12')
 
   markers.addLayer(well_354);
   oms.addMarker(well_354);
   
 
   
+  var well_355 = L.marker(new L.LatLng(47.20898056, -101.7863889)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/coyote-station/blue-13?zoom=' + map_current_zoom + '&lat=47.20898056&lng=-101.7863889';  
+    });
+  }).on('mouseover', function (e) {
+    well_355.openPopup()
+  });
 
+  
+    well_355.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_355.bindPopup('BLUE 13')
+
+  markers.addLayer(well_355);
+  oms.addMarker(well_355);
   
 
   
@@ -1049,23 +1062,27 @@ var icon_other_violation = {
   
 
   
-  var well_373 = L.marker(new L.LatLng(47.22054167, -101.8133639)).on('click', function (e) {
+
+  
+
+  
+  var well_374 = L.marker(new L.LatLng(47.22054167, -101.8133639)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-n3?zoom=' + map_current_zoom + '&lat=47.22054167&lng=-101.8133639';  
     });
   }).on('mouseover', function (e) {
-    well_373.openPopup()
+    well_374.openPopup()
   });
 
   
-    well_373.setIcon(L.icon(icon_upgradient_violation));
+    well_374.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_373.bindPopup('ASH POND N3')
+  well_374.bindPopup('ASH POND N3')
 
-  markers.addLayer(well_373);
-  oms.addMarker(well_373);
+  markers.addLayer(well_374);
+  oms.addMarker(well_374);
   
 
   
@@ -1293,23 +1310,23 @@ var icon_other_violation = {
   
 
   
-  var well_486 = L.marker(new L.LatLng(47.21781389, -101.8088556)).on('click', function (e) {
+  var well_487 = L.marker(new L.LatLng(47.21781389, -101.8088556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-6?zoom=' + map_current_zoom + '&lat=47.21781389&lng=-101.8088556';  
     });
   }).on('mouseover', function (e) {
-    well_486.openPopup()
+    well_487.openPopup()
   });
 
   
-    well_486.setIcon(L.icon(icon_downgradient_violation));
+    well_487.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_486.bindPopup('ASH POND 6')
+  well_487.bindPopup('ASH POND 6')
 
-  markers.addLayer(well_486);
-  oms.addMarker(well_486);
+  markers.addLayer(well_487);
+  oms.addMarker(well_487);
   
 
   
@@ -1483,25 +1500,23 @@ var icon_other_violation = {
   
 
   
-  var well_572 = L.marker(new L.LatLng(47.21894167, -101.8109889)).on('click', function (e) {
+  var well_573 = L.marker(new L.LatLng(47.21894167, -101.8109889)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-a6?zoom=' + map_current_zoom + '&lat=47.21894167&lng=-101.8109889';  
     });
   }).on('mouseover', function (e) {
-    well_572.openPopup()
+    well_573.openPopup()
   });
 
   
-    well_572.setIcon(L.icon(icon_downgradient_violation));
+    well_573.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_572.bindPopup('ASH POND A6')
+  well_573.bindPopup('ASH POND A6')
 
-  markers.addLayer(well_572);
-  oms.addMarker(well_572);
-  
-
+  markers.addLayer(well_573);
+  oms.addMarker(well_573);
   
 
   
@@ -1555,25 +1570,25 @@ var icon_other_violation = {
   
 
   
-  var well_599 = L.marker(new L.LatLng(47.22345278, -101.7970083)).on('click', function (e) {
+
+  
+  var well_600 = L.marker(new L.LatLng(47.22345278, -101.7970083)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/black-bp2-a?zoom=' + map_current_zoom + '&lat=47.22345278&lng=-101.7970083';  
     });
   }).on('mouseover', function (e) {
-    well_599.openPopup()
+    well_600.openPopup()
   });
 
   
-    well_599.setIcon(L.icon(icon_upgradient_violation));
+    well_600.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_599.bindPopup('BLACK BP2-A')
+  well_600.bindPopup('BLACK BP2-A')
 
-  markers.addLayer(well_599);
-  oms.addMarker(well_599);
-  
-
+  markers.addLayer(well_600);
+  oms.addMarker(well_600);
   
 
   
@@ -1605,25 +1620,25 @@ var icon_other_violation = {
   
 
   
-  var well_615 = L.marker(new L.LatLng(47.21731667, -101.8093556)).on('click', function (e) {
+
+  
+  var well_616 = L.marker(new L.LatLng(47.21731667, -101.8093556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-a1?zoom=' + map_current_zoom + '&lat=47.21731667&lng=-101.8093556';  
     });
   }).on('mouseover', function (e) {
-    well_615.openPopup()
+    well_616.openPopup()
   });
 
   
-    well_615.setIcon(L.icon(icon_downgradient_compliant));
+    well_616.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_615.bindPopup('ASH POND A1')
+  well_616.bindPopup('ASH POND A1')
 
-  markers.addLayer(well_615);
-  oms.addMarker(well_615);
-  
-
+  markers.addLayer(well_616);
+  oms.addMarker(well_616);
   
 
   
@@ -1691,45 +1706,47 @@ var icon_other_violation = {
   
 
   
-  var well_649 = L.marker(new L.LatLng(47.21487778, -101.7935306)).on('click', function (e) {
+
+  
+  var well_650 = L.marker(new L.LatLng(47.21487778, -101.7935306)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/blue-7?zoom=' + map_current_zoom + '&lat=47.21487778&lng=-101.7935306';  
     });
   }).on('mouseover', function (e) {
-    well_649.openPopup()
+    well_650.openPopup()
   });
 
   
-    well_649.setIcon(L.icon(icon_downgradient_violation));
+    well_650.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_649.bindPopup('BLUE 7')
+  well_650.bindPopup('BLUE 7')
 
-  markers.addLayer(well_649);
-  oms.addMarker(well_649);
+  markers.addLayer(well_650);
+  oms.addMarker(well_650);
   
 
   
 
   
-  var well_651 = L.marker(new L.LatLng(47.21921111, -101.7999917)).on('click', function (e) {
+  var well_652 = L.marker(new L.LatLng(47.21921111, -101.7999917)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/black-1715?zoom=' + map_current_zoom + '&lat=47.21921111&lng=-101.7999917';  
     });
   }).on('mouseover', function (e) {
-    well_651.openPopup()
+    well_652.openPopup()
   });
 
   
-    well_651.setIcon(L.icon(icon_downgradient_violation));
+    well_652.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_651.bindPopup('BLACK 1715')
+  well_652.bindPopup('BLACK 1715')
 
-  markers.addLayer(well_651);
-  oms.addMarker(well_651);
+  markers.addLayer(well_652);
+  oms.addMarker(well_652);
   
 
   
@@ -2039,30 +2056,10 @@ var icon_other_violation = {
   
 
   
-  var well_805 = L.marker(new L.LatLng(47.22770278, -101.7888111)).on('click', function (e) {
+  var well_806 = L.marker(new L.LatLng(47.22770278, -101.7888111)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/green-6?zoom=' + map_current_zoom + '&lat=47.22770278&lng=-101.7888111';  
-    });
-  }).on('mouseover', function (e) {
-    well_805.openPopup()
-  });
-
-  
-    well_805.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_805.bindPopup('GREEN 6')
-
-  markers.addLayer(well_805);
-  oms.addMarker(well_805);
-  
-
-  
-  var well_806 = L.marker(new L.LatLng(47.22556667, -101.7885222)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/green-7?zoom=' + map_current_zoom + '&lat=47.22556667&lng=-101.7885222';  
     });
   }).on('mouseover', function (e) {
     well_806.openPopup()
@@ -2072,14 +2069,30 @@ var icon_other_violation = {
     well_806.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_806.bindPopup('GREEN 7')
+  well_806.bindPopup('GREEN 6')
 
   markers.addLayer(well_806);
   oms.addMarker(well_806);
   
 
   
+  var well_807 = L.marker(new L.LatLng(47.22556667, -101.7885222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/coyote-station/green-7?zoom=' + map_current_zoom + '&lat=47.22556667&lng=-101.7885222';  
+    });
+  }).on('mouseover', function (e) {
+    well_807.openPopup()
+  });
 
+  
+    well_807.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_807.bindPopup('GREEN 7')
+
+  markers.addLayer(well_807);
+  oms.addMarker(well_807);
   
 
   
@@ -2135,25 +2148,27 @@ var icon_other_violation = {
   
 
   
-  var well_835 = L.marker(new L.LatLng(47.21967778, -101.813975)).on('click', function (e) {
+
+  
+
+  
+  var well_836 = L.marker(new L.LatLng(47.21967778, -101.813975)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-n1?zoom=' + map_current_zoom + '&lat=47.21967778&lng=-101.813975';  
     });
   }).on('mouseover', function (e) {
-    well_835.openPopup()
+    well_836.openPopup()
   });
 
   
-    well_835.setIcon(L.icon(icon_upgradient_violation));
+    well_836.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_835.bindPopup('ASH POND N1')
+  well_836.bindPopup('ASH POND N1')
 
-  markers.addLayer(well_835);
-  oms.addMarker(well_835);
-  
-
+  markers.addLayer(well_836);
+  oms.addMarker(well_836);
   
 
   
@@ -5191,59 +5206,77 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Sb</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Sb</span> <span class="contaminant-name">Antimony</span></div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of As at this facility">As</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of As at this facility"><span class="contaminant-symbol">As</span> <span class="contaminant-name">Arsenic</span></div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of B at this facility">B</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of B at this facility"><span class="contaminant-symbol">B</span> <span class="contaminant-name">Boron</span></div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Co</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Co</span> <span class="contaminant-name">Cobalt</span></div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility">Mn</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility"><span class="contaminant-symbol">Mn</span> <span class="contaminant-name">Manganese</span></div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mo at this facility">Mo</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mo at this facility"><span class="contaminant-symbol">Mo</span> <span class="contaminant-name">Molybdenum</span></div>
+    
   
-    <div class="element  ">Ni</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of N at this facility"><span class="contaminant-symbol">N</span> <span class="contaminant-name">Nitrate</span></div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility"><span class="contaminant-symbol">Se</span> <span class="contaminant-name">Selenium</span></div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

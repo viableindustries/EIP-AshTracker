@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 36.313439, params.lng || -86.40885],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1505,25 +1520,25 @@ var icon_other_violation = {
   
 
   
-  var well_646 = L.marker(new L.LatLng(36.313439, -86.40885)).on('click', function (e) {
+
+  
+  var well_647 = L.marker(new L.LatLng(36.313439, -86.40885)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/gallatin-fossil-plant/gaf-19r?zoom=' + map_current_zoom + '&lat=36.313439&lng=-86.40885';  
     });
   }).on('mouseover', function (e) {
-    well_646.openPopup()
+    well_647.openPopup()
   });
 
   
-    well_646.setIcon(L.icon(icon_downgradient_violation));
+    well_647.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_646.bindPopup('GAF-19R')
+  well_647.bindPopup('GAF-19R')
 
-  markers.addLayer(well_646);
-  oms.addMarker(well_646);
-  
-
+  markers.addLayer(well_647);
+  oms.addMarker(well_647);
   
 
   
@@ -1571,25 +1586,25 @@ var icon_other_violation = {
   
 
   
-  var well_670 = L.marker(new L.LatLng(36.335922, -86.415604)).on('click', function (e) {
+
+  
+  var well_671 = L.marker(new L.LatLng(36.335922, -86.415604)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/gallatin-fossil-plant/gaf-24?zoom=' + map_current_zoom + '&lat=36.335922&lng=-86.415604';  
     });
   }).on('mouseover', function (e) {
-    well_670.openPopup()
+    well_671.openPopup()
   });
 
   
-    well_670.setIcon(L.icon(icon_downgradient_compliant));
+    well_671.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_670.bindPopup('GAF-24')
+  well_671.bindPopup('GAF-24')
 
-  markers.addLayer(well_670);
-  oms.addMarker(well_670);
-  
-
+  markers.addLayer(well_671);
+  oms.addMarker(well_671);
   
 
   
@@ -5029,59 +5044,71 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="Exceendence of As at this well">As</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="Exceendence of As at this well"><span class="contaminant-symbol">As</span> <span class="contaminant-name">Arsenic</span></div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Exceendence of Be at this well">Be</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Exceendence of Be at this well"><span class="contaminant-symbol">Be</span> <span class="contaminant-name">Beryllium</span></div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="Exceendence of B at this well">B</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="Exceendence of B at this well"><span class="contaminant-symbol">B</span> <span class="contaminant-name">Boron</span></div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="Exceendence of Cd at this well">Cd</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="Exceendence of Cd at this well"><span class="contaminant-symbol">Cd</span> <span class="contaminant-name">Cadmium</span></div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="Exceendence of Ni at this well">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="Exceendence of Ni at this well"><span class="contaminant-symbol">Ni</span> <span class="contaminant-name">Nickel</span></div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

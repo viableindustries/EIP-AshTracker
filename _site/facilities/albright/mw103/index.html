@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 39.48722222, params.lng || -79.60777778],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -1059,25 +1074,25 @@ var icon_other_violation = {
   
 
   
-  var well_360 = L.marker(new L.LatLng(39.48805556, -79.60972222)).on('click', function (e) {
+
+  
+  var well_361 = L.marker(new L.LatLng(39.48805556, -79.60972222)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw313d1?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60972222';  
     });
   }).on('mouseover', function (e) {
-    well_360.openPopup()
+    well_361.openPopup()
   });
 
   
-    well_360.setIcon(L.icon(icon_other_violation));
+    well_361.setIcon(L.icon(icon_other_violation));
   
 
-  well_360.bindPopup('MW313D1')
+  well_361.bindPopup('MW313D1')
 
-  markers.addLayer(well_360);
-  oms.addMarker(well_360);
-  
-
+  markers.addLayer(well_361);
+  oms.addMarker(well_361);
   
 
   
@@ -1117,23 +1132,25 @@ var icon_other_violation = {
   
 
   
-  var well_380 = L.marker(new L.LatLng(39.49083333, -79.60472222)).on('click', function (e) {
+
+  
+  var well_381 = L.marker(new L.LatLng(39.49083333, -79.60472222)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw317s?zoom=' + map_current_zoom + '&lat=39.49083333&lng=-79.60472222';  
     });
   }).on('mouseover', function (e) {
-    well_380.openPopup()
+    well_381.openPopup()
   });
 
   
-    well_380.setIcon(L.icon(icon_downgradient_violation));
+    well_381.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_380.bindPopup('MW317S')
+  well_381.bindPopup('MW317S')
 
-  markers.addLayer(well_380);
-  oms.addMarker(well_380);
+  markers.addLayer(well_381);
+  oms.addMarker(well_381);
   
 
   
@@ -1471,25 +1488,23 @@ var icon_other_violation = {
   
 
   
-  var well_548 = L.marker(new L.LatLng(39.48666667, -79.60916667)).on('click', function (e) {
+  var well_549 = L.marker(new L.LatLng(39.48666667, -79.60916667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw104?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60916667';  
     });
   }).on('mouseover', function (e) {
-    well_548.openPopup()
+    well_549.openPopup()
   });
 
   
-    well_548.setIcon(L.icon(icon_downgradient_violation));
+    well_549.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_548.bindPopup('MW104')
+  well_549.bindPopup('MW104')
 
-  markers.addLayer(well_548);
-  oms.addMarker(well_548);
-  
-
+  markers.addLayer(well_549);
+  oms.addMarker(well_549);
   
 
   
@@ -1527,25 +1542,25 @@ var icon_other_violation = {
   
 
   
-  var well_567 = L.marker(new L.LatLng(39.48722222, -79.60777778)).on('click', function (e) {
+
+  
+  var well_568 = L.marker(new L.LatLng(39.48722222, -79.60777778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw103?zoom=' + map_current_zoom + '&lat=39.48722222&lng=-79.60777778';  
     });
   }).on('mouseover', function (e) {
-    well_567.openPopup()
+    well_568.openPopup()
   });
 
   
-    well_567.setIcon(L.icon(icon_downgradient_violation));
+    well_568.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_567.bindPopup('MW103')
+  well_568.bindPopup('MW103')
 
-  markers.addLayer(well_567);
-  oms.addMarker(well_567);
-  
-
+  markers.addLayer(well_568);
+  oms.addMarker(well_568);
   
 
   
@@ -1579,30 +1594,12 @@ var icon_other_violation = {
   
 
   
-  var well_584 = L.marker(new L.LatLng(39.48472222, -79.605)).on('click', function (e) {
+
+  
+  var well_585 = L.marker(new L.LatLng(39.48472222, -79.605)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw208d?zoom=' + map_current_zoom + '&lat=39.48472222&lng=-79.605';  
-    });
-  }).on('mouseover', function (e) {
-    well_584.openPopup()
-  });
-
-  
-    well_584.setIcon(L.icon(icon_other_violation));
-  
-
-  well_584.bindPopup('MW208D')
-
-  markers.addLayer(well_584);
-  oms.addMarker(well_584);
-  
-
-  
-  var well_585 = L.marker(new L.LatLng(39.48861111, -79.61083333)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright/mw314d?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.61083333';  
     });
   }).on('mouseover', function (e) {
     well_585.openPopup()
@@ -1612,14 +1609,30 @@ var icon_other_violation = {
     well_585.setIcon(L.icon(icon_other_violation));
   
 
-  well_585.bindPopup('MW314D')
+  well_585.bindPopup('MW208D')
 
   markers.addLayer(well_585);
   oms.addMarker(well_585);
   
 
   
+  var well_586 = L.marker(new L.LatLng(39.48861111, -79.61083333)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/albright/mw314d?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.61083333';  
+    });
+  }).on('mouseover', function (e) {
+    well_586.openPopup()
+  });
 
+  
+    well_586.setIcon(L.icon(icon_other_violation));
+  
+
+  well_586.bindPopup('MW314D')
+
+  markers.addLayer(well_586);
+  oms.addMarker(well_586);
   
 
   
@@ -1697,23 +1710,27 @@ var icon_other_violation = {
   
 
   
-  var well_625 = L.marker(new L.LatLng(39.48805556, -79.60666667)).on('click', function (e) {
+
+  
+
+  
+  var well_626 = L.marker(new L.LatLng(39.48805556, -79.60666667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw308d?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60666667';  
     });
   }).on('mouseover', function (e) {
-    well_625.openPopup()
+    well_626.openPopup()
   });
 
   
-    well_625.setIcon(L.icon(icon_other_violation));
+    well_626.setIcon(L.icon(icon_other_violation));
   
 
-  well_625.bindPopup('MW308D')
+  well_626.bindPopup('MW308D')
 
-  markers.addLayer(well_625);
-  oms.addMarker(well_625);
+  markers.addLayer(well_626);
+  oms.addMarker(well_626);
   
 
   
@@ -1883,25 +1900,23 @@ var icon_other_violation = {
   
 
   
-  var well_709 = L.marker(new L.LatLng(39.48777778, -79.60805556)).on('click', function (e) {
+  var well_710 = L.marker(new L.LatLng(39.48777778, -79.60805556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw310d?zoom=' + map_current_zoom + '&lat=39.48777778&lng=-79.60805556';  
     });
   }).on('mouseover', function (e) {
-    well_709.openPopup()
+    well_710.openPopup()
   });
 
   
-    well_709.setIcon(L.icon(icon_other_violation));
+    well_710.setIcon(L.icon(icon_other_violation));
   
 
-  well_709.bindPopup('MW310D')
+  well_710.bindPopup('MW310D')
 
-  markers.addLayer(well_709);
-  oms.addMarker(well_709);
-  
-
+  markers.addLayer(well_710);
+  oms.addMarker(well_710);
   
 
   
@@ -2411,6 +2426,9 @@ var icon_other_violation = {
 
 
 
+  
+
+    
   
 
     
@@ -5202,9 +5220,6 @@ var icon_other_violation = {
     
   
 
-    
-  
-
 
 
 /**
@@ -5245,59 +5260,75 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Sb</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Sb</span> <span class="contaminant-name">Antimony</span></div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">B</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">B</span> <span class="contaminant-name">Boron</span></div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Cr</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Cr</span> <span class="contaminant-name">Chromium</span></div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element element-clickable violation" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="Exceendence of Pb at this well">Pb</div>
+    
+      <div class="element element-clickable violation" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="Exceendence of Pb at this well"><span class="contaminant-symbol">Pb</span> <span class="contaminant-name">Lead, Dissolved</span></div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Mn</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Mn</span> <span class="contaminant-name">Manganese</span></div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Ni</span> <span class="contaminant-name">Nickel</span></div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
+      <div  class="element not-tracked" data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"><span class="contaminant-symbol">Tl</span> <span class="contaminant-name">Thalium</span></div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>

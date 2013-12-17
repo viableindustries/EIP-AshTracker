@@ -75,21 +75,36 @@
       <div class="brand-container">
         <a class="brand" href="/"></a>
       </div>
-      <nav role="navigation">
-        <ul class="nav nav-justified">
-          <li><a href="/facilities" class="facilities">Facility Data</a></li>
-          <!-- 
-            <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
-           -->
-          
-            <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
-          
-          
-            <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-          
-        </ul>
-      </nav>
-    </header>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
         
     
       <div id="map" class="site-map"></div>
@@ -125,7 +140,7 @@ get_url_parameters();
 var mapbox_id      = "developedsimple.g7pfo3pa",
     mapbox_mapid   = "map",
     mapbox_extent  = [params.lat || 36.001707, params.lng || -84.155369],
-    mapbox_zoom    = params.zoom || 13;    
+    mapbox_zoom    = params.zoom || 12;    
 
 map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
 
@@ -837,453 +852,23 @@ var icon_other_violation = {
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var well_527 = L.marker(new L.LatLng(36.009988, -84.153322)).on('click', function (e) {
+  var well_312 = L.marker(new L.LatLng(36.009988, -84.153322)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/brf-1?zoom=' + map_current_zoom + '&lat=36.009988&lng=-84.153322';  
     });
   }).on('mouseover', function (e) {
-    well_527.openPopup()
+    well_312.openPopup()
   });
 
   
-    well_527.setIcon(L.icon(icon_upgradient_violation));
+    well_312.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_527.bindPopup('BRF-1')
+  well_312.bindPopup('BRF-1')
 
-  markers.addLayer(well_527);
-  oms.addMarker(well_527);
+  markers.addLayer(well_312);
+  oms.addMarker(well_312);
   
 
   
@@ -1499,47 +1084,477 @@ var icon_other_violation = {
   
 
   
-  var well_634 = L.marker(new L.LatLng(36.011728, -84.159639)).on('click', function (e) {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_635 = L.marker(new L.LatLng(36.011728, -84.159639)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/brf-47?zoom=' + map_current_zoom + '&lat=36.011728&lng=-84.159639';  
     });
   }).on('mouseover', function (e) {
-    well_634.openPopup()
+    well_635.openPopup()
   });
 
   
-    well_634.setIcon(L.icon(icon_downgradient_violation));
+    well_635.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_634.bindPopup('BRF-47')
+  well_635.bindPopup('BRF-47')
 
-  markers.addLayer(well_634);
-  oms.addMarker(well_634);
+  markers.addLayer(well_635);
+  oms.addMarker(well_635);
   
 
   
 
   
-  var well_636 = L.marker(new L.LatLng(36.008866, -84.157722)).on('click', function (e) {
+  var well_637 = L.marker(new L.LatLng(36.008866, -84.157722)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/brf-48?zoom=' + map_current_zoom + '&lat=36.008866&lng=-84.157722';  
     });
   }).on('mouseover', function (e) {
-    well_636.openPopup()
+    well_637.openPopup()
   });
 
   
-    well_636.setIcon(L.icon(icon_downgradient_violation));
+    well_637.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_636.bindPopup('BRF-48')
+  well_637.bindPopup('BRF-48')
 
-  markers.addLayer(well_636);
-  oms.addMarker(well_636);
-  
-
+  markers.addLayer(well_637);
+  oms.addMarker(well_637);
   
 
   
@@ -1561,25 +1576,25 @@ var icon_other_violation = {
   
 
   
-  var well_647 = L.marker(new L.LatLng(35.997643, -84.154651)).on('click', function (e) {
+
+  
+  var well_648 = L.marker(new L.LatLng(35.997643, -84.154651)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/s?zoom=' + map_current_zoom + '&lat=35.997643&lng=-84.154651';  
     });
   }).on('mouseover', function (e) {
-    well_647.openPopup()
+    well_648.openPopup()
   });
 
   
-    well_647.setIcon(L.icon(icon_downgradient_compliant));
+    well_648.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_647.bindPopup('S')
+  well_648.bindPopup('S')
 
-  markers.addLayer(well_647);
-  oms.addMarker(well_647);
-  
-
+  markers.addLayer(well_648);
+  oms.addMarker(well_648);
   
 
   
@@ -1599,67 +1614,69 @@ var icon_other_violation = {
   
 
   
-  var well_657 = L.marker(new L.LatLng(36.025073, -84.142817)).on('click', function (e) {
+
+  
+  var well_658 = L.marker(new L.LatLng(36.025073, -84.142817)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/g?zoom=' + map_current_zoom + '&lat=36.025073&lng=-84.142817';  
-    });
-  }).on('mouseover', function (e) {
-    well_657.openPopup()
-  });
-
-  
-    well_657.setIcon(L.icon(icon_downgradient_compliant));
-  
-
-  well_657.bindPopup('G')
-
-  markers.addLayer(well_657);
-  oms.addMarker(well_657);
-  
-
-  
-  var well_658 = L.marker(new L.LatLng(36.02865, -84.146354)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run-fossil-plant/i?zoom=' + map_current_zoom + '&lat=36.02865&lng=-84.146354';  
     });
   }).on('mouseover', function (e) {
     well_658.openPopup()
   });
 
   
-    well_658.setIcon(L.icon(icon_upgradient_compliant));
+    well_658.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_658.bindPopup('I')
+  well_658.bindPopup('G')
 
   markers.addLayer(well_658);
   oms.addMarker(well_658);
   
 
   
+  var well_659 = L.marker(new L.LatLng(36.02865, -84.146354)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bull-run-fossil-plant/i?zoom=' + map_current_zoom + '&lat=36.02865&lng=-84.146354';  
+    });
+  }).on('mouseover', function (e) {
+    well_659.openPopup()
+  });
+
+  
+    well_659.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_659.bindPopup('I')
+
+  markers.addLayer(well_659);
+  oms.addMarker(well_659);
+  
+
+  
 
   
 
   
-  var well_661 = L.marker(new L.LatLng(36.02307, -84.14695)).on('click', function (e) {
+  var well_662 = L.marker(new L.LatLng(36.02307, -84.14695)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/j?zoom=' + map_current_zoom + '&lat=36.02307&lng=-84.14695';  
     });
   }).on('mouseover', function (e) {
-    well_661.openPopup()
+    well_662.openPopup()
   });
 
   
-    well_661.setIcon(L.icon(icon_downgradient_compliant));
+    well_662.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_661.bindPopup('J')
+  well_662.bindPopup('J')
 
-  markers.addLayer(well_661);
-  oms.addMarker(well_661);
+  markers.addLayer(well_662);
+  oms.addMarker(well_662);
   
 
   
@@ -1925,25 +1942,23 @@ var icon_other_violation = {
   
 
   
-  var well_793 = L.marker(new L.LatLng(36.024839, -84.144651)).on('click', function (e) {
+  var well_794 = L.marker(new L.LatLng(36.024839, -84.144651)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/f45r?zoom=' + map_current_zoom + '&lat=36.024839&lng=-84.144651';  
     });
   }).on('mouseover', function (e) {
-    well_793.openPopup()
+    well_794.openPopup()
   });
 
   
-    well_793.setIcon(L.icon(icon_downgradient_violation));
+    well_794.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_793.bindPopup('F45R')
+  well_794.bindPopup('F45R')
 
-  markers.addLayer(well_793);
-  oms.addMarker(well_793);
-  
-
+  markers.addLayer(well_794);
+  oms.addMarker(well_794);
   
 
   
@@ -2045,30 +2060,12 @@ var icon_other_violation = {
   
 
   
-  var well_844 = L.marker(new L.LatLng(36.000738, -84.151325)).on('click', function (e) {
+
+  
+  var well_845 = L.marker(new L.LatLng(36.000738, -84.151325)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/bull-run-fossil-plant/10-52?zoom=' + map_current_zoom + '&lat=36.000738&lng=-84.151325';  
-    });
-  }).on('mouseover', function (e) {
-    well_844.openPopup()
-  });
-
-  
-    well_844.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_844.bindPopup('10-52')
-
-  markers.addLayer(well_844);
-  oms.addMarker(well_844);
-  
-
-  
-  var well_845 = L.marker(new L.LatLng(36.001707, -84.155369)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run-fossil-plant/10-51?zoom=' + map_current_zoom + '&lat=36.001707&lng=-84.155369';  
     });
   }).on('mouseover', function (e) {
     well_845.openPopup()
@@ -2078,12 +2075,30 @@ var icon_other_violation = {
     well_845.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_845.bindPopup('10-51')
+  well_845.bindPopup('10-52')
 
   markers.addLayer(well_845);
   oms.addMarker(well_845);
   
 
+  
+  var well_846 = L.marker(new L.LatLng(36.001707, -84.155369)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bull-run-fossil-plant/10-51?zoom=' + map_current_zoom + '&lat=36.001707&lng=-84.155369';  
+    });
+  }).on('mouseover', function (e) {
+    well_846.openPopup()
+  });
+
+  
+    well_846.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_846.bindPopup('10-51')
+
+  markers.addLayer(well_846);
+  oms.addMarker(well_846);
   
 
   
@@ -5101,59 +5116,61 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-    <div class="element  ">NO3</div>
+    
   
-    <div class="element  ">NH-3</div>
+    
   
-    <div class="element  ">Sb</div>
+    
   
-    <div class="element  ">As</div>
+    
   
-    <div class="element  ">Ba</div>
+    
   
-    <div class="element  ">Be</div>
+    
   
-    <div class="element  ">B</div>
+    
   
-    <div class="element  ">Cd</div>
+    
   
-    <div class="element  ">Co</div>
+    
   
-    <div class="element  ">Cr</div>
+    
   
-    <div class="element  ">Cu</div>
+    
   
-    <div class="element  ">Cn</div>
+    
   
-    <div class="element  ">F</div>
+    
   
-    <div class="element  ">GAP</div>
+    
   
-    <div class="element  ">GBP</div>
+    
   
-    <div class="element  ">Pb</div>
+    
   
-    <div class="element  ">Mn</div>
+    
   
-    <div class="element  ">Hg</div>
+    
   
-    <div class="element  ">Mo</div>
+    
   
-    <div class="element  ">Ni</div>
+    
   
-    <div class="element  ">Ra</div>
+    
   
-    <div class="element  ">Se</div>
+    
   
-    <div class="element  ">Ag</div>
+    
   
-    <div class="element  ">Sr</div>
+    
   
-    <div class="element  ">Tl</div>
+    
   
-    <div class="element  ">H-3</div>
+    
   
-    <div class="element  ">U</div>
+    
+  
+    
   
 
 </div>
