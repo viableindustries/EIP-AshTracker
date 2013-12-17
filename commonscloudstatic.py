@@ -47,85 +47,116 @@ def page(path):
 
     all_pollutants = [
       {
-        'type': 'NO3'
+        'type': 'NO3',
+        "name": "Nitrate"
       },
       {
-        'type': "NH-3"
+        'type': "NH-3",
+        "name": "Ammonia"
       },
       {
-        'type': "Sb"
+        'type': "Sb",
+        'name': "Antimony"
       },
       {
-        'type': "As"
+        'type': "As",
+        "name": "Arsenic"
       },
       {
-        'type': "Ba"
+        'type': "Ba",
+        "name": "Barium"
       },
       {
-        'type': "Be"
+        'type': "Be",
+        "name": "Beryllium"
       },
       {
-        'type': "B"
+        'type': "B",
+        "name": "Boron"
       },
       {
-        'type': "Cd"
+        'type': "Cd",
+        "name": "Cadmium"
       },
       {
-        'type': "Co"
+        'type': "Co",
+        "name": "Cobalt"
       },
       {
-        'type': "Cr"
+        'type': "Cr",
+        "name": "Chromium"
       },
       {
-        'type': "Cu"
+        'type': "Cu",
+        "name": "Copper"
       },
       {
-        'type': "Cn"
+        'type': "Cn",
+        "name": "Cyanide"
       },
       {
-        'type': "F"
+        'type': "F",
+        "name": "Flouride"
       },
       {
-        'type': "GAP"
+        'type': "GAP",
+        "name": "Gross Alpha Particle"
       },
       {
-        'type': "GBP"
+        'type': "GBP",
+        "name": "Gross Beta Particle"
       },
       {
-        'type': "Pb"
+        'type': "Pb",
+        "name": "Lead"
       },
       {
-        'type': "Mn"
+        'type': "Mn",
+        "name": "Manganese"
       },
       {
-        'type': "Hg"
+        'type': "Hg",
+        "name": "Mercury"
       },
       {
-        'type': "Mo"
+        'type': "Mo",
+        "name": "Molybdenum"
       },
       {
-        'type': "Ni"
+        'type': "N",
+        "name": "Nitrate"
       },
       {
-        'type': "Ra"
+        'type': "Ni",
+        "name": "Nickel"
       },
       {
-        'type': "Se"
+        'type': "Ra",
+        "name": "Radium"
       },
       {
-        'type': "Ag"
+        'type': "Se",
+        "name": "Selenium"
       },
       {
-        'type': "Sr"
+        'type': "Ag",
+        "name": "Silver"
       },
       {
-        'type': "Tl"
+        'type': "Sr",
+        "name": "Strontium"
       },
       {
-        'type': "H-3"
+        'type': "Tl",
+        "name": "Thalium"
       },
       {
-        'type': "U"
+        'type': "H-3",
+        "name": "Tritium"
+      },
+      {
+        'type': "U",
+        "name": "Uranium"
       }
     ]
         

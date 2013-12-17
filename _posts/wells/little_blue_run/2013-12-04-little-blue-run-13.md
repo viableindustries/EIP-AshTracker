@@ -14,12 +14,33 @@ designation: "Upgradient"
 legend: "Upgradient, In Compliance"
 pollutants: [
   {
-  name: "",
-  health_base_standard_exceeded: "No observed exceedances of health criteria",
-  number_of_times_in_exceedance: "",
-  number_of_times_monitored: "",
-  max_exceedance_amount: "",
-  max_allowable_amount: "",
-  unit_of_measurement: ""
+    'type': "As",
+    "name": "Arsenic"
+  },
+  {
+    'type': "B",
+    "name": "Boron"
+  },
+  {
+    'type': "F",
+    "name": "Flouride"
+  },
+  {
+    'type': "Mn",
+    "name": "Manganese"
+  },
+  {
+    'type': "Hg",
+    "name": "Mercury"
+  },
+  {
+    'type': "Mo",
+    "name": "Molybdenum"
+  },
+  {
+    'type': "N",
+    "name": "Nitrate"
   }
 ]
+
+

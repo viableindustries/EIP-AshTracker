@@ -30,7 +30,7 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/{{ facility.permalink }}?zoom=13&lat={{ facility.coordinates[1]}}&lng={{ facility.coordinates[0] }}';  
+    window.location.href = '/{{ facility.permalink }}?zoom=12&lat={{ facility.coordinates[1]}}&lng={{ facility.coordinates[0] }}';  
   }).on('mouseover', function (e) {
     facility_{{ loop.index }}.openPopup()
   });

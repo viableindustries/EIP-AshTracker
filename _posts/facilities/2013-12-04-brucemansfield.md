@@ -1,5 +1,5 @@
 template: facility.html
-permalink: "facilities/bruce-mansfield-power"
+permalink: "facilities/little-blue-run"
 facility_class: little_blue_run
 title: Bruce Mansfield Power Plants
 date: 2013-12-04 12:12:12
@@ -17,18 +17,38 @@ address:
 owner_operator: FirstEnergy
 impoundment_hazard_rating: High hazard
 monitoring: All contaminants of concern being monitored.
-pollutants: 
-  - type: As
-    name: Arsenic
-  - type: B
-    name: Boron
-  - type: F
-    name: Fluoride
-  - type: Mn
-    name: Manganese
-  - type: N
-    name: Nitrate (as N)
+pollutants: [
+  {
+    'type': "As",
+    "name": "Arsenic"
+  },
+  {
+    'type': "B",
+    "name": "Boron"
+  },
+  {
+    'type': "F",
+    "name": "Flouride"
+  },
+  {
+    'type': "Mn",
+    "name": "Manganese"
+  },
+  {
+    'type': "Hg",
+    "name": "Mercury"
+  },
+  {
+    'type': "Mo",
+    "name": "Molybdenum"
+  },
+  {
+    'type': "N",
+    "name": "Nitrate"
+  }
+]
 data_download: "/static/data/Bruce_Mansfield.xlsx.zip"
+has_wells: true
 
 Little Blue Run is the nations largest coal ash impoundment. At nearly 1,700 acres it straddles land in West Virginia and Pennsylvania. It is also completely unlined. In July of 2012, the Pennsylvania DEP filed a complaint and consent decree, finding that the impoundments seeps and associated discharges to groundwater may present an imminent and substantial endangerment to health or the environment, in violation of federal law.
 

@@ -1,7 +1,0 @@
-<div class="contaminants">
-{% if pollutants %}
-  {% for pollutant in pollutants %}
-    <div class="element {{ pollutant.tracking }} {{ pollutant.exceedence }}" {% if pollutant.tracking %} data-toggle="tooltip" data-placement="top" data-original-title="Not monitored at this facility"{% elif pollutant.exceedence %} data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of {{ pollutant.type }} at this facility"{% endif %}>{{ pollutant.type }}</div>
-  {% endfor %}
-{% endif %}
-</div>

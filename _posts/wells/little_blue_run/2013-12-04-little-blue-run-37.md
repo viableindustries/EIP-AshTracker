@@ -14,6 +14,34 @@ designation: "Downgradient"
 legend: "Downgradient, Not In Compliance"
 pollutants: [
   {
+    'type': "As",
+    "name": "Arsenic"
+  },
+  {
+    'type': "B",
+    "name": "Boron"
+  },
+  {
+    'type': "F",
+    "name": "Flouride"
+  },
+  {
+    'type': "Mn",
+    "name": "Manganese"
+  },
+  {
+    'type': "Hg",
+    "name": "Mercury"
+  },
+  {
+    'type': "Mo",
+    "name": "Molybdenum"
+  },
+  {
+    'type': "N",
+    "name": "Nitrate"
+  },
+  {
   type: "Mg",
   name: "Manganese",
   health_base_standard_exceeded: "LHA",
