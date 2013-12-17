@@ -47,7 +47,7 @@ pollutants: [
   },
   {
   health_base_standard_exceeded: "LHA",
-  type: "Mg",
+  type: "Mn",
   name: "Manganese, Dissolved",
   number_of_times_in_exceedance: "2",
   number_of_times_monitored: "8",

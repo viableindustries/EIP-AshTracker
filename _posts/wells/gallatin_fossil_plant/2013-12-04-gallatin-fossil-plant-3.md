@@ -34,7 +34,7 @@ pollutants: [
   unit_of_measurement: "mg/L"
   },
   {
-  type: "Mg",
+  type: "Mn",
   name: "Manganese",
   health_base_standard_exceeded: "LHA",
   number_of_times_in_exceedance: "11",

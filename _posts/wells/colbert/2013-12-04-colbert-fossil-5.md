@@ -78,7 +78,7 @@ pollutants: [
   },
   {
     health_base_standard_exceeded: "LHA",
-    type: "Mg",
+    type: "Mn",
     name: "Manganese, Total",
     number_of_times_in_exceedance: "3",
     number_of_times_monitored: "4",

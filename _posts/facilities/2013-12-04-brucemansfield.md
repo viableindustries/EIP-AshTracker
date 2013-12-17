@@ -1,7 +1,7 @@
 template: facility.html
 permalink: "facilities/little-blue-run"
 facility_class: little_blue_run
-title: Bruce Mansfield Power Plants
+title: Bruce Mansfield Power Plant
 date: 2013-12-04 12:12:12
 coordinates: 
   - "-80.416111"
