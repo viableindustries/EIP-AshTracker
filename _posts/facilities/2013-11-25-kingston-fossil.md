@@ -1,5 +1,5 @@
 template: facility.html
-permalink: facilities/kingston-fossil
+permalink: facilities/kingston-fossil-plant
 title: "Kingston Fossil Plant"
 page_title: 'Kingston Fossil Plant &raquo; Tennessee Valley Authority (TVA) | Ashtracker'
 date: 2013-11-25 09:52:50

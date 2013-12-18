@@ -13,6 +13,10 @@ coordinates: [
 designation: "Downgradient"
 legend: "Downgradient, Not In Compliance"
 pollutants: [
+{
+type: "Se",
+name: "Selenium"
+},
   {
   type: "Mn",
   name: "Manganese",

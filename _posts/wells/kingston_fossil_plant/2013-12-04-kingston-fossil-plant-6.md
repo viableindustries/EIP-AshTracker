@@ -13,4 +13,12 @@ coordinates: [
 designation: "Upgradient"
 legend: "Upgradient, In Compliance"
 pollutants: [
+  {
+  type: "Se",
+  name: "Selenium"
+  },
+  {
+  type: "Mn",
+  name: "Manganese"
+  }
 ]

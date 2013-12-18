@@ -14,6 +14,10 @@ designation: "Downgradient"
 legend: "Downgradient, Not In Compliance"
 pollutants: [
   {
+  type: "Se",
+  name: "Selenium"
+  },
+  {
   type: "Mn",
   name: "Manganese",
   health_base_standard_exceeded: "LHA",
