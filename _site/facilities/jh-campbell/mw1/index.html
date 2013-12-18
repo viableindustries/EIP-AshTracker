@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -608,47 +629,47 @@ var icon_other_violation = {
   
 
   
-  var well_199 = L.marker(new L.LatLng(42.90683889, -86.17808056)).on('click', function (e) {
+
+  
+  var well_200 = L.marker(new L.LatLng(42.90683889, -86.17808056)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/mw12?zoom=' + map_current_zoom + '&lat=42.90683889&lng=-86.17808056';  
     });
   }).on('mouseover', function (e) {
-    well_199.openPopup()
+    well_200.openPopup()
   });
 
   
-    well_199.setIcon(L.icon(icon_other_compliant));  
+    well_200.setIcon(L.icon(icon_other_compliant));  
   
 
-  well_199.bindPopup('MW12')
+  well_200.bindPopup('MW12')
 
-  markers.addLayer(well_199);
-  oms.addMarker(well_199);
+  markers.addLayer(well_200);
+  oms.addMarker(well_200);
   
 
   
 
   
-  var well_201 = L.marker(new L.LatLng(42.90415278, -86.18255556)).on('click', function (e) {
+  var well_202 = L.marker(new L.LatLng(42.90415278, -86.18255556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/mw14?zoom=' + map_current_zoom + '&lat=42.90415278&lng=-86.18255556';  
     });
   }).on('mouseover', function (e) {
-    well_201.openPopup()
+    well_202.openPopup()
   });
 
   
-    well_201.setIcon(L.icon(icon_downgradient_compliant));
+    well_202.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_201.bindPopup('MW14')
+  well_202.bindPopup('MW14')
 
-  markers.addLayer(well_201);
-  oms.addMarker(well_201);
-  
-
+  markers.addLayer(well_202);
+  oms.addMarker(well_202);
   
 
   
@@ -724,25 +745,25 @@ var icon_other_violation = {
   
 
   
-  var well_239 = L.marker(new L.LatLng(42.90515833, -86.18235278)).on('click', function (e) {
+
+  
+  var well_240 = L.marker(new L.LatLng(42.90515833, -86.18235278)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/mw13?zoom=' + map_current_zoom + '&lat=42.90515833&lng=-86.18235278';  
     });
   }).on('mouseover', function (e) {
-    well_239.openPopup()
+    well_240.openPopup()
   });
 
   
-    well_239.setIcon(L.icon(icon_other_compliant));  
+    well_240.setIcon(L.icon(icon_other_compliant));  
   
 
-  well_239.bindPopup('MW13')
+  well_240.bindPopup('MW13')
 
-  markers.addLayer(well_239);
-  oms.addMarker(well_239);
-  
-
+  markers.addLayer(well_240);
+  oms.addMarker(well_240);
   
 
   
@@ -1228,23 +1249,25 @@ var icon_other_violation = {
   
 
   
-  var well_428 = L.marker(new L.LatLng(42.90959444, -86.17742778)).on('click', function (e) {
+
+  
+  var well_429 = L.marker(new L.LatLng(42.90959444, -86.17742778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/mw11a?zoom=' + map_current_zoom + '&lat=42.90959444&lng=-86.17742778';  
     });
   }).on('mouseover', function (e) {
-    well_428.openPopup()
+    well_429.openPopup()
   });
 
   
-    well_428.setIcon(L.icon(icon_other_violation));
+    well_429.setIcon(L.icon(icon_other_violation));
   
 
-  well_428.bindPopup('MW11a')
+  well_429.bindPopup('MW11a')
 
-  markers.addLayer(well_428);
-  oms.addMarker(well_428);
+  markers.addLayer(well_429);
+  oms.addMarker(well_429);
   
 
   
@@ -1380,23 +1403,23 @@ var icon_other_violation = {
   
 
   
-  var well_495 = L.marker(new L.LatLng(42.91020278, -86.17681944)).on('click', function (e) {
+  var well_496 = L.marker(new L.LatLng(42.91020278, -86.17681944)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/rw3?zoom=' + map_current_zoom + '&lat=42.91020278&lng=-86.17681944';  
     });
   }).on('mouseover', function (e) {
-    well_495.openPopup()
+    well_496.openPopup()
   });
 
   
-    well_495.setIcon(L.icon(icon_other_violation));
+    well_496.setIcon(L.icon(icon_other_violation));
   
 
-  well_495.bindPopup('RW3')
+  well_496.bindPopup('RW3')
 
-  markers.addLayer(well_495);
-  oms.addMarker(well_495);
+  markers.addLayer(well_496);
+  oms.addMarker(well_496);
   
 
   
@@ -1540,25 +1563,23 @@ var icon_other_violation = {
   
 
   
-  var well_566 = L.marker(new L.LatLng(42.91513333, -86.18733611)).on('click', function (e) {
+  var well_567 = L.marker(new L.LatLng(42.91513333, -86.18733611)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/mwa1?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18733611';  
     });
   }).on('mouseover', function (e) {
-    well_566.openPopup()
+    well_567.openPopup()
   });
 
   
-    well_566.setIcon(L.icon(icon_downgradient_compliant));
+    well_567.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_566.bindPopup('MWA1')
+  well_567.bindPopup('MWA1')
 
-  markers.addLayer(well_566);
-  oms.addMarker(well_566);
-  
-
+  markers.addLayer(well_567);
+  oms.addMarker(well_567);
   
 
   
@@ -1576,25 +1597,25 @@ var icon_other_violation = {
   
 
   
-  var well_575 = L.marker(new L.LatLng(42.90934722, -86.19809444)).on('click', function (e) {
+
+  
+  var well_576 = L.marker(new L.LatLng(42.90934722, -86.19809444)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/pz37?zoom=' + map_current_zoom + '&lat=42.90934722&lng=-86.19809444';  
     });
   }).on('mouseover', function (e) {
-    well_575.openPopup()
+    well_576.openPopup()
   });
 
   
-    well_575.setIcon(L.icon(icon_other_compliant));  
+    well_576.setIcon(L.icon(icon_other_compliant));  
   
 
-  well_575.bindPopup('PZ37')
+  well_576.bindPopup('PZ37')
 
-  markers.addLayer(well_575);
-  oms.addMarker(well_575);
-  
-
+  markers.addLayer(well_576);
+  oms.addMarker(well_576);
   
 
   
@@ -1634,30 +1655,12 @@ var icon_other_violation = {
   
 
   
-  var well_595 = L.marker(new L.LatLng(42.915125, -86.18563333)).on('click', function (e) {
+
+  
+  var well_596 = L.marker(new L.LatLng(42.915125, -86.18563333)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/mwa2?zoom=' + map_current_zoom + '&lat=42.915125&lng=-86.18563333';  
-    });
-  }).on('mouseover', function (e) {
-    well_595.openPopup()
-  });
-
-  
-    well_595.setIcon(L.icon(icon_downgradient_compliant));
-  
-
-  well_595.bindPopup('MWA2')
-
-  markers.addLayer(well_595);
-  oms.addMarker(well_595);
-  
-
-  
-  var well_596 = L.marker(new L.LatLng(42.91513333, -86.18409722)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/mwa3?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18409722';  
     });
   }).on('mouseover', function (e) {
     well_596.openPopup()
@@ -1667,14 +1670,30 @@ var icon_other_violation = {
     well_596.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_596.bindPopup('MWA3')
+  well_596.bindPopup('MWA2')
 
   markers.addLayer(well_596);
   oms.addMarker(well_596);
   
 
   
+  var well_597 = L.marker(new L.LatLng(42.91513333, -86.18409722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/jh-campbell/mwa3?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18409722';  
+    });
+  }).on('mouseover', function (e) {
+    well_597.openPopup()
+  });
 
+  
+    well_597.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_597.bindPopup('MWA3')
+
+  markers.addLayer(well_597);
+  oms.addMarker(well_597);
   
 
   
@@ -1696,25 +1715,27 @@ var icon_other_violation = {
   
 
   
-  var well_608 = L.marker(new L.LatLng(42.91745833, -86.19421667)).on('click', function (e) {
+
+  
+
+  
+  var well_609 = L.marker(new L.LatLng(42.91745833, -86.19421667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/jh-campbell/pz3?zoom=' + map_current_zoom + '&lat=42.91745833&lng=-86.19421667';  
     });
   }).on('mouseover', function (e) {
-    well_608.openPopup()
+    well_609.openPopup()
   });
 
   
-    well_608.setIcon(L.icon(icon_other_compliant));  
+    well_609.setIcon(L.icon(icon_other_compliant));  
   
 
-  well_608.bindPopup('PZ3')
+  well_609.bindPopup('PZ3')
 
-  markers.addLayer(well_608);
-  oms.addMarker(well_608);
-  
-
+  markers.addLayer(well_609);
+  oms.addMarker(well_609);
   
 
   

@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -290,7 +311,21 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
+  var facility_52 = L.marker(new L.LatLng(36.027778, -87.986389), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/johnsonville-fossil-plant?zoom=12&lat=36.027778&lng=-87.986389';  
+  }).on('mouseover', function (e) {
+    facility_52.openPopup()
+  });
+  facility_52.bindPopup('Johnsonville Fossil Plant')
 
+  markers.addLayer(facility_52);
+  
   
 
   
@@ -364,7 +399,11 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_89 = L.marker(new L.LatLng(36.256268, -94.523592), {
+
+  
+
+  
+  var facility_90 = L.marker(new L.LatLng(36.256268, -94.523592), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -373,14 +412,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/flint-creek?zoom=12&lat=36.256268&lng=-94.523592';  
   }).on('mouseover', function (e) {
-    facility_89.openPopup()
+    facility_90.openPopup()
   });
-  facility_89.bindPopup('Flint Creek Power Plant')
+  facility_90.bindPopup('Flint Creek Power Plant')
 
-  markers.addLayer(facility_89);
+  markers.addLayer(facility_90);
   
-  
-
   
 
   
@@ -412,7 +449,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_105 = L.marker(new L.LatLng(41.987383, -91.73668), {
+
+  
+  var facility_106 = L.marker(new L.LatLng(41.987383, -91.73668), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -421,14 +460,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/stonypoint?zoom=12&lat=41.987383&lng=-91.73668';  
   }).on('mouseover', function (e) {
-    facility_105.openPopup()
+    facility_106.openPopup()
   });
-  facility_105.bindPopup('Stony Point Coal Combustion Plant')
+  facility_106.bindPopup('Stony Point Coal Combustion Plant')
 
-  markers.addLayer(facility_105);
+  markers.addLayer(facility_106);
   
-  
-
   
 
   
@@ -446,7 +483,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_114 = L.marker(new L.LatLng(40.552055, -96.783233), {
+
+  
+  var facility_115 = L.marker(new L.LatLng(40.552055, -96.783233), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -455,14 +494,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/sheldon?zoom=12&lat=40.552055&lng=-96.783233';  
   }).on('mouseover', function (e) {
-    facility_114.openPopup()
+    facility_115.openPopup()
   });
-  facility_114.bindPopup('Sheldon Station')
+  facility_115.bindPopup('Sheldon Station')
 
-  markers.addLayer(facility_114);
+  markers.addLayer(facility_115);
   
-  
-
   
 
   
@@ -472,7 +509,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_119 = L.marker(new L.LatLng(47.219561, -101.810224), {
+
+  
+  var facility_120 = L.marker(new L.LatLng(47.219561, -101.810224), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -481,14 +520,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/coyote-station?zoom=12&lat=47.219561&lng=-101.810224';  
   }).on('mouseover', function (e) {
-    facility_119.openPopup()
+    facility_120.openPopup()
   });
-  facility_119.bindPopup('Coyote Station')
+  facility_120.bindPopup('Coyote Station')
 
-  markers.addLayer(facility_119);
+  markers.addLayer(facility_120);
   
-  
-
   
 
   
@@ -552,7 +589,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_151 = L.marker(new L.LatLng(41.496281, -88.100184), {
+
+  
+  var facility_152 = L.marker(new L.LatLng(41.496281, -88.100184), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -561,14 +600,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/joliet9?zoom=12&lat=41.496281&lng=-88.100184';  
   }).on('mouseover', function (e) {
-    facility_151.openPopup()
+    facility_152.openPopup()
   });
-  facility_151.bindPopup('Joliet 9 Generating Station')
+  facility_152.bindPopup('Joliet 9 Generating Station')
 
-  markers.addLayer(facility_151);
+  markers.addLayer(facility_152);
   
-  
-
   
 
   
@@ -576,7 +613,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_155 = L.marker(new L.LatLng(34.0533, -81.2178), {
+
+  
+  var facility_156 = L.marker(new L.LatLng(34.0533, -81.2178), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -585,14 +624,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/mcmeekin?zoom=12&lat=34.0533&lng=-81.2178';  
   }).on('mouseover', function (e) {
-    facility_155.openPopup()
+    facility_156.openPopup()
   });
-  facility_155.bindPopup('McMeekin Station')
+  facility_156.bindPopup('McMeekin Station')
 
-  markers.addLayer(facility_155);
+  markers.addLayer(facility_156);
   
-  
-
   
 
   
@@ -610,7 +647,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_164 = L.marker(new L.LatLng(43.642089, -83.838188), {
+
+  
+  var facility_165 = L.marker(new L.LatLng(43.642089, -83.838188), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -619,14 +658,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/weadlock?zoom=12&lat=43.642089&lng=-83.838188';  
   }).on('mouseover', function (e) {
-    facility_164.openPopup()
+    facility_165.openPopup()
   });
-  facility_164.bindPopup('JC Weadlock Power Plant')
+  facility_165.bindPopup('JC Weadlock Power Plant')
 
-  markers.addLayer(facility_164);
+  markers.addLayer(facility_165);
   
-  
-
   
 
   
@@ -684,7 +721,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_193 = L.marker(new L.LatLng(36.488368, -79.718053), {
+
+  
+  var facility_194 = L.marker(new L.LatLng(36.488368, -79.718053), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -693,14 +732,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/danriver?zoom=12&lat=36.488368&lng=-79.718053';  
   }).on('mouseover', function (e) {
-    facility_193.openPopup()
+    facility_194.openPopup()
   });
-  facility_193.bindPopup('Dan River Steam Station')
+  facility_194.bindPopup('Dan River Steam Station')
 
-  markers.addLayer(facility_193);
+  markers.addLayer(facility_194);
   
-  
-
   
 
   
@@ -730,7 +767,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_208 = L.marker(new L.LatLng(35.465556, -82.550278), {
+
+  
+  var facility_209 = L.marker(new L.LatLng(35.465556, -82.550278), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -739,14 +778,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/ashville-steam?zoom=12&lat=35.465556&lng=-82.550278';  
   }).on('mouseover', function (e) {
-    facility_208.openPopup()
+    facility_209.openPopup()
   });
-  facility_208.bindPopup('Asheville Steam Electric Generating Plant')
+  facility_209.bindPopup('Asheville Steam Electric Generating Plant')
 
-  markers.addLayer(facility_208);
+  markers.addLayer(facility_209);
   
-  
-
   
 
   
@@ -774,7 +811,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_222 = L.marker(new L.LatLng(35.379795, -78.087612), {
+
+  
+  var facility_223 = L.marker(new L.LatLng(35.379795, -78.087612), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -783,14 +822,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/hflee?zoom=12&lat=35.379795&lng=-78.087612';  
   }).on('mouseover', function (e) {
-    facility_222.openPopup()
+    facility_223.openPopup()
   });
-  facility_222.bindPopup('H.F. Lee Steam Electric Plant')
+  facility_223.bindPopup('H.F. Lee Steam Electric Plant')
 
-  markers.addLayer(facility_222);
+  markers.addLayer(facility_223);
   
-  
-
   
 
   
@@ -832,7 +869,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_243 = L.marker(new L.LatLng(41.201538, -76.069648), {
+
+  
+  var facility_244 = L.marker(new L.LatLng(41.201538, -76.069648), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -841,14 +880,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/hunlock?zoom=12&lat=41.201538&lng=-76.069648';  
   }).on('mouseover', function (e) {
-    facility_243.openPopup()
+    facility_244.openPopup()
   });
-  facility_243.bindPopup('Hunlock Power Station')
+  facility_244.bindPopup('Hunlock Power Station')
 
-  markers.addLayer(facility_243);
+  markers.addLayer(facility_244);
   
-  
-
   
 
   
@@ -856,7 +893,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_247 = L.marker(new L.LatLng(36.315278, -86.400278), {
+
+  
+  var facility_248 = L.marker(new L.LatLng(36.315278, -86.400278), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -865,16 +904,16 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/gallatin-fossil-plant?zoom=12&lat=36.315278&lng=-86.400278';  
   }).on('mouseover', function (e) {
-    facility_247.openPopup()
+    facility_248.openPopup()
   });
-  facility_247.bindPopup('Gallatin Fossil Plant')
+  facility_248.bindPopup('Gallatin Fossil Plant')
 
-  markers.addLayer(facility_247);
+  markers.addLayer(facility_248);
   
   
 
   
-  var facility_248 = L.marker(new L.LatLng(35.179529, -81.006759), {
+  var facility_249 = L.marker(new L.LatLng(35.179529, -81.006759), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -883,20 +922,20 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/allen?zoom=12&lat=35.179529&lng=-81.006759';  
   }).on('mouseover', function (e) {
-    facility_248.openPopup()
+    facility_249.openPopup()
   });
-  facility_248.bindPopup('Allen Steam Plant')
+  facility_249.bindPopup('Allen Steam Plant')
 
-  markers.addLayer(facility_248);
+  markers.addLayer(facility_249);
   
-  
-
   
 
   
 
   
-  var facility_251 = L.marker(new L.LatLng(35.217222, -81.76111), {
+
+  
+  var facility_252 = L.marker(new L.LatLng(35.217222, -81.76111), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -905,14 +944,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/cliffside-station?zoom=12&lat=35.217222&lng=-81.76111';  
   }).on('mouseover', function (e) {
-    facility_251.openPopup()
+    facility_252.openPopup()
   });
-  facility_251.bindPopup('Cliffside Steam Station')
+  facility_252.bindPopup('Cliffside Steam Station')
 
-  markers.addLayer(facility_251);
+  markers.addLayer(facility_252);
   
-  
-
   
 
   
@@ -920,7 +957,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_255 = L.marker(new L.LatLng(35.357778, -80.97), {
+
+  
+  var facility_256 = L.marker(new L.LatLng(35.357778, -80.97), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -929,14 +968,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/riverbend?zoom=12&lat=35.357778&lng=-80.97';  
   }).on('mouseover', function (e) {
-    facility_255.openPopup()
+    facility_256.openPopup()
   });
-  facility_255.bindPopup('Riverbend Steam Station')
+  facility_256.bindPopup('Riverbend Steam Station')
 
-  markers.addLayer(facility_255);
+  markers.addLayer(facility_256);
   
-  
-
   
 
   
@@ -965,22 +1002,6 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
 
   
 
-  
-  var facility_270 = L.marker(new L.LatLng(36.027778, -87.986389), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/johnsonville-fossil?zoom=12&lat=36.027778&lng=-87.986389';  
-  }).on('mouseover', function (e) {
-    facility_270.openPopup()
-  });
-  facility_270.bindPopup('Johnsonville Fossil Plant')
-
-  markers.addLayer(facility_270);
-  
   
 
   
@@ -1336,6 +1357,22 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
+  var facility_399 = L.marker(new L.LatLng(35.902145, -84.523905), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/kingston-fossil-plant?zoom=12&lat=35.902145&lng=-84.523905';  
+  }).on('mouseover', function (e) {
+    facility_399.openPopup()
+  });
+  facility_399.bindPopup('Kingston Fossil Plant')
+
+  markers.addLayer(facility_399);
+  
+  
 
   
 
@@ -1434,7 +1471,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_440 = L.marker(new L.LatLng(36.527778, -78.885833), {
+
+  
+  var facility_441 = L.marker(new L.LatLng(36.527778, -78.885833), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1443,14 +1482,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/mayo?zoom=12&lat=36.527778&lng=-78.885833';  
   }).on('mouseover', function (e) {
-    facility_440.openPopup()
+    facility_441.openPopup()
   });
-  facility_440.bindPopup('Mayo Electric Generating Plant')
+  facility_441.bindPopup('Mayo Electric Generating Plant')
 
-  markers.addLayer(facility_440);
+  markers.addLayer(facility_441);
   
-  
-
   
 
   
@@ -1472,7 +1509,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_451 = L.marker(new L.LatLng(34.592523, -78.977649), {
+
+  
+  var facility_452 = L.marker(new L.LatLng(34.592523, -78.977649), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1481,14 +1520,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/weatherspoon?zoom=12&lat=34.592523&lng=-78.977649';  
   }).on('mouseover', function (e) {
-    facility_451.openPopup()
+    facility_452.openPopup()
   });
-  facility_451.bindPopup('Weatherspoon Power Plant')
+  facility_452.bindPopup('Weatherspoon Power Plant')
 
-  markers.addLayer(facility_451);
+  markers.addLayer(facility_452);
   
-  
-
   
 
   
@@ -1498,7 +1535,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_456 = L.marker(new L.LatLng(47.367903, -101.837286), {
+
+  
+  var facility_457 = L.marker(new L.LatLng(47.367903, -101.837286), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1507,14 +1546,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/antelope?zoom=12&lat=47.367903&lng=-101.837286';  
   }).on('mouseover', function (e) {
-    facility_456.openPopup()
+    facility_457.openPopup()
   });
-  facility_456.bindPopup('Antelope Valley Station')
+  facility_457.bindPopup('Antelope Valley Station')
 
-  markers.addLayer(facility_456);
+  markers.addLayer(facility_457);
   
-  
-
   
 
   
@@ -1636,7 +1673,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_517 = L.marker(new L.LatLng(34.891361, -85.750778), {
+
+  
+  var facility_518 = L.marker(new L.LatLng(34.891361, -85.750778), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1645,14 +1684,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/widows-creek-fossil-plant?zoom=12&lat=34.891361&lng=-85.750778';  
   }).on('mouseover', function (e) {
-    facility_517.openPopup()
+    facility_518.openPopup()
   });
-  facility_517.bindPopup('Widows Creek Fossil Plant')
+  facility_518.bindPopup('Widows Creek Fossil Plant')
 
-  markers.addLayer(facility_517);
+  markers.addLayer(facility_518);
   
-  
-
   
 
   
@@ -1674,7 +1711,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_528 = L.marker(new L.LatLng(40.638056, -80.416111), {
+
+  
+  var facility_529 = L.marker(new L.LatLng(40.638056, -80.416111), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1683,18 +1722,18 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/little-blue-run?zoom=12&lat=40.638056&lng=-80.416111';  
   }).on('mouseover', function (e) {
-    facility_528.openPopup()
+    facility_529.openPopup()
   });
-  facility_528.bindPopup('Bruce Mansfield Power Plant')
+  facility_529.bindPopup('Bruce Mansfield Power Plant')
 
-  markers.addLayer(facility_528);
+  markers.addLayer(facility_529);
   
-  
-
   
 
   
-  var facility_530 = L.marker(new L.LatLng(31.396889, -92.719078), {
+
+  
+  var facility_531 = L.marker(new L.LatLng(31.396889, -92.719078), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1703,14 +1742,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/brame?zoom=12&lat=31.396889&lng=-92.719078';  
   }).on('mouseover', function (e) {
-    facility_530.openPopup()
+    facility_531.openPopup()
   });
-  facility_530.bindPopup('Brame Energy Center')
+  facility_531.bindPopup('Brame Energy Center')
 
-  markers.addLayer(facility_530);
+  markers.addLayer(facility_531);
   
-  
-
   
 
   
@@ -1720,7 +1757,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_535 = L.marker(new L.LatLng(27.797444, -82.405194), {
+
+  
+  var facility_536 = L.marker(new L.LatLng(27.797444, -82.405194), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -1729,14 +1768,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/big-bend-station?zoom=12&lat=27.797444&lng=-82.405194';  
   }).on('mouseover', function (e) {
-    facility_535.openPopup()
+    facility_536.openPopup()
   });
-  facility_535.bindPopup('Big Bend Station')
+  facility_536.bindPopup('Big Bend Station')
 
-  markers.addLayer(facility_535);
+  markers.addLayer(facility_536);
   
-  
-
   
 
   
@@ -1766,7 +1803,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_550 = L.marker(new L.LatLng(47.281667, -101.319444), {
+
+  
+  var facility_551 = L.marker(new L.LatLng(47.281667, -101.319444), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1775,14 +1814,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/lelandolds?zoom=12&lat=47.281667&lng=-101.319444';  
   }).on('mouseover', function (e) {
-    facility_550.openPopup()
+    facility_551.openPopup()
   });
-  facility_550.bindPopup('Leland Olds Station')
+  facility_551.bindPopup('Leland Olds Station')
 
-  markers.addLayer(facility_550);
+  markers.addLayer(facility_551);
   
-  
-
   
 
   
@@ -1802,7 +1839,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_560 = L.marker(new L.LatLng(41.892495, -83.351968), {
+
+  
+  var facility_561 = L.marker(new L.LatLng(41.892495, -83.351968), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1811,14 +1850,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/monroe?zoom=12&lat=41.892495&lng=-83.351968';  
   }).on('mouseover', function (e) {
-    facility_560.openPopup()
+    facility_561.openPopup()
   });
-  facility_560.bindPopup('Detroit Edison Monroe Power Plant')
+  facility_561.bindPopup('Detroit Edison Monroe Power Plant')
 
-  markers.addLayer(facility_560);
+  markers.addLayer(facility_561);
   
-  
-
   
 
   
@@ -1852,7 +1889,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_577 = L.marker(new L.LatLng(43.642089, -83.838188), {
+
+  
+  var facility_578 = L.marker(new L.LatLng(43.642089, -83.838188), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1861,20 +1900,20 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/dekarn?zoom=12&lat=43.642089&lng=-83.838188';  
   }).on('mouseover', function (e) {
-    facility_577.openPopup()
+    facility_578.openPopup()
   });
-  facility_577.bindPopup('D.E. Karn Power Plant')
+  facility_578.bindPopup('D.E. Karn Power Plant')
 
-  markers.addLayer(facility_577);
+  markers.addLayer(facility_578);
   
-  
-
   
 
   
 
   
-  var facility_580 = L.marker(new L.LatLng(41.6348, -88.0632), {
+
+  
+  var facility_581 = L.marker(new L.LatLng(41.6348, -88.0632), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1883,14 +1922,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/will?zoom=12&lat=41.6348&lng=-88.0632';  
   }).on('mouseover', function (e) {
-    facility_580.openPopup()
+    facility_581.openPopup()
   });
-  facility_580.bindPopup('Will County Generating Station')
+  facility_581.bindPopup('Will County Generating Station')
 
-  markers.addLayer(facility_580);
+  markers.addLayer(facility_581);
   
-  
-
   
 
   
@@ -1916,7 +1953,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_593 = L.marker(new L.LatLng(35.711029, -80.379359), {
+
+  
+  var facility_594 = L.marker(new L.LatLng(35.711029, -80.379359), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1925,14 +1964,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/buck?zoom=12&lat=35.711029&lng=-80.379359';  
   }).on('mouseover', function (e) {
-    facility_593.openPopup()
+    facility_594.openPopup()
   });
-  facility_593.bindPopup('Buck Steam Station')
+  facility_594.bindPopup('Buck Steam Station')
 
-  markers.addLayer(facility_593);
+  markers.addLayer(facility_594);
   
-  
-
   
 
   
@@ -1958,7 +1995,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_606 = L.marker(new L.LatLng(36.28, -80.060556), {
+
+  
+  var facility_607 = L.marker(new L.LatLng(36.28, -80.060556), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1967,14 +2006,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/belews?zoom=12&lat=36.28&lng=-80.060556';  
   }).on('mouseover', function (e) {
-    facility_606.openPopup()
+    facility_607.openPopup()
   });
-  facility_606.bindPopup('Belews')
+  facility_607.bindPopup('Belews')
 
-  markers.addLayer(facility_606);
+  markers.addLayer(facility_607);
   
-  
-
   
 
   
@@ -1990,7 +2027,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_614 = L.marker(new L.LatLng(36.376667, -82.963056), {
+
+  
+  var facility_615 = L.marker(new L.LatLng(36.376667, -82.963056), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -1999,14 +2038,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/john-sevier-fossil?zoom=12&lat=36.376667&lng=-82.963056';  
   }).on('mouseover', function (e) {
-    facility_614.openPopup()
+    facility_615.openPopup()
   });
-  facility_614.bindPopup('John Sevier Fossil Plant')
+  facility_615.bindPopup('John Sevier Fossil Plant')
 
-  markers.addLayer(facility_614);
+  markers.addLayer(facility_615);
   
-  
-
   
 
   
@@ -2014,7 +2051,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_618 = L.marker(new L.LatLng(37.151667, -88.777222), {
+
+  
+  var facility_619 = L.marker(new L.LatLng(37.151667, -88.777222), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -2023,16 +2062,16 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/shawnee-fossil-plant?zoom=12&lat=37.151667&lng=-88.777222';  
   }).on('mouseover', function (e) {
-    facility_618.openPopup()
+    facility_619.openPopup()
   });
-  facility_618.bindPopup('Shawnee Fossil Plant')
+  facility_619.bindPopup('Shawnee Fossil Plant')
 
-  markers.addLayer(facility_618);
+  markers.addLayer(facility_619);
   
   
 
   
-  var facility_619 = L.marker(new L.LatLng(39.489694, -79.639389), {
+  var facility_620 = L.marker(new L.LatLng(39.489694, -79.639389), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -2041,14 +2080,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/albright?zoom=12&lat=39.489694&lng=-79.639389';  
   }).on('mouseover', function (e) {
-    facility_619.openPopup()
+    facility_620.openPopup()
   });
-  facility_619.bindPopup('Albright Power Station')
+  facility_620.bindPopup('Albright Power Station')
 
-  markers.addLayer(facility_619);
+  markers.addLayer(facility_620);
   
-  
-
   
 
   
@@ -2064,7 +2101,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_627 = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
+
+  
+  var facility_628 = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -2073,14 +2112,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/colbert?zoom=12&lat=34.72622600000&lng=-87.82832100000';  
   }).on('mouseover', function (e) {
-    facility_627.openPopup()
+    facility_628.openPopup()
   });
-  facility_627.bindPopup('Colbert Fossil Plant')
+  facility_628.bindPopup('Colbert Fossil Plant')
 
-  markers.addLayer(facility_627);
+  markers.addLayer(facility_628);
   
-  
-
   
 
   
@@ -2110,7 +2147,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_642 = L.marker(new L.LatLng(39.853889, -79.927778), {
+
+  
+  var facility_643 = L.marker(new L.LatLng(39.853889, -79.927778), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -2119,36 +2158,18 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/hatfields-ferry?zoom=12&lat=39.853889&lng=-79.927778';  
   }).on('mouseover', function (e) {
-    facility_642.openPopup()
+    facility_643.openPopup()
   });
-  facility_642.bindPopup('Hatfield&#39;s Ferry')
+  facility_643.bindPopup('Hatfield&#39;s Ferry')
 
-  markers.addLayer(facility_642);
+  markers.addLayer(facility_643);
   
-  
-
   
 
   
 
   
 
-  
-  var facility_646 = L.marker(new L.LatLng(35.902145, -84.523905), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/kingston-fossil?zoom=12&lat=35.902145&lng=-84.523905';  
-  }).on('mouseover', function (e) {
-    facility_646.openPopup()
-  });
-  facility_646.bindPopup('Kingston Fossil Plant')
-
-  markers.addLayer(facility_646);
-  
   
 
   
@@ -3726,7 +3747,7 @@ map.addLayer(markers);
           <td>Allen Steam Plant</td>
           <td>
             
-              <a href="/static/data/Allen_Fossil_Plant_DD.xlsx.zip" class="">Download</a></td>
+              <a href="//static/data/Allen_Fossil_Plant_DD.xlsx.zip" class="">Download</a></td>
             
         </tr>
         
@@ -4024,7 +4045,7 @@ map.addLayer(markers);
           <td>Cane Run Station</td>
           <td>
             
-              <a href="/static/data/CaneRun_DD.xlsx.zip" class="">Download</a></td>
+              <a href="//static/data/CaneRun_DD.xlsx.zip" class="">Download</a></td>
             
         </tr>
         

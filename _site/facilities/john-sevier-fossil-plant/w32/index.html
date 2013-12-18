@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -350,25 +371,25 @@ var icon_other_violation = {
   
 
   
-  var well_52 = L.marker(new L.LatLng(36.378272, -82.969887)).on('click', function (e) {
+
+  
+  var well_53 = L.marker(new L.LatLng(36.378272, -82.969887)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/w29?zoom=' + map_current_zoom + '&lat=36.378272&lng=-82.969887';  
     });
   }).on('mouseover', function (e) {
-    well_52.openPopup()
+    well_53.openPopup()
   });
 
   
-    well_52.setIcon(L.icon(icon_downgradient_violation));
+    well_53.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_52.bindPopup('W29')
+  well_53.bindPopup('W29')
 
-  markers.addLayer(well_52);
-  oms.addMarker(well_52);
-  
-
+  markers.addLayer(well_53);
+  oms.addMarker(well_53);
   
 
   
@@ -402,25 +423,25 @@ var icon_other_violation = {
   
 
   
-  var well_69 = L.marker(new L.LatLng(36.371343, -82.967041)).on('click', function (e) {
+
+  
+  var well_70 = L.marker(new L.LatLng(36.371343, -82.967041)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/jsf-10-36?zoom=' + map_current_zoom + '&lat=36.371343&lng=-82.967041';  
     });
   }).on('mouseover', function (e) {
-    well_69.openPopup()
+    well_70.openPopup()
   });
 
   
-    well_69.setIcon(L.icon(icon_downgradient_violation));
+    well_70.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_69.bindPopup('JSF-10-36')
+  well_70.bindPopup('JSF-10-36')
 
-  markers.addLayer(well_69);
-  oms.addMarker(well_69);
-  
-
+  markers.addLayer(well_70);
+  oms.addMarker(well_70);
   
 
   
@@ -430,25 +451,25 @@ var icon_other_violation = {
   
 
   
-  var well_74 = L.marker(new L.LatLng(36.371053, -82.973709)).on('click', function (e) {
+
+  
+  var well_75 = L.marker(new L.LatLng(36.371053, -82.973709)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/jsf-10-37?zoom=' + map_current_zoom + '&lat=36.371053&lng=-82.973709';  
     });
   }).on('mouseover', function (e) {
-    well_74.openPopup()
+    well_75.openPopup()
   });
 
   
-    well_74.setIcon(L.icon(icon_downgradient_violation));
+    well_75.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_74.bindPopup('JSF-10-37')
+  well_75.bindPopup('JSF-10-37')
 
-  markers.addLayer(well_74);
-  oms.addMarker(well_74);
-  
-
+  markers.addLayer(well_75);
+  oms.addMarker(well_75);
   
 
   
@@ -1214,25 +1235,25 @@ var icon_other_violation = {
   
 
   
-  var well_439 = L.marker(new L.LatLng(36.366929, -82.969608)).on('click', function (e) {
+
+  
+  var well_440 = L.marker(new L.LatLng(36.366929, -82.969608)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/w1?zoom=' + map_current_zoom + '&lat=36.366929&lng=-82.969608';  
     });
   }).on('mouseover', function (e) {
-    well_439.openPopup()
+    well_440.openPopup()
   });
 
   
-    well_439.setIcon(L.icon(icon_upgradient_compliant));
+    well_440.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_439.bindPopup('W1')
+  well_440.bindPopup('W1')
 
-  markers.addLayer(well_439);
-  oms.addMarker(well_439);
-  
-
+  markers.addLayer(well_440);
+  oms.addMarker(well_440);
   
 
   

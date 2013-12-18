@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -380,25 +401,25 @@ var icon_other_violation = {
   
 
   
-  var well_85 = L.marker(new L.LatLng(34.888771, -85.757641)).on('click', function (e) {
+
+  
+  var well_86 = L.marker(new L.LatLng(34.888771, -85.757641)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/wcf-10-48?zoom=' + map_current_zoom + '&lat=34.888771&lng=-85.757641';  
     });
   }).on('mouseover', function (e) {
-    well_85.openPopup()
+    well_86.openPopup()
   });
 
   
-    well_85.setIcon(L.icon(icon_downgradient_violation));
+    well_86.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_85.bindPopup('WCF-10-48')
+  well_86.bindPopup('WCF-10-48')
 
-  markers.addLayer(well_85);
-  oms.addMarker(well_85);
-  
-
+  markers.addLayer(well_86);
+  oms.addMarker(well_86);
   
 
   
@@ -1126,23 +1147,25 @@ var icon_other_violation = {
   
 
   
-  var well_431 = L.marker(new L.LatLng(34.899314, -85.743839)).on('click', function (e) {
+
+  
+  var well_432 = L.marker(new L.LatLng(34.899314, -85.743839)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/31?zoom=' + map_current_zoom + '&lat=34.899314&lng=-85.743839';  
     });
   }).on('mouseover', function (e) {
-    well_431.openPopup()
+    well_432.openPopup()
   });
 
   
-    well_431.setIcon(L.icon(icon_downgradient_compliant));
+    well_432.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_431.bindPopup('31')
+  well_432.bindPopup('31')
 
-  markers.addLayer(well_431);
-  oms.addMarker(well_431);
+  markers.addLayer(well_432);
+  oms.addMarker(well_432);
   
 
   
@@ -1420,25 +1443,23 @@ var icon_other_violation = {
   
 
   
-  var well_569 = L.marker(new L.LatLng(34.903162, -85.755266)).on('click', function (e) {
+  var well_570 = L.marker(new L.LatLng(34.903162, -85.755266)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/widows-creek-fossil-plant/w-10?zoom=' + map_current_zoom + '&lat=34.903162&lng=-85.755266';  
     });
   }).on('mouseover', function (e) {
-    well_569.openPopup()
+    well_570.openPopup()
   });
 
   
-    well_569.setIcon(L.icon(icon_upgradient_compliant));
+    well_570.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_569.bindPopup('W-10')
+  well_570.bindPopup('W-10')
 
-  markers.addLayer(well_569);
-  oms.addMarker(well_569);
-  
-
+  markers.addLayer(well_570);
+  oms.addMarker(well_570);
   
 
   
@@ -3743,6 +3764,9 @@ var icon_other_violation = {
   
 
     
+  
+
+    
 
       /**
        * Add the facility to the marker list
@@ -3755,9 +3779,6 @@ var icon_other_violation = {
          })
       });
       map.addLayer(this_facility);
-
-    
-  
 
     
   

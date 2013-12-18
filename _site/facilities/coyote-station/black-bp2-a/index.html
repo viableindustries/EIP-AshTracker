@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -486,25 +507,25 @@ var icon_other_violation = {
   
 
   
-  var well_129 = L.marker(new L.LatLng(47.22196667, -101.7937111)).on('click', function (e) {
+
+  
+  var well_130 = L.marker(new L.LatLng(47.22196667, -101.7937111)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/black-1463?zoom=' + map_current_zoom + '&lat=47.22196667&lng=-101.7937111';  
     });
   }).on('mouseover', function (e) {
-    well_129.openPopup()
+    well_130.openPopup()
   });
 
   
-    well_129.setIcon(L.icon(icon_downgradient_compliant));
+    well_130.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_129.bindPopup('BLACK 1463')
+  well_130.bindPopup('BLACK 1463')
 
-  markers.addLayer(well_129);
-  oms.addMarker(well_129);
-  
-
+  markers.addLayer(well_130);
+  oms.addMarker(well_130);
   
 
   
@@ -518,25 +539,25 @@ var icon_other_violation = {
   
 
   
-  var well_136 = L.marker(new L.LatLng(47.2123, -101.7942917)).on('click', function (e) {
+
+  
+  var well_137 = L.marker(new L.LatLng(47.2123, -101.7942917)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/blue-6?zoom=' + map_current_zoom + '&lat=47.2123&lng=-101.7942917';  
     });
   }).on('mouseover', function (e) {
-    well_136.openPopup()
+    well_137.openPopup()
   });
 
   
-    well_136.setIcon(L.icon(icon_downgradient_violation));
+    well_137.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_136.bindPopup('BLUE 6')
+  well_137.bindPopup('BLUE 6')
 
-  markers.addLayer(well_136);
-  oms.addMarker(well_136);
-  
-
+  markers.addLayer(well_137);
+  oms.addMarker(well_137);
   
 
   
@@ -596,25 +617,25 @@ var icon_other_violation = {
   
 
   
-  var well_166 = L.marker(new L.LatLng(47.21963889, -101.7977028)).on('click', function (e) {
+
+  
+  var well_167 = L.marker(new L.LatLng(47.21963889, -101.7977028)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/black-1718?zoom=' + map_current_zoom + '&lat=47.21963889&lng=-101.7977028';  
     });
   }).on('mouseover', function (e) {
-    well_166.openPopup()
+    well_167.openPopup()
   });
 
   
-    well_166.setIcon(L.icon(icon_downgradient_violation));
+    well_167.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_166.bindPopup('BLACK 1718')
+  well_167.bindPopup('BLACK 1718')
 
-  markers.addLayer(well_166);
-  oms.addMarker(well_166);
-  
-
+  markers.addLayer(well_167);
+  oms.addMarker(well_167);
   
 
   
@@ -1310,23 +1331,25 @@ var icon_other_violation = {
   
 
   
-  var well_487 = L.marker(new L.LatLng(47.21781389, -101.8088556)).on('click', function (e) {
+
+  
+  var well_488 = L.marker(new L.LatLng(47.21781389, -101.8088556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-6?zoom=' + map_current_zoom + '&lat=47.21781389&lng=-101.8088556';  
     });
   }).on('mouseover', function (e) {
-    well_487.openPopup()
+    well_488.openPopup()
   });
 
   
-    well_487.setIcon(L.icon(icon_downgradient_violation));
+    well_488.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_487.bindPopup('ASH POND 6')
+  well_488.bindPopup('ASH POND 6')
 
-  markers.addLayer(well_487);
-  oms.addMarker(well_487);
+  markers.addLayer(well_488);
+  oms.addMarker(well_488);
   
 
   
@@ -1500,25 +1523,23 @@ var icon_other_violation = {
   
 
   
-  var well_573 = L.marker(new L.LatLng(47.21894167, -101.8109889)).on('click', function (e) {
+  var well_574 = L.marker(new L.LatLng(47.21894167, -101.8109889)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-a6?zoom=' + map_current_zoom + '&lat=47.21894167&lng=-101.8109889';  
     });
   }).on('mouseover', function (e) {
-    well_573.openPopup()
+    well_574.openPopup()
   });
 
   
-    well_573.setIcon(L.icon(icon_downgradient_violation));
+    well_574.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_573.bindPopup('ASH POND A6')
+  well_574.bindPopup('ASH POND A6')
 
-  markers.addLayer(well_573);
-  oms.addMarker(well_573);
-  
-
+  markers.addLayer(well_574);
+  oms.addMarker(well_574);
   
 
   
@@ -1572,25 +1593,25 @@ var icon_other_violation = {
   
 
   
-  var well_600 = L.marker(new L.LatLng(47.22345278, -101.7970083)).on('click', function (e) {
+
+  
+  var well_601 = L.marker(new L.LatLng(47.22345278, -101.7970083)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/black-bp2-a?zoom=' + map_current_zoom + '&lat=47.22345278&lng=-101.7970083';  
     });
   }).on('mouseover', function (e) {
-    well_600.openPopup()
+    well_601.openPopup()
   });
 
   
-    well_600.setIcon(L.icon(icon_upgradient_violation));
+    well_601.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_600.bindPopup('BLACK BP2-A')
+  well_601.bindPopup('BLACK BP2-A')
 
-  markers.addLayer(well_600);
-  oms.addMarker(well_600);
-  
-
+  markers.addLayer(well_601);
+  oms.addMarker(well_601);
   
 
   
@@ -1622,25 +1643,25 @@ var icon_other_violation = {
   
 
   
-  var well_616 = L.marker(new L.LatLng(47.21731667, -101.8093556)).on('click', function (e) {
+
+  
+  var well_617 = L.marker(new L.LatLng(47.21731667, -101.8093556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/coyote-station/ash-pond-a1?zoom=' + map_current_zoom + '&lat=47.21731667&lng=-101.8093556';  
     });
   }).on('mouseover', function (e) {
-    well_616.openPopup()
+    well_617.openPopup()
   });
 
   
-    well_616.setIcon(L.icon(icon_downgradient_compliant));
+    well_617.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_616.bindPopup('ASH POND A1')
+  well_617.bindPopup('ASH POND A1')
 
-  markers.addLayer(well_616);
-  oms.addMarker(well_616);
-  
-
+  markers.addLayer(well_617);
+  oms.addMarker(well_617);
   
 
   
@@ -2729,6 +2750,9 @@ var icon_other_violation = {
   
 
     
+  
+
+    
 
       /**
        * Add the facility to the marker list
@@ -2741,9 +2765,6 @@ var icon_other_violation = {
          })
       });
       map.addLayer(this_facility);
-
-    
-  
 
     
   

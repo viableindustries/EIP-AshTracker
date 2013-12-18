@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -348,30 +369,12 @@ var icon_other_violation = {
   
 
   
-  var well_60 = L.marker(new L.LatLng(40.27040833, -80.65886944)).on('click', function (e) {
+
+  
+  var well_61 = L.marker(new L.LatLng(40.27040833, -80.65886944)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cardinal/s-18?zoom=' + map_current_zoom + '&lat=40.27040833&lng=-80.65886944';  
-    });
-  }).on('mouseover', function (e) {
-    well_60.openPopup()
-  });
-
-  
-    well_60.setIcon(L.icon(icon_upgradient_violation));
-  
-
-  well_60.bindPopup('S-18')
-
-  markers.addLayer(well_60);
-  oms.addMarker(well_60);
-  
-
-  
-  var well_61 = L.marker(new L.LatLng(40.27946944, -80.64883056)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-16?zoom=' + map_current_zoom + '&lat=40.27946944&lng=-80.64883056';  
     });
   }).on('mouseover', function (e) {
     well_61.openPopup()
@@ -381,451 +384,451 @@ var icon_other_violation = {
     well_61.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_61.bindPopup('S-16')
+  well_61.bindPopup('S-18')
 
   markers.addLayer(well_61);
   oms.addMarker(well_61);
   
 
   
-
-  
-  var well_63 = L.marker(new L.LatLng(40.27260556, -80.637)).on('click', function (e) {
+  var well_62 = L.marker(new L.LatLng(40.27946944, -80.64883056)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-14?zoom=' + map_current_zoom + '&lat=40.27260556&lng=-80.637';  
+      window.location.href = '/facilities/cardinal/s-16?zoom=' + map_current_zoom + '&lat=40.27946944&lng=-80.64883056';  
     });
   }).on('mouseover', function (e) {
-    well_63.openPopup()
+    well_62.openPopup()
   });
 
   
-    well_63.setIcon(L.icon(icon_upgradient_compliant));
+    well_62.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_63.bindPopup('S-14')
+  well_62.bindPopup('S-16')
 
-  markers.addLayer(well_63);
-  oms.addMarker(well_63);
+  markers.addLayer(well_62);
+  oms.addMarker(well_62);
   
 
   
-  var well_64 = L.marker(new L.LatLng(40.27392222, -80.64273333)).on('click', function (e) {
+
+  
+  var well_64 = L.marker(new L.LatLng(40.27260556, -80.637)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-15?zoom=' + map_current_zoom + '&lat=40.27392222&lng=-80.64273333';  
+      window.location.href = '/facilities/cardinal/s-14?zoom=' + map_current_zoom + '&lat=40.27260556&lng=-80.637';  
     });
   }).on('mouseover', function (e) {
     well_64.openPopup()
   });
 
   
-    well_64.setIcon(L.icon(icon_upgradient_violation));
+    well_64.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_64.bindPopup('S-15')
+  well_64.bindPopup('S-14')
 
   markers.addLayer(well_64);
   oms.addMarker(well_64);
   
 
   
-  var well_65 = L.marker(new L.LatLng(40.26888889, -80.64220278)).on('click', function (e) {
+  var well_65 = L.marker(new L.LatLng(40.27392222, -80.64273333)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-13?zoom=' + map_current_zoom + '&lat=40.26888889&lng=-80.64220278';  
+      window.location.href = '/facilities/cardinal/s-15?zoom=' + map_current_zoom + '&lat=40.27392222&lng=-80.64273333';  
     });
   }).on('mouseover', function (e) {
     well_65.openPopup()
   });
 
   
-    well_65.setIcon(L.icon(icon_upgradient_compliant));
+    well_65.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_65.bindPopup('S-13')
+  well_65.bindPopup('S-15')
 
   markers.addLayer(well_65);
   oms.addMarker(well_65);
   
 
   
-  var well_66 = L.marker(new L.LatLng(40.26959444, -80.64864722)).on('click', function (e) {
+  var well_66 = L.marker(new L.LatLng(40.26888889, -80.64220278)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-10?zoom=' + map_current_zoom + '&lat=40.26959444&lng=-80.64864722';  
+      window.location.href = '/facilities/cardinal/s-13?zoom=' + map_current_zoom + '&lat=40.26888889&lng=-80.64220278';  
     });
   }).on('mouseover', function (e) {
     well_66.openPopup()
   });
 
   
-    well_66.setIcon(L.icon(icon_downgradient_violation));
+    well_66.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_66.bindPopup('S-10')
+  well_66.bindPopup('S-13')
 
   markers.addLayer(well_66);
   oms.addMarker(well_66);
   
 
   
-  var well_67 = L.marker(new L.LatLng(40.27291389, -80.65076389)).on('click', function (e) {
+  var well_67 = L.marker(new L.LatLng(40.26959444, -80.64864722)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-11?zoom=' + map_current_zoom + '&lat=40.27291389&lng=-80.65076389';  
+      window.location.href = '/facilities/cardinal/s-10?zoom=' + map_current_zoom + '&lat=40.26959444&lng=-80.64864722';  
     });
   }).on('mouseover', function (e) {
     well_67.openPopup()
   });
 
   
-    well_67.setIcon(L.icon(icon_other_compliant));  
+    well_67.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_67.bindPopup('S-11')
+  well_67.bindPopup('S-10')
 
   markers.addLayer(well_67);
   oms.addMarker(well_67);
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var well_224 = L.marker(new L.LatLng(40.26558333, -80.64941111)).on('click', function (e) {
+  var well_68 = L.marker(new L.LatLng(40.27291389, -80.65076389)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/m-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64941111';  
+      window.location.href = '/facilities/cardinal/s-11?zoom=' + map_current_zoom + '&lat=40.27291389&lng=-80.65076389';  
     });
   }).on('mouseover', function (e) {
-    well_224.openPopup()
+    well_68.openPopup()
   });
 
   
-    well_224.setIcon(L.icon(icon_downgradient_violation));
+    well_68.setIcon(L.icon(icon_other_compliant));  
   
 
-  well_224.bindPopup('M-21')
+  well_68.bindPopup('S-11')
 
-  markers.addLayer(well_224);
-  oms.addMarker(well_224);
+  markers.addLayer(well_68);
+  oms.addMarker(well_68);
   
 
   
-  var well_225 = L.marker(new L.LatLng(40.26704444, -80.65188611)).on('click', function (e) {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_225 = L.marker(new L.LatLng(40.26558333, -80.64941111)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/m-20?zoom=' + map_current_zoom + '&lat=40.26704444&lng=-80.65188611';  
+      window.location.href = '/facilities/cardinal/m-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64941111';  
     });
   }).on('mouseover', function (e) {
     well_225.openPopup()
@@ -835,17 +838,17 @@ var icon_other_violation = {
     well_225.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_225.bindPopup('M-20')
+  well_225.bindPopup('M-21')
 
   markers.addLayer(well_225);
   oms.addMarker(well_225);
   
 
   
-  var well_226 = L.marker(new L.LatLng(40.26415556, -80.64350278)).on('click', function (e) {
+  var well_226 = L.marker(new L.LatLng(40.26704444, -80.65188611)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/m-23?zoom=' + map_current_zoom + '&lat=40.26415556&lng=-80.64350278';  
+      window.location.href = '/facilities/cardinal/m-20?zoom=' + map_current_zoom + '&lat=40.26704444&lng=-80.65188611';  
     });
   }).on('mouseover', function (e) {
     well_226.openPopup()
@@ -855,17 +858,17 @@ var icon_other_violation = {
     well_226.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_226.bindPopup('M-23')
+  well_226.bindPopup('M-20')
 
   markers.addLayer(well_226);
   oms.addMarker(well_226);
   
 
   
-  var well_227 = L.marker(new L.LatLng(40.26688889, -80.63894444)).on('click', function (e) {
+  var well_227 = L.marker(new L.LatLng(40.26415556, -80.64350278)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/m-22?zoom=' + map_current_zoom + '&lat=40.26688889&lng=-80.63894444';  
+      window.location.href = '/facilities/cardinal/m-23?zoom=' + map_current_zoom + '&lat=40.26415556&lng=-80.64350278';  
     });
   }).on('mouseover', function (e) {
     well_227.openPopup()
@@ -875,12 +878,30 @@ var icon_other_violation = {
     well_227.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_227.bindPopup('M-22')
+  well_227.bindPopup('M-23')
 
   markers.addLayer(well_227);
   oms.addMarker(well_227);
   
 
+  
+  var well_228 = L.marker(new L.LatLng(40.26688889, -80.63894444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal/m-22?zoom=' + map_current_zoom + '&lat=40.26688889&lng=-80.63894444';  
+    });
+  }).on('mouseover', function (e) {
+    well_228.openPopup()
+  });
+
+  
+    well_228.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_228.bindPopup('M-22')
+
+  markers.addLayer(well_228);
+  oms.addMarker(well_228);
   
 
   
@@ -1644,25 +1665,25 @@ var icon_other_violation = {
   
 
   
-  var well_474 = L.marker(new L.LatLng(40.27492222, -80.66158056)).on('click', function (e) {
+
+  
+  var well_475 = L.marker(new L.LatLng(40.27492222, -80.66158056)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cardinal/s-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.66158056';  
     });
   }).on('mouseover', function (e) {
-    well_474.openPopup()
+    well_475.openPopup()
   });
 
   
-    well_474.setIcon(L.icon(icon_upgradient_violation));
+    well_475.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_474.bindPopup('S-17')
+  well_475.bindPopup('S-17')
 
-  markers.addLayer(well_474);
-  oms.addMarker(well_474);
-  
-
+  markers.addLayer(well_475);
+  oms.addMarker(well_475);
   
 
   
@@ -1680,112 +1701,94 @@ var icon_other_violation = {
   
 
   
-  var well_483 = L.marker(new L.LatLng(40.27695278, -80.661175)).on('click', function (e) {
+
+  
+  var well_484 = L.marker(new L.LatLng(40.27695278, -80.661175)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cardinal/s-4?zoom=' + map_current_zoom + '&lat=40.27695278&lng=-80.661175';  
-    });
-  }).on('mouseover', function (e) {
-    well_483.openPopup()
-  });
-
-  
-    well_483.setIcon(L.icon(icon_upgradient_violation));
-  
-
-  well_483.bindPopup('S-4')
-
-  markers.addLayer(well_483);
-  oms.addMarker(well_483);
-  
-
-  
-  var well_484 = L.marker(new L.LatLng(40.27796667, -80.66169167)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-5?zoom=' + map_current_zoom + '&lat=40.27796667&lng=-80.66169167';  
     });
   }).on('mouseover', function (e) {
     well_484.openPopup()
   });
 
   
-    well_484.setIcon(L.icon(icon_upgradient_compliant));
+    well_484.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_484.bindPopup('S-5')
+  well_484.bindPopup('S-4')
 
   markers.addLayer(well_484);
   oms.addMarker(well_484);
   
 
   
-  var well_485 = L.marker(new L.LatLng(40.27742222, -80.6589)).on('click', function (e) {
+  var well_485 = L.marker(new L.LatLng(40.27796667, -80.66169167)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-6?zoom=' + map_current_zoom + '&lat=40.27742222&lng=-80.6589';  
+      window.location.href = '/facilities/cardinal/s-5?zoom=' + map_current_zoom + '&lat=40.27796667&lng=-80.66169167';  
     });
   }).on('mouseover', function (e) {
     well_485.openPopup()
   });
 
   
-    well_485.setIcon(L.icon(icon_upgradient_violation));
+    well_485.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_485.bindPopup('S-6')
+  well_485.bindPopup('S-5')
 
   markers.addLayer(well_485);
   oms.addMarker(well_485);
   
 
   
-  var well_486 = L.marker(new L.LatLng(40.26971944, -80.64825278)).on('click', function (e) {
+  var well_486 = L.marker(new L.LatLng(40.27742222, -80.6589)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-7?zoom=' + map_current_zoom + '&lat=40.26971944&lng=-80.64825278';  
+      window.location.href = '/facilities/cardinal/s-6?zoom=' + map_current_zoom + '&lat=40.27742222&lng=-80.6589';  
     });
   }).on('mouseover', function (e) {
     well_486.openPopup()
   });
 
   
-    well_486.setIcon(L.icon(icon_downgradient_violation));
+    well_486.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_486.bindPopup('S-7')
+  well_486.bindPopup('S-6')
 
   markers.addLayer(well_486);
   oms.addMarker(well_486);
   
 
   
-
-  
-  var well_488 = L.marker(new L.LatLng(40.26853056, -80.65382778)).on('click', function (e) {
+  var well_487 = L.marker(new L.LatLng(40.26971944, -80.64825278)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382778';  
+      window.location.href = '/facilities/cardinal/s-7?zoom=' + map_current_zoom + '&lat=40.26971944&lng=-80.64825278';  
     });
   }).on('mouseover', function (e) {
-    well_488.openPopup()
+    well_487.openPopup()
   });
 
   
-    well_488.setIcon(L.icon(icon_upgradient_violation));
+    well_487.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_488.bindPopup('S-1')
+  well_487.bindPopup('S-7')
 
-  markers.addLayer(well_488);
-  oms.addMarker(well_488);
+  markers.addLayer(well_487);
+  oms.addMarker(well_487);
   
 
   
-  var well_489 = L.marker(new L.LatLng(40.26768611, -80.65524167)).on('click', function (e) {
+
+  
+  var well_489 = L.marker(new L.LatLng(40.26853056, -80.65382778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal/s-2?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65524167';  
+      window.location.href = '/facilities/cardinal/s-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382778';  
     });
   }).on('mouseover', function (e) {
     well_489.openPopup()
@@ -1795,34 +1798,52 @@ var icon_other_violation = {
     well_489.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_489.bindPopup('S-2')
+  well_489.bindPopup('S-1')
 
   markers.addLayer(well_489);
   oms.addMarker(well_489);
   
 
   
+  var well_490 = L.marker(new L.LatLng(40.26768611, -80.65524167)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal/s-2?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65524167';  
+    });
+  }).on('mouseover', function (e) {
+    well_490.openPopup()
+  });
 
   
-  var well_491 = L.marker(new L.LatLng(40.27273333, -80.65882778)).on('click', function (e) {
+    well_490.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_490.bindPopup('S-2')
+
+  markers.addLayer(well_490);
+  oms.addMarker(well_490);
+  
+
+  
+
+  
+  var well_492 = L.marker(new L.LatLng(40.27273333, -80.65882778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/cardinal/s-8?zoom=' + map_current_zoom + '&lat=40.27273333&lng=-80.65882778';  
     });
   }).on('mouseover', function (e) {
-    well_491.openPopup()
+    well_492.openPopup()
   });
 
   
-    well_491.setIcon(L.icon(icon_upgradient_violation));
+    well_492.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_491.bindPopup('S-8')
+  well_492.bindPopup('S-8')
 
-  markers.addLayer(well_491);
-  oms.addMarker(well_491);
-  
-
+  markers.addLayer(well_492);
+  oms.addMarker(well_492);
   
 
   

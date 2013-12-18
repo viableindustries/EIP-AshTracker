@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -352,25 +373,25 @@ var icon_other_violation = {
   
 
   
-  var well_62 = L.marker(new L.LatLng(39.48555556, -79.60166667)).on('click', function (e) {
+
+  
+  var well_63 = L.marker(new L.LatLng(39.48555556, -79.60166667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw301a?zoom=' + map_current_zoom + '&lat=39.48555556&lng=-79.60166667';  
     });
   }).on('mouseover', function (e) {
-    well_62.openPopup()
+    well_63.openPopup()
   });
 
   
-    well_62.setIcon(L.icon(icon_other_violation));
+    well_63.setIcon(L.icon(icon_other_violation));
   
 
-  well_62.bindPopup('MW301A')
+  well_63.bindPopup('MW301A')
 
-  markers.addLayer(well_62);
-  oms.addMarker(well_62);
-  
-
+  markers.addLayer(well_63);
+  oms.addMarker(well_63);
   
 
   
@@ -430,48 +451,50 @@ var icon_other_violation = {
   
 
   
-  var well_92 = L.marker(new L.LatLng(39.485, -79.58583333)).on('click', function (e) {
+
+  
+  var well_93 = L.marker(new L.LatLng(39.485, -79.58583333)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw101?zoom=' + map_current_zoom + '&lat=39.485&lng=-79.58583333';  
-    });
-  }).on('mouseover', function (e) {
-    well_92.openPopup()
-  });
-
-  
-    well_92.setIcon(L.icon(icon_other_violation));
-  
-
-  well_92.bindPopup('MW101')
-
-  markers.addLayer(well_92);
-  oms.addMarker(well_92);
-  
-
-  
-  var well_93 = L.marker(new L.LatLng(39.48527778, -79.60777778)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright/mw102?zoom=' + map_current_zoom + '&lat=39.48527778&lng=-79.60777778';  
     });
   }).on('mouseover', function (e) {
     well_93.openPopup()
   });
 
   
-    well_93.setIcon(L.icon(icon_downgradient_violation));
+    well_93.setIcon(L.icon(icon_other_violation));
   
 
-  well_93.bindPopup('MW102')
+  well_93.bindPopup('MW101')
 
   markers.addLayer(well_93);
   oms.addMarker(well_93);
   
 
   
+  var well_94 = L.marker(new L.LatLng(39.48527778, -79.60777778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/albright/mw102?zoom=' + map_current_zoom + '&lat=39.48527778&lng=-79.60777778';  
+    });
+  }).on('mouseover', function (e) {
+    well_94.openPopup()
+  });
 
   
+    well_94.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_94.bindPopup('MW102')
+
+  markers.addLayer(well_94);
+  oms.addMarker(well_94);
+  
+
+  
+
+  
 
   
 
@@ -598,25 +621,23 @@ var icon_other_violation = {
   
 
   
-  var well_158 = L.marker(new L.LatLng(39.48861111, -79.60194444)).on('click', function (e) {
+  var well_159 = L.marker(new L.LatLng(39.48861111, -79.60194444)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw206s?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.60194444';  
     });
   }).on('mouseover', function (e) {
-    well_158.openPopup()
+    well_159.openPopup()
   });
 
   
-    well_158.setIcon(L.icon(icon_upgradient_compliant));
+    well_159.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_158.bindPopup('MW206S')
+  well_159.bindPopup('MW206S')
 
-  markers.addLayer(well_158);
-  oms.addMarker(well_158);
-  
-
+  markers.addLayer(well_159);
+  oms.addMarker(well_159);
   
 
   
@@ -652,25 +673,25 @@ var icon_other_violation = {
   
 
   
-  var well_176 = L.marker(new L.LatLng(39.49333333, -79.66527778)).on('click', function (e) {
+
+  
+  var well_177 = L.marker(new L.LatLng(39.49333333, -79.66527778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw1?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.66527778';  
     });
   }).on('mouseover', function (e) {
-    well_176.openPopup()
+    well_177.openPopup()
   });
 
   
-    well_176.setIcon(L.icon(icon_upgradient_compliant));
+    well_177.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_176.bindPopup('MW1')
+  well_177.bindPopup('MW1')
 
-  markers.addLayer(well_176);
-  oms.addMarker(well_176);
-  
-
+  markers.addLayer(well_177);
+  oms.addMarker(well_177);
   
 
   
@@ -710,25 +731,25 @@ var icon_other_violation = {
   
 
   
-  var well_196 = L.marker(new L.LatLng(39.48666667, -79.60972222)).on('click', function (e) {
+
+  
+  var well_197 = L.marker(new L.LatLng(39.48666667, -79.60972222)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw201s2?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60972222';  
     });
   }).on('mouseover', function (e) {
-    well_196.openPopup()
+    well_197.openPopup()
   });
 
   
-    well_196.setIcon(L.icon(icon_other_violation));
+    well_197.setIcon(L.icon(icon_other_violation));
   
 
-  well_196.bindPopup('MW201S2')
+  well_197.bindPopup('MW201S2')
 
-  markers.addLayer(well_196);
-  oms.addMarker(well_196);
-  
-
+  markers.addLayer(well_197);
+  oms.addMarker(well_197);
   
 
   
@@ -1488,25 +1509,25 @@ var icon_other_violation = {
   
 
   
-  var well_549 = L.marker(new L.LatLng(39.48666667, -79.60916667)).on('click', function (e) {
+
+  
+  var well_550 = L.marker(new L.LatLng(39.48666667, -79.60916667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw104?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60916667';  
     });
   }).on('mouseover', function (e) {
-    well_549.openPopup()
+    well_550.openPopup()
   });
 
   
-    well_549.setIcon(L.icon(icon_downgradient_violation));
+    well_550.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_549.bindPopup('MW104')
+  well_550.bindPopup('MW104')
 
-  markers.addLayer(well_549);
-  oms.addMarker(well_549);
-  
-
+  markers.addLayer(well_550);
+  oms.addMarker(well_550);
   
 
   
@@ -1544,25 +1565,25 @@ var icon_other_violation = {
   
 
   
-  var well_568 = L.marker(new L.LatLng(39.48722222, -79.60777778)).on('click', function (e) {
+
+  
+  var well_569 = L.marker(new L.LatLng(39.48722222, -79.60777778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw103?zoom=' + map_current_zoom + '&lat=39.48722222&lng=-79.60777778';  
     });
   }).on('mouseover', function (e) {
-    well_568.openPopup()
+    well_569.openPopup()
   });
 
   
-    well_568.setIcon(L.icon(icon_downgradient_violation));
+    well_569.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_568.bindPopup('MW103')
+  well_569.bindPopup('MW103')
 
-  markers.addLayer(well_568);
-  oms.addMarker(well_568);
-  
-
+  markers.addLayer(well_569);
+  oms.addMarker(well_569);
   
 
   
@@ -1596,30 +1617,12 @@ var icon_other_violation = {
   
 
   
-  var well_585 = L.marker(new L.LatLng(39.48472222, -79.605)).on('click', function (e) {
+
+  
+  var well_586 = L.marker(new L.LatLng(39.48472222, -79.605)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw208d?zoom=' + map_current_zoom + '&lat=39.48472222&lng=-79.605';  
-    });
-  }).on('mouseover', function (e) {
-    well_585.openPopup()
-  });
-
-  
-    well_585.setIcon(L.icon(icon_other_violation));
-  
-
-  well_585.bindPopup('MW208D')
-
-  markers.addLayer(well_585);
-  oms.addMarker(well_585);
-  
-
-  
-  var well_586 = L.marker(new L.LatLng(39.48861111, -79.61083333)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright/mw314d?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.61083333';  
     });
   }).on('mouseover', function (e) {
     well_586.openPopup()
@@ -1629,14 +1632,30 @@ var icon_other_violation = {
     well_586.setIcon(L.icon(icon_other_violation));
   
 
-  well_586.bindPopup('MW314D')
+  well_586.bindPopup('MW208D')
 
   markers.addLayer(well_586);
   oms.addMarker(well_586);
   
 
   
+  var well_587 = L.marker(new L.LatLng(39.48861111, -79.61083333)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/albright/mw314d?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.61083333';  
+    });
+  }).on('mouseover', function (e) {
+    well_587.openPopup()
+  });
 
+  
+    well_587.setIcon(L.icon(icon_other_violation));
+  
+
+  well_587.bindPopup('MW314D')
+
+  markers.addLayer(well_587);
+  oms.addMarker(well_587);
   
 
   
@@ -1714,25 +1733,27 @@ var icon_other_violation = {
   
 
   
-  var well_626 = L.marker(new L.LatLng(39.48805556, -79.60666667)).on('click', function (e) {
+
+  
+
+  
+  var well_627 = L.marker(new L.LatLng(39.48805556, -79.60666667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/albright/mw308d?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60666667';  
     });
   }).on('mouseover', function (e) {
-    well_626.openPopup()
+    well_627.openPopup()
   });
 
   
-    well_626.setIcon(L.icon(icon_other_violation));
+    well_627.setIcon(L.icon(icon_other_violation));
   
 
-  well_626.bindPopup('MW308D')
+  well_627.bindPopup('MW308D')
 
-  markers.addLayer(well_626);
-  oms.addMarker(well_626);
-  
-
+  markers.addLayer(well_627);
+  oms.addMarker(well_627);
   
 
   

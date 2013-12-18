@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -344,23 +365,25 @@ var icon_other_violation = {
   
 
   
-  var well_58 = L.marker(new L.LatLng(36.261419, -94.513272)).on('click', function (e) {
+
+  
+  var well_59 = L.marker(new L.LatLng(36.261419, -94.513272)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/b-07a?zoom=' + map_current_zoom + '&lat=36.261419&lng=-94.513272';  
     });
   }).on('mouseover', function (e) {
-    well_58.openPopup()
+    well_59.openPopup()
   });
 
   
-    well_58.setIcon(L.icon(icon_downgradient_compliant));
+    well_59.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_58.bindPopup('B-07A')
+  well_59.bindPopup('B-07A')
 
-  markers.addLayer(well_58);
-  oms.addMarker(well_58);
+  markers.addLayer(well_59);
+  oms.addMarker(well_59);
   
 
   
@@ -526,25 +549,23 @@ var icon_other_violation = {
   
 
   
-  var well_140 = L.marker(new L.LatLng(36.260697, -94.513442)).on('click', function (e) {
+  var well_141 = L.marker(new L.LatLng(36.260697, -94.513442)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/b-01b?zoom=' + map_current_zoom + '&lat=36.260697&lng=-94.513442';  
     });
   }).on('mouseover', function (e) {
-    well_140.openPopup()
+    well_141.openPopup()
   });
 
   
-    well_140.setIcon(L.icon(icon_downgradient_compliant));
+    well_141.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_140.bindPopup('B-01B')
+  well_141.bindPopup('B-01B')
 
-  markers.addLayer(well_140);
-  oms.addMarker(well_140);
-  
-
+  markers.addLayer(well_141);
+  oms.addMarker(well_141);
   
 
   
@@ -1602,25 +1623,25 @@ var icon_other_violation = {
   
 
   
-  var well_624 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
+
+  
+  var well_625 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-7d?zoom=' + map_current_zoom + '&lat=36.258296&lng=-94.518796';  
     });
   }).on('mouseover', function (e) {
-    well_624.openPopup()
+    well_625.openPopup()
   });
 
   
-    well_624.setIcon(L.icon(icon_downgradient_violation));
+    well_625.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_624.bindPopup('NE-7D')
+  well_625.bindPopup('NE-7D')
 
-  markers.addLayer(well_624);
-  oms.addMarker(well_624);
-  
-
+  markers.addLayer(well_625);
+  oms.addMarker(well_625);
   
 
   

@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -370,25 +391,25 @@ var icon_other_violation = {
   
 
   
-  var well_71 = L.marker(new L.LatLng(27.79839681, -82.39415816)).on('click', function (e) {
+
+  
+  var well_72 = L.marker(new L.LatLng(27.79839681, -82.39415816)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-49?zoom=' + map_current_zoom + '&lat=27.79839681&lng=-82.39415816';  
     });
   }).on('mouseover', function (e) {
-    well_71.openPopup()
+    well_72.openPopup()
   });
 
   
-    well_71.setIcon(L.icon(icon_downgradient_violation));
+    well_72.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_71.bindPopup('B-49')
+  well_72.bindPopup('B-49')
 
-  markers.addLayer(well_71);
-  oms.addMarker(well_71);
-  
-
+  markers.addLayer(well_72);
+  oms.addMarker(well_72);
   
 
   
@@ -396,50 +417,32 @@ var icon_other_violation = {
   
 
   
-  var well_75 = L.marker(new L.LatLng(27.78161142, -82.40050694)).on('click', function (e) {
+
+  
+  var well_76 = L.marker(new L.LatLng(27.78161142, -82.40050694)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-44?zoom=' + map_current_zoom + '&lat=27.78161142&lng=-82.40050694';  
-    });
-  }).on('mouseover', function (e) {
-    well_75.openPopup()
-  });
-
-  
-    well_75.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_75.bindPopup('B-44')
-
-  markers.addLayer(well_75);
-  oms.addMarker(well_75);
-  
-
-  
-  var well_76 = L.marker(new L.LatLng(27.78514853, -82.39242828)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-41?zoom=' + map_current_zoom + '&lat=27.78514853&lng=-82.39242828';  
     });
   }).on('mouseover', function (e) {
     well_76.openPopup()
   });
 
   
-    well_76.setIcon(L.icon(icon_upgradient_violation));
+    well_76.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_76.bindPopup('B-41')
+  well_76.bindPopup('B-44')
 
   markers.addLayer(well_76);
   oms.addMarker(well_76);
   
 
   
-  var well_77 = L.marker(new L.LatLng(27.79682449, -82.38840759)).on('click', function (e) {
+  var well_77 = L.marker(new L.LatLng(27.78514853, -82.39242828)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-40?zoom=' + map_current_zoom + '&lat=27.79682449&lng=-82.38840759';  
+      window.location.href = '/facilities/big-bend-station/b-41?zoom=' + map_current_zoom + '&lat=27.78514853&lng=-82.39242828';  
     });
   }).on('mouseover', function (e) {
     well_77.openPopup()
@@ -449,37 +452,37 @@ var icon_other_violation = {
     well_77.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_77.bindPopup('B-40')
+  well_77.bindPopup('B-41')
 
   markers.addLayer(well_77);
   oms.addMarker(well_77);
   
 
   
-  var well_78 = L.marker(new L.LatLng(27.80116765, -82.39127192)).on('click', function (e) {
+  var well_78 = L.marker(new L.LatLng(27.79682449, -82.38840759)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-43?zoom=' + map_current_zoom + '&lat=27.80116765&lng=-82.39127192';  
+      window.location.href = '/facilities/big-bend-station/b-40?zoom=' + map_current_zoom + '&lat=27.79682449&lng=-82.38840759';  
     });
   }).on('mouseover', function (e) {
     well_78.openPopup()
   });
 
   
-    well_78.setIcon(L.icon(icon_downgradient_violation));
+    well_78.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_78.bindPopup('B-43')
+  well_78.bindPopup('B-40')
 
   markers.addLayer(well_78);
   oms.addMarker(well_78);
   
 
   
-  var well_79 = L.marker(new L.LatLng(27.8037517, -82.39427729)).on('click', function (e) {
+  var well_79 = L.marker(new L.LatLng(27.80116765, -82.39127192)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-42?zoom=' + map_current_zoom + '&lat=27.8037517&lng=-82.39427729';  
+      window.location.href = '/facilities/big-bend-station/b-43?zoom=' + map_current_zoom + '&lat=27.80116765&lng=-82.39127192';  
     });
   }).on('mouseover', function (e) {
     well_79.openPopup()
@@ -489,17 +492,17 @@ var icon_other_violation = {
     well_79.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_79.bindPopup('B-42')
+  well_79.bindPopup('B-43')
 
   markers.addLayer(well_79);
   oms.addMarker(well_79);
   
 
   
-  var well_80 = L.marker(new L.LatLng(27.78231954, -82.39465936)).on('click', function (e) {
+  var well_80 = L.marker(new L.LatLng(27.8037517, -82.39427729)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-38?zoom=' + map_current_zoom + '&lat=27.78231954&lng=-82.39465936';  
+      window.location.href = '/facilities/big-bend-station/b-42?zoom=' + map_current_zoom + '&lat=27.8037517&lng=-82.39427729';  
     });
   }).on('mouseover', function (e) {
     well_80.openPopup()
@@ -509,34 +512,50 @@ var icon_other_violation = {
     well_80.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_80.bindPopup('B-38')
+  well_80.bindPopup('B-42')
 
   markers.addLayer(well_80);
   oms.addMarker(well_80);
   
 
   
-  var well_81 = L.marker(new L.LatLng(27.80599386, -82.38352102)).on('click', function (e) {
+  var well_81 = L.marker(new L.LatLng(27.78231954, -82.39465936)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-39?zoom=' + map_current_zoom + '&lat=27.80599386&lng=-82.38352102';  
+      window.location.href = '/facilities/big-bend-station/b-38?zoom=' + map_current_zoom + '&lat=27.78231954&lng=-82.39465936';  
     });
   }).on('mouseover', function (e) {
     well_81.openPopup()
   });
 
   
-    well_81.setIcon(L.icon(icon_upgradient_violation));
+    well_81.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_81.bindPopup('B-39')
+  well_81.bindPopup('B-38')
 
   markers.addLayer(well_81);
   oms.addMarker(well_81);
   
 
   
+  var well_82 = L.marker(new L.LatLng(27.80599386, -82.38352102)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/b-39?zoom=' + map_current_zoom + '&lat=27.80599386&lng=-82.38352102';  
+    });
+  }).on('mouseover', function (e) {
+    well_82.openPopup()
+  });
 
+  
+    well_82.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_82.bindPopup('B-39')
+
+  markers.addLayer(well_82);
+  oms.addMarker(well_82);
   
 
   
@@ -546,54 +565,38 @@ var icon_other_violation = {
   
 
   
-  var well_87 = L.marker(new L.LatLng(27.79365679, -82.40767858)).on('click', function (e) {
+
+  
+
+  
+  var well_88 = L.marker(new L.LatLng(27.79365679, -82.40767858)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-30?zoom=' + map_current_zoom + '&lat=27.79365679&lng=-82.40767858';  
     });
   }).on('mouseover', function (e) {
-    well_87.openPopup()
+    well_88.openPopup()
   });
 
   
-    well_87.setIcon(L.icon(icon_downgradient_violation));
+    well_88.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_87.bindPopup('B-30')
+  well_88.bindPopup('B-30')
 
-  markers.addLayer(well_87);
-  oms.addMarker(well_87);
-  
-
+  markers.addLayer(well_88);
+  oms.addMarker(well_88);
   
 
   
 
   
-  var well_90 = L.marker(new L.LatLng(27.80018118, -82.39435031)).on('click', function (e) {
+
+  
+  var well_91 = L.marker(new L.LatLng(27.80018118, -82.39435031)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-33?zoom=' + map_current_zoom + '&lat=27.80018118&lng=-82.39435031';  
-    });
-  }).on('mouseover', function (e) {
-    well_90.openPopup()
-  });
-
-  
-    well_90.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_90.bindPopup('B-33')
-
-  markers.addLayer(well_90);
-  oms.addMarker(well_90);
-  
-
-  
-  var well_91 = L.marker(new L.LatLng(27.78556002, -82.39843292)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-34?zoom=' + map_current_zoom + '&lat=27.78556002&lng=-82.39843292';  
     });
   }).on('mouseover', function (e) {
     well_91.openPopup()
@@ -603,36 +606,54 @@ var icon_other_violation = {
     well_91.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_91.bindPopup('B-34')
+  well_91.bindPopup('B-33')
 
   markers.addLayer(well_91);
   oms.addMarker(well_91);
   
 
   
+  var well_92 = L.marker(new L.LatLng(27.78556002, -82.39843292)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/b-34?zoom=' + map_current_zoom + '&lat=27.78556002&lng=-82.39843292';  
+    });
+  }).on('mouseover', function (e) {
+    well_92.openPopup()
+  });
+
+  
+    well_92.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_92.bindPopup('B-34')
+
+  markers.addLayer(well_92);
+  oms.addMarker(well_92);
+  
+
+  
 
   
 
   
-  var well_94 = L.marker(new L.LatLng(27.78194066, -82.39739978)).on('click', function (e) {
+  var well_95 = L.marker(new L.LatLng(27.78194066, -82.39739978)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-37?zoom=' + map_current_zoom + '&lat=27.78194066&lng=-82.39739978';  
     });
   }).on('mouseover', function (e) {
-    well_94.openPopup()
+    well_95.openPopup()
   });
 
   
-    well_94.setIcon(L.icon(icon_downgradient_violation));
+    well_95.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_94.bindPopup('B-37')
+  well_95.bindPopup('B-37')
 
-  markers.addLayer(well_94);
-  oms.addMarker(well_94);
-  
-
+  markers.addLayer(well_95);
+  oms.addMarker(well_95);
   
 
   
@@ -674,25 +695,25 @@ var icon_other_violation = {
   
 
   
-  var well_115 = L.marker(new L.LatLng(27.78395055, -82.38525524)).on('click', function (e) {
+
+  
+  var well_116 = L.marker(new L.LatLng(27.78395055, -82.38525524)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-4r?zoom=' + map_current_zoom + '&lat=27.78395055&lng=-82.38525524';  
     });
   }).on('mouseover', function (e) {
-    well_115.openPopup()
+    well_116.openPopup()
   });
 
   
-    well_115.setIcon(L.icon(icon_upgradient_compliant));
+    well_116.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_115.bindPopup('B-4R')
+  well_116.bindPopup('B-4R')
 
-  markers.addLayer(well_115);
-  oms.addMarker(well_115);
-  
-
+  markers.addLayer(well_116);
+  oms.addMarker(well_116);
   
 
   
@@ -1566,25 +1587,25 @@ var icon_other_violation = {
   
 
   
-  var well_498 = L.marker(new L.LatLng(27.78985358, -82.39362218)).on('click', function (e) {
+
+  
+  var well_499 = L.marker(new L.LatLng(27.78985358, -82.39362218)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-17r?zoom=' + map_current_zoom + '&lat=27.78985358&lng=-82.39362218';  
     });
   }).on('mouseover', function (e) {
-    well_498.openPopup()
+    well_499.openPopup()
   });
 
   
-    well_498.setIcon(L.icon(icon_other_violation));
+    well_499.setIcon(L.icon(icon_other_violation));
   
 
-  well_498.bindPopup('B-17R')
+  well_499.bindPopup('B-17R')
 
-  markers.addLayer(well_498);
-  oms.addMarker(well_498);
-  
-
+  markers.addLayer(well_499);
+  oms.addMarker(well_499);
   
 
   
@@ -1594,25 +1615,25 @@ var icon_other_violation = {
   
 
   
-  var well_503 = L.marker(new L.LatLng(27.79362899, -82.40524547)).on('click', function (e) {
+
+  
+  var well_504 = L.marker(new L.LatLng(27.79362899, -82.40524547)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-60?zoom=' + map_current_zoom + '&lat=27.79362899&lng=-82.40524547';  
     });
   }).on('mouseover', function (e) {
-    well_503.openPopup()
+    well_504.openPopup()
   });
 
   
-    well_503.setIcon(L.icon(icon_downgradient_violation));
+    well_504.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_503.bindPopup('B-60')
+  well_504.bindPopup('B-60')
 
-  markers.addLayer(well_503);
-  oms.addMarker(well_503);
-  
-
+  markers.addLayer(well_504);
+  oms.addMarker(well_504);
   
 
   
@@ -1710,25 +1731,25 @@ var icon_other_violation = {
   
 
   
-  var well_552 = L.marker(new L.LatLng(27.80214, -82.39644)).on('click', function (e) {
+
+  
+  var well_553 = L.marker(new L.LatLng(27.80214, -82.39644)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-32?zoom=' + map_current_zoom + '&lat=27.80214&lng=-82.39644';  
     });
   }).on('mouseover', function (e) {
-    well_552.openPopup()
+    well_553.openPopup()
   });
 
   
-    well_552.setIcon(L.icon(icon_downgradient_violation));
+    well_553.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_552.bindPopup('B-32')
+  well_553.bindPopup('B-32')
 
-  markers.addLayer(well_552);
-  oms.addMarker(well_552);
-  
-
+  markers.addLayer(well_553);
+  oms.addMarker(well_553);
   
 
   
@@ -1752,25 +1773,25 @@ var icon_other_violation = {
   
 
   
-  var well_564 = L.marker(new L.LatLng(27.79219113, -82.39680363)).on('click', function (e) {
+
+  
+  var well_565 = L.marker(new L.LatLng(27.79219113, -82.39680363)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-36?zoom=' + map_current_zoom + '&lat=27.79219113&lng=-82.39680363';  
     });
   }).on('mouseover', function (e) {
-    well_564.openPopup()
+    well_565.openPopup()
   });
 
   
-    well_564.setIcon(L.icon(icon_downgradient_violation));
+    well_565.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_564.bindPopup('B-36')
+  well_565.bindPopup('B-36')
 
-  markers.addLayer(well_564);
-  oms.addMarker(well_564);
-  
-
+  markers.addLayer(well_565);
+  oms.addMarker(well_565);
   
 
   
@@ -1882,30 +1903,12 @@ var icon_other_violation = {
   
 
   
-  var well_620 = L.marker(new L.LatLng(27.80170556, -82.39250278)).on('click', function (e) {
+
+  
+  var well_621 = L.marker(new L.LatLng(27.80170556, -82.39250278)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/big-bend-station/b-15?zoom=' + map_current_zoom + '&lat=27.80170556&lng=-82.39250278';  
-    });
-  }).on('mouseover', function (e) {
-    well_620.openPopup()
-  });
-
-  
-    well_620.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_620.bindPopup('B-15')
-
-  markers.addLayer(well_620);
-  oms.addMarker(well_620);
-  
-
-  
-  var well_621 = L.marker(new L.LatLng(27.79993333, -82.39246111)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-12?zoom=' + map_current_zoom + '&lat=27.79993333&lng=-82.39246111';  
     });
   }).on('mouseover', function (e) {
     well_621.openPopup()
@@ -1915,37 +1918,37 @@ var icon_other_violation = {
     well_621.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_621.bindPopup('B-12')
+  well_621.bindPopup('B-15')
 
   markers.addLayer(well_621);
   oms.addMarker(well_621);
   
 
   
-  var well_622 = L.marker(new L.LatLng(27.79743611, -82.39897778)).on('click', function (e) {
+  var well_622 = L.marker(new L.LatLng(27.79993333, -82.39246111)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-10?zoom=' + map_current_zoom + '&lat=27.79743611&lng=-82.39897778';  
+      window.location.href = '/facilities/big-bend-station/b-12?zoom=' + map_current_zoom + '&lat=27.79993333&lng=-82.39246111';  
     });
   }).on('mouseover', function (e) {
     well_622.openPopup()
   });
 
   
-    well_622.setIcon(L.icon(icon_other_violation));
+    well_622.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_622.bindPopup('B-10')
+  well_622.bindPopup('B-12')
 
   markers.addLayer(well_622);
   oms.addMarker(well_622);
   
 
   
-  var well_623 = L.marker(new L.LatLng(27.79681389, -82.39253056)).on('click', function (e) {
+  var well_623 = L.marker(new L.LatLng(27.79743611, -82.39897778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/b-11?zoom=' + map_current_zoom + '&lat=27.79681389&lng=-82.39253056';  
+      window.location.href = '/facilities/big-bend-station/b-10?zoom=' + map_current_zoom + '&lat=27.79743611&lng=-82.39897778';  
     });
   }).on('mouseover', function (e) {
     well_623.openPopup()
@@ -1955,12 +1958,30 @@ var icon_other_violation = {
     well_623.setIcon(L.icon(icon_other_violation));
   
 
-  well_623.bindPopup('B-11')
+  well_623.bindPopup('B-10')
 
   markers.addLayer(well_623);
   oms.addMarker(well_623);
   
 
+  
+  var well_624 = L.marker(new L.LatLng(27.79681389, -82.39253056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/b-11?zoom=' + map_current_zoom + '&lat=27.79681389&lng=-82.39253056';  
+    });
+  }).on('mouseover', function (e) {
+    well_624.openPopup()
+  });
+
+  
+    well_624.setIcon(L.icon(icon_other_violation));
+  
+
+  well_624.bindPopup('B-11')
+
+  markers.addLayer(well_624);
+  oms.addMarker(well_624);
   
 
   

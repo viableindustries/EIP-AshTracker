@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -328,25 +349,25 @@ var icon_other_violation = {
   
 
   
-  var well_59 = L.marker(new L.LatLng(37.16092, -88.795061)).on('click', function (e) {
+
+  
+  var well_60 = L.marker(new L.LatLng(37.16092, -88.795061)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/shf-d75b?zoom=' + map_current_zoom + '&lat=37.16092&lng=-88.795061';  
     });
   }).on('mouseover', function (e) {
-    well_59.openPopup()
+    well_60.openPopup()
   });
 
   
-    well_59.setIcon(L.icon(icon_downgradient_violation));
+    well_60.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_59.bindPopup('SHF-D75B')
+  well_60.bindPopup('SHF-D75B')
 
-  markers.addLayer(well_59);
-  oms.addMarker(well_59);
-  
-
+  markers.addLayer(well_60);
+  oms.addMarker(well_60);
   
 
   
@@ -450,25 +471,25 @@ var icon_other_violation = {
   
 
   
-  var well_111 = L.marker(new L.LatLng(37.167749, -88.794868)).on('click', function (e) {
+
+  
+  var well_112 = L.marker(new L.LatLng(37.167749, -88.794868)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/shf-d11b?zoom=' + map_current_zoom + '&lat=37.167749&lng=-88.794868';  
     });
   }).on('mouseover', function (e) {
-    well_111.openPopup()
+    well_112.openPopup()
   });
 
   
-    well_111.setIcon(L.icon(icon_downgradient_violation));
+    well_112.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_111.bindPopup('SHF-D11B')
+  well_112.bindPopup('SHF-D11B')
 
-  markers.addLayer(well_111);
-  oms.addMarker(well_111);
-  
-
+  markers.addLayer(well_112);
+  oms.addMarker(well_112);
   
 
   
@@ -1118,25 +1139,25 @@ var icon_other_violation = {
   
 
   
-  var well_427 = L.marker(new L.LatLng(37.15704, -88.792885)).on('click', function (e) {
+
+  
+  var well_428 = L.marker(new L.LatLng(37.15704, -88.792885)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/d76a?zoom=' + map_current_zoom + '&lat=37.15704&lng=-88.792885';  
     });
   }).on('mouseover', function (e) {
-    well_427.openPopup()
+    well_428.openPopup()
   });
 
   
-    well_427.setIcon(L.icon(icon_downgradient_violation));
+    well_428.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_427.bindPopup('D76A')
+  well_428.bindPopup('D76A')
 
-  markers.addLayer(well_427);
-  oms.addMarker(well_427);
-  
-
+  markers.addLayer(well_428);
+  oms.addMarker(well_428);
   
 
   
@@ -1146,30 +1167,12 @@ var icon_other_violation = {
   
 
   
-  var well_432 = L.marker(new L.LatLng(37.159933, -88.779711)).on('click', function (e) {
+
+  
+  var well_433 = L.marker(new L.LatLng(37.159933, -88.779711)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/shf-d30a?zoom=' + map_current_zoom + '&lat=37.159933&lng=-88.779711';  
-    });
-  }).on('mouseover', function (e) {
-    well_432.openPopup()
-  });
-
-  
-    well_432.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_432.bindPopup('SHF-D30A')
-
-  markers.addLayer(well_432);
-  oms.addMarker(well_432);
-  
-
-  
-  var well_433 = L.marker(new L.LatLng(37.160174, -88.779746)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil-plant/shf-d30b?zoom=' + map_current_zoom + '&lat=37.160174&lng=-88.779746';  
     });
   }).on('mouseover', function (e) {
     well_433.openPopup()
@@ -1179,14 +1182,30 @@ var icon_other_violation = {
     well_433.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_433.bindPopup('SHF-D30B')
+  well_433.bindPopup('SHF-D30A')
 
   markers.addLayer(well_433);
   oms.addMarker(well_433);
   
 
   
+  var well_434 = L.marker(new L.LatLng(37.160174, -88.779746)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/shawnee-fossil-plant/shf-d30b?zoom=' + map_current_zoom + '&lat=37.160174&lng=-88.779746';  
+    });
+  }).on('mouseover', function (e) {
+    well_434.openPopup()
+  });
 
+  
+    well_434.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_434.bindPopup('SHF-D30B')
+
+  markers.addLayer(well_434);
+  oms.addMarker(well_434);
   
 
   
@@ -1206,23 +1225,27 @@ var icon_other_violation = {
   
 
   
-  var well_444 = L.marker(new L.LatLng(37.148965, -88.782053)).on('click', function (e) {
+
+  
+
+  
+  var well_445 = L.marker(new L.LatLng(37.148965, -88.782053)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/shf-d27?zoom=' + map_current_zoom + '&lat=37.148965&lng=-88.782053';  
     });
   }).on('mouseover', function (e) {
-    well_444.openPopup()
+    well_445.openPopup()
   });
 
   
-    well_444.setIcon(L.icon(icon_upgradient_compliant));
+    well_445.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_444.bindPopup('SHF-D27')
+  well_445.bindPopup('SHF-D27')
 
-  markers.addLayer(well_444);
-  oms.addMarker(well_444);
+  markers.addLayer(well_445);
+  oms.addMarker(well_445);
   
 
   
@@ -1352,25 +1375,23 @@ var icon_other_violation = {
   
 
   
-  var well_508 = L.marker(new L.LatLng(37.16082, -88.795016)).on('click', function (e) {
+  var well_509 = L.marker(new L.LatLng(37.16082, -88.795016)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/shf-d75a?zoom=' + map_current_zoom + '&lat=37.16082&lng=-88.795016';  
     });
   }).on('mouseover', function (e) {
-    well_508.openPopup()
+    well_509.openPopup()
   });
 
   
-    well_508.setIcon(L.icon(icon_downgradient_violation));
+    well_509.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_508.bindPopup('SHF-D75A')
+  well_509.bindPopup('SHF-D75A')
 
-  markers.addLayer(well_508);
-  oms.addMarker(well_508);
-  
-
+  markers.addLayer(well_509);
+  oms.addMarker(well_509);
   
 
   
@@ -1456,25 +1477,25 @@ var icon_other_violation = {
   
 
   
-  var well_551 = L.marker(new L.LatLng(37.167647, -88.794473)).on('click', function (e) {
+
+  
+  var well_552 = L.marker(new L.LatLng(37.167647, -88.794473)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/shf-d11?zoom=' + map_current_zoom + '&lat=37.167647&lng=-88.794473';  
     });
   }).on('mouseover', function (e) {
-    well_551.openPopup()
+    well_552.openPopup()
   });
 
   
-    well_551.setIcon(L.icon(icon_downgradient_violation));
+    well_552.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_551.bindPopup('SHF-D11')
+  well_552.bindPopup('SHF-D11')
 
-  markers.addLayer(well_551);
-  oms.addMarker(well_551);
-  
-
+  markers.addLayer(well_552);
+  oms.addMarker(well_552);
   
 
   
@@ -1580,25 +1601,25 @@ var icon_other_violation = {
   
 
   
-  var well_604 = L.marker(new L.LatLng(37.154088, -88.791851)).on('click', function (e) {
+
+  
+  var well_605 = L.marker(new L.LatLng(37.154088, -88.791851)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/shawnee-fossil-plant/d8a?zoom=' + map_current_zoom + '&lat=37.154088&lng=-88.791851';  
     });
   }).on('mouseover', function (e) {
-    well_604.openPopup()
+    well_605.openPopup()
   });
 
   
-    well_604.setIcon(L.icon(icon_downgradient_violation));
+    well_605.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_604.bindPopup('D8A')
+  well_605.bindPopup('D8A')
 
-  markers.addLayer(well_604);
-  oms.addMarker(well_604);
-  
-
+  markers.addLayer(well_605);
+  oms.addMarker(well_605);
   
 
   

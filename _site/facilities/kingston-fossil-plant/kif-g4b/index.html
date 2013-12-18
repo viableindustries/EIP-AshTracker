@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -506,25 +527,25 @@ var icon_other_violation = {
   
 
   
-  var well_148 = L.marker(new L.LatLng(35.892068, -84.511094)).on('click', function (e) {
+
+  
+  var well_149 = L.marker(new L.LatLng(35.892068, -84.511094)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g3a?zoom=' + map_current_zoom + '&lat=35.892068&lng=-84.511094';  
     });
   }).on('mouseover', function (e) {
-    well_148.openPopup()
+    well_149.openPopup()
   });
 
   
-    well_148.setIcon(L.icon(icon_downgradient_compliant));
+    well_149.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_148.bindPopup('KIF-G3A')
+  well_149.bindPopup('KIF-G3A')
 
-  markers.addLayer(well_148);
-  oms.addMarker(well_148);
-  
-
+  markers.addLayer(well_149);
+  oms.addMarker(well_149);
   
 
   
@@ -532,25 +553,25 @@ var icon_other_violation = {
   
 
   
-  var well_152 = L.marker(new L.LatLng(35.892055, -84.511156)).on('click', function (e) {
+
+  
+  var well_153 = L.marker(new L.LatLng(35.892055, -84.511156)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g3b?zoom=' + map_current_zoom + '&lat=35.892055&lng=-84.511156';  
     });
   }).on('mouseover', function (e) {
-    well_152.openPopup()
+    well_153.openPopup()
   });
 
   
-    well_152.setIcon(L.icon(icon_downgradient_compliant));
+    well_153.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_152.bindPopup('KIF-G3B')
+  well_153.bindPopup('KIF-G3B')
 
-  markers.addLayer(well_152);
-  oms.addMarker(well_152);
-  
-
+  markers.addLayer(well_153);
+  oms.addMarker(well_153);
   
 
   
@@ -590,45 +611,47 @@ var icon_other_violation = {
   
 
   
-  var well_172 = L.marker(new L.LatLng(35.891727, -84.506776)).on('click', function (e) {
+
+  
+  var well_173 = L.marker(new L.LatLng(35.891727, -84.506776)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g5b?zoom=' + map_current_zoom + '&lat=35.891727&lng=-84.506776';  
     });
   }).on('mouseover', function (e) {
-    well_172.openPopup()
+    well_173.openPopup()
   });
 
   
-    well_172.setIcon(L.icon(icon_downgradient_violation));
+    well_173.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_172.bindPopup('KIF-G5B')
+  well_173.bindPopup('KIF-G5B')
 
-  markers.addLayer(well_172);
-  oms.addMarker(well_172);
+  markers.addLayer(well_173);
+  oms.addMarker(well_173);
   
 
   
 
   
-  var well_174 = L.marker(new L.LatLng(35.891737, -84.506817)).on('click', function (e) {
+  var well_175 = L.marker(new L.LatLng(35.891737, -84.506817)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g5a?zoom=' + map_current_zoom + '&lat=35.891737&lng=-84.506817';  
     });
   }).on('mouseover', function (e) {
-    well_174.openPopup()
+    well_175.openPopup()
   });
 
   
-    well_174.setIcon(L.icon(icon_downgradient_violation));
+    well_175.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_174.bindPopup('KIF-G5A')
+  well_175.bindPopup('KIF-G5A')
 
-  markers.addLayer(well_174);
-  oms.addMarker(well_174);
+  markers.addLayer(well_175);
+  oms.addMarker(well_175);
   
 
   
@@ -758,25 +781,23 @@ var icon_other_violation = {
   
 
   
-  var well_238 = L.marker(new L.LatLng(35.896094, -84.508262)).on('click', function (e) {
+  var well_239 = L.marker(new L.LatLng(35.896094, -84.508262)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g1b?zoom=' + map_current_zoom + '&lat=35.896094&lng=-84.508262';  
     });
   }).on('mouseover', function (e) {
-    well_238.openPopup()
+    well_239.openPopup()
   });
 
   
-    well_238.setIcon(L.icon(icon_upgradient_compliant));
+    well_239.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_238.bindPopup('KIF-G1B')
+  well_239.bindPopup('KIF-G1B')
 
-  markers.addLayer(well_238);
-  oms.addMarker(well_238);
-  
-
+  markers.addLayer(well_239);
+  oms.addMarker(well_239);
   
 
   
@@ -812,23 +833,25 @@ var icon_other_violation = {
   
 
   
-  var well_256 = L.marker(new L.LatLng(35.902915, -84.51499)).on('click', function (e) {
+
+  
+  var well_257 = L.marker(new L.LatLng(35.902915, -84.51499)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/ad-2?zoom=' + map_current_zoom + '&lat=35.902915&lng=-84.51499';  
     });
   }).on('mouseover', function (e) {
-    well_256.openPopup()
+    well_257.openPopup()
   });
 
   
-    well_256.setIcon(L.icon(icon_downgradient_violation));
+    well_257.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_256.bindPopup('AD-2')
+  well_257.bindPopup('AD-2')
 
-  markers.addLayer(well_256);
-  oms.addMarker(well_256);
+  markers.addLayer(well_257);
+  oms.addMarker(well_257);
   
 
   
@@ -1348,23 +1371,23 @@ var icon_other_violation = {
   
 
   
-  var well_515 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
+  var well_516 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/ad-1?zoom=' + map_current_zoom + '&lat=35.908929&lng=-84.519528';  
     });
   }).on('mouseover', function (e) {
-    well_515.openPopup()
+    well_516.openPopup()
   });
 
   
-    well_515.setIcon(L.icon(icon_upgradient_compliant));
+    well_516.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_515.bindPopup('AD-1')
+  well_516.bindPopup('AD-1')
 
-  markers.addLayer(well_515);
-  oms.addMarker(well_515);
+  markers.addLayer(well_516);
+  oms.addMarker(well_516);
   
 
   
@@ -1614,25 +1637,23 @@ var icon_other_violation = {
   
 
   
-  var well_639 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
+  var well_640 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g4b?zoom=' + map_current_zoom + '&lat=35.891652&lng=-84.508803';  
     });
   }).on('mouseover', function (e) {
-    well_639.openPopup()
+    well_640.openPopup()
   });
 
   
-    well_639.setIcon(L.icon(icon_downgradient_compliant));
+    well_640.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_639.bindPopup('KIF-G4B')
+  well_640.bindPopup('KIF-G4B')
 
-  markers.addLayer(well_639);
-  oms.addMarker(well_639);
-  
-
+  markers.addLayer(well_640);
+  oms.addMarker(well_640);
   
 
   
@@ -3479,6 +3500,20 @@ var icon_other_violation = {
   
 
     
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(35.902145, -84.523905), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
   
 
     
@@ -5135,7 +5170,7 @@ map.addLayer(markers);
     
   
     
-  
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Mn at this facility"><span class="contaminant-symbol">Mn</span> <span class="contaminant-name">Manganese</span></div>
     
   
     
@@ -5146,6 +5181,10 @@ map.addLayer(markers);
   
     
   
+    
+  
+    
+      <div  class="element exceeded" data-toggle="tooltip" data-placement="top" data-original-title="Exceendence of Se at this facility"><span class="contaminant-symbol">Se</span> <span class="contaminant-name">Selenium</span></div>
     
   
     
@@ -5162,6 +5201,8 @@ map.addLayer(markers);
 </div>
 
 
+
+  
 
   
 

@@ -8,6 +8,10 @@
  */
 @import url(../lib/bootstrap/3.0.2/css/bootstrap.css);
 
+.element-invisible {
+  display: none;
+}
+
 html {
   height: 100%;
 }
@@ -222,6 +226,28 @@ nav {
   width: 58.333333333333336%;
 }
 
+.site-legend {
+  background-color: rgb(242,242,242);
+  background-color: rgba(242,242,242,0.9);
+  right: 24px;
+  min-height: 72px;
+  position: fixed;
+  bottom: 24px;
+  width: 53.333333333333336%;  
+}
+
+.legend-item {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.legend-item p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .site-content {
   left: 0;
   height: 100%;
@@ -344,13 +370,14 @@ main p.lead {
   margin: 0 0 24px;
 }
 
-a,
-a:hover {
-  color: #60c2db;
+a {
+  color:rgb(41, 132, 189);
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  color: rgb(41, 132, 189);
+  text-decoration: underline;
 }
 
 a.close-well,

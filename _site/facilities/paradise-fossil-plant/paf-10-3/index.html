@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -646,23 +667,25 @@ var icon_other_violation = {
   
 
   
-  var well_218 = L.marker(new L.LatLng(37.237884, -87.005492)).on('click', function (e) {
+
+  
+  var well_219 = L.marker(new L.LatLng(37.237884, -87.005492)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/94-35a?zoom=' + map_current_zoom + '&lat=37.237884&lng=-87.005492';  
     });
   }).on('mouseover', function (e) {
-    well_218.openPopup()
+    well_219.openPopup()
   });
 
   
-    well_218.setIcon(L.icon(icon_upgradient_compliant));
+    well_219.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_218.bindPopup('94-35A')
+  well_219.bindPopup('94-35A')
 
-  markers.addLayer(well_218);
-  oms.addMarker(well_218);
+  markers.addLayer(well_219);
+  oms.addMarker(well_219);
   
 
   
@@ -1268,25 +1291,23 @@ var icon_other_violation = {
   
 
   
-  var well_520 = L.marker(new L.LatLng(37.264505, -86.978586)).on('click', function (e) {
+  var well_521 = L.marker(new L.LatLng(37.264505, -86.978586)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/95-47c?zoom=' + map_current_zoom + '&lat=37.264505&lng=-86.978586';  
     });
   }).on('mouseover', function (e) {
-    well_520.openPopup()
+    well_521.openPopup()
   });
 
   
-    well_520.setIcon(L.icon(icon_downgradient_compliant));
+    well_521.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_520.bindPopup('95-47C')
+  well_521.bindPopup('95-47C')
 
-  markers.addLayer(well_520);
-  oms.addMarker(well_520);
-  
-
+  markers.addLayer(well_521);
+  oms.addMarker(well_521);
   
 
   
@@ -1352,49 +1373,49 @@ var icon_other_violation = {
   
 
   
-  var well_553 = L.marker(new L.LatLng(37.263122, -86.996283)).on('click', function (e) {
+
+  
+  var well_554 = L.marker(new L.LatLng(37.263122, -86.996283)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/paf-10-7?zoom=' + map_current_zoom + '&lat=37.263122&lng=-86.996283';  
     });
   }).on('mouseover', function (e) {
-    well_553.openPopup()
+    well_554.openPopup()
   });
 
   
-    well_553.setIcon(L.icon(icon_upgradient_violation));
+    well_554.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_553.bindPopup('PAF-10-7')
+  well_554.bindPopup('PAF-10-7')
 
-  markers.addLayer(well_553);
-  oms.addMarker(well_553);
-  
-
+  markers.addLayer(well_554);
+  oms.addMarker(well_554);
   
 
   
 
   
-  var well_556 = L.marker(new L.LatLng(37.245653, -86.975477)).on('click', function (e) {
+
+  
+  var well_557 = L.marker(new L.LatLng(37.245653, -86.975477)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/paradise-fossil-plant/paf-10-4?zoom=' + map_current_zoom + '&lat=37.245653&lng=-86.975477';  
     });
   }).on('mouseover', function (e) {
-    well_556.openPopup()
+    well_557.openPopup()
   });
 
   
-    well_556.setIcon(L.icon(icon_downgradient_violation));
+    well_557.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_556.bindPopup('PAF-10-4')
+  well_557.bindPopup('PAF-10-4')
 
-  markers.addLayer(well_556);
-  oms.addMarker(well_556);
-  
-
+  markers.addLayer(well_557);
+  oms.addMarker(well_557);
   
 
   

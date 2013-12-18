@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -604,25 +625,25 @@ var icon_other_violation = {
   
 
   
-  var well_179 = L.marker(new L.LatLng(39.846389, -79.953889)).on('click', function (e) {
+
+  
+  var well_180 = L.marker(new L.LatLng(39.846389, -79.953889)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw213a?zoom=' + map_current_zoom + '&lat=39.846389&lng=-79.953889';  
     });
   }).on('mouseover', function (e) {
-    well_179.openPopup()
+    well_180.openPopup()
   });
 
   
-    well_179.setIcon(L.icon(icon_downgradient_violation));
+    well_180.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_179.bindPopup('MW213A')
+  well_180.bindPopup('MW213A')
 
-  markers.addLayer(well_179);
-  oms.addMarker(well_179);
-  
-
+  markers.addLayer(well_180);
+  oms.addMarker(well_180);
   
 
   
@@ -1218,25 +1239,25 @@ var icon_other_violation = {
   
 
   
-  var well_468 = L.marker(new L.LatLng(39.854556, -79.946556)).on('click', function (e) {
+
+  
+  var well_469 = L.marker(new L.LatLng(39.854556, -79.946556)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw202b?zoom=' + map_current_zoom + '&lat=39.854556&lng=-79.946556';  
     });
   }).on('mouseover', function (e) {
-    well_468.openPopup()
+    well_469.openPopup()
   });
 
   
-    well_468.setIcon(L.icon(icon_downgradient_violation));
+    well_469.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_468.bindPopup('MW202B')
+  well_469.bindPopup('MW202B')
 
-  markers.addLayer(well_468);
-  oms.addMarker(well_468);
-  
-
+  markers.addLayer(well_469);
+  oms.addMarker(well_469);
   
 
   
@@ -1288,23 +1309,25 @@ var icon_other_violation = {
   
 
   
-  var well_494 = L.marker(new L.LatLng(39.85166667, -79.93916667)).on('click', function (e) {
+
+  
+  var well_495 = L.marker(new L.LatLng(39.85166667, -79.93916667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw217a?zoom=' + map_current_zoom + '&lat=39.85166667&lng=-79.93916667';  
     });
   }).on('mouseover', function (e) {
-    well_494.openPopup()
+    well_495.openPopup()
   });
 
   
-    well_494.setIcon(L.icon(icon_downgradient_violation));
+    well_495.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_494.bindPopup('MW217A')
+  well_495.bindPopup('MW217A')
 
-  markers.addLayer(well_494);
-  oms.addMarker(well_494);
+  markers.addLayer(well_495);
+  oms.addMarker(well_495);
   
 
   
@@ -1474,25 +1497,23 @@ var icon_other_violation = {
   
 
   
-  var well_578 = L.marker(new L.LatLng(39.856111, -79.945722)).on('click', function (e) {
+  var well_579 = L.marker(new L.LatLng(39.856111, -79.945722)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/hatfields-ferry/mw201c?zoom=' + map_current_zoom + '&lat=39.856111&lng=-79.945722';  
     });
   }).on('mouseover', function (e) {
-    well_578.openPopup()
+    well_579.openPopup()
   });
 
   
-    well_578.setIcon(L.icon(icon_downgradient_violation));
+    well_579.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_578.bindPopup('MW201C')
+  well_579.bindPopup('MW201C')
 
-  markers.addLayer(well_578);
-  oms.addMarker(well_578);
-  
-
+  markers.addLayer(well_579);
+  oms.addMarker(well_579);
   
 
   

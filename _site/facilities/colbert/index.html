@@ -109,6 +109,27 @@
     
       <div id="map" class="site-map"></div>
 
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend"><span class="glyphicon glyphicon-tasks"></span></a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-4">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-4">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+        </div>
+      </div>
+
       <main role="content" class="site-content">
         <a name="content-top" id="content-top"></a>
     
@@ -316,30 +337,12 @@ var icon_other_violation = {
   
 
   
-  var well_53 = L.marker(new L.LatLng(34.733091, -87.853787)).on('click', function (e) {
+
+  
+  var well_54 = L.marker(new L.LatLng(34.733091, -87.853787)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-mc5a?zoom=' + map_current_zoom + '&lat=34.733091&lng=-87.853787';  
-    });
-  }).on('mouseover', function (e) {
-    well_53.openPopup()
-  });
-
-  
-    well_53.setIcon(L.icon(icon_downgradient_violation));
-  
-
-  well_53.bindPopup('COF-MC5A')
-
-  markers.addLayer(well_53);
-  oms.addMarker(well_53);
-  
-
-  
-  var well_54 = L.marker(new L.LatLng(34.733036, -87.853817)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/cof-mc5c?zoom=' + map_current_zoom + '&lat=34.733036&lng=-87.853817';  
     });
   }).on('mouseover', function (e) {
     well_54.openPopup()
@@ -349,14 +352,30 @@ var icon_other_violation = {
     well_54.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_54.bindPopup('COF-MC5C')
+  well_54.bindPopup('COF-MC5A')
 
   markers.addLayer(well_54);
   oms.addMarker(well_54);
   
 
   
+  var well_55 = L.marker(new L.LatLng(34.733036, -87.853817)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/colbert-fossil/cof-mc5c?zoom=' + map_current_zoom + '&lat=34.733036&lng=-87.853817';  
+    });
+  }).on('mouseover', function (e) {
+    well_55.openPopup()
+  });
 
+  
+    well_55.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_55.bindPopup('COF-MC5C')
+
+  markers.addLayer(well_55);
+  oms.addMarker(well_55);
   
 
   
@@ -462,25 +481,27 @@ var icon_other_violation = {
   
 
   
-  var well_108 = L.marker(new L.LatLng(34.7275, -87.816667)).on('click', function (e) {
+
+  
+
+  
+  var well_109 = L.marker(new L.LatLng(34.7275, -87.816667)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca21b?zoom=' + map_current_zoom + '&lat=34.7275&lng=-87.816667';  
     });
   }).on('mouseover', function (e) {
-    well_108.openPopup()
+    well_109.openPopup()
   });
 
   
-    well_108.setIcon(L.icon(icon_downgradient_violation));
+    well_109.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_108.bindPopup('COF-CA21B')
+  well_109.bindPopup('COF-CA21B')
 
-  markers.addLayer(well_108);
-  oms.addMarker(well_108);
-  
-
+  markers.addLayer(well_109);
+  oms.addMarker(well_109);
   
 
   
@@ -490,25 +511,25 @@ var icon_other_violation = {
   
 
   
-  var well_113 = L.marker(new L.LatLng(34.736905, -87.836284)).on('click', function (e) {
+
+  
+  var well_114 = L.marker(new L.LatLng(34.736905, -87.836284)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca19b?zoom=' + map_current_zoom + '&lat=34.736905&lng=-87.836284';  
     });
   }).on('mouseover', function (e) {
-    well_113.openPopup()
+    well_114.openPopup()
   });
 
   
-    well_113.setIcon(L.icon(icon_downgradient_compliant));
+    well_114.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_113.bindPopup('COF-CA19B')
+  well_114.bindPopup('COF-CA19B')
 
-  markers.addLayer(well_113);
-  oms.addMarker(well_113);
-  
-
+  markers.addLayer(well_114);
+  oms.addMarker(well_114);
   
 
   
@@ -570,203 +591,201 @@ var icon_other_violation = {
   
 
   
-  var well_144 = L.marker(new L.LatLng(34.726389, -87.848056)).on('click', function (e) {
+
+  
+  var well_145 = L.marker(new L.LatLng(34.726389, -87.848056)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca5?zoom=' + map_current_zoom + '&lat=34.726389&lng=-87.848056';  
     });
   }).on('mouseover', function (e) {
-    well_144.openPopup()
+    well_145.openPopup()
   });
 
   
-    well_144.setIcon(L.icon(icon_upgradient_violation));
+    well_145.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_144.bindPopup('COF-CA5')
+  well_145.bindPopup('COF-CA5')
 
-  markers.addLayer(well_144);
-  oms.addMarker(well_144);
+  markers.addLayer(well_145);
+  oms.addMarker(well_145);
   
 
   
 
   
-  var well_146 = L.marker(new L.LatLng(34.726389, -87.848056)).on('click', function (e) {
+  var well_147 = L.marker(new L.LatLng(34.726389, -87.848056)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca6?zoom=' + map_current_zoom + '&lat=34.726389&lng=-87.848056';  
     });
   }).on('mouseover', function (e) {
-    well_146.openPopup()
+    well_147.openPopup()
   });
 
   
-    well_146.setIcon(L.icon(icon_upgradient_compliant));
+    well_147.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_146.bindPopup('COF-CA6')
+  well_147.bindPopup('COF-CA6')
 
-  markers.addLayer(well_146);
-  oms.addMarker(well_146);
-  
-
+  markers.addLayer(well_147);
+  oms.addMarker(well_147);
   
 
   
 
   
-  var well_149 = L.marker(new L.LatLng(34.73463, -87.847181)).on('click', function (e) {
+
+  
+  var well_150 = L.marker(new L.LatLng(34.73463, -87.847181)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca17b?zoom=' + map_current_zoom + '&lat=34.73463&lng=-87.847181';  
-    });
-  }).on('mouseover', function (e) {
-    well_149.openPopup()
-  });
-
-  
-    well_149.setIcon(L.icon(icon_other_violation));
-  
-
-  well_149.bindPopup('COF-CA17B')
-
-  markers.addLayer(well_149);
-  oms.addMarker(well_149);
-  
-
-  
-  var well_150 = L.marker(new L.LatLng(34.734722, -87.847222)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/cof-ca17a?zoom=' + map_current_zoom + '&lat=34.734722&lng=-87.847222';  
     });
   }).on('mouseover', function (e) {
     well_150.openPopup()
   });
 
   
-    well_150.setIcon(L.icon(icon_downgradient_compliant));
+    well_150.setIcon(L.icon(icon_other_violation));
   
 
-  well_150.bindPopup('COF-CA17A')
+  well_150.bindPopup('COF-CA17B')
 
   markers.addLayer(well_150);
   oms.addMarker(well_150);
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var well_186 = L.marker(new L.LatLng(34.729167, -87.840278)).on('click', function (e) {
+  var well_151 = L.marker(new L.LatLng(34.734722, -87.847222)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/cof-ca16?zoom=' + map_current_zoom + '&lat=34.729167&lng=-87.840278';  
+      window.location.href = '/facilities/colbert-fossil/cof-ca17a?zoom=' + map_current_zoom + '&lat=34.734722&lng=-87.847222';  
     });
   }).on('mouseover', function (e) {
-    well_186.openPopup()
+    well_151.openPopup()
   });
 
   
-    well_186.setIcon(L.icon(icon_downgradient_compliant));
+    well_151.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_186.bindPopup('COF-CA16')
+  well_151.bindPopup('COF-CA17A')
 
-  markers.addLayer(well_186);
-  oms.addMarker(well_186);
+  markers.addLayer(well_151);
+  oms.addMarker(well_151);
   
 
   
-  var well_187 = L.marker(new L.LatLng(34.726226, -87.828321)).on('click', function (e) {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_187 = L.marker(new L.LatLng(34.729167, -87.840278)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/cof-ca11?zoom=' + map_current_zoom + '&lat=34.726226&lng=-87.828321';  
+      window.location.href = '/facilities/colbert-fossil/cof-ca16?zoom=' + map_current_zoom + '&lat=34.729167&lng=-87.840278';  
     });
   }).on('mouseover', function (e) {
     well_187.openPopup()
   });
 
   
-    well_187.setIcon(L.icon(icon_upgradient_violation));
+    well_187.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_187.bindPopup('COF-CA11')
+  well_187.bindPopup('COF-CA16')
 
   markers.addLayer(well_187);
   oms.addMarker(well_187);
   
 
   
+  var well_188 = L.marker(new L.LatLng(34.726226, -87.828321)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/colbert-fossil/cof-ca11?zoom=' + map_current_zoom + '&lat=34.726226&lng=-87.828321';  
+    });
+  }).on('mouseover', function (e) {
+    well_188.openPopup()
+  });
 
+  
+    well_188.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_188.bindPopup('COF-CA11')
+
+  markers.addLayer(well_188);
+  oms.addMarker(well_188);
   
 
   
@@ -786,25 +805,27 @@ var icon_other_violation = {
   
 
   
-  var well_198 = L.marker(new L.LatLng(34.738296, -87.837153)).on('click', function (e) {
+
+  
+
+  
+  var well_199 = L.marker(new L.LatLng(34.738296, -87.837153)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca22b?zoom=' + map_current_zoom + '&lat=34.738296&lng=-87.837153';  
     });
   }).on('mouseover', function (e) {
-    well_198.openPopup()
+    well_199.openPopup()
   });
 
   
-    well_198.setIcon(L.icon(icon_downgradient_violation));
+    well_199.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_198.bindPopup('COF-CA22B')
+  well_199.bindPopup('COF-CA22B')
 
-  markers.addLayer(well_198);
-  oms.addMarker(well_198);
-  
-
+  markers.addLayer(well_199);
+  oms.addMarker(well_199);
   
 
   
@@ -854,25 +875,25 @@ var icon_other_violation = {
   
 
   
-  var well_223 = L.marker(new L.LatLng(34.73263, -87.854672)).on('click', function (e) {
+
+  
+  var well_224 = L.marker(new L.LatLng(34.73263, -87.854672)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca29br?zoom=' + map_current_zoom + '&lat=34.73263&lng=-87.854672';  
     });
   }).on('mouseover', function (e) {
-    well_223.openPopup()
+    well_224.openPopup()
   });
 
   
-    well_223.setIcon(L.icon(icon_other_violation));
+    well_224.setIcon(L.icon(icon_other_violation));
   
 
-  well_223.bindPopup('COF-CA29BR')
+  well_224.bindPopup('COF-CA29BR')
 
-  markers.addLayer(well_223);
-  oms.addMarker(well_223);
-  
-
+  markers.addLayer(well_224);
+  oms.addMarker(well_224);
   
 
   
@@ -890,25 +911,25 @@ var icon_other_violation = {
   
 
   
-  var well_232 = L.marker(new L.LatLng(34.739084, -87.850821)).on('click', function (e) {
+
+  
+  var well_233 = L.marker(new L.LatLng(34.739084, -87.850821)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca31a?zoom=' + map_current_zoom + '&lat=34.739084&lng=-87.850821';  
     });
   }).on('mouseover', function (e) {
-    well_232.openPopup()
+    well_233.openPopup()
   });
 
   
-    well_232.setIcon(L.icon(icon_upgradient_violation));
+    well_233.setIcon(L.icon(icon_upgradient_violation));
   
 
-  well_232.bindPopup('COF-CA31A')
+  well_233.bindPopup('COF-CA31A')
 
-  markers.addLayer(well_232);
-  oms.addMarker(well_232);
-  
-
+  markers.addLayer(well_233);
+  oms.addMarker(well_233);
   
 
   
@@ -1312,25 +1333,25 @@ var icon_other_violation = {
   
 
   
-  var well_425 = L.marker(new L.LatLng(34.735074, -87.835177)).on('click', function (e) {
+
+  
+  var well_426 = L.marker(new L.LatLng(34.735074, -87.835177)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca9r?zoom=' + map_current_zoom + '&lat=34.735074&lng=-87.835177';  
     });
   }).on('mouseover', function (e) {
-    well_425.openPopup()
+    well_426.openPopup()
   });
 
   
-    well_425.setIcon(L.icon(icon_downgradient_violation));
+    well_426.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_425.bindPopup('COF-CA9R')
+  well_426.bindPopup('COF-CA9R')
 
-  markers.addLayer(well_425);
-  oms.addMarker(well_425);
-  
-
+  markers.addLayer(well_426);
+  oms.addMarker(well_426);
   
 
   
@@ -1372,25 +1393,25 @@ var icon_other_violation = {
   
 
   
-  var well_446 = L.marker(new L.LatLng(34.731273, -87.845203)).on('click', function (e) {
+
+  
+  var well_447 = L.marker(new L.LatLng(34.731273, -87.845203)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca30b?zoom=' + map_current_zoom + '&lat=34.731273&lng=-87.845203';  
     });
   }).on('mouseover', function (e) {
-    well_446.openPopup()
+    well_447.openPopup()
   });
 
   
-    well_446.setIcon(L.icon(icon_other_violation));
+    well_447.setIcon(L.icon(icon_other_violation));
   
 
-  well_446.bindPopup('COF-CA30B')
+  well_447.bindPopup('COF-CA30B')
 
-  markers.addLayer(well_446);
-  oms.addMarker(well_446);
-  
-
+  markers.addLayer(well_447);
+  oms.addMarker(well_447);
   
 
   
@@ -1478,47 +1499,47 @@ var icon_other_violation = {
   
 
   
-  var well_490 = L.marker(new L.LatLng(34.749297, -87.853766)).on('click', function (e) {
+
+  
+  var well_491 = L.marker(new L.LatLng(34.749297, -87.853766)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca28b?zoom=' + map_current_zoom + '&lat=34.749297&lng=-87.853766';  
     });
   }).on('mouseover', function (e) {
-    well_490.openPopup()
+    well_491.openPopup()
   });
 
   
-    well_490.setIcon(L.icon(icon_downgradient_violation));
+    well_491.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_490.bindPopup('COF-CA28B')
+  well_491.bindPopup('COF-CA28B')
 
-  markers.addLayer(well_490);
-  oms.addMarker(well_490);
+  markers.addLayer(well_491);
+  oms.addMarker(well_491);
   
 
   
 
   
-  var well_492 = L.marker(new L.LatLng(34.731749, -87.843647)).on('click', function (e) {
+  var well_493 = L.marker(new L.LatLng(34.731749, -87.843647)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/colbert-fossil/cof-ca12a?zoom=' + map_current_zoom + '&lat=34.731749&lng=-87.843647';  
     });
   }).on('mouseover', function (e) {
-    well_492.openPopup()
+    well_493.openPopup()
   });
 
   
-    well_492.setIcon(L.icon(icon_downgradient_violation));
+    well_493.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_492.bindPopup('COF-CA12A')
+  well_493.bindPopup('COF-CA12A')
 
-  markers.addLayer(well_492);
-  oms.addMarker(well_492);
-  
-
+  markers.addLayer(well_493);
+  oms.addMarker(well_493);
   
 
   
