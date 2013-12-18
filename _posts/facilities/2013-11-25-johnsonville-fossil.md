@@ -1,5 +1,5 @@
 template: facility.html
-permalink: facilities/johnsonville-fossil
+permalink: facilities/johnsonville-fossil-plant
 title: "Johnsonville Fossil Plant"
 page_title: 'Johnsonville Fossil Plant &raquo; Tennessee Valley Authority (TVA) | Ashtracker'
 date: 2013-11-25 09:52:50

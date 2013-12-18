@@ -15,7 +15,16 @@ address:
 owner_operator: 'Tennessee Valley Authority (TVA)'
 impoundment_hazard_rating: null
 monitoring: null
-pollutants: []
+pollutants: [
+  {
+  type: "Se",
+  name: "Selenium"
+  },
+  {
+  type: "Mn",
+  name: "Manganese"
+  }
+]
 coordinates: 
   - "-84.523905"
   - "35.902145"
