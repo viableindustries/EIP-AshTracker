@@ -62,4 +62,4 @@ coordinates:
 data_download: "/static/data/JHCampbell.xlsx.zip"
 has_wells: 'true'
 
-The JH Campbell Generating Complex contains a 410 acre landfill, and is located about one mile east of Lake Michigan. In response to an EPA request for data in 2010, Consumers Energy admitted that discharges from the Complex contaminated groundwater in excess of state standards or federal standards for antimony, boron, chromium, lead, selenium, vanadium, cadmium, lead, manganese and zinc- though the facility does not routinely analyze groundwater samples for cadmium or lead.
+The JH Campbell Generating Complex contains a 410 acre landfill, and is located about one mile east of Lake Michigan. In response to an EPA request for data in 2010, Consumer's Energy admitted that discharges from the Complex contaminated groundwater in excess of state standards or federal standards for antimony, boron, chromium, lead, selenium, vanadium, cadmium, lead, manganese and zinc- though the facility does not routinely analyze groundwater samples for cadmium or lead.

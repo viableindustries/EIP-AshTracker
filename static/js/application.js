@@ -30,7 +30,7 @@
       jQuery(".info_area").show();
     });
     
-    jQuery('.toggle-legend').appendTo('.leaflet-bar');
+    jQuery('.toggle-legend').prependTo('.leaflet-bar');
     jQuery('.toggle-legend').click(function () {
       jQuery('.site-legend').toggleClass('element-invisible');
     });
