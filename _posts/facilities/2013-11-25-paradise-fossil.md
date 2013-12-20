@@ -1,5 +1,5 @@
 template: facility.html
-permalink: facilities/paradise-fossil
+permalink: facilities/paradise-fossil-plant
 title: "Paradise Fossil Plant"
 page_title: 'Paradise Fossil Plant &raquo; Tennessee Valley Authority (TVA) | Ashtracker'
 date: 2013-11-25 09:52:50

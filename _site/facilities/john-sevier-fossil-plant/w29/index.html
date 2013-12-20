@@ -1145,49 +1145,45 @@ var icon_other_violation = {
   
 
   
-
-  
-  var well_408 = L.marker(new L.LatLng(36.375854, -82.972778)).on('click', function (e) {
+  var well_407 = L.marker(new L.LatLng(36.375854, -82.972778)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/w30?zoom=' + map_current_zoom + '&lat=36.375854&lng=-82.972778';  
     });
   }).on('mouseover', function (e) {
-    well_408.openPopup()
+    well_407.openPopup()
   });
 
   
-    well_408.setIcon(L.icon(icon_downgradient_violation));
+    well_407.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_408.bindPopup('W30')
+  well_407.bindPopup('W30')
 
-  markers.addLayer(well_408);
-  oms.addMarker(well_408);
+  markers.addLayer(well_407);
+  oms.addMarker(well_407);
   
 
   
 
   
-  var well_410 = L.marker(new L.LatLng(36.370966, -82.978064)).on('click', function (e) {
+  var well_409 = L.marker(new L.LatLng(36.370966, -82.978064)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/w32?zoom=' + map_current_zoom + '&lat=36.370966&lng=-82.978064';  
     });
   }).on('mouseover', function (e) {
-    well_410.openPopup()
+    well_409.openPopup()
   });
 
   
-    well_410.setIcon(L.icon(icon_downgradient_compliant));
+    well_409.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_410.bindPopup('W32')
+  well_409.bindPopup('W32')
 
-  markers.addLayer(well_410);
-  oms.addMarker(well_410);
-  
-
+  markers.addLayer(well_409);
+  oms.addMarker(well_409);
   
 
   
@@ -1247,23 +1243,25 @@ var icon_other_violation = {
   
 
   
-  var well_440 = L.marker(new L.LatLng(36.366929, -82.969608)).on('click', function (e) {
+
+  
+  var well_439 = L.marker(new L.LatLng(36.366929, -82.969608)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/john-sevier-fossil-plant/w1?zoom=' + map_current_zoom + '&lat=36.366929&lng=-82.969608';  
     });
   }).on('mouseover', function (e) {
-    well_440.openPopup()
+    well_439.openPopup()
   });
 
   
-    well_440.setIcon(L.icon(icon_upgradient_compliant));
+    well_439.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_440.bindPopup('W1')
+  well_439.bindPopup('W1')
 
-  markers.addLayer(well_440);
-  oms.addMarker(well_440);
+  markers.addLayer(well_439);
+  oms.addMarker(well_439);
   
 
   
@@ -2238,6 +2236,8 @@ var icon_other_violation = {
 
   
 
+  
+
 
 
 
@@ -4465,6 +4465,20 @@ var icon_other_violation = {
 
     
   
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(36.376667, -82.963056), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
 
     
   

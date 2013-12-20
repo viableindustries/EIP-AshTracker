@@ -1379,25 +1379,23 @@ var icon_other_violation = {
   
 
   
-
-  
-  var well_516 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
+  var well_515 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/ad-1?zoom=' + map_current_zoom + '&lat=35.908929&lng=-84.519528';  
     });
   }).on('mouseover', function (e) {
-    well_516.openPopup()
+    well_515.openPopup()
   });
 
   
-    well_516.setIcon(L.icon(icon_upgradient_compliant));
+    well_515.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_516.bindPopup('AD-1')
+  well_515.bindPopup('AD-1')
 
-  markers.addLayer(well_516);
-  oms.addMarker(well_516);
+  markers.addLayer(well_515);
+  oms.addMarker(well_515);
   
 
   
@@ -1645,25 +1643,27 @@ var icon_other_violation = {
   
 
   
-
-  
-  var well_640 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
+  var well_638 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/kingston-fossil-plant/kif-g4b?zoom=' + map_current_zoom + '&lat=35.891652&lng=-84.508803';  
     });
   }).on('mouseover', function (e) {
-    well_640.openPopup()
+    well_638.openPopup()
   });
 
   
-    well_640.setIcon(L.icon(icon_downgradient_compliant));
+    well_638.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_640.bindPopup('KIF-G4B')
+  well_638.bindPopup('KIF-G4B')
 
-  markers.addLayer(well_640);
-  oms.addMarker(well_640);
+  markers.addLayer(well_638);
+  oms.addMarker(well_638);
+  
+
+  
+
   
 
   
@@ -3507,9 +3507,6 @@ var icon_other_violation = {
   
 
     
-  
-
-    
 
       /**
        * Add the facility to the marker list
@@ -3522,6 +3519,9 @@ var icon_other_violation = {
          })
       });
       map.addLayer(this_facility);
+
+    
+  
 
     
   

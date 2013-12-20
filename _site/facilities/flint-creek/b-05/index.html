@@ -1097,52 +1097,70 @@ var icon_other_violation = {
   
 
   
-
-  
-  var well_402 = L.marker(new L.LatLng(36.257278, -94.516972)).on('click', function (e) {
+  var well_401 = L.marker(new L.LatLng(36.257278, -94.516972)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/b-08?zoom=' + map_current_zoom + '&lat=36.257278&lng=-94.516972';  
+    });
+  }).on('mouseover', function (e) {
+    well_401.openPopup()
+  });
+
+  
+    well_401.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_401.bindPopup('B-08')
+
+  markers.addLayer(well_401);
+  oms.addMarker(well_401);
+  
+
+  
+  var well_402 = L.marker(new L.LatLng(36.260864, -94.516081)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';  
     });
   }).on('mouseover', function (e) {
     well_402.openPopup()
   });
 
   
-    well_402.setIcon(L.icon(icon_upgradient_violation));
+    well_402.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_402.bindPopup('B-08')
+  well_402.bindPopup('B-06')
 
   markers.addLayer(well_402);
   oms.addMarker(well_402);
   
 
   
-  var well_403 = L.marker(new L.LatLng(36.260864, -94.516081)).on('click', function (e) {
+  var well_403 = L.marker(new L.LatLng(36.257273, -94.513837)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';  
+      window.location.href = '/facilities/flint-creek/b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';  
     });
   }).on('mouseover', function (e) {
     well_403.openPopup()
   });
 
   
-    well_403.setIcon(L.icon(icon_downgradient_violation));
+    well_403.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_403.bindPopup('B-06')
+  well_403.bindPopup('B-05')
 
   markers.addLayer(well_403);
   oms.addMarker(well_403);
   
 
   
-  var well_404 = L.marker(new L.LatLng(36.257273, -94.513837)).on('click', function (e) {
+  var well_404 = L.marker(new L.LatLng(36.258858, -94.511693)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';  
+      window.location.href = '/facilities/flint-creek/b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';  
     });
   }).on('mouseover', function (e) {
     well_404.openPopup()
@@ -1152,52 +1170,32 @@ var icon_other_violation = {
     well_404.setIcon(L.icon(icon_upgradient_compliant));
   
 
-  well_404.bindPopup('B-05')
+  well_404.bindPopup('B-04')
 
   markers.addLayer(well_404);
   oms.addMarker(well_404);
   
 
   
-  var well_405 = L.marker(new L.LatLng(36.258858, -94.511693)).on('click', function (e) {
-    oms.addListener('click', function(markers) {
-      var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';  
-    });
-  }).on('mouseover', function (e) {
-    well_405.openPopup()
-  });
 
   
-    well_405.setIcon(L.icon(icon_upgradient_compliant));
-  
-
-  well_405.bindPopup('B-04')
-
-  markers.addLayer(well_405);
-  oms.addMarker(well_405);
-  
-
-  
-
-  
-  var well_407 = L.marker(new L.LatLng(36.259546, -94.516108)).on('click', function (e) {
+  var well_406 = L.marker(new L.LatLng(36.259546, -94.516108)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/b-02?zoom=' + map_current_zoom + '&lat=36.259546&lng=-94.516108';  
     });
   }).on('mouseover', function (e) {
-    well_407.openPopup()
+    well_406.openPopup()
   });
 
   
-    well_407.setIcon(L.icon(icon_downgradient_violation));
+    well_406.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_407.bindPopup('B-02')
+  well_406.bindPopup('B-02')
 
-  markers.addLayer(well_407);
-  oms.addMarker(well_407);
+  markers.addLayer(well_406);
+  oms.addMarker(well_406);
   
 
   
@@ -1633,25 +1631,23 @@ var icon_other_violation = {
   
 
   
-
-  
-  var well_625 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
+  var well_623 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-7d?zoom=' + map_current_zoom + '&lat=36.258296&lng=-94.518796';  
     });
   }).on('mouseover', function (e) {
-    well_625.openPopup()
+    well_623.openPopup()
   });
 
   
-    well_625.setIcon(L.icon(icon_downgradient_violation));
+    well_623.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_625.bindPopup('NE-7D')
+  well_623.bindPopup('NE-7D')
 
-  markers.addLayer(well_625);
-  oms.addMarker(well_625);
+  markers.addLayer(well_623);
+  oms.addMarker(well_623);
   
 
   
@@ -1795,25 +1791,23 @@ var icon_other_violation = {
   
 
   
-  var well_696 = L.marker(new L.LatLng(36.260861, -94.516727)).on('click', function (e) {
+  var well_694 = L.marker(new L.LatLng(36.260861, -94.516727)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-1?zoom=' + map_current_zoom + '&lat=36.260861&lng=-94.516727';  
     });
   }).on('mouseover', function (e) {
-    well_696.openPopup()
+    well_694.openPopup()
   });
 
   
-    well_696.setIcon(L.icon(icon_downgradient_violation));
+    well_694.setIcon(L.icon(icon_downgradient_violation));
   
 
-  well_696.bindPopup('NE-1')
+  well_694.bindPopup('NE-1')
 
-  markers.addLayer(well_696);
-  oms.addMarker(well_696);
-  
-
+  markers.addLayer(well_694);
+  oms.addMarker(well_694);
   
 
   
@@ -1829,23 +1823,29 @@ var icon_other_violation = {
   
 
   
-  var well_704 = L.marker(new L.LatLng(36.259574, -94.517474)).on('click', function (e) {
+
+  
+  var well_702 = L.marker(new L.LatLng(36.259574, -94.517474)).on('click', function (e) {
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
       window.location.href = '/facilities/flint-creek/ne-2?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517474';  
     });
   }).on('mouseover', function (e) {
-    well_704.openPopup()
+    well_702.openPopup()
   });
 
   
-    well_704.setIcon(L.icon(icon_downgradient_compliant));
+    well_702.setIcon(L.icon(icon_downgradient_compliant));
   
 
-  well_704.bindPopup('NE-2')
+  well_702.bindPopup('NE-2')
 
-  markers.addLayer(well_704);
-  oms.addMarker(well_704);
+  markers.addLayer(well_702);
+  oms.addMarker(well_702);
+  
+
+  
+
   
 
   
