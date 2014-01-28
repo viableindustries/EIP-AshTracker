@@ -4,6 +4,10 @@ date:   2013-11-19 09:52:50
 permalink: glossary
 page_class: glossary
 
+## About Health Advisory Levels
+
+The health advisory levels discussed below were adopted to protect public water supplies under the Safe Drinking Water Act. Health advisories are established for some pollutants that may accumulate in groundwater at levels that are unsafe for those who rely on private wells, but which aren’t commonly found in public water supplies because they are removed during treatment. Many ash disposal facilities are located near rivers or lakes and contaminants may end up there where they can pose a risk to aquatic life.  
+
 ## Drinking Water Contaminants
 
 <div class="row space-below">
