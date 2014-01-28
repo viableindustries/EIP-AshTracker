@@ -1,0 +1,1009 @@
+/**
+ * (c) Copyright 2013 Viable Industries, L.L.C.
+ */
+
+
+/**
+ * Import Frameworks
+ */
+@import url(../lib/bootstrap/3.0.2/css/bootstrap.css);
+
+.element-invisible {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+/**
+ * Generic System Defaults
+ */
+body {
+  background-color: #f2f2f2;
+  min-height: 100%;
+  height: auto !important; 
+  height: 100%; /** NEED FOR IE **/
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  padding-left: 24px;
+}
+
+ul li {
+  list-style-type: square;
+  padding-bottom: 16px;
+}
+
+ol li {
+  list-style-type: decimal;
+  padding-bottom: 16px;
+}
+
+ul li:last-child,
+ol li:last-child {
+  padding-bottom: 0;
+}
+
+.navigation li {
+  list-style-type: none;
+}
+
+.glossaryterms >.glyphicon {
+  color: darkgray;
+  font-size: 21px;
+  border-bottom: 1px dotted rgb(24,34,43);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 0 20px;
+  margin: 0 0 24px;
+}
+
+main h3.clear,
+.clear {
+  clear: both;
+}
+
+/**
+ * Site Header Layout
+ */
+.site-header {
+  background-color: rgb(24,34,43);
+  box-shadow: 0 0 10px rgb(64,64,64);
+  left: 0;
+  min-height: 72px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.brand-container {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 41.66666666666667%;
+}
+
+.brand {
+  background-color: rgb(242,242,242);
+  background-image: url(../img/eip-logo.png);
+  background-position: 18px 6px;
+  background-repeat: no-repeat;
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  min-height: 74px;
+  width: 202px;
+  z-index: 5;
+}
+
+.map-area,
+a.info_area,
+.nav > .about {
+  display: none;
+}
+
+nav {
+  float: left;
+  padding: 18px 8px 0;
+  margin: 0;
+  width: 58.333333333333336%;
+}
+
+.nav a {
+  color: rgb(242,242,242);
+  font-size: 14px;
+  font-weight: 500;  
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav .glyphicon {
+  font-weight: normal;
+  font-size: 15px;
+  top: 3px;
+}
+
+.nav .open > a .caret,
+.nav .open > a:hover .caret,
+.nav .open > a:focus .caret,
+.nav .caret,
+.nav a:hover .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  margin-top: -3px;
+  vertical-align: middle;
+  border-top: 5px solid rgb(242,242,242);
+  border-right: 5px solid transparent;
+  border-bottom: 0 dotted;
+  border-left: 5px solid transparent;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li.active a,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: rgb(24,34,43);
+  background-color: rgb(41,132,189);
+  color: rgb(242,242,242);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-decoration: none;
+}
+
+.nav .facilities,
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li.active a,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: rgb(44,54,63);
+  color: rgb(242,242,242);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-decoration: none;
+}
+
+.nav .facilities,
+.nav > li > .facilities:hover,
+.nav > li > .facilities:focus,
+.nav > li.active > .facilities {
+  background-color: rgb(41,132,189);
+}
+
+.nav li a {
+  margin-right: 3px;
+}
+
+.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 0;
+  box-shadow: 0 0 0;
+}
+
+.dropdown-menu {
+  background-color: rgb(24,34,43);
+  background-color: rgb(41,132,189);
+  color: rgb(242,242,242);
+  margin-top: 8px;
+  min-width: 100%;
+}
+
+.dropdown-menu > li > a {
+  color: rgb(242,242,242);
+  margin-right: 0;
+  text-transform: none;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: transparent;
+  color: rgb(242,242,242);
+  text-decoration: none;
+}
+
+
+.site-map {
+  right: 0;
+  height: 100%;
+  min-height: 100%;
+  height: auto !important;
+  position: fixed;
+  top: 0;
+  width: 58.333333333333336%;
+}
+
+.site-legend {
+  background-color: rgb(242,242,242);
+  background-color: rgba(242,242,242,0.9);
+  right: 24px;
+  min-height: 72px;
+  position: fixed;
+  bottom: 24px;
+  width: 53.333333333333336%;  
+}
+
+.legend-item {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.legend-item p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.site-content {
+  left: 0;
+  height: 100%;
+  min-height: 100%;
+  height: auto !important;
+  position: absolute;
+  top: 0;
+  width: 41.66666666666667%;
+}
+
+main {
+  padding: 72px 24px;
+}
+
+
+/**
+ * Site Footer Layout
+ */
+.site-footer {
+  background-color: #242424;
+  color: #f2f2f2;
+  padding-bottom: 16px;
+  padding-top: 64px;
+  display: none;
+  left: 0;
+  min-height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.site-footer .copyright {
+  border-top: 1px dotted #404040;
+  margin-top: 24px;
+  padding-top: 24px;
+  padding-bottom: 16px; }
+
+/**
+ * (c) Copyright 2013 Viable Industries, L.L.C.
+ */
+body {
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+main .statistic {
+  font-family: "league-gothic", "HelventicaNeue-CondensedBold", Helvetica, Arial, sans-serif;
+  font-size: 64px;
+  font-weight: normal;
+}
+
+main h2 {
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+}
+
+main .content h2 {
+  border-top: 1px dotted rgb(24,34,43);
+  margin: 24px 0 0;
+  padding: 24px 0 16px;
+}
+
+main .content h2:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+main h3 {
+  border-top: 1px dotted rgb(24,34,43);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin: 10px 0 16px;
+  padding: 24px 0 0;
+  text-transform: uppercase;
+}
+
+main h4 {
+  border-top: 1px dotted rgb(24,34,43);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 6px;
+  padding: 24px 0 0;
+  text-transform: uppercase;
+}
+
+main h5 {
+  background-color: rgb(44,54,63);
+  color: rgb(242,242,242);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin: 0 -24px;
+  padding: 12px 24px;
+  text-shadow: 0 -1px 0 rgb(24,34,43);
+  text-transform: uppercase;
+}
+
+main p.lead {
+  border-bottom: 1px dotted rgb(24,34,43);
+  font-size: 21px;
+  font-weight: 400;
+  padding: 0 0 16px;
+  margin: 0 0 24px;
+}
+
+a {
+  color:rgb(41, 132, 189);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(41, 132, 189);
+  text-decoration: underline;
+}
+
+a.close-well,
+a.close-well:hover {
+  color: rgb(242,242,242);
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: -7px;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.content {
+  border-top: 1px dotted rgb(24,34,43);
+  margin-top: 10px;
+  padding: 24px 0 0;
+}
+
+.button,
+.button:hover {
+  background-color: rgb(24,34,43);
+  background-color: rgb(41,132,189);
+  background-color: rgb(44,54,63);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  color: rgb(242,242,242);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 16px;
+  padding: 16px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button.small,
+.button.small:hover {
+  font-size: 12px;
+  padding: 4px 14px;
+  margin-left: -16px;
+}
+
+.button:hover {
+  background-color: rgb(24,34,43);
+}
+
+.button.download {
+  background-color: rgb(41,169,9);
+}
+
+.button.download:hover {
+  background-color: rgb(21,149,0);
+}
+
+.space-below {
+  margin-bottom: 16px;
+}
+
+
+/**
+ * Site Footer Typography
+ */
+.site-footer h3 {
+  font-size: 28px;
+  font-weight: 100;
+  color: #60c2db;
+  margin-bottom: 32px;
+  margin-top: 0; }
+
+.site-footer p,
+.site-footer address {
+  color: gray;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 14px; }
+
+.copyright p,
+.copyright a {
+  color: gray;
+  font-size: 11px;
+}
+
+
+/**
+ * Leaflet Overrides
+ */
+.leaflet-bar {
+  border: 0; }
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  height: auto;
+  margin-bottom: 4px;
+  padding: 4px 10px 6px;
+  width: auto; }
+
+.leaflet-bar a:first-child,
+.leaflet-bar a:last-child {
+  border-radius: 0;
+  -mox-border-radius: 0;
+  -webkit-border-radius: 0; }
+
+.leaflet-left {
+  right: 0;
+  left: auto; }
+
+.leaflet-top {
+  top: 72px;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 15px; }
+
+.leaflet-left .leaflet-control {
+  margin-right: 30px; }
+
+/**
+ * Marker clustering
+ */
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+  -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-out, opacity 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-out, opacity 0.2s ease-in;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-in; }
+
+.marker-cluster {
+  background-clip: padding-box;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  height: 60px !important;
+  width: 60px !important; }
+
+.marker-cluster div {
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  width: 50px; }
+
+.marker-cluster span {
+  line-height: 50px; }
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background-color: rgba(41,132,189,0.6);
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  color: #fcfcfc;
+  background-color: rgb(41,132,189);
+}
+
+/**
+ * Import Module Dependencies
+ */
+
+.leaflet-popup-content {
+margin: 12px 36px 12px 16px
+}
+.leaflet-container a.leaflet-popup-close-button {
+	padding: 10px 22px 0 0;
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.leaflet-popup-content {
+  margin: 8px 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+
+/**
+ * Contamination Status Indicator
+ */
+.content.contaminant-status {
+  margin: 10px 0 16px;
+  padding: 12px 0 0;
+}
+
+.content.contaminant-status h2 {
+  padding-bottom: 0;
+  margin-left: -15px;
+  margin: 0 0 0 -15px;
+  border: 0;
+  padding: 0;
+}
+
+.content.contaminant-status h4 {
+  margin-top: 14px;
+  padding-top: 0;
+  border-top: 0;
+  margin-left: -15px;
+}
+
+.contaminant-symbol {
+  font-size: 48px;
+  display: block;
+  text-align: center;
+}
+
+.contaminant-name {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.indicator {
+  border-radius: 25px;
+  display: block;
+  height: 40px;
+  margin: 10px 0 0;
+  text-align: center;
+  width: 40px;
+}
+
+.indicator.has-wells {
+  background-color: #2984BD;
+}
+
+.indicator.has-no-wells {
+  background-color: #BBBBBB;
+}
+
+.compliance {
+  background-color: #29A909;
+}
+
+.violation {
+  background-color: #A92909;
+}
+
+.neutral {
+  background-color: #999999;
+  text-align: center;
+  display: inline;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.indicator.downgradient .caret {
+  margin-top: 12px;
+  border-top: 20px solid #FFF;
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-bottom: 0 dotted;
+  border-left: 12px solid rgba(0, 0, 0, 0);
+  margin-left: -1px;
+}
+
+.indicator.upgradient .caret {
+  margin-top: 8px;
+  border-bottom: 20px solid #FFF;
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-top: 0 dotted;
+  border-left: 12px solid rgba(0, 0, 0, 0);
+  margin-left: -1px;
+}
+
+
+/**
+ * Table of Contaminants
+ */
+.contaminants {
+  clear: both;
+  float: left;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+h4.thin {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.element {
+  background-color: rgb(252,252,252);
+  border-bottom: 3px solid rgb(196,196,196);
+  float: left;
+  padding: 16px 6px 24px;
+  min-height: 133px;
+  margin: 0 16px 16px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 29.666666666666664%;
+}
+
+.element-details {
+  display: none;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  background: #F2F2F2;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.element-details h4 {
+  border-top: 0;
+}
+
+.element-details .other h4,
+.element-details .chemical-symbol h4,
+.element-details .chemical-name h4 {
+  text-align: right;
+}
+
+.element-details .other {
+  border-top: 1px dotted rgb(24,34,43);
+}
+.element-details .other.last {
+  border-bottom: 1px dotted rgb(24,34,43);
+}
+
+.element-details .other h4 {
+  padding: 16px 0;
+}
+
+main .element-details .other h2,
+main .element-details .other h2:first-child {
+  padding: 18px 0 16px;
+  font-size: 24px;
+}
+main .element-details .other.last h2,
+main .element-details .other.last h2:first-child {
+  padding-top: 24px;
+}
+
+.element-details .chemical-name {
+  margin-bottom: 24px;  
+}
+
+main .element-details .chemical-name h2,
+main .element-details .chemical-name h2:first-child {
+  margin: 16px 0 0;
+}
+.element-details .chemical-name h4 {
+  font-size: 16px;
+  margin-top: 16px;
+  padding: 0;
+}
+.element-details .chemical-symbol h2 {
+  font-size: 108px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.element-details .chemical-symbol h4 {
+  padding-top: 42px;
+  font-size: 16px;
+}
+
+.element-details h5 {
+  margin: 0;
+}
+
+.element.compliance {
+  background-color: #29A909;
+  color: rgb(252, 252, 252);
+  border-bottom-color: rgb(109, 1, 0);
+  border-bottom-width: 3px;
+}
+
+.element.violation {
+  background-color: rgb(169, 41, 9);
+  color: rgb(252, 252, 252);
+  border-bottom-color: rgb(109, 1, 0);
+}
+.element.violation:hover {
+  background-color: rgb(109, 1, 0);
+}
+
+.element-content {
+  padding: 24px;
+}
+
+.element.element-clickable {
+  cursor: pointer;
+}
+
+.element-details.visible {
+  display: block;
+}
+
+.element.exceeded {
+  background-color: rgb(255, 235, 235);
+  border-bottom-color: rgb(169, 41, 9);
+}
+.element.not-tracked {
+  background-color: rgb(255, 255, 235);
+  border-bottom-color: rgb(255, 235, 0);
+}
+
+.tooltip-inner {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  padding: 10px;
+  max-width: 256px;
+}
+
+.glossary-col-layout {
+  width: 26%;
+  float: left;
+  margin: 0px 12px;
+}
+
+/**
+ * Media
+ */
+
+
+@media (max-width: 1160px){ 
+  .element {
+    width: 43.666667%
+  }
+}
+
+@media (max-width: 768px){
+  
+  h4 {
+    margin-top: 0;
+  }
+ .navbar-toggle {
+    margin-top: 19px;
+    position: relative;
+    top: 0px;
+    right: 12px;
+    background-color: rgb(128,128,128);
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
+  
+  .element-details .other h4,
+  .element-details .chemical-symbol h4,
+  .element-details .chemical-name h4 {
+    text-align: left;
+    padding: 2px 0px;
+    margin: 16px 0 5px 0;
+  }
+  .other br {
+  display: none;
+}
+  
+  .element-details .other h2, main .element-details .other h2:first-child {
+   padding: 0 0 16px;
+ }
+  
+   .element-details .other h2, .element-details .other.last h2, 
+   main .element-details .other.last h2:first-child, .other h2:first-child  {
+    padding: 0 0 12px;
+  }
+  
+  .button,
+  .button:hover {
+    font-size: 12px;
+  }
+    
+  .glossary-col-layout {
+    width: 35%;
+    float: left;
+    margin: 0px 12px;
+  }
+  
+  main p.lead {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+
+  .help {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: black;
+  }
+  
+  .brand-container .site-map {
+    width: 41.66666666666667%;
+  }
+  
+  .navbar-collapse {
+    clear: both;}
+  
+  .site-header nav {
+    width: 100%;
+ }
+ 
+  .indicator {
+    display: none;
+  }
+}
+
+
+@media (max-width: 720px) {
+  .element {
+    width: 100%
+  }
+}
+
+
+@media (max-width: 480px){
+  
+  .site-legend {
+    width: 100%;
+  }
+  
+  .legend-item {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .site-map {
+    width: 100%;
+  }
+  
+  .element {
+    width: 43.666667%
+  }
+  
+  .glossary-col-layout {
+    width: 60%;
+    float: left;
+    margin: 0 12px;
+  }
+  
+  .button,
+  .button:hover {
+    font-size: 11px;
+  }
+  
+  .brand {
+    display: none;
+  }
+  
+  .help .brand,
+  .glossary .brand,
+  .nav > .about, .map-area {
+    display: block;
+  }
+  
+  .info_area .glyphicon-info-sign {
+    font-size: 30px;
+    font-weight: normal;
+    display: block;
+    color: rgb(128,128,128);
+    margin: 18px 16px;
+  }
+  
+  .help {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .map-area .glyphicon-map-marker {
+    font-size: 32px;
+    font-weight: normal;
+    display: block;
+    color: rgb(128,128,128);
+    margin: 18px 16px;
+  }
+  
+  .glossary .info_area,
+  .glossary .map-area,
+  .help .map-area,
+  .help .info_area {
+    display: none;
+  }
+  
+  .info_area {
+    display: none;
+  }
+
+  .site-content { 
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+  }
+}
+
+@media (max-width: 320px){
+  .element {
+    width: 100%;
+  }
+}
+
+
+.leaflet-control-legend {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.leaflet-bar a.leaflet-control-zoom-in,
+.leaflet-bar a.leaflet-control-zoom-out {
+  float: right;
+  clear: right;
+  width: 35px;
+  max-width: 35px;
+}
