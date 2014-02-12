@@ -96,7 +96,7 @@ def page(path):
       },
       {
         'type': "F",
-        "name": "Flouride"
+        "name": "Fluoride"
       },
       {
         'type': "GAP",

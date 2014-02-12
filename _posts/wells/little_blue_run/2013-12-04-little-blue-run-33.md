@@ -23,7 +23,7 @@ pollutants: [
   },
   {
     'type': "F",
-    "name": "Flouride"
+    "name": "Fluoride"
   },
   {
     'type': "Mn",
