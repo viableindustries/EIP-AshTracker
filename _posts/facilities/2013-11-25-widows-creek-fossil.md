@@ -19,7 +19,7 @@ pollutants: []
 coordinates: 
   - "-85.750778"
   - "34.891361"
-data_download: ""
+data_download: "/static/data/WidowsCreekFossilPlant_DD.xlsx.zip"
 
 The Widows Creek Fossil Plant is located on the Tennessee River in Stevenson, AL. Widows Creek itself is a partially rechanneled stream that flows through the site. TVA built Units 1 through 6 in the 1950s. Two more units, Units 7 and 8, came online in 1964. As part of a recent compliance agreement with EPA, TVA has agreed to retire units 1-6 between 2013 and 2015, and all six units are currently idle.  In November 2013 TVA announced that it was retiring Unit 8.
 
