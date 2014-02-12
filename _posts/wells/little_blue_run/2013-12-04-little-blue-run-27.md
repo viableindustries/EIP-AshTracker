@@ -1,5 +1,3 @@
-
-
 template: well.html
 facility_url: facilities/little-blue-run
 facility_class: little_blue_run
