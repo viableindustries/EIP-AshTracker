@@ -1,0 +1,7432 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Big-Bend-Station-B-58" />
+    <meta property="twitter:url" content="wells/big_bend_station/2014-03-31-Big-Bend-Station-B-58" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="Ashtracker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="wells/big_bend_station/2014-03-31-Big-Bend-Station-B-58" />
+    <meta property="og:title" content="Big-Bend-Station-B-58" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="wells/big_bend_station/2014-03-31-Big-Bend-Station-B-58" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="Big-Bend-Station-B-58" />
+
+    <meta name="fragment" content="!" />
+
+    <title>Big-Bend-Station-B-58 | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
+        
+    
+      <div id="map" class="site-map"></div>
+
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend">Legend</a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-2 col-xs-offset-1">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="upgradient indicator neutral"><span class="caret"></span></div>
+            <p>Upgradient</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="downgradient indicator neutral"><span class="caret"></span></div>
+            <p>Downgradient</p>
+          </div>          
+        </div>
+      </div>
+
+      <main role="content" class="site-content">
+        <a name="content-top" id="content-top"></a>
+    
+
+    
+
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 27.7874927, params.lng || -82.39653718],
+    mapbox_zoom    = params.zoom || 12;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_88 = L.marker(new L.LatLng(27.8037517, -82.39427729)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-42?zoom=' + map_current_zoom + '&lat=27.8037517&lng=-82.39427729';  
+    });
+  }).on('mouseover', function (e) {
+    well_88.openPopup()
+  });
+
+  
+    well_88.setIcon(L.icon(icon_other_violation));
+  
+
+  well_88.bindPopup('Big-Bend-Station-B-42')
+
+  markers.addLayer(well_88);
+  oms.addMarker(well_88);
+  
+
+  
+  var well_89 = L.marker(new L.LatLng(27.80116765, -82.39127192)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-43?zoom=' + map_current_zoom + '&lat=27.80116765&lng=-82.39127192';  
+    });
+  }).on('mouseover', function (e) {
+    well_89.openPopup()
+  });
+
+  
+    well_89.setIcon(L.icon(icon_other_violation));
+  
+
+  well_89.bindPopup('Big-Bend-Station-B-43')
+
+  markers.addLayer(well_89);
+  oms.addMarker(well_89);
+  
+
+  
+  var well_90 = L.marker(new L.LatLng(27.79682449, -82.38840759)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-40?zoom=' + map_current_zoom + '&lat=27.79682449&lng=-82.38840759';  
+    });
+  }).on('mouseover', function (e) {
+    well_90.openPopup()
+  });
+
+  
+    well_90.setIcon(L.icon(icon_other_violation));
+  
+
+  well_90.bindPopup('Big-Bend-Station-B-40')
+
+  markers.addLayer(well_90);
+  oms.addMarker(well_90);
+  
+
+  
+  var well_91 = L.marker(new L.LatLng(27.78514853, -82.39242828)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-41?zoom=' + map_current_zoom + '&lat=27.78514853&lng=-82.39242828';  
+    });
+  }).on('mouseover', function (e) {
+    well_91.openPopup()
+  });
+
+  
+    well_91.setIcon(L.icon(icon_other_violation));
+  
+
+  well_91.bindPopup('Big-Bend-Station-B-41')
+
+  markers.addLayer(well_91);
+  oms.addMarker(well_91);
+  
+
+  
+
+  
+  var well_93 = L.marker(new L.LatLng(27.78161142, -82.40050694)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-44?zoom=' + map_current_zoom + '&lat=27.78161142&lng=-82.40050694';  
+    });
+  }).on('mouseover', function (e) {
+    well_93.openPopup()
+  });
+
+  
+    well_93.setIcon(L.icon(icon_other_violation));
+  
+
+  well_93.bindPopup('Big-Bend-Station-B-44')
+
+  markers.addLayer(well_93);
+  oms.addMarker(well_93);
+  
+
+  
+
+  
+
+  
+
+  
+  var well_97 = L.marker(new L.LatLng(27.79839681, -82.39415816)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-49?zoom=' + map_current_zoom + '&lat=27.79839681&lng=-82.39415816';  
+    });
+  }).on('mouseover', function (e) {
+    well_97.openPopup()
+  });
+
+  
+    well_97.setIcon(L.icon(icon_other_violation));
+  
+
+  well_97.bindPopup('Big-Bend-Station-B-49')
+
+  markers.addLayer(well_97);
+  oms.addMarker(well_97);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_121 = L.marker(new L.LatLng(27.78395055, -82.38525524)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-4r?zoom=' + map_current_zoom + '&lat=27.78395055&lng=-82.38525524';  
+    });
+  }).on('mouseover', function (e) {
+    well_121.openPopup()
+  });
+
+  
+    well_121.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_121.bindPopup('Big-Bend-Station-B-4R')
+
+  markers.addLayer(well_121);
+  oms.addMarker(well_121);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_303 = L.marker(new L.LatLng(27.78518333, -82.40067778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-5?zoom=' + map_current_zoom + '&lat=27.78518333&lng=-82.40067778';  
+    });
+  }).on('mouseover', function (e) {
+    well_303.openPopup()
+  });
+
+  
+    well_303.setIcon(L.icon(icon_other_violation));
+  
+
+  well_303.bindPopup('Big-Bend-Station-B-5')
+
+  markers.addLayer(well_303);
+  oms.addMarker(well_303);
+  
+
+  
+
+  
+  var well_305 = L.marker(new L.LatLng(27.790175, -82.4006)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-7?zoom=' + map_current_zoom + '&lat=27.790175&lng=-82.4006';  
+    });
+  }).on('mouseover', function (e) {
+    well_305.openPopup()
+  });
+
+  
+    well_305.setIcon(L.icon(icon_other_violation));
+  
+
+  well_305.bindPopup('Big-Bend-Station-B-7')
+
+  markers.addLayer(well_305);
+  oms.addMarker(well_305);
+  
+
+  
+  var well_306 = L.marker(new L.LatLng(27.78946111, -82.4006)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-6?zoom=' + map_current_zoom + '&lat=27.78946111&lng=-82.4006';  
+    });
+  }).on('mouseover', function (e) {
+    well_306.openPopup()
+  });
+
+  
+    well_306.setIcon(L.icon(icon_other_violation));
+  
+
+  well_306.bindPopup('Big-Bend-Station-B-6')
+
+  markers.addLayer(well_306);
+  oms.addMarker(well_306);
+  
+
+  
+
+  
+
+  
+  var well_309 = L.marker(new L.LatLng(27.78189167, -82.40009444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-2?zoom=' + map_current_zoom + '&lat=27.78189167&lng=-82.40009444';  
+    });
+  }).on('mouseover', function (e) {
+    well_309.openPopup()
+  });
+
+  
+    well_309.setIcon(L.icon(icon_other_violation));
+  
+
+  well_309.bindPopup('Big-Bend-Station-B-2')
+
+  markers.addLayer(well_309);
+  oms.addMarker(well_309);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_369 = L.marker(new L.LatLng(27.78985358, -82.39362218)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-17r?zoom=' + map_current_zoom + '&lat=27.78985358&lng=-82.39362218';  
+    });
+  }).on('mouseover', function (e) {
+    well_369.openPopup()
+  });
+
+  
+    well_369.setIcon(L.icon(icon_other_violation));
+  
+
+  well_369.bindPopup('Big-Bend-Station-B-17R')
+
+  markers.addLayer(well_369);
+  oms.addMarker(well_369);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_503 = L.marker(new L.LatLng(27.79311224, -82.39938742)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-8r?zoom=' + map_current_zoom + '&lat=27.79311224&lng=-82.39938742';  
+    });
+  }).on('mouseover', function (e) {
+    well_503.openPopup()
+  });
+
+  
+    well_503.setIcon(L.icon(icon_other_violation));
+  
+
+  well_503.bindPopup('Big-Bend-Station-B-8R')
+
+  markers.addLayer(well_503);
+  oms.addMarker(well_503);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_549 = L.marker(new L.LatLng(27.79365679, -82.40767858)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-30?zoom=' + map_current_zoom + '&lat=27.79365679&lng=-82.40767858';  
+    });
+  }).on('mouseover', function (e) {
+    well_549.openPopup()
+  });
+
+  
+    well_549.setIcon(L.icon(icon_other_violation));
+  
+
+  well_549.bindPopup('Big-Bend-Station-B-30')
+
+  markers.addLayer(well_549);
+  oms.addMarker(well_549);
+  
+
+  
+  var well_550 = L.marker(new L.LatLng(27.78194066, -82.39739978)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-37?zoom=' + map_current_zoom + '&lat=27.78194066&lng=-82.39739978';  
+    });
+  }).on('mouseover', function (e) {
+    well_550.openPopup()
+  });
+
+  
+    well_550.setIcon(L.icon(icon_other_violation));
+  
+
+  well_550.bindPopup('Big-Bend-Station-B-37')
+
+  markers.addLayer(well_550);
+  oms.addMarker(well_550);
+  
+
+  
+
+  
+  var well_552 = L.marker(new L.LatLng(27.78999449, -82.39650413)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-35?zoom=' + map_current_zoom + '&lat=27.78999449&lng=-82.39650413';  
+    });
+  }).on('mouseover', function (e) {
+    well_552.openPopup()
+  });
+
+  
+    well_552.setIcon(L.icon(icon_other_violation));
+  
+
+  well_552.bindPopup('Big-Bend-Station-B-35')
+
+  markers.addLayer(well_552);
+  oms.addMarker(well_552);
+  
+
+  
+
+  
+
+  
+
+  
+  var well_556 = L.marker(new L.LatLng(27.80599386, -82.38352102)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-39?zoom=' + map_current_zoom + '&lat=27.80599386&lng=-82.38352102';  
+    });
+  }).on('mouseover', function (e) {
+    well_556.openPopup()
+  });
+
+  
+    well_556.setIcon(L.icon(icon_other_violation));
+  
+
+  well_556.bindPopup('Big-Bend-Station-B-39')
+
+  markers.addLayer(well_556);
+  oms.addMarker(well_556);
+  
+
+  
+  var well_557 = L.marker(new L.LatLng(27.78231954, -82.39465936)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-38?zoom=' + map_current_zoom + '&lat=27.78231954&lng=-82.39465936';  
+    });
+  }).on('mouseover', function (e) {
+    well_557.openPopup()
+  });
+
+  
+    well_557.setIcon(L.icon(icon_other_violation));
+  
+
+  well_557.bindPopup('Big-Bend-Station-B-38')
+
+  markers.addLayer(well_557);
+  oms.addMarker(well_557);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_610 = L.marker(new L.LatLng(27.80042808, -82.39732069)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-14r?zoom=' + map_current_zoom + '&lat=27.80042808&lng=-82.39732069';  
+    });
+  }).on('mouseover', function (e) {
+    well_610.openPopup()
+  });
+
+  
+    well_610.setIcon(L.icon(icon_other_violation));
+  
+
+  well_610.bindPopup('Big-Bend-Station-B-14R')
+
+  markers.addLayer(well_610);
+  oms.addMarker(well_610);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_642 = L.marker(new L.LatLng(27.78086667, -82.39565833)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-1?zoom=' + map_current_zoom + '&lat=27.78086667&lng=-82.39565833';  
+    });
+  }).on('mouseover', function (e) {
+    well_642.openPopup()
+  });
+
+  
+    well_642.setIcon(L.icon(icon_other_violation));
+  
+
+  well_642.bindPopup('Big-Bend-Station-B-1')
+
+  markers.addLayer(well_642);
+  oms.addMarker(well_642);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_733 = L.marker(new L.LatLng(27.79362899, -82.40524547)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-60?zoom=' + map_current_zoom + '&lat=27.79362899&lng=-82.40524547';  
+    });
+  }).on('mouseover', function (e) {
+    well_733.openPopup()
+  });
+
+  
+    well_733.setIcon(L.icon(icon_other_violation));
+  
+
+  well_733.bindPopup('Big-Bend-Station-B-60')
+
+  markers.addLayer(well_733);
+  oms.addMarker(well_733);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_768 = L.marker(new L.LatLng(27.80602308, -82.38360756)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-56-uf?zoom=' + map_current_zoom + '&lat=27.80602308&lng=-82.38360756';  
+    });
+  }).on('mouseover', function (e) {
+    well_768.openPopup()
+  });
+
+  
+    well_768.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_768.bindPopup('Big-Bend-Station-B-56-UF')
+
+  markers.addLayer(well_768);
+  oms.addMarker(well_768);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_853 = L.marker(new L.LatLng(27.79946918, -82.39215246)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-51?zoom=' + map_current_zoom + '&lat=27.79946918&lng=-82.39215246';  
+    });
+  }).on('mouseover', function (e) {
+    well_853.openPopup()
+  });
+
+  
+    well_853.setIcon(L.icon(icon_other_violation));
+  
+
+  well_853.bindPopup('Big-Bend-Station-B-51')
+
+  markers.addLayer(well_853);
+  oms.addMarker(well_853);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_871 = L.marker(new L.LatLng(27.79654365, -82.39419893)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-50?zoom=' + map_current_zoom + '&lat=27.79654365&lng=-82.39419893';  
+    });
+  }).on('mouseover', function (e) {
+    well_871.openPopup()
+  });
+
+  
+    well_871.setIcon(L.icon(icon_other_violation));
+  
+
+  well_871.bindPopup('Big-Bend-Station-B-50')
+
+  markers.addLayer(well_871);
+  oms.addMarker(well_871);
+  
+
+  
+  var well_872 = L.marker(new L.LatLng(27.79673657, -82.38864734)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-53?zoom=' + map_current_zoom + '&lat=27.79673657&lng=-82.38864734';  
+    });
+  }).on('mouseover', function (e) {
+    well_872.openPopup()
+  });
+
+  
+    well_872.setIcon(L.icon(icon_other_violation));
+  
+
+  well_872.bindPopup('Big-Bend-Station-B-53')
+
+  markers.addLayer(well_872);
+  oms.addMarker(well_872);
+  
+
+  
+  var well_873 = L.marker(new L.LatLng(27.79873315, -82.39200933)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-52?zoom=' + map_current_zoom + '&lat=27.79873315&lng=-82.39200933';  
+    });
+  }).on('mouseover', function (e) {
+    well_873.openPopup()
+  });
+
+  
+    well_873.setIcon(L.icon(icon_other_violation));
+  
+
+  well_873.bindPopup('Big-Bend-Station-B-52')
+
+  markers.addLayer(well_873);
+  oms.addMarker(well_873);
+  
+
+  
+  var well_874 = L.marker(new L.LatLng(27.79647233, -82.40036807)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-54?zoom=' + map_current_zoom + '&lat=27.79647233&lng=-82.40036807';  
+    });
+  }).on('mouseover', function (e) {
+    well_874.openPopup()
+  });
+
+  
+    well_874.setIcon(L.icon(icon_other_violation));
+  
+
+  well_874.bindPopup('Big-Bend-Station-B-54')
+
+  markers.addLayer(well_874);
+  oms.addMarker(well_874);
+  
+
+  
+  var well_875 = L.marker(new L.LatLng(27.79242998, -82.39960464)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-57?zoom=' + map_current_zoom + '&lat=27.79242998&lng=-82.39960464';  
+    });
+  }).on('mouseover', function (e) {
+    well_875.openPopup()
+  });
+
+  
+    well_875.setIcon(L.icon(icon_other_violation));
+  
+
+  well_875.bindPopup('Big-Bend-Station-B-57')
+
+  markers.addLayer(well_875);
+  oms.addMarker(well_875);
+  
+
+  
+
+  
+  var well_877 = L.marker(new L.LatLng(27.7874927, -82.39653718)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-58?zoom=' + map_current_zoom + '&lat=27.7874927&lng=-82.39653718';  
+    });
+  }).on('mouseover', function (e) {
+    well_877.openPopup()
+  });
+
+  
+    well_877.setIcon(L.icon(icon_other_violation));
+  
+
+  well_877.bindPopup('Big-Bend-Station-B-58')
+
+  markers.addLayer(well_877);
+  oms.addMarker(well_877);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1002 = L.marker(new L.LatLng(27.80015431, -82.39427339)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-59-uf?zoom=' + map_current_zoom + '&lat=27.80015431&lng=-82.39427339';  
+    });
+  }).on('mouseover', function (e) {
+    well_1002.openPopup()
+  });
+
+  
+    well_1002.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1002.bindPopup('Big-Bend-Station-B-59-UF')
+
+  markers.addLayer(well_1002);
+  oms.addMarker(well_1002);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1014 = L.marker(new L.LatLng(27.79238611, -82.40038056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-18?zoom=' + map_current_zoom + '&lat=27.79238611&lng=-82.40038056';  
+    });
+  }).on('mouseover', function (e) {
+    well_1014.openPopup()
+  });
+
+  
+    well_1014.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1014.bindPopup('Big-Bend-Station-B-18')
+
+  markers.addLayer(well_1014);
+  oms.addMarker(well_1014);
+  
+
+  
+
+  
+
+  
+  var well_1017 = L.marker(new L.LatLng(27.80170556, -82.39250278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-15?zoom=' + map_current_zoom + '&lat=27.80170556&lng=-82.39250278';  
+    });
+  }).on('mouseover', function (e) {
+    well_1017.openPopup()
+  });
+
+  
+    well_1017.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1017.bindPopup('Big-Bend-Station-B-15')
+
+  markers.addLayer(well_1017);
+  oms.addMarker(well_1017);
+  
+
+  
+  var well_1018 = L.marker(new L.LatLng(27.80111667, -82.39643889)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-14?zoom=' + map_current_zoom + '&lat=27.80111667&lng=-82.39643889';  
+    });
+  }).on('mouseover', function (e) {
+    well_1018.openPopup()
+  });
+
+  
+    well_1018.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_1018.bindPopup('Big-Bend-Station-B-14')
+
+  markers.addLayer(well_1018);
+  oms.addMarker(well_1018);
+  
+
+  
+
+  
+  var well_1020 = L.marker(new L.LatLng(27.79681389, -82.39253056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-11?zoom=' + map_current_zoom + '&lat=27.79681389&lng=-82.39253056';  
+    });
+  }).on('mouseover', function (e) {
+    well_1020.openPopup()
+  });
+
+  
+    well_1020.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1020.bindPopup('Big-Bend-Station-B-11')
+
+  markers.addLayer(well_1020);
+  oms.addMarker(well_1020);
+  
+
+  
+  var well_1021 = L.marker(new L.LatLng(27.79743611, -82.39897778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-10?zoom=' + map_current_zoom + '&lat=27.79743611&lng=-82.39897778';  
+    });
+  }).on('mouseover', function (e) {
+    well_1021.openPopup()
+  });
+
+  
+    well_1021.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1021.bindPopup('Big-Bend-Station-B-10')
+
+  markers.addLayer(well_1021);
+  oms.addMarker(well_1021);
+  
+
+  
+  var well_1022 = L.marker(new L.LatLng(27.79993333, -82.39246111)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-12?zoom=' + map_current_zoom + '&lat=27.79993333&lng=-82.39246111';  
+    });
+  }).on('mouseover', function (e) {
+    well_1022.openPopup()
+  });
+
+  
+    well_1022.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1022.bindPopup('Big-Bend-Station-B-12')
+
+  markers.addLayer(well_1022);
+  oms.addMarker(well_1022);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1052 = L.marker(new L.LatLng(27.80018118, -82.39435031)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-33?zoom=' + map_current_zoom + '&lat=27.80018118&lng=-82.39435031';  
+    });
+  }).on('mouseover', function (e) {
+    well_1052.openPopup()
+  });
+
+  
+    well_1052.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1052.bindPopup('Big-Bend-Station-B-33')
+
+  markers.addLayer(well_1052);
+  oms.addMarker(well_1052);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1057 = L.marker(new L.LatLng(27.80214, -82.39644)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-32?zoom=' + map_current_zoom + '&lat=27.80214&lng=-82.39644';  
+    });
+  }).on('mouseover', function (e) {
+    well_1057.openPopup()
+  });
+
+  
+    well_1057.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1057.bindPopup('Big-Bend-Station-B-32')
+
+  markers.addLayer(well_1057);
+  oms.addMarker(well_1057);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1073 = L.marker(new L.LatLng(27.79219113, -82.39680363)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-36?zoom=' + map_current_zoom + '&lat=27.79219113&lng=-82.39680363';  
+    });
+  }).on('mouseover', function (e) {
+    well_1073.openPopup()
+  });
+
+  
+    well_1073.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1073.bindPopup('Big-Bend-Station-B-36')
+
+  markers.addLayer(well_1073);
+  oms.addMarker(well_1073);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1080 = L.marker(new L.LatLng(27.78556002, -82.39843292)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-34?zoom=' + map_current_zoom + '&lat=27.78556002&lng=-82.39843292';  
+    });
+  }).on('mouseover', function (e) {
+    well_1080.openPopup()
+  });
+
+  
+    well_1080.setIcon(L.icon(icon_other_violation));
+  
+
+  well_1080.bindPopup('Big-Bend-Station-B-34')
+
+  markers.addLayer(well_1080);
+  oms.addMarker(well_1080);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(27.797444, -82.405194), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Well</strong> View <a class="close-well pull-right" href="/facilities/big-bend-station">&times;</a></h5>
+
+<h1>Big-Bend-Station-B-58</h1>
+
+
+<h4>Designation</h4>
+<h2>Other Designation</h2>
+
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaminant Status</h4>
+    <h2>Other Designation, Not In Compliance</h2>
+  </div>
+  <div class="col-sm-2">
+    
+    <div class="indicator violation"></div>
+    
+  </div>
+</div>
+
+<div class="content contaminants">
+
+<h4 class="thin"><strong>Pollutant</strong> Details</h4>
+<br />
+
+
+
+<div class="contaminants">
+
+  
+      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="6 exceedances of As at this well">
+        <span class="contaminant-symbol">As</span>
+        
+        <span class="contaminant-name">Arsenic</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="8 exceedances of B at this well">
+        <span class="contaminant-symbol">B</span>
+        
+        <span class="contaminant-name">Boron</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="7 exceedances of Mn at this well">
+        <span class="contaminant-symbol">Mn</span>
+        
+        <span class="contaminant-name">Manganese</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="7 exceedances of Mo at this well">
+        <span class="contaminant-symbol">Mo</span>
+        
+        <span class="contaminant-name">Molybdenum</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-Tl" rel="tooltip" data-placement="top" data-original-title="1 exceedances of Tl at this well">
+        <span class="contaminant-symbol">Tl</span>
+        
+        <span class="contaminant-name">Thallium</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="1 exceedances of GAP at this well">
+        <span class="contaminant-symbol">GAP</span>
+        
+        <span class="contaminant-name">Gross Alpha</span>
+        
+      </div>
+  
+
+</div>
+
+
+  
+  <div id="element-As" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-As">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>As</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Arsenic</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>6 / 8</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/10/2010</div>
+        <div class="col-sm-3 history">0.0243 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">2.43x limit</div>
+        <div class="col-sm-3 history">0.01mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/5/2010</div>
+        <div class="col-sm-3 history">0.04606 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">4.61x limit</div>
+        <div class="col-sm-3 history">0.01mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/12/2010</div>
+        <div class="col-sm-3 history">0.04864 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">4.86x limit</div>
+        <div class="col-sm-3 history">0.01mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/11/2010</div>
+        <div class="col-sm-3 history">0.0205 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">2.05x limit</div>
+        <div class="col-sm-3 history">0.01mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/16/2011</div>
+        <div class="col-sm-3 history">0.00833 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/12/2011</div>
+        <div class="col-sm-3 history">0.0105 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.05x limit</div>
+        <div class="col-sm-3 history">0.01mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/17/2011</div>
+        <div class="col-sm-3 history">0.0429 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">4.29x limit</div>
+        <div class="col-sm-3 history">0.01mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/16/11</div>
+        <div class="col-sm-3 history">0.00712 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+  <div id="element-B" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-B">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>B</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Boron</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>8 / 8</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/10/2010</div>
+        <div class="col-sm-3 history">26.4 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">4.40x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/5/2010</div>
+        <div class="col-sm-3 history">31.84 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">5.31x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/12/2010</div>
+        <div class="col-sm-3 history">42.3 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">7.05x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/11/2010</div>
+        <div class="col-sm-3 history">50.06 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">8.34x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/16/2011</div>
+        <div class="col-sm-3 history">50.7 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">8.45x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/12/2011</div>
+        <div class="col-sm-3 history">49.8 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">8.30x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/17/2011</div>
+        <div class="col-sm-3 history">14.7 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">2.45x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/16/11</div>
+        <div class="col-sm-3 history">13.6 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">2.27x limit</div>
+        <div class="col-sm-3 history">6mg/l (LHA)</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+  <div id="element-Mn" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mn">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Mn</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Manganese</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>7 / 8</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/10/2010</div>
+        <div class="col-sm-3 history">0.6721 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">2.24x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/5/2010</div>
+        <div class="col-sm-3 history">0.344 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.15x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/12/2010</div>
+        <div class="col-sm-3 history">0.6574 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">2.19x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/11/2010</div>
+        <div class="col-sm-3 history">0.468 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.56x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/16/2011</div>
+        <div class="col-sm-3 history">0.5115 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.70x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/12/2011</div>
+        <div class="col-sm-3 history">0.456 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.52x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/17/2011</div>
+        <div class="col-sm-3 history">0.364 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.21x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/16/11</div>
+        <div class="col-sm-3 history">0.0867 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+  <div id="element-Mo" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mo">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Mo</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Molybdenum</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>7 / 8</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/10/2010</div>
+        <div class="col-sm-3 history">0.3807 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">9.52x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/5/2010</div>
+        <div class="col-sm-3 history">0.384 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">9.60x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/12/2010</div>
+        <div class="col-sm-3 history">0.5852 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">14.63x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/11/2010</div>
+        <div class="col-sm-3 history">0.185 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">4.63x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/16/2011</div>
+        <div class="col-sm-3 history">0.2106 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">5.27x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/12/2011</div>
+        <div class="col-sm-3 history">0.301 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">7.52x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/17/2011</div>
+        <div class="col-sm-3 history">0.546 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">13.65x limit</div>
+        <div class="col-sm-3 history">0.04mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/16/11</div>
+        <div class="col-sm-3 history">0.00344 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+  <div id="element-Tl" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Tl">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Tl</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Thallium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>1 / 7</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/10/2010</div>
+        <div class="col-sm-3 history">5e-05 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/5/2010</div>
+        <div class="col-sm-3 history">2e-05 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/12/2010</div>
+        <div class="col-sm-3 history">8e-05 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/16/2011</div>
+        <div class="col-sm-3 history">0.0176 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">8.80x limit</div>
+        <div class="col-sm-3 history">0.002mg/l (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/12/2011</div>
+        <div class="col-sm-3 history">0.0004 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/17/2011</div>
+        <div class="col-sm-3 history">0.0001 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/16/11</div>
+        <div class="col-sm-3 history">0.0001 mg/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+  <div id="element-GAP" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-GAP">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>GAP</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Gross Alpha Particle Activity</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>1 / 8</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/10/2010</div>
+        <div class="col-sm-3 history">10.1 pCi/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/5/2010</div>
+        <div class="col-sm-3 history">10 pCi/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/12/2010</div>
+        <div class="col-sm-3 history">11.9 pCi/l</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/11/2010</div>
+        <div class="col-sm-3 history">9.3 pCi/L</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">2/16/2011</div>
+        <div class="col-sm-3 history">13.1 pCi/L</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/12/2011</div>
+        <div class="col-sm-3 history">21 pCi/L</div>
+
+        
+        <div class="col-sm-3 history magnitude">1.40x limit</div>
+        <div class="col-sm-3 history">15pCi/L (MCL)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/17/2011</div>
+        <div class="col-sm-3 history">10.5 pCi/L</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">11/16/11</div>
+        <div class="col-sm-3 history">11.3 pCi/L</div>
+
+        
+        <div class="col-sm-3 history">--</div>
+        <div class="col-sm-3 history">--</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+
+
+
+</div>
+
+
+    
+      </main>
+    
+    
+
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47560197-1', 'ashtracker.org');
+      ga('send', 'pageview');
+
+    </script>
+    
+  </body>
+
+</html>

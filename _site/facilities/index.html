@@ -205,38 +205,70 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_28 = L.marker(new L.LatLng(35.595278, -80.964444), {
+  var facility_18 = L.marker(new L.LatLng(34.283786, -77.985205), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/marshall?zoom=12&lat=35.595278&lng=-80.964444';  
+    window.location.href = '/facilities/sutton?zoom=12&lat=34.283786&lng=-77.985205';  
+  }).on('mouseover', function (e) {
+    facility_18.openPopup()
+  });
+  facility_18.bindPopup('Sutton Steam Plant')
+
+  markers.addLayer(facility_18);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_24 = L.marker(new L.LatLng(31.396889, -92.719078), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/brame-energy?zoom=12&lat=31.396889&lng=-92.719078';  
+  }).on('mouseover', function (e) {
+    facility_24.openPopup()
+  });
+  facility_24.bindPopup('Brame Energy Center')
+
+  markers.addLayer(facility_24);
+  
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_28 = L.marker(new L.LatLng(40.638056, -80.416111), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/bruce-mansfield?zoom=12&lat=40.638056&lng=-80.416111';  
   }).on('mouseover', function (e) {
     facility_28.openPopup()
   });
-  facility_28.bindPopup('Marshall Steam Station')
+  facility_28.bindPopup('Bruce Mansfield Power Plant')
 
   markers.addLayer(facility_28);
   
@@ -269,72 +301,20 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-  var facility_44 = L.marker(new L.LatLng(43.1605, -95.257556), {
+  var facility_42 = L.marker(new L.LatLng(35.595278, -80.964444), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/humboldt?zoom=12&lat=43.1605&lng=-95.257556';  
+    window.location.href = '/facilities/marshall?zoom=12&lat=35.595278&lng=-80.964444';  
   }).on('mouseover', function (e) {
-    facility_44.openPopup()
+    facility_42.openPopup()
   });
-  facility_44.bindPopup('Humboldt Station')
+  facility_42.bindPopup('Marshall Steam Station')
 
-  markers.addLayer(facility_44);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_50 = L.marker(new L.LatLng(37.926982, -100.992659), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/holcomb?zoom=12&lat=37.926982&lng=-100.992659';  
-  }).on('mouseover', function (e) {
-    facility_50.openPopup()
-  });
-  facility_50.bindPopup('Holcomb Power Station')
-
-  markers.addLayer(facility_50);
-  
-  
-
-  
-
-  
-  var facility_52 = L.marker(new L.LatLng(36.027778, -87.986389), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/johnsonville-fossil-plant?zoom=12&lat=36.027778&lng=-87.986389';  
-  }).on('mouseover', function (e) {
-    facility_52.openPopup()
-  });
-  facility_52.bindPopup('Johnsonville Fossil Plant')
-
-  markers.addLayer(facility_52);
+  markers.addLayer(facility_42);
   
   
 
@@ -413,7 +393,73 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_90 = L.marker(new L.LatLng(36.256268, -94.523592), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_113 = L.marker(new L.LatLng(36.256268, -94.523592), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -422,14 +468,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/flint-creek?zoom=12&lat=36.256268&lng=-94.523592';  
   }).on('mouseover', function (e) {
-    facility_90.openPopup()
+    facility_113.openPopup()
   });
-  facility_90.bindPopup('Flint Creek Power Plant')
+  facility_113.bindPopup('Flint Creek Power Plant')
 
-  markers.addLayer(facility_90);
+  markers.addLayer(facility_113);
   
-  
-
   
 
   
@@ -461,23 +505,29 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_106 = L.marker(new L.LatLng(41.987383, -91.73668), {
+
+  
+
+  
+
+  
+
+  
+  var facility_132 = L.marker(new L.LatLng(40.2462, -80.6526), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
-      'marker-color': 'BBBBBB',
+      'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/stonypoint?zoom=12&lat=41.987383&lng=-91.73668';  
+    window.location.href = '/facilities/cardinal-plant?zoom=12&lat=40.2462&lng=-80.6526';  
   }).on('mouseover', function (e) {
-    facility_106.openPopup()
+    facility_132.openPopup()
   });
-  facility_106.bindPopup('Stony Point Coal Combustion Plant')
+  facility_132.bindPopup('Cardinal Plant')
 
-  markers.addLayer(facility_106);
+  markers.addLayer(facility_132);
   
-  
-
   
 
   
@@ -487,15 +537,7 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-  var facility_115 = L.marker(new L.LatLng(40.552055, -96.783233), {
+  var facility_136 = L.marker(new L.LatLng(40.552055, -96.783233), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -504,24 +546,18 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/sheldon?zoom=12&lat=40.552055&lng=-96.783233';  
   }).on('mouseover', function (e) {
-    facility_115.openPopup()
+    facility_136.openPopup()
   });
-  facility_115.bindPopup('Sheldon Station')
+  facility_136.bindPopup('Sheldon Station')
 
-  markers.addLayer(facility_115);
+  markers.addLayer(facility_136);
   
-  
-
   
 
   
 
   
-
-  
-
-  
-  var facility_120 = L.marker(new L.LatLng(47.219561, -101.810224), {
+  var facility_138 = L.marker(new L.LatLng(47.219561, -101.810224), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -530,14 +566,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/coyote-station?zoom=12&lat=47.219561&lng=-101.810224';  
   }).on('mouseover', function (e) {
-    facility_120.openPopup()
+    facility_138.openPopup()
   });
-  facility_120.bindPopup('Coyote Station')
+  facility_138.bindPopup('Coyote Station')
 
-  markers.addLayer(facility_120);
+  markers.addLayer(facility_138);
   
-  
-
   
 
   
@@ -601,7 +635,33 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_152 = L.marker(new L.LatLng(41.496281, -88.100184), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_182 = L.marker(new L.LatLng(41.496281, -88.100184), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -610,35 +670,11 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/joliet9?zoom=12&lat=41.496281&lng=-88.100184';  
   }).on('mouseover', function (e) {
-    facility_152.openPopup()
+    facility_182.openPopup()
   });
-  facility_152.bindPopup('Joliet 9 Generating Station')
+  facility_182.bindPopup('Joliet 9 Generating Station')
 
-  markers.addLayer(facility_152);
-  
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_156 = L.marker(new L.LatLng(34.0533, -81.2178), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/mcmeekin?zoom=12&lat=34.0533&lng=-81.2178';  
-  }).on('mouseover', function (e) {
-    facility_156.openPopup()
-  });
-  facility_156.bindPopup('McMeekin Station')
-
-  markers.addLayer(facility_156);
+  markers.addLayer(facility_182);
   
   
 
@@ -659,7 +695,19 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_165 = L.marker(new L.LatLng(43.642089, -83.838188), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_197 = L.marker(new L.LatLng(43.642089, -83.838188), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -668,14 +716,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/weadlock?zoom=12&lat=43.642089&lng=-83.838188';  
   }).on('mouseover', function (e) {
-    facility_165.openPopup()
+    facility_197.openPopup()
   });
-  facility_165.bindPopup('JC Weadlock Power Plant')
+  facility_197.bindPopup('JC Weadlock Power Plant')
 
-  markers.addLayer(facility_165);
+  markers.addLayer(facility_197);
   
-  
-
   
 
   
@@ -733,7 +779,31 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_194 = L.marker(new L.LatLng(36.488368, -79.718053), {
+
+  
+  var facility_226 = L.marker(new L.LatLng(34.891361, -85.750778), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/widows-creek?zoom=12&lat=34.891361&lng=-85.750778';  
+  }).on('mouseover', function (e) {
+    facility_226.openPopup()
+  });
+  facility_226.bindPopup('Widows Creek Fossil Plant')
+
+  markers.addLayer(facility_226);
+  
+  
+
+  
+
+  
+
+  
+  var facility_229 = L.marker(new L.LatLng(36.488368, -79.718053), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -742,14 +812,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/danriver?zoom=12&lat=36.488368&lng=-79.718053';  
   }).on('mouseover', function (e) {
-    facility_194.openPopup()
+    facility_229.openPopup()
   });
-  facility_194.bindPopup('Dan River Steam Station')
+  facility_229.bindPopup('Dan River Steam Station')
 
-  markers.addLayer(facility_194);
+  markers.addLayer(facility_229);
   
-  
-
   
 
   
@@ -769,7 +837,41 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
+  var facility_238 = L.marker(new L.LatLng(36.315278, -86.400278), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/gallatin-fossil?zoom=12&lat=36.315278&lng=-86.400278';  
+  }).on('mouseover', function (e) {
+    facility_238.openPopup()
+  });
+  facility_238.bindPopup('Gallatin Fossil Plant')
 
+  markers.addLayer(facility_238);
+  
+  
+
+  
+
+  
+  var facility_240 = L.marker(new L.LatLng(41.892495, -83.351968), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/monroe-power?zoom=12&lat=41.892495&lng=-83.351968';  
+  }).on('mouseover', function (e) {
+    facility_240.openPopup()
+  });
+  facility_240.bindPopup('Monroe Power Plant')
+
+  markers.addLayer(facility_240);
+  
   
 
   
@@ -779,7 +881,7 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_209 = L.marker(new L.LatLng(35.465556, -82.550278), {
+  var facility_244 = L.marker(new L.LatLng(35.465556, -82.550278), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -788,111 +890,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/ashville-steam?zoom=12&lat=35.465556&lng=-82.550278';  
   }).on('mouseover', function (e) {
-    facility_209.openPopup()
-  });
-  facility_209.bindPopup('Asheville Steam Electric Generating Plant')
-
-  markers.addLayer(facility_209);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_223 = L.marker(new L.LatLng(35.379795, -78.087612), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/hflee?zoom=12&lat=35.379795&lng=-78.087612';  
-  }).on('mouseover', function (e) {
-    facility_223.openPopup()
-  });
-  facility_223.bindPopup('H.F. Lee Steam Electric Plant')
-
-  markers.addLayer(facility_223);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_244 = L.marker(new L.LatLng(41.201538, -76.069648), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/hunlock?zoom=12&lat=41.201538&lng=-76.069648';  
-  }).on('mouseover', function (e) {
     facility_244.openPopup()
   });
-  facility_244.bindPopup('Hunlock Power Station')
+  facility_244.bindPopup('Asheville Steam Electric Generating Plant')
 
   markers.addLayer(facility_244);
   
@@ -905,232 +905,184 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_248 = L.marker(new L.LatLng(36.315278, -86.400278), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_275 = L.marker(new L.LatLng(35.379795, -78.087612), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/hflee?zoom=12&lat=35.379795&lng=-78.087612';  
+  }).on('mouseover', function (e) {
+    facility_275.openPopup()
+  });
+  facility_275.bindPopup('H.F. Lee Steam Electric Plant')
+
+  markers.addLayer(facility_275);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_286 = L.marker(new L.LatLng(34.592523, -78.977649), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/weatherspoon?zoom=12&lat=34.592523&lng=-78.977649';  
+  }).on('mouseover', function (e) {
+    facility_286.openPopup()
+  });
+  facility_286.bindPopup('Weatherspoon Power Plant')
+
+  markers.addLayer(facility_286);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_296 = L.marker(new L.LatLng(35.073611, -90.148889), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/gallatin-fossil-plant?zoom=12&lat=36.315278&lng=-86.400278';  
+    window.location.href = '/facilities/allen-fossil?zoom=12&lat=35.073611&lng=-90.148889';  
   }).on('mouseover', function (e) {
-    facility_248.openPopup()
+    facility_296.openPopup()
   });
-  facility_248.bindPopup('Gallatin Fossil Plant')
+  facility_296.bindPopup('Allen Fossil Plant')
 
-  markers.addLayer(facility_248);
+  markers.addLayer(facility_296);
   
   
 
   
-  var facility_249 = L.marker(new L.LatLng(35.179529, -81.006759), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_307 = L.marker(new L.LatLng(41.201538, -76.069648), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/allen?zoom=12&lat=35.179529&lng=-81.006759';  
-  }).on('mouseover', function (e) {
-    facility_249.openPopup()
-  });
-  facility_249.bindPopup('Allen Steam Plant')
-
-  markers.addLayer(facility_249);
-  
-  
-
-  
-
-  
-
-  
-  var facility_252 = L.marker(new L.LatLng(35.217222, -81.76111), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/cliffside-station?zoom=12&lat=35.217222&lng=-81.76111';  
-  }).on('mouseover', function (e) {
-    facility_252.openPopup()
-  });
-  facility_252.bindPopup('Cliffside Steam Station')
-
-  markers.addLayer(facility_252);
-  
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_256 = L.marker(new L.LatLng(35.357778, -80.97), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/riverbend?zoom=12&lat=35.357778&lng=-80.97';  
-  }).on('mouseover', function (e) {
-    facility_256.openPopup()
-  });
-  facility_256.bindPopup('Riverbend Steam Station')
-
-  markers.addLayer(facility_256);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_299 = L.marker(new L.LatLng(35.59, -79.04), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/cape-fear?zoom=12&lat=35.59&lng=-79.04';  
-  }).on('mouseover', function (e) {
-    facility_299.openPopup()
-  });
-  facility_299.bindPopup('Cape Fear Steam Electric Plant')
-
-  markers.addLayer(facility_299);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_305 = L.marker(new L.LatLng(39.828889, -80.82), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/mitchell?zoom=12&lat=39.828889&lng=-80.82';  
-  }).on('mouseover', function (e) {
-    facility_305.openPopup()
-  });
-  facility_305.bindPopup('Mitchell Plant')
-
-  markers.addLayer(facility_305);
-  
-  
-
-  
-
-  
-  var facility_307 = L.marker(new L.LatLng(36.6531, -114.6364), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/reidgardner?zoom=12&lat=36.6531&lng=-114.6364';  
+    window.location.href = '/facilities/hunlock?zoom=12&lat=41.201538&lng=-76.069648';  
   }).on('mouseover', function (e) {
     facility_307.openPopup()
   });
-  facility_307.bindPopup('Reid Gardner Generating Station')
+  facility_307.bindPopup('Hunlock Power Station')
 
   markers.addLayer(facility_307);
   
@@ -1155,18 +1107,18 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_317 = L.marker(new L.LatLng(34.283786, -77.985205), {
+  var facility_317 = L.marker(new L.LatLng(35.217222, -81.76111), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/sutton?zoom=12&lat=34.283786&lng=-77.985205';  
+    window.location.href = '/facilities/cliffside-station?zoom=12&lat=35.217222&lng=-81.76111';  
   }).on('mouseover', function (e) {
     facility_317.openPopup()
   });
-  facility_317.bindPopup('Sutton Steam Plant')
+  facility_317.bindPopup('Cliffside Steam Station')
 
   markers.addLayer(facility_317);
   
@@ -1185,121 +1137,365 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_373 = L.marker(new L.LatLng(38.175833, -85.879444), {
+  var facility_324 = L.marker(new L.LatLng(35.357778, -80.97), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
+    window.location.href = '/facilities/riverbend?zoom=12&lat=35.357778&lng=-80.97';  
+  }).on('mouseover', function (e) {
+    facility_324.openPopup()
+  });
+  facility_324.bindPopup('Riverbend Steam Station')
+
+  markers.addLayer(facility_324);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_336 = L.marker(new L.LatLng(36.027778, -87.986389), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/johnsonville-fossil?zoom=12&lat=36.027778&lng=-87.986389';  
+  }).on('mouseover', function (e) {
+    facility_336.openPopup()
+  });
+  facility_336.bindPopup('Johnsonville Fossil Plant')
+
+  markers.addLayer(facility_336);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_354 = L.marker(new L.LatLng(37.259722, -86.978056), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/paradise-fossil?zoom=12&lat=37.259722&lng=-86.978056';  
+  }).on('mouseover', function (e) {
+    facility_354.openPopup()
+  });
+  facility_354.bindPopup('Paradise Fossil Plant')
+
+  markers.addLayer(facility_354);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_363 = L.marker(new L.LatLng(35.59, -79.04), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/cape-fear?zoom=12&lat=35.59&lng=-79.04';  
+  }).on('mouseover', function (e) {
+    facility_363.openPopup()
+  });
+  facility_363.bindPopup('Cape Fear Steam Electric Plant')
+
+  markers.addLayer(facility_363);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_371 = L.marker(new L.LatLng(39.828889, -80.82), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/mitchell?zoom=12&lat=39.828889&lng=-80.82';  
+  }).on('mouseover', function (e) {
+    facility_371.openPopup()
+  });
+  facility_371.bindPopup('Mitchell Plant')
+
+  markers.addLayer(facility_371);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_376 = L.marker(new L.LatLng(36.6531, -114.6364), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/reidgardner?zoom=12&lat=36.6531&lng=-114.6364';  
+  }).on('mouseover', function (e) {
+    facility_376.openPopup()
+  });
+  facility_376.bindPopup('Reid Gardner Generating Station')
+
+  markers.addLayer(facility_376);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_385 = L.marker(new L.LatLng(39.489694, -79.639389), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/albright-power?zoom=12&lat=39.489694&lng=-79.639389';  
+  }).on('mouseover', function (e) {
+    facility_385.openPopup()
+  });
+  facility_385.bindPopup('Albright Power Station')
+
+  markers.addLayer(facility_385);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_440 = L.marker(new L.LatLng(38.175833, -85.879444), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
     window.location.href = '/facilities/cane-run?zoom=12&lat=38.175833&lng=-85.879444';  
   }).on('mouseover', function (e) {
-    facility_373.openPopup()
+    facility_440.openPopup()
   });
-  facility_373.bindPopup('Cane Run Station')
+  facility_440.bindPopup('Cane Run Station')
 
-  markers.addLayer(facility_373);
+  markers.addLayer(facility_440);
   
-  
-
   
 
   
@@ -1347,70 +1543,114 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_397 = L.marker(new L.LatLng(35.902145, -84.523905), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_510 = L.marker(new L.LatLng(39.853889, -79.927778), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/kingston-fossil-plant?zoom=12&lat=35.902145&lng=-84.523905';  
+    window.location.href = '/facilities/hatfields-ferry?zoom=12&lat=39.853889&lng=-79.927778';  
   }).on('mouseover', function (e) {
-    facility_397.openPopup()
+    facility_510.openPopup()
   });
-  facility_397.bindPopup('Kingston Fossil Plant')
+  facility_510.bindPopup('Hatfield&#39;s Ferry Power Station')
 
-  markers.addLayer(facility_397);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_414 = L.marker(new L.LatLng(40.2462, -80.6526), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/cardinal?zoom=12&lat=40.2462&lng=-80.6526';  
-  }).on('mouseover', function (e) {
-    facility_414.openPopup()
-  });
-  facility_414.bindPopup('Cardinal Plant Ash Disposal Complex')
-
-  markers.addLayer(facility_414);
+  markers.addLayer(facility_510);
   
   
 
@@ -1423,47 +1663,7 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_439 = L.marker(new L.LatLng(36.527778, -78.885833), {
+  var facility_515 = L.marker(new L.LatLng(36.527778, -78.885833), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1472,225 +1672,9 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/mayo?zoom=12&lat=36.527778&lng=-78.885833';  
   }).on('mouseover', function (e) {
-    facility_439.openPopup()
-  });
-  facility_439.bindPopup('Mayo Electric Generating Plant')
-
-  markers.addLayer(facility_439);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_450 = L.marker(new L.LatLng(34.592523, -78.977649), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/weatherspoon?zoom=12&lat=34.592523&lng=-78.977649';  
-  }).on('mouseover', function (e) {
-    facility_450.openPopup()
-  });
-  facility_450.bindPopup('Weatherspoon Power Plant')
-
-  markers.addLayer(facility_450);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_455 = L.marker(new L.LatLng(47.367903, -101.837286), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/antelope?zoom=12&lat=47.367903&lng=-101.837286';  
-  }).on('mouseover', function (e) {
-    facility_455.openPopup()
-  });
-  facility_455.bindPopup('Antelope Valley Station')
-
-  markers.addLayer(facility_455);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_477 = L.marker(new L.LatLng(38.584722, -85.411944), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/trimble?zoom=12&lat=38.584722&lng=-85.411944';  
-  }).on('mouseover', function (e) {
-    facility_477.openPopup()
-  });
-  facility_477.bindPopup('Trimble County Station')
-
-  markers.addLayer(facility_477);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_515 = L.marker(new L.LatLng(34.891361, -85.750778), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/widows-creek-fossil-plant?zoom=12&lat=34.891361&lng=-85.750778';  
-  }).on('mouseover', function (e) {
     facility_515.openPopup()
   });
-  facility_515.bindPopup('Widows Creek Fossil Plant')
+  facility_515.bindPopup('Mayo Electric Generating Plant')
 
   markers.addLayer(facility_515);
   
@@ -1717,43 +1701,165 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_526 = L.marker(new L.LatLng(40.638056, -80.416111), {
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_531 = L.marker(new L.LatLng(47.367903, -101.837286), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/little-blue-run?zoom=12&lat=40.638056&lng=-80.416111';  
+    window.location.href = '/facilities/antelope?zoom=12&lat=47.367903&lng=-101.837286';  
   }).on('mouseover', function (e) {
-    facility_526.openPopup()
+    facility_531.openPopup()
   });
-  facility_526.bindPopup('Bruce Mansfield Power Plant')
+  facility_531.bindPopup('Antelope Valley Station')
 
-  markers.addLayer(facility_526);
+  markers.addLayer(facility_531);
   
-  
-
   
 
   
-  var facility_528 = L.marker(new L.LatLng(31.396889, -92.719078), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_590 = L.marker(new L.LatLng(36.376667, -82.963056), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
-      'marker-color': 'BBBBBB',
+      'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/brame?zoom=12&lat=31.396889&lng=-92.719078';  
+    window.location.href = '/facilities/john-sevier?zoom=12&lat=36.376667&lng=-82.963056';  
   }).on('mouseover', function (e) {
-    facility_528.openPopup()
+    facility_590.openPopup()
   });
-  facility_528.bindPopup('Brame Energy Center')
+  facility_590.bindPopup('John Sevier Fossil Plant')
 
-  markers.addLayer(facility_528);
+  markers.addLayer(facility_590);
   
-  
-
   
 
   
@@ -1763,7 +1869,137 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_533 = L.marker(new L.LatLng(27.797444, -82.405194), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_626 = L.marker(new L.LatLng(41.987522, -91.736781), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/stoney-point?zoom=12&lat=41.987522&lng=-91.736781';  
+  }).on('mouseover', function (e) {
+    facility_626.openPopup()
+  });
+  facility_626.bindPopup('Stoney Point Landfill')
+
+  markers.addLayer(facility_626);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_640 = L.marker(new L.LatLng(41.8283, -87.722801), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/crawford-generating?zoom=12&lat=41.8283&lng=-87.722801';  
+  }).on('mouseover', function (e) {
+    facility_640.openPopup()
+  });
+  facility_640.bindPopup('Crawford Generating Station')
+
+  markers.addLayer(facility_640);
+  
+  
+
+  
+
+  
+
+  
+  var facility_643 = L.marker(new L.LatLng(27.797444, -82.405194), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
@@ -1772,14 +2008,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/big-bend-station?zoom=12&lat=27.797444&lng=-82.405194';  
   }).on('mouseover', function (e) {
-    facility_533.openPopup()
+    facility_643.openPopup()
   });
-  facility_533.bindPopup('Big Bend Station')
+  facility_643.bindPopup('Big Bend Station')
 
-  markers.addLayer(facility_533);
+  markers.addLayer(facility_643);
   
-  
-
   
 
   
@@ -1809,23 +2043,31 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_548 = L.marker(new L.LatLng(47.281667, -101.319444), {
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_662 = L.marker(new L.LatLng(34.0533, -81.2178), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
-      'marker-color': 'BBBBBB',
+      'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/lelandolds?zoom=12&lat=47.281667&lng=-101.319444';  
+    window.location.href = '/facilities/mcmeekin-station?zoom=12&lat=34.0533&lng=-81.2178';  
   }).on('mouseover', function (e) {
-    facility_548.openPopup()
+    facility_662.openPopup()
   });
-  facility_548.bindPopup('Leland Olds Station')
+  facility_662.bindPopup('McMeekin Station')
 
-  markers.addLayer(facility_548);
+  markers.addLayer(facility_662);
   
-  
-
   
 
   
@@ -1845,23 +2087,49 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_558 = L.marker(new L.LatLng(41.892495, -83.351968), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_685 = L.marker(new L.LatLng(37.926982, -100.992659), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
-      'marker-color': 'BBBBBB',
+      'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/monroe?zoom=12&lat=41.892495&lng=-83.351968';  
+    window.location.href = '/facilities/holcomb-station?zoom=12&lat=37.926982&lng=-100.992659';  
   }).on('mouseover', function (e) {
-    facility_558.openPopup()
+    facility_685.openPopup()
   });
-  facility_558.bindPopup('Detroit Edison Monroe Power Plant')
+  facility_685.bindPopup('Holcomb Station')
 
-  markers.addLayer(facility_558);
+  markers.addLayer(facility_685);
   
-  
-
   
 
   
@@ -1883,19 +2151,7 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_575 = L.marker(new L.LatLng(43.642089, -83.838188), {
+  var facility_695 = L.marker(new L.LatLng(43.642089, -83.838188), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1904,20 +2160,18 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/dekarn?zoom=12&lat=43.642089&lng=-83.838188';  
   }).on('mouseover', function (e) {
-    facility_575.openPopup()
+    facility_695.openPopup()
   });
-  facility_575.bindPopup('D.E. Karn Power Plant')
+  facility_695.bindPopup('D.E. Karn Power Plant')
 
-  markers.addLayer(facility_575);
+  markers.addLayer(facility_695);
   
-  
-
   
 
   
 
   
-  var facility_578 = L.marker(new L.LatLng(41.6348, -88.0632), {
+  var facility_697 = L.marker(new L.LatLng(41.6348, -88.0632), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1926,14 +2180,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/will?zoom=12&lat=41.6348&lng=-88.0632';  
   }).on('mouseover', function (e) {
-    facility_578.openPopup()
+    facility_697.openPopup()
   });
-  facility_578.bindPopup('Will County Generating Station')
+  facility_697.bindPopup('Will County Generating Station')
 
-  markers.addLayer(facility_578);
+  markers.addLayer(facility_697);
   
-  
-
   
 
   
@@ -1959,7 +2211,47 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_591 = L.marker(new L.LatLng(35.711029, -80.379359), {
+
+  
+  var facility_710 = L.marker(new L.LatLng(41.949356, -91.594309), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/big-bend-landfill?zoom=12&lat=41.949356&lng=-91.594309';  
+  }).on('mouseover', function (e) {
+    facility_710.openPopup()
+  });
+  facility_710.bindPopup('Big Bend Landfill')
+
+  markers.addLayer(facility_710);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_721 = L.marker(new L.LatLng(35.711029, -80.379359), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -1968,14 +2260,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/buck?zoom=12&lat=35.711029&lng=-80.379359';  
   }).on('mouseover', function (e) {
-    facility_591.openPopup()
+    facility_721.openPopup()
   });
-  facility_591.bindPopup('Buck Steam Station')
+  facility_721.bindPopup('Buck Steam Station')
 
-  markers.addLayer(facility_591);
+  markers.addLayer(facility_721);
   
-  
-
   
 
   
@@ -2001,7 +2291,15 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_604 = L.marker(new L.LatLng(36.28, -80.060556), {
+
+  
+
+  
+
+  
+
+  
+  var facility_737 = L.marker(new L.LatLng(36.28, -80.060556), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -2010,14 +2308,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/belews?zoom=12&lat=36.28&lng=-80.060556';  
   }).on('mouseover', function (e) {
-    facility_604.openPopup()
+    facility_737.openPopup()
   });
-  facility_604.bindPopup('Belews')
+  facility_737.bindPopup('Belews')
 
-  markers.addLayer(facility_604);
+  markers.addLayer(facility_737);
   
-  
-
   
 
   
@@ -2029,51 +2325,93 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_615 = L.marker(new L.LatLng(37.151667, -88.777222), {
+  var facility_742 = L.marker(new L.LatLng(45.880278, -106.61333), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/shawnee-fossil-plant?zoom=12&lat=37.151667&lng=-88.777222';  
+    window.location.href = '/facilities/colstrip-steam?zoom=12&lat=45.880278&lng=-106.61333';  
   }).on('mouseover', function (e) {
-    facility_615.openPopup()
+    facility_742.openPopup()
   });
-  facility_615.bindPopup('Shawnee Fossil Plant')
+  facility_742.bindPopup('Colstrip Steam Electric Station')
 
-  markers.addLayer(facility_615);
+  markers.addLayer(facility_742);
   
   
 
   
-  var facility_616 = L.marker(new L.LatLng(39.489694, -79.639389), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_770 = L.marker(new L.LatLng(35.902145, -84.523905), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/albright?zoom=12&lat=39.489694&lng=-79.639389';  
+    window.location.href = '/facilities/kingston-fossil?zoom=12&lat=35.902145&lng=-84.523905';  
   }).on('mouseover', function (e) {
-    facility_616.openPopup()
+    facility_770.openPopup()
   });
-  facility_616.bindPopup('Albright Power Station')
+  facility_770.bindPopup('Kingston Fossil Plant')
 
-  markers.addLayer(facility_616);
+  markers.addLayer(facility_770);
   
-  
-
   
 
   
@@ -2089,189 +2427,89 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_624 = L.marker(new L.LatLng(34.72622600000, -87.82832100000), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_809 = L.marker(new L.LatLng(38.584722, -85.411944), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
-      'marker-color': '2984BD',
+      'marker-color': 'BBBBBB',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/colbert?zoom=12&lat=34.72622600000&lng=-87.82832100000';  
+    window.location.href = '/facilities/trimble?zoom=12&lat=38.584722&lng=-85.411944';  
   }).on('mouseover', function (e) {
-    facility_624.openPopup()
+    facility_809.openPopup()
   });
-  facility_624.bindPopup('Colbert Fossil Plant')
+  facility_809.bindPopup('Trimble County Station')
 
-  markers.addLayer(facility_624);
+  markers.addLayer(facility_809);
   
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_639 = L.marker(new L.LatLng(39.853889, -79.927778), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/hatfields-ferry?zoom=12&lat=39.853889&lng=-79.927778';  
-  }).on('mouseover', function (e) {
-    facility_639.openPopup()
-  });
-  facility_639.bindPopup('Hatfield&#39;s Ferry')
-
-  markers.addLayer(facility_639);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_657 = L.marker(new L.LatLng(37.259722, -86.978056), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/paradise-fossil-plant?zoom=12&lat=37.259722&lng=-86.978056';  
-  }).on('mouseover', function (e) {
-    facility_657.openPopup()
-  });
-  facility_657.bindPopup('Paradise Fossil Plant')
-
-  markers.addLayer(facility_657);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_691 = L.marker(new L.LatLng(40.511406, -79.197677), {
+  var facility_810 = L.marker(new L.LatLng(40.511406, -79.197677), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': 'BBBBBB',
@@ -2280,14 +2518,12 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   }).on('click', function (e) {
     window.location.href = '/facilities/homer-city?zoom=12&lat=40.511406&lng=-79.197677';  
   }).on('mouseover', function (e) {
-    facility_691.openPopup()
+    facility_810.openPopup()
   });
-  facility_691.bindPopup('Homer City Generating Station')
+  facility_810.bindPopup('Homer City Generating Station')
 
-  markers.addLayer(facility_691);
+  markers.addLayer(facility_810);
   
-  
-
   
 
   
@@ -2321,366 +2557,18 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_716 = L.marker(new L.LatLng(41.949274, -91.594011), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/big-bend-cl?zoom=12&lat=41.949274&lng=-91.594011';  
-  }).on('mouseover', function (e) {
-    facility_716.openPopup()
-  });
-  facility_716.bindPopup('Big Bend Closed Landfill')
-
-  markers.addLayer(facility_716);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_727 = L.marker(new L.LatLng(36.391944, -87.655556), {
+  var facility_826 = L.marker(new L.LatLng(37.151667, -88.777222), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/cumberland-fossil-plant?zoom=12&lat=36.391944&lng=-87.655556';  
-  }).on('mouseover', function (e) {
-    facility_727.openPopup()
-  });
-  facility_727.bindPopup('Cumberland Fossil Plant')
-
-  markers.addLayer(facility_727);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_734 = L.marker(new L.LatLng(41.8283, -87.722801), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/crawford?zoom=12&lat=41.8283&lng=-87.722801';  
-  }).on('mouseover', function (e) {
-    facility_734.openPopup()
-  });
-  facility_734.bindPopup('Crawford Generating Station')
-
-  markers.addLayer(facility_734);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_740 = L.marker(new L.LatLng(36.376667, -82.963056), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/john-sevier-fossil-plant?zoom=12&lat=36.376667&lng=-82.963056';  
-  }).on('mouseover', function (e) {
-    facility_740.openPopup()
-  });
-  facility_740.bindPopup('John Sevier Fossil Plant')
-
-  markers.addLayer(facility_740);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_785 = L.marker(new L.LatLng(38.4739803, -81.8226314), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/amos?zoom=12&lat=38.4739803&lng=-81.8226314';  
-  }).on('mouseover', function (e) {
-    facility_785.openPopup()
-  });
-  facility_785.bindPopup('John E. Amos Plant')
-
-  markers.addLayer(facility_785);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_801 = L.marker(new L.LatLng(36.081148, -77.746263), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/swiftcreek?zoom=12&lat=36.081148&lng=-77.746263';  
-  }).on('mouseover', function (e) {
-    facility_801.openPopup()
-  });
-  facility_801.bindPopup('Swift Creek Structural Fill')
-
-  markers.addLayer(facility_801);
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_822 = L.marker(new L.LatLng(42.920909, -86.206292), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': '2984BD',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/jh-campbell?zoom=12&lat=42.920909&lng=-86.206292';  
-  }).on('mouseover', function (e) {
-    facility_822.openPopup()
-  });
-  facility_822.bindPopup('J.H. Campbell Landfill')
-
-  markers.addLayer(facility_822);
-  
-  
-
-  
-
-  
-
-  
-
-  
-  var facility_826 = L.marker(new L.LatLng(36.48, -79.071), {
-    icon: L.mapbox.marker.icon({
-      'marker-size': 'large',
-      'marker-color': 'BBBBBB',
-      'marker-symbol': 'industrial'
-    })
-  }).on('click', function (e) {
-    window.location.href = '/facilities/roxboro?zoom=12&lat=36.48&lng=-79.071';  
+    window.location.href = '/facilities/shawnee-fossil?zoom=12&lat=37.151667&lng=-88.777222';  
   }).on('mouseover', function (e) {
     facility_826.openPopup()
   });
-  facility_826.bindPopup('Roxboro Steam Electric Generating Plant')
+  facility_826.bindPopup('Shawnee Fossil Plant')
 
   markers.addLayer(facility_826);
   
@@ -2795,23 +2683,31 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_881 = L.marker(new L.LatLng(45.8842896, -106.6150072), {
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_886 = L.marker(new L.LatLng(47.281667, -101.319444), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/colstrip?zoom=12&lat=45.8842896&lng=-106.6150072';  
+    window.location.href = '/facilities/leland-olds?zoom=12&lat=47.281667&lng=-101.319444';  
   }).on('mouseover', function (e) {
-    facility_881.openPopup()
+    facility_886.openPopup()
   });
-  facility_881.bindPopup('Colstrip Power Plant')
+  facility_886.bindPopup('Leland Olds Station')
 
-  markers.addLayer(facility_881);
+  markers.addLayer(facility_886);
   
-  
-
   
 
   
@@ -2845,21 +2741,491 @@ var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 1, spiderfyOnM
   
 
   
-  var facility_898 = L.marker(new L.LatLng(36.020556, -84.1575), {
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_911 = L.marker(new L.LatLng(38.4739803, -81.8226314), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/amos?zoom=12&lat=38.4739803&lng=-81.8226314';  
+  }).on('mouseover', function (e) {
+    facility_911.openPopup()
+  });
+  facility_911.bindPopup('John E. Amos Plant')
+
+  markers.addLayer(facility_911);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_942 = L.marker(new L.LatLng(36.081148, -77.746263), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/swiftcreek?zoom=12&lat=36.081148&lng=-77.746263';  
+  }).on('mouseover', function (e) {
+    facility_942.openPopup()
+  });
+  facility_942.bindPopup('Swift Creek Structural Fill')
+
+  markers.addLayer(facility_942);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_947 = L.marker(new L.LatLng(42.677412, -94.196659), {
     icon: L.mapbox.marker.icon({
       'marker-size': 'large',
       'marker-color': '2984BD',
       'marker-symbol': 'industrial'
     })
   }).on('click', function (e) {
-    window.location.href = '/facilities/bull-run-fossil-plant?zoom=12&lat=36.020556&lng=-84.1575';  
+    window.location.href = '/facilities/humboldt-station?zoom=12&lat=42.677412&lng=-94.196659';  
   }).on('mouseover', function (e) {
-    facility_898.openPopup()
+    facility_947.openPopup()
   });
-  facility_898.bindPopup('Bull Run Fossil Plant')
+  facility_947.bindPopup('Humboldt Station Landfill')
 
-  markers.addLayer(facility_898);
+  markers.addLayer(facility_947);
   
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_957 = L.marker(new L.LatLng(36.391944, -87.655556), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/cumberland-fossil?zoom=12&lat=36.391944&lng=-87.655556';  
+  }).on('mouseover', function (e) {
+    facility_957.openPopup()
+  });
+  facility_957.bindPopup('Cumberland Fossil Plant')
+
+  markers.addLayer(facility_957);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_970 = L.marker(new L.LatLng(42.920909, -86.206292), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/jh-campbell?zoom=12&lat=42.920909&lng=-86.206292';  
+  }).on('mouseover', function (e) {
+    facility_970.openPopup()
+  });
+  facility_970.bindPopup('JH Campbell Generating Complex')
+
+  markers.addLayer(facility_970);
+  
+  
+
+  
+
+  
+
+  
+  var facility_973 = L.marker(new L.LatLng(36.48, -79.071), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': 'BBBBBB',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/roxboro?zoom=12&lat=36.48&lng=-79.071';  
+  }).on('mouseover', function (e) {
+    facility_973.openPopup()
+  });
+  facility_973.bindPopup('Roxboro Steam Electric Generating Plant')
+
+  markers.addLayer(facility_973);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_996 = L.marker(new L.LatLng(36.020556, -84.1575), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/bull-run?zoom=12&lat=36.020556&lng=-84.1575';  
+  }).on('mouseover', function (e) {
+    facility_996.openPopup()
+  });
+  facility_996.bindPopup('Bull Run Fossil Plant')
+
+  markers.addLayer(facility_996);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var facility_1013 = L.marker(new L.LatLng(34.741, -87.849389), {
+    icon: L.mapbox.marker.icon({
+      'marker-size': 'large',
+      'marker-color': '2984BD',
+      'marker-symbol': 'industrial'
+    })
+  }).on('click', function (e) {
+    window.location.href = '/facilities/colbert-fossil?zoom=12&lat=34.741&lng=-87.849389';  
+  }).on('mouseover', function (e) {
+    facility_1013.openPopup()
+  });
+  facility_1013.bindPopup('Colbert Fossil Plant')
+
+  markers.addLayer(facility_1013);
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -2931,843 +3297,93 @@ map.addLayer(markers);
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>FirstEnergy - Monongahela Power</h4>
-        <h2><a href="/facilities/albright">Albright Power Station</a></h2>
+        <h2><a href="/facilities/albright-power">Albright Power Station</a></h2>
+        <h4>Preston, WV</h4>
         
         <a class="button download small" href="/static/data/Albright_Power_Station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>30<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Duke Energy Carolinas LLC</h4>
-        <h2><a href="/facilities/allen">Allen Steam Plant</a></h2>
+        <h4>Tennessee Valley Authority (TVA)</h4>
+        <h2><a href="/facilities/allen-fossil">Allen Fossil Plant</a></h2>
+        <h4>Shelby, TN</h4>
         
         <a class="button download small" href="/static/data/Allen_Fossil_Plant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>4<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3775,52 +3391,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Basin Electric Power Cooperative</h4>
         <h2><a href="/facilities/antelope">Antelope Valley Station</a></h2>
+        <h4>Mercer County, North Dakota</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -3828,136 +3407,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Progress Energy Carolinas Inc.</h4>
         <h2><a href="/facilities/ashville-steam">Asheville Steam Electric Generating Plant</a></h2>
+        <h4>Buncombe County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -3967,24 +3425,32 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Duke Energy Carolinas LLC</h4>
         <h2><a href="/facilities/belews">Belews</a></h2>
+        <h4>Stokes County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Interstate Power and Light Company</h4>
-        <h2><a href="/facilities/big-bend-cl">Big Bend Closed Landfill</a></h2>
+        <h4>Interstate Power &amp; Light Company</h4>
+        <h2><a href="/facilities/big-bend-landfill">Big Bend Landfill</a></h2>
+        <h4>Linn County, IA</h4>
+        
+        <a class="button download small" href="/static/data/Big_Bend_Landfill_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>15<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -3993,14 +3459,109 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Tampa Electric Company (TECO)</h4>
         <h2><a href="/facilities/big-bend-station">Big Bend Station</a></h2>
+        <h4>Hillsborough, FL</h4>
         
         <a class="button download small" href="/static/data/Big_Bend_Station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>44<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4024,14 +3585,51 @@ map.addLayer(markers);
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Cleco Power, LLC</h4>
-        <h2><a href="/facilities/brame">Brame Energy Center</a></h2>
+        <h4>CLECO</h4>
+        <h2><a href="/facilities/brame-energy">Brame Energy Center</a></h2>
+        <h4>Rapides, LA</h4>
+        
+        <a class="button download small" href="/static/data/Brame_Energy_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>21<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4048,15 +3646,154 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>FirstEnergy</h4>
-        <h2><a href="/facilities/little-blue-run">Bruce Mansfield Power Plant</a></h2>
+        <h2><a href="/facilities/bruce-mansfield">Bruce Mansfield Power Plant</a></h2>
+        <h4>Beaver &amp; Hancock, PA</h4>
         
         <a class="button download small" href="/static/data/Bruce_Mansfield.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>69<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4064,11 +3801,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Duke Energy Carolinas LLC</h4>
         <h2><a href="/facilities/buck">Buck Steam Station</a></h2>
+        <h4>Rowan County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -4076,15 +3816,38 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/bull-run-fossil-plant">Bull Run Fossil Plant</a></h2>
+        <h2><a href="/facilities/bull-run">Bull Run Fossil Plant</a></h2>
+        <h4>Anderson, TN</h4>
         
-        <a class="button download small" href="/static/data/BullRunFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Bull_Run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>12<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4094,16 +3857,47 @@ map.addLayer(markers);
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Louisville Gas and Electric</h4>
+        <h4>Louisville Gas and Electric Company</h4>
         <h2><a href="/facilities/cane-run">Cane Run Station</a></h2>
+        <h4>Jefferson, KY</h4>
         
-        <a class="button download small" href="/static/data/CaneRun_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Cane_Run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>14<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4111,11 +3905,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Progress Energy Carolinas Inc.</h4>
         <h2><a href="/facilities/cape-fear">Cape Fear Steam Electric Plant</a></h2>
+        <h4>Chatham County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -4123,15 +3920,106 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>American Electric Power (AEP)</h4>
-        <h2><a href="/facilities/cardinal">Cardinal Plant Ash Disposal Complex</a></h2>
+        <h2><a href="/facilities/cardinal-plant">Cardinal Plant</a></h2>
+        <h4>Jefferson, OH</h4>
         
-        <a class="button download small" href="/static/data/CardinalPlant.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Cardinal.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>70<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4143,94 +4031,1069 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Duke Energy Carolinas LLC</h4>
         <h2><a href="/facilities/cliffside-station">Cliffside Steam Station</a></h2>
+        <h4>Cleveland County and Rutherford County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/colbert">Colbert Fossil Plant</a></h2>
+        <h2><a href="/facilities/colbert-fossil">Colbert Fossil Plant</a></h2>
+        <h4>Colbert, AL</h4>
         
         <a class="button download small" href="/static/data/Colbert.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>25<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>PPL Montana</h4>
-        <h2><a href="/facilities/colstrip">Colstrip Power Plant</a></h2>
+        <h2><a href="/facilities/colstrip-steam">Colstrip Steam Electric Station</a></h2>
+        <h4>Rosebud, MT</h4>
         
         <a class="button download small" href="/static/data/Colstrip.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>506<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4238,14 +5101,41 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Otter Tail Power Company</h4>
         <h2><a href="/facilities/coyote-station">Coyote Station</a></h2>
+        <h4>Mercer, ND</h4>
         
-        <a class="button download small" href="/static/data/CoyoteStation.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Coyote.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>17<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4261,26 +5151,19 @@ map.addLayer(markers);
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Midwest Generation, LLC</h4>
-        <h2><a href="/facilities/crawford">Crawford Generating Station</a></h2>
+        <h4>Midwest Generation LLC</h4>
+        <h2><a href="/facilities/crawford-generating">Crawford Generating Station</a></h2>
+        <h4>Cook, IL</h4>
+        
+        <a class="button download small" href="/static/data/Crawford.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>2<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4291,15 +5174,34 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/cumberland-fossil-plant">Cumberland Fossil Plant</a></h2>
+        <h2><a href="/facilities/cumberland-fossil">Cumberland Fossil Plant</a></h2>
+        <h4>Stewart, TN</h4>
         
-        <a class="button download small" href="/static/data/CumberlandFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Cumberland.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>8<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4307,18 +5209,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Consumer&#39;s Energy Co.</h4>
         <h2><a href="/facilities/dekarn">D.E. Karn Power Plant</a></h2>
+        <h4>Bay County, MI</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
   
 
   
@@ -4326,41 +5225,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Duke Energy Carolinas LLC</h4>
         <h2><a href="/facilities/danriver">Dan River Steam Station</a></h2>
+        <h4>Rockingham County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-    <div class="row content contaminant-status">
-      <div class="col-sm-10">
-        <h4>DTE Energy</h4>
-        <h2><a href="/facilities/monroe">Detroit Edison Monroe Power Plant</a></h2>
-        
-      </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
-      </div>
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4384,14 +5257,27 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>American Electric Power (AEP)</h4>
         <h2><a href="/facilities/flint-creek">Flint Creek Power Plant</a></h2>
+        <h4>Benton, AR</h4>
         
-        <a class="button download small" href="/static/data/FlintCreek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Flint_Creek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>18<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4420,45 +5306,18 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/gallatin-fossil-plant">Gallatin Fossil Plant</a></h2>
+        <h2><a href="/facilities/gallatin-fossil">Gallatin Fossil Plant</a></h2>
+        <h4>Sumner, TN</h4>
         
-        <a class="button download small" href="/static/data/GallatinFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Gallatin.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>10<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4484,40 +5343,105 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Progress Energy Carolinas Inc.</h4>
         <h2><a href="/facilities/hflee">H.F. Lee Steam Electric Plant</a></h2>
+        <h4>Wayne County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Allegheny Energy</h4>
-        <h2><a href="/facilities/hatfields-ferry">Hatfield&#39;s Ferry</a></h2>
+        <h4>FirstEnergy - Allegheny Energy</h4>
+        <h2><a href="/facilities/hatfields-ferry">Hatfield&#39;s Ferry Power Station</a></h2>
+        <h4>Greene, PA</h4>
         
-        <a class="button download small" href="/static/data/HatfieldsFerry.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Hatfields.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>14<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Holcomb Common Facilities, LLC</h4>
-        <h2><a href="/facilities/holcomb">Holcomb Power Station</a></h2>
+        <h4>Sunflower Electric Power</h4>
+        <h2><a href="/facilities/holcomb-station">Holcomb Station</a></h2>
+        <h4>Finney, KS</h4>
+        
+        <a class="button download small" href="/static/data/Holcomb.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>14<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4525,11 +5449,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>NRG Energy and General Electric</h4>
         <h2><a href="/facilities/homer-city">Homer City Generating Station</a></h2>
+        <h4>Indiana County, PA</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -4537,13 +5464,30 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Corn Belt Power Cooperative</h4>
-        <h2><a href="/facilities/humboldt">Humboldt Station</a></h2>
+        <h2><a href="/facilities/humboldt-station">Humboldt Station Landfill</a></h2>
+        <h4>Humboldt County, IA</h4>
+        
+        <a class="button download small" href="/static/data/Humboldt.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>7<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4551,30 +5495,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>UGI Development Company</h4>
         <h2><a href="/facilities/hunlock">Hunlock Power Station</a></h2>
+        <h4>Luzerne County, PA</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
-    </div>
-  
-
-  
-
-  
-
-  
-    <div class="row content contaminant-status">
-      <div class="col-sm-10">
-        <h4>Consumer&#39;s Energy Company</h4>
-        <h2><a href="/facilities/jh-campbell">J.H. Campbell Landfill</a></h2>
-        
-        <a class="button download small" href="/static/data/JHCampbell.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
-        
-      </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
-      </div>
+      
     </div>
   
 
@@ -4583,12 +5511,95 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Consumer&#39;s Energy</h4>
         <h2><a href="/facilities/weadlock">JC Weadlock Power Plant</a></h2>
+        <h4>Bay County, MI</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+    <div class="row content contaminant-status">
+      <div class="col-sm-10">
+        <h4>Consumer&#39;s Energy</h4>
+        <h2><a href="/facilities/jh-campbell">JH Campbell Generating Complex</a></h2>
+        <h4>Ottawa, MI</h4>
+        
+        <a class="button download small" href="/static/data/JH_Campbell.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        
+      </div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>47<br />wells</span>
+      </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4602,11 +5613,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Appalachian Power Company</h4>
         <h2><a href="/facilities/amos">John E. Amos Plant</a></h2>
+        <h4>Putnam County, WV</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -4614,30 +5628,80 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/john-sevier-fossil-plant">John Sevier Fossil Plant</a></h2>
+        <h2><a href="/facilities/john-sevier">John Sevier Fossil Plant</a></h2>
+        <h4>Hawkins, TN</h4>
         
-        <a class="button download small" href="/static/data/JohnSevierFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/John_Sevier.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>8<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/johnsonville-fossil-plant">Johnsonville Fossil Plant</a></h2>
+        <h2><a href="/facilities/johnsonville-fossil">Johnsonville Fossil Plant</a></h2>
+        <h4>Humphreys, TN</h4>
         
-        <a class="button download small" href="/static/data/JohnsonvilleFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Johnsonville.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>14<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4645,70 +5709,75 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Midwest Generation, LLC</h4>
         <h2><a href="/facilities/joliet9">Joliet 9 Generating Station</a></h2>
+        <h4>Will County, IL</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/kingston-fossil-plant">Kingston Fossil Plant</a></h2>
+        <h2><a href="/facilities/kingston-fossil">Kingston Fossil Plant</a></h2>
+        <h4>Roane, TN</h4>
         
-        <a class="button download small" href="/static/data/KingstonFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Kingston.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>12<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Basin Electric Power Cooperative</h4>
-        <h2><a href="/facilities/lelandolds">Leland Olds Station</a></h2>
+        <h2><a href="/facilities/leland-olds">Leland Olds Station</a></h2>
+        <h4>Mercer, ND</h4>
+        
+        <a class="button download small" href="/static/data/Leland.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>23<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4756,11 +5825,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Duke Energy Carolinas LLC</h4>
         <h2><a href="/facilities/marshall">Marshall Steam Station</a></h2>
+        <h4>Catawba County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -4769,27 +5841,47 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Progress Energy Carolinas Inc.</h4>
         <h2><a href="/facilities/mayo">Mayo Electric Generating Plant</a></h2>
+        <h4>Person County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>South Carolina Electric &amp; Gas</h4>
-        <h2><a href="/facilities/mcmeekin">McMeekin Station</a></h2>
+        <h4>South Carolina Electric &amp; Gas Company</h4>
+        <h2><a href="/facilities/mcmeekin-station">McMeekin Station</a></h2>
+        <h4>Lexington, SC</h4>
         
-        <a class="button download small" href="/static/data/McMeekin_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/McMeekin.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>12<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4797,162 +5889,33 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Ohio Power Co.</h4>
         <h2><a href="/facilities/mitchell">Mitchell Plant</a></h2>
+        <h4>Marshall County, WV</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
+    <div class="row content contaminant-status">
+      <div class="col-sm-10">
+        <h4>DTE Energy</h4>
+        <h2><a href="/facilities/monroe-power">Monroe Power Plant</a></h2>
+        <h4>Monroe, MI</h4>
+        
+        <a class="button download small" href="/static/data/Monroe.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        
+      </div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>1<br />wells</span>
+      </div>
+      
+    </div>
   
 
   
@@ -5043,37 +6006,18 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/paradise-fossil-plant">Paradise Fossil Plant</a></h2>
+        <h2><a href="/facilities/paradise-fossil">Paradise Fossil Plant</a></h2>
+        <h4>Muhlenberg, KY</h4>
         
-        <a class="button download small" href="/static/data/ParadiseFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Paradise.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>16<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -5107,11 +6051,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>NV Energy</h4>
         <h2><a href="/facilities/reidgardner">Reid Gardner Generating Station</a></h2>
+        <h4>Clark County, NV</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -5120,11 +6067,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Duke Energy Carolinas LLC</h4>
         <h2><a href="/facilities/riverbend">Riverbend Steam Station</a></h2>
+        <h4>Gaston County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -5133,68 +6083,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>CPI USA North Carolina</h4>
         <h2><a href="/facilities/roxboro">Roxboro Steam Electric Generating Plant</a></h2>
+        <h4>Person County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -5235,28 +6132,22 @@ map.addLayer(markers);
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/shawnee-fossil-plant">Shawnee Fossil Plant</a></h2>
+        <h2><a href="/facilities/shawnee-fossil">Shawnee Fossil Plant</a></h2>
+        <h4>McCracken, KY</h4>
         
-        <a class="button download small" href="/static/data/ShawneeFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Shawnee.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>14<br />wells</span>
       </div>
+      
     </div>
   
 
   
-    <div class="row content contaminant-status">
-      <div class="col-sm-10">
-        <h4>Nebraska Public Power District</h4>
-        <h2><a href="/facilities/sheldon">Sheldon Station</a></h2>
-        
-      </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
-      </div>
-    </div>
+
   
 
   
@@ -5286,14 +6177,71 @@ map.addLayer(markers);
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
-        <h4>Iowa Electric Light &amp; Power Co.</h4>
-        <h2><a href="/facilities/stonypoint">Stony Point Coal Combustion Plant</a></h2>
+        <h4>Nebraska Public Power District</h4>
+        <h2><a href="/facilities/sheldon">Sheldon Station</a></h2>
+        <h4>Lancaster County, NE</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+    <div class="row content contaminant-status">
+      <div class="col-sm-10">
+        <h4>Interstate Power &amp; Light Company</h4>
+        <h2><a href="/facilities/stoney-point">Stoney Point Landfill</a></h2>
+        <h4>Linn County, IA</h4>
+        
+        <a class="button download small" href="/static/data/Stoney.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        
+      </div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>19<br />wells</span>
+      </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -5301,11 +6249,14 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Carolina Power and Light Company</h4>
         <h2><a href="/facilities/sutton">Sutton Steam Plant</a></h2>
+        <h4>New Hanover County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
   
 
@@ -5314,14 +6265,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Full Circle Solutions, Inc.</h4>
         <h2><a href="/facilities/swiftcreek">Swift Creek Structural Fill</a></h2>
+        <h4>Nash County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
   
 
   
@@ -5329,56 +6281,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Louisville Gas and Electric</h4>
         <h2><a href="/facilities/trimble">Trimble County Station</a></h2>
+        <h4>Trimble County, KY</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -5386,33 +6297,47 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Progress Energy Carolinas Inc.</h4>
         <h2><a href="/facilities/weatherspoon">Weatherspoon Power Plant</a></h2>
+        <h4>Robeson County, NC</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
   
 
   
     <div class="row content contaminant-status">
       <div class="col-sm-10">
         <h4>Tennessee Valley Authority (TVA)</h4>
-        <h2><a href="/facilities/widows-creek-fossil-plant">Widows Creek Fossil Plant</a></h2>
+        <h2><a href="/facilities/widows-creek">Widows Creek Fossil Plant</a></h2>
+        <h4>Jackson, AL</h4>
         
-        <a class="button download small" href="/static/data/WidowsCreekFossilPlant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/Widows.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-wells"></div>
+      
+      <div class="col-sm-2 well-count has-wells">
+        <span>7<br />wells</span>
       </div>
+      
     </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -5420,24 +6345,15 @@ map.addLayer(markers);
       <div class="col-sm-10">
         <h4>Midwest Generation, LLC</h4>
         <h2><a href="/facilities/will">Will County Generating Station</a></h2>
+        <h4>Will County, IL</h4>
         
       </div>
-      <div class="col-sm-2">
-        <div class="indicator has-no-wells"></div>
+      
+      <div class="col-sm-2 well-count has-no-wells">
+        <span>0<br />wells</span>
       </div>
+      
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
 

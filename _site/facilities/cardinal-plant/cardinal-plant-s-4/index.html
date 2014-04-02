@@ -1,0 +1,6835 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Cardinal-Plant-S-4" />
+    <meta property="twitter:url" content="wells/cardinal/2014-03-31-Cardinal-Plant-S-4" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="Ashtracker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="wells/cardinal/2014-03-31-Cardinal-Plant-S-4" />
+    <meta property="og:title" content="Cardinal-Plant-S-4" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="wells/cardinal/2014-03-31-Cardinal-Plant-S-4" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="Cardinal-Plant-S-4" />
+
+    <meta name="fragment" content="!" />
+
+    <title>Cardinal-Plant-S-4 | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
+        
+    
+      <div id="map" class="site-map"></div>
+
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend">Legend</a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-2 col-xs-offset-1">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="upgradient indicator neutral"><span class="caret"></span></div>
+            <p>Upgradient</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="downgradient indicator neutral"><span class="caret"></span></div>
+            <p>Downgradient</p>
+          </div>          
+        </div>
+      </div>
+
+      <main role="content" class="site-content">
+        <a name="content-top" id="content-top"></a>
+    
+
+    
+
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 40.27695278, params.lng || -80.661175],
+    mapbox_zoom    = params.zoom || 12;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_20 = L.marker(new L.LatLng(40.27273333, -80.65882778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-8?zoom=' + map_current_zoom + '&lat=40.27273333&lng=-80.65882778';  
+    });
+  }).on('mouseover', function (e) {
+    well_20.openPopup()
+  });
+
+  
+    well_20.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_20.bindPopup('Cardinal-Plant-S-8')
+
+  markers.addLayer(well_20);
+  oms.addMarker(well_20);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_30 = L.marker(new L.LatLng(40.26448333, -80.64905)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-9?zoom=' + map_current_zoom + '&lat=40.26448333&lng=-80.64905';  
+    });
+  }).on('mouseover', function (e) {
+    well_30.openPopup()
+  });
+
+  
+    well_30.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_30.bindPopup('Cardinal-Plant-S-9')
+
+  markers.addLayer(well_30);
+  oms.addMarker(well_30);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_57 = L.marker(new L.LatLng(40.27947222, -80.64883889)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-16?zoom=' + map_current_zoom + '&lat=40.27947222&lng=-80.64883889';  
+    });
+  }).on('mouseover', function (e) {
+    well_57.openPopup()
+  });
+
+  
+    well_57.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_57.bindPopup('Cardinal-Plant-M-16')
+
+  markers.addLayer(well_57);
+  oms.addMarker(well_57);
+  
+
+  
+  var well_58 = L.marker(new L.LatLng(40.27492222, -80.6616)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.6616';  
+    });
+  }).on('mouseover', function (e) {
+    well_58.openPopup()
+  });
+
+  
+    well_58.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_58.bindPopup('Cardinal-Plant-M-17')
+
+  markers.addLayer(well_58);
+  oms.addMarker(well_58);
+  
+
+  
+  var well_59 = L.marker(new L.LatLng(40.27260278, -80.63699444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-14?zoom=' + map_current_zoom + '&lat=40.27260278&lng=-80.63699444';  
+    });
+  }).on('mouseover', function (e) {
+    well_59.openPopup()
+  });
+
+  
+    well_59.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_59.bindPopup('Cardinal-Plant-M-14')
+
+  markers.addLayer(well_59);
+  oms.addMarker(well_59);
+  
+
+  
+  var well_60 = L.marker(new L.LatLng(40.27393056, -80.64272222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-15?zoom=' + map_current_zoom + '&lat=40.27393056&lng=-80.64272222';  
+    });
+  }).on('mouseover', function (e) {
+    well_60.openPopup()
+  });
+
+  
+    well_60.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_60.bindPopup('Cardinal-Plant-M-15')
+
+  markers.addLayer(well_60);
+  oms.addMarker(well_60);
+  
+
+  
+  var well_61 = L.marker(new L.LatLng(40.27291944, -80.65074722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-12?zoom=' + map_current_zoom + '&lat=40.27291944&lng=-80.65074722';  
+    });
+  }).on('mouseover', function (e) {
+    well_61.openPopup()
+  });
+
+  
+    well_61.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_61.bindPopup('Cardinal-Plant-M-12')
+
+  markers.addLayer(well_61);
+  oms.addMarker(well_61);
+  
+
+  
+  var well_62 = L.marker(new L.LatLng(40.26889444, -80.6422)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-13?zoom=' + map_current_zoom + '&lat=40.26889444&lng=-80.6422';  
+    });
+  }).on('mouseover', function (e) {
+    well_62.openPopup()
+  });
+
+  
+    well_62.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_62.bindPopup('Cardinal-Plant-M-13')
+
+  markers.addLayer(well_62);
+  oms.addMarker(well_62);
+  
+
+  
+  var well_63 = L.marker(new L.LatLng(40.26640556, -80.64364722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-10?zoom=' + map_current_zoom + '&lat=40.26640556&lng=-80.64364722';  
+    });
+  }).on('mouseover', function (e) {
+    well_63.openPopup()
+  });
+
+  
+    well_63.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_63.bindPopup('Cardinal-Plant-M-10')
+
+  markers.addLayer(well_63);
+  oms.addMarker(well_63);
+  
+
+  
+  var well_64 = L.marker(new L.LatLng(40.26448889, -80.64905)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-11?zoom=' + map_current_zoom + '&lat=40.26448889&lng=-80.64905';  
+    });
+  }).on('mouseover', function (e) {
+    well_64.openPopup()
+  });
+
+  
+    well_64.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_64.bindPopup('Cardinal-Plant-M-11')
+
+  markers.addLayer(well_64);
+  oms.addMarker(well_64);
+  
+
+  
+
+  
+
+  
+
+  
+  var well_68 = L.marker(new L.LatLng(40.27041389, -80.65886389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-18?zoom=' + map_current_zoom + '&lat=40.27041389&lng=-80.65886389';  
+    });
+  }).on('mouseover', function (e) {
+    well_68.openPopup()
+  });
+
+  
+    well_68.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_68.bindPopup('Cardinal-Plant-M-18')
+
+  markers.addLayer(well_68);
+  oms.addMarker(well_68);
+  
+
+  
+  var well_69 = L.marker(new L.LatLng(40.26683333, -80.65751944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-19?zoom=' + map_current_zoom + '&lat=40.26683333&lng=-80.65751944';  
+    });
+  }).on('mouseover', function (e) {
+    well_69.openPopup()
+  });
+
+  
+    well_69.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_69.bindPopup('Cardinal-Plant-M-19')
+
+  markers.addLayer(well_69);
+  oms.addMarker(well_69);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_289 = L.marker(new L.LatLng(40.26060556, -80.64869722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-5?zoom=' + map_current_zoom + '&lat=40.26060556&lng=-80.64869722';  
+    });
+  }).on('mouseover', function (e) {
+    well_289.openPopup()
+  });
+
+  
+    well_289.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_289.bindPopup('Cardinal-Plant-CR-5')
+
+  markers.addLayer(well_289);
+  oms.addMarker(well_289);
+  
+
+  
+  var well_290 = L.marker(new L.LatLng(40.261275, -80.64891667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-4?zoom=' + map_current_zoom + '&lat=40.261275&lng=-80.64891667';  
+    });
+  }).on('mouseover', function (e) {
+    well_290.openPopup()
+  });
+
+  
+    well_290.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_290.bindPopup('Cardinal-Plant-CR-4')
+
+  markers.addLayer(well_290);
+  oms.addMarker(well_290);
+  
+
+  
+  var well_291 = L.marker(new L.LatLng(40.27736389, -80.66036667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-3?zoom=' + map_current_zoom + '&lat=40.27736389&lng=-80.66036667';  
+    });
+  }).on('mouseover', function (e) {
+    well_291.openPopup()
+  });
+
+  
+    well_291.setIcon(L.icon(icon_other_violation));
+  
+
+  well_291.bindPopup('Cardinal-Plant-CR-3')
+
+  markers.addLayer(well_291);
+  oms.addMarker(well_291);
+  
+
+  
+  var well_292 = L.marker(new L.LatLng(40.26160556, -80.64506944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-2?zoom=' + map_current_zoom + '&lat=40.26160556&lng=-80.64506944';  
+    });
+  }).on('mouseover', function (e) {
+    well_292.openPopup()
+  });
+
+  
+    well_292.setIcon(L.icon(icon_other_violation));
+  
+
+  well_292.bindPopup('Cardinal-Plant-CR-2')
+
+  markers.addLayer(well_292);
+  oms.addMarker(well_292);
+  
+
+  
+  var well_293 = L.marker(new L.LatLng(40.264025, -80.64380556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-1?zoom=' + map_current_zoom + '&lat=40.264025&lng=-80.64380556';  
+    });
+  }).on('mouseover', function (e) {
+    well_293.openPopup()
+  });
+
+  
+    well_293.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_293.bindPopup('Cardinal-Plant-CR-1')
+
+  markers.addLayer(well_293);
+  oms.addMarker(well_293);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_368 = L.marker(new L.LatLng(40.277425, -80.65890556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-4?zoom=' + map_current_zoom + '&lat=40.277425&lng=-80.65890556';  
+    });
+  }).on('mouseover', function (e) {
+    well_368.openPopup()
+  });
+
+  
+    well_368.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_368.bindPopup('Cardinal-Plant-M-4')
+
+  markers.addLayer(well_368);
+  oms.addMarker(well_368);
+  
+
+  
+
+  
+  var well_370 = L.marker(new L.LatLng(40.26966944, -80.64791389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-6?zoom=' + map_current_zoom + '&lat=40.26966944&lng=-80.64791389';  
+    });
+  }).on('mouseover', function (e) {
+    well_370.openPopup()
+  });
+
+  
+    well_370.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_370.bindPopup('Cardinal-Plant-M-6')
+
+  markers.addLayer(well_370);
+  oms.addMarker(well_370);
+  
+
+  
+
+  
+  var well_372 = L.marker(new L.LatLng(40.27696944, -80.661175)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-2?zoom=' + map_current_zoom + '&lat=40.27696944&lng=-80.661175';  
+    });
+  }).on('mouseover', function (e) {
+    well_372.openPopup()
+  });
+
+  
+    well_372.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_372.bindPopup('Cardinal-Plant-M-2')
+
+  markers.addLayer(well_372);
+  oms.addMarker(well_372);
+  
+
+  
+  var well_373 = L.marker(new L.LatLng(40.27795556, -80.66169722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-3?zoom=' + map_current_zoom + '&lat=40.27795556&lng=-80.66169722';  
+    });
+  }).on('mouseover', function (e) {
+    well_373.openPopup()
+  });
+
+  
+    well_373.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_373.bindPopup('Cardinal-Plant-M-3')
+
+  markers.addLayer(well_373);
+  oms.addMarker(well_373);
+  
+
+  
+
+  
+  var well_375 = L.marker(new L.LatLng(40.261575, -80.64505556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-8?zoom=' + map_current_zoom + '&lat=40.261575&lng=-80.64505556';  
+    });
+  }).on('mouseover', function (e) {
+    well_375.openPopup()
+  });
+
+  
+    well_375.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_375.bindPopup('Cardinal-Plant-M-8')
+
+  markers.addLayer(well_375);
+  oms.addMarker(well_375);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_389 = L.marker(new L.LatLng(40.26415556, -80.64350278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-23?zoom=' + map_current_zoom + '&lat=40.26415556&lng=-80.64350278';  
+    });
+  }).on('mouseover', function (e) {
+    well_389.openPopup()
+  });
+
+  
+    well_389.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_389.bindPopup('Cardinal-Plant-M-23')
+
+  markers.addLayer(well_389);
+  oms.addMarker(well_389);
+  
+
+  
+  var well_390 = L.marker(new L.LatLng(40.26688889, -80.63894444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-22?zoom=' + map_current_zoom + '&lat=40.26688889&lng=-80.63894444';  
+    });
+  }).on('mouseover', function (e) {
+    well_390.openPopup()
+  });
+
+  
+    well_390.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_390.bindPopup('Cardinal-Plant-M-22')
+
+  markers.addLayer(well_390);
+  oms.addMarker(well_390);
+  
+
+  
+  var well_391 = L.marker(new L.LatLng(40.26558333, -80.64941111)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64941111';  
+    });
+  }).on('mouseover', function (e) {
+    well_391.openPopup()
+  });
+
+  
+    well_391.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_391.bindPopup('Cardinal-Plant-M-21')
+
+  markers.addLayer(well_391);
+  oms.addMarker(well_391);
+  
+
+  
+  var well_392 = L.marker(new L.LatLng(40.26704444, -80.65188611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-20?zoom=' + map_current_zoom + '&lat=40.26704444&lng=-80.65188611';  
+    });
+  }).on('mouseover', function (e) {
+    well_392.openPopup()
+  });
+
+  
+    well_392.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_392.bindPopup('Cardinal-Plant-M-20')
+
+  markers.addLayer(well_392);
+  oms.addMarker(well_392);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_418 = L.marker(new L.LatLng(40.26558333, -80.64940556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64940556';  
+    });
+  }).on('mouseover', function (e) {
+    well_418.openPopup()
+  });
+
+  
+    well_418.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_418.bindPopup('Cardinal-Plant-S-21')
+
+  markers.addLayer(well_418);
+  oms.addMarker(well_418);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_454 = L.marker(new L.LatLng(40.27260556, -80.637)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-14?zoom=' + map_current_zoom + '&lat=40.27260556&lng=-80.637';  
+    });
+  }).on('mouseover', function (e) {
+    well_454.openPopup()
+  });
+
+  
+    well_454.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_454.bindPopup('Cardinal-Plant-S-14')
+
+  markers.addLayer(well_454);
+  oms.addMarker(well_454);
+  
+
+  
+  var well_455 = L.marker(new L.LatLng(40.27392222, -80.64273333)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-15?zoom=' + map_current_zoom + '&lat=40.27392222&lng=-80.64273333';  
+    });
+  }).on('mouseover', function (e) {
+    well_455.openPopup()
+  });
+
+  
+    well_455.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_455.bindPopup('Cardinal-Plant-S-15')
+
+  markers.addLayer(well_455);
+  oms.addMarker(well_455);
+  
+
+  
+  var well_456 = L.marker(new L.LatLng(40.27946944, -80.64883056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-16?zoom=' + map_current_zoom + '&lat=40.27946944&lng=-80.64883056';  
+    });
+  }).on('mouseover', function (e) {
+    well_456.openPopup()
+  });
+
+  
+    well_456.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_456.bindPopup('Cardinal-Plant-S-16')
+
+  markers.addLayer(well_456);
+  oms.addMarker(well_456);
+  
+
+  
+  var well_457 = L.marker(new L.LatLng(40.27492222, -80.66158056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.66158056';  
+    });
+  }).on('mouseover', function (e) {
+    well_457.openPopup()
+  });
+
+  
+    well_457.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_457.bindPopup('Cardinal-Plant-S-17')
+
+  markers.addLayer(well_457);
+  oms.addMarker(well_457);
+  
+
+  
+  var well_458 = L.marker(new L.LatLng(40.26959444, -80.64864722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-10?zoom=' + map_current_zoom + '&lat=40.26959444&lng=-80.64864722';  
+    });
+  }).on('mouseover', function (e) {
+    well_458.openPopup()
+  });
+
+  
+    well_458.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_458.bindPopup('Cardinal-Plant-S-10')
+
+  markers.addLayer(well_458);
+  oms.addMarker(well_458);
+  
+
+  
+  var well_459 = L.marker(new L.LatLng(40.27291389, -80.65076389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-11?zoom=' + map_current_zoom + '&lat=40.27291389&lng=-80.65076389';  
+    });
+  }).on('mouseover', function (e) {
+    well_459.openPopup()
+  });
+
+  
+    well_459.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_459.bindPopup('Cardinal-Plant-S-11')
+
+  markers.addLayer(well_459);
+  oms.addMarker(well_459);
+  
+
+  
+
+  
+  var well_461 = L.marker(new L.LatLng(40.26888889, -80.64220278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-13?zoom=' + map_current_zoom + '&lat=40.26888889&lng=-80.64220278';  
+    });
+  }).on('mouseover', function (e) {
+    well_461.openPopup()
+  });
+
+  
+    well_461.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_461.bindPopup('Cardinal-Plant-S-13')
+
+  markers.addLayer(well_461);
+  oms.addMarker(well_461);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_466 = L.marker(new L.LatLng(40.27040833, -80.65886944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-18?zoom=' + map_current_zoom + '&lat=40.27040833&lng=-80.65886944';  
+    });
+  }).on('mouseover', function (e) {
+    well_466.openPopup()
+  });
+
+  
+    well_466.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_466.bindPopup('Cardinal-Plant-S-18')
+
+  markers.addLayer(well_466);
+  oms.addMarker(well_466);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_569 = L.marker(new L.LatLng(40.27742222, -80.6589)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-6?zoom=' + map_current_zoom + '&lat=40.27742222&lng=-80.6589';  
+    });
+  }).on('mouseover', function (e) {
+    well_569.openPopup()
+  });
+
+  
+    well_569.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_569.bindPopup('Cardinal-Plant-S-6')
+
+  markers.addLayer(well_569);
+  oms.addMarker(well_569);
+  
+
+  
+  var well_570 = L.marker(new L.LatLng(40.26971944, -80.64825278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-7?zoom=' + map_current_zoom + '&lat=40.26971944&lng=-80.64825278';  
+    });
+  }).on('mouseover', function (e) {
+    well_570.openPopup()
+  });
+
+  
+    well_570.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_570.bindPopup('Cardinal-Plant-S-7')
+
+  markers.addLayer(well_570);
+  oms.addMarker(well_570);
+  
+
+  
+  var well_571 = L.marker(new L.LatLng(40.27695278, -80.661175)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-4?zoom=' + map_current_zoom + '&lat=40.27695278&lng=-80.661175';  
+    });
+  }).on('mouseover', function (e) {
+    well_571.openPopup()
+  });
+
+  
+    well_571.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_571.bindPopup('Cardinal-Plant-S-4')
+
+  markers.addLayer(well_571);
+  oms.addMarker(well_571);
+  
+
+  
+  var well_572 = L.marker(new L.LatLng(40.27796667, -80.66169167)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-5?zoom=' + map_current_zoom + '&lat=40.27796667&lng=-80.66169167';  
+    });
+  }).on('mouseover', function (e) {
+    well_572.openPopup()
+  });
+
+  
+    well_572.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_572.bindPopup('Cardinal-Plant-S-5')
+
+  markers.addLayer(well_572);
+  oms.addMarker(well_572);
+  
+
+  
+  var well_573 = L.marker(new L.LatLng(40.26768611, -80.65524167)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-2?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65524167';  
+    });
+  }).on('mouseover', function (e) {
+    well_573.openPopup()
+  });
+
+  
+    well_573.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_573.bindPopup('Cardinal-Plant-S-2')
+
+  markers.addLayer(well_573);
+  oms.addMarker(well_573);
+  
+
+  
+
+  
+  var well_575 = L.marker(new L.LatLng(40.26853056, -80.65382778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382778';  
+    });
+  }).on('mouseover', function (e) {
+    well_575.openPopup()
+  });
+
+  
+    well_575.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_575.bindPopup('Cardinal-Plant-S-1')
+
+  markers.addLayer(well_575);
+  oms.addMarker(well_575);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_644 = L.marker(new L.LatLng(40.26704722, -80.65189722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-20?zoom=' + map_current_zoom + '&lat=40.26704722&lng=-80.65189722';  
+    });
+  }).on('mouseover', function (e) {
+    well_644.openPopup()
+  });
+
+  
+    well_644.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_644.bindPopup('Cardinal-Plant-S-20')
+
+  markers.addLayer(well_644);
+  oms.addMarker(well_644);
+  
+
+  
+
+  
+  var well_646 = L.marker(new L.LatLng(40.26688333, -80.63893611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-22?zoom=' + map_current_zoom + '&lat=40.26688333&lng=-80.63893611';  
+    });
+  }).on('mouseover', function (e) {
+    well_646.openPopup()
+  });
+
+  
+    well_646.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_646.bindPopup('Cardinal-Plant-S-22')
+
+  markers.addLayer(well_646);
+  oms.addMarker(well_646);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1016 = L.marker(new L.LatLng(40.26768611, -80.65522778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-5?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65522778';  
+    });
+  }).on('mouseover', function (e) {
+    well_1016.openPopup()
+  });
+
+  
+    well_1016.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_1016.bindPopup('Cardinal-Plant-M-5')
+
+  markers.addLayer(well_1016);
+  oms.addMarker(well_1016);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1033 = L.marker(new L.LatLng(40.26853056, -80.65382222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382222';  
+    });
+  }).on('mouseover', function (e) {
+    well_1033.openPopup()
+  });
+
+  
+    well_1033.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_1033.bindPopup('Cardinal-Plant-M-1')
+
+  markers.addLayer(well_1033);
+  oms.addMarker(well_1033);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1062 = L.marker(new L.LatLng(40.26421667, -80.64123056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-9?zoom=' + map_current_zoom + '&lat=40.26421667&lng=-80.64123056';  
+    });
+  }).on('mouseover', function (e) {
+    well_1062.openPopup()
+  });
+
+  
+    well_1062.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_1062.bindPopup('Cardinal-Plant-M-9')
+
+  markers.addLayer(well_1062);
+  oms.addMarker(well_1062);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(40.2462, -80.6526), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Well</strong> View <a class="close-well pull-right" href="/facilities/cardinal-plant">&times;</a></h5>
+
+<h1>Cardinal-Plant-S-4</h1>
+
+
+<h4>Designation</h4>
+<h2>Upgradient</h2>
+
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaminant Status</h4>
+    <h2>Upgradient, Not In Compliance</h2>
+  </div>
+  <div class="col-sm-2">
+    
+    <div class="indicator violation upgradient"><span class="caret"></span></div>
+    
+  </div>
+</div>
+
+<div class="content contaminants">
+
+<h4 class="thin"><strong>Pollutant</strong> Details</h4>
+<br />
+
+
+
+<div class="contaminants">
+
+  
+      <div class="element element-clickable exceeded" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="4 exceedances of Mn at this well">
+        <span class="contaminant-symbol">Mn</span>
+        
+        <span class="contaminant-name">Manganese</span>
+        
+      </div>
+  
+
+</div>
+
+
+  
+  <div id="element-Mn" class="element-details">
+    <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mn">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Mn</h2>
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Manganese</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>4 / 4</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-2"><strong>Date</strong></div>
+        <div class="col-sm-3"><strong>Concentration</strong></div>
+        <div class="col-sm-3"><strong>Magnitude</strong></div>
+        <div class="col-sm-3"><strong>Limit Exceeded</strong></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">5/24/10</div>
+        <div class="col-sm-3 history">2.35 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">7.83x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">10/6/10</div>
+        <div class="col-sm-3 history">1.81 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">6.03x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">3/23/11</div>
+        <div class="col-sm-3 history">2.2 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">7.33x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-2 history">8/11/11</div>
+        <div class="col-sm-3 history">2.24 mg/l</div>
+
+        
+        <div class="col-sm-3 history magnitude">7.47x limit</div>
+        <div class="col-sm-3 history">0.3mg/l (LHA)</div>
+        
+      </div>
+      
+
+    </div>
+  
+  </div>
+  
+
+
+
+</div>
+
+
+    
+      </main>
+    
+    
+
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47560197-1', 'ashtracker.org');
+      ga('send', 'pageview');
+
+    </script>
+    
+  </body>
+
+</html>

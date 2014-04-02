@@ -1,0 +1,7129 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Bruce-Mansfield-MW-8" />
+    <meta property="twitter:url" content="wells/bruce_mansfield/2014-03-31-Bruce-Mansfield-MW-8" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="Ashtracker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="wells/bruce_mansfield/2014-03-31-Bruce-Mansfield-MW-8" />
+    <meta property="og:title" content="Bruce-Mansfield-MW-8" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="wells/bruce_mansfield/2014-03-31-Bruce-Mansfield-MW-8" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="Bruce-Mansfield-MW-8" />
+
+    <meta name="fragment" content="!" />
+
+    <title>Bruce-Mansfield-MW-8 | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
+        
+    
+      <div id="map" class="site-map"></div>
+
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend">Legend</a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-2 col-xs-offset-1">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="upgradient indicator neutral"><span class="caret"></span></div>
+            <p>Upgradient</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="downgradient indicator neutral"><span class="caret"></span></div>
+            <p>Downgradient</p>
+          </div>          
+        </div>
+      </div>
+
+      <main role="content" class="site-content">
+        <a name="content-top" id="content-top"></a>
+    
+
+    
+
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 40.617361, params.lng || -80.530611],
+    mapbox_zoom    = params.zoom || 12;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_8 = L.marker(new L.LatLng(40.588444, -80.498194)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-34?zoom=' + map_current_zoom + '&lat=40.588444&lng=-80.498194';  
+    });
+  }).on('mouseover', function (e) {
+    well_8.openPopup()
+  });
+
+  
+    well_8.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_8.bindPopup('Bruce-Mansfield-S-34')
+
+  markers.addLayer(well_8);
+  oms.addMarker(well_8);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_16 = L.marker(new L.LatLng(40.58925, -80.501611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-33?zoom=' + map_current_zoom + '&lat=40.58925&lng=-80.501611';  
+    });
+  }).on('mouseover', function (e) {
+    well_16.openPopup()
+  });
+
+  
+    well_16.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_16.bindPopup('Bruce-Mansfield-S-33')
+
+  markers.addLayer(well_16);
+  oms.addMarker(well_16);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_23 = L.marker(new L.LatLng(40.611417, -80.5405)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-31?zoom=' + map_current_zoom + '&lat=40.611417&lng=-80.5405';  
+    });
+  }).on('mouseover', function (e) {
+    well_23.openPopup()
+  });
+
+  
+    well_23.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_23.bindPopup('Bruce-Mansfield-S-31')
+
+  markers.addLayer(well_23);
+  oms.addMarker(well_23);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_45 = L.marker(new L.LatLng(40.608333, -80.501611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-dwq-3?zoom=' + map_current_zoom + '&lat=40.608333&lng=-80.501611';  
+    });
+  }).on('mouseover', function (e) {
+    well_45.openPopup()
+  });
+
+  
+    well_45.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_45.bindPopup('Bruce-Mansfield-DWQ-3')
+
+  markers.addLayer(well_45);
+  oms.addMarker(well_45);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_84 = L.marker(new L.LatLng(40.633528, -80.51725)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-15a?zoom=' + map_current_zoom + '&lat=40.633528&lng=-80.51725';  
+    });
+  }).on('mouseover', function (e) {
+    well_84.openPopup()
+  });
+
+  
+    well_84.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_84.bindPopup('Bruce-Mansfield-MW-15A')
+
+  markers.addLayer(well_84);
+  oms.addMarker(well_84);
+  
+
+  
+  var well_85 = L.marker(new L.LatLng(40.633528, -80.517194)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-15b?zoom=' + map_current_zoom + '&lat=40.633528&lng=-80.517194';  
+    });
+  }).on('mouseover', function (e) {
+    well_85.openPopup()
+  });
+
+  
+    well_85.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_85.bindPopup('Bruce-Mansfield-MW-15B')
+
+  markers.addLayer(well_85);
+  oms.addMarker(well_85);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_143 = L.marker(new L.LatLng(40.620444, -80.506028)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-dw-74?zoom=' + map_current_zoom + '&lat=40.620444&lng=-80.506028';  
+    });
+  }).on('mouseover', function (e) {
+    well_143.openPopup()
+  });
+
+  
+    well_143.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_143.bindPopup('Bruce-Mansfield-DW-74')
+
+  markers.addLayer(well_143);
+  oms.addMarker(well_143);
+  
+
+  
+
+  
+  var well_145 = L.marker(new L.LatLng(40.620444, -80.506028)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-dw-72?zoom=' + map_current_zoom + '&lat=40.620444&lng=-80.506028';  
+    });
+  }).on('mouseover', function (e) {
+    well_145.openPopup()
+  });
+
+  
+    well_145.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_145.bindPopup('Bruce-Mansfield-DW-72')
+
+  markers.addLayer(well_145);
+  oms.addMarker(well_145);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_218 = L.marker(new L.LatLng(40.608194, -80.521611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-11a?zoom=' + map_current_zoom + '&lat=40.608194&lng=-80.521611';  
+    });
+  }).on('mouseover', function (e) {
+    well_218.openPopup()
+  });
+
+  
+    well_218.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_218.bindPopup('Bruce-Mansfield-MW-11A')
+
+  markers.addLayer(well_218);
+  oms.addMarker(well_218);
+  
+
+  
+  var well_219 = L.marker(new L.LatLng(40.60875, -80.518417)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-11b?zoom=' + map_current_zoom + '&lat=40.60875&lng=-80.518417';  
+    });
+  }).on('mouseover', function (e) {
+    well_219.openPopup()
+  });
+
+  
+    well_219.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_219.bindPopup('Bruce-Mansfield-MW-11B')
+
+  markers.addLayer(well_219);
+  oms.addMarker(well_219);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_233 = L.marker(new L.LatLng(40.599272, -80.521022)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-stipec?zoom=' + map_current_zoom + '&lat=40.599272&lng=-80.521022';  
+    });
+  }).on('mouseover', function (e) {
+    well_233.openPopup()
+  });
+
+  
+    well_233.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_233.bindPopup('Bruce-Mansfield-Stipec')
+
+  markers.addLayer(well_233);
+  oms.addMarker(well_233);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_246 = L.marker(new L.LatLng(40.6205, -80.538694)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-29?zoom=' + map_current_zoom + '&lat=40.6205&lng=-80.538694';  
+    });
+  }).on('mouseover', function (e) {
+    well_246.openPopup()
+  });
+
+  
+    well_246.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_246.bindPopup('Bruce-Mansfield-S-29')
+
+  markers.addLayer(well_246);
+  oms.addMarker(well_246);
+  
+
+  
+  var well_247 = L.marker(new L.LatLng(40.620722, -80.538389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-28?zoom=' + map_current_zoom + '&lat=40.620722&lng=-80.538389';  
+    });
+  }).on('mouseover', function (e) {
+    well_247.openPopup()
+  });
+
+  
+    well_247.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_247.bindPopup('Bruce-Mansfield-S-28')
+
+  markers.addLayer(well_247);
+  oms.addMarker(well_247);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_252 = L.marker(new L.LatLng(40.627917, -80.500944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-21?zoom=' + map_current_zoom + '&lat=40.627917&lng=-80.500944';  
+    });
+  }).on('mouseover', function (e) {
+    well_252.openPopup()
+  });
+
+  
+    well_252.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_252.bindPopup('Bruce-Mansfield-S-21')
+
+  markers.addLayer(well_252);
+  oms.addMarker(well_252);
+  
+
+  
+
+  
+  var well_254 = L.marker(new L.LatLng(40.610139, -80.5395)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-23?zoom=' + map_current_zoom + '&lat=40.610139&lng=-80.5395';  
+    });
+  }).on('mouseover', function (e) {
+    well_254.openPopup()
+  });
+
+  
+    well_254.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_254.bindPopup('Bruce-Mansfield-S-23')
+
+  markers.addLayer(well_254);
+  oms.addMarker(well_254);
+  
+
+  
+
+  
+
+  
+  var well_257 = L.marker(new L.LatLng(40.632972, -80.504333)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-16-mc?zoom=' + map_current_zoom + '&lat=40.632972&lng=-80.504333';  
+    });
+  }).on('mouseover', function (e) {
+    well_257.openPopup()
+  });
+
+  
+    well_257.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_257.bindPopup('Bruce-Mansfield-S-16-MC')
+
+  markers.addLayer(well_257);
+  oms.addMarker(well_257);
+  
+
+  
+
+  
+
+  
+  var well_260 = L.marker(new L.LatLng(40.608389, -80.50475)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-4a?zoom=' + map_current_zoom + '&lat=40.608389&lng=-80.50475';  
+    });
+  }).on('mouseover', function (e) {
+    well_260.openPopup()
+  });
+
+  
+    well_260.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_260.bindPopup('Bruce-Mansfield-MW-4A')
+
+  markers.addLayer(well_260);
+  oms.addMarker(well_260);
+  
+
+  
+
+  
+  var well_262 = L.marker(new L.LatLng(40.608222, -80.505)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-4b?zoom=' + map_current_zoom + '&lat=40.608222&lng=-80.505';  
+    });
+  }).on('mouseover', function (e) {
+    well_262.openPopup()
+  });
+
+  
+    well_262.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_262.bindPopup('Bruce-Mansfield-MW-4B')
+
+  markers.addLayer(well_262);
+  oms.addMarker(well_262);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_270 = L.marker(new L.LatLng(40.62375, -80.504917)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-3a?zoom=' + map_current_zoom + '&lat=40.62375&lng=-80.504917';  
+    });
+  }).on('mouseover', function (e) {
+    well_270.openPopup()
+  });
+
+  
+    well_270.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_270.bindPopup('Bruce-Mansfield-MW-3A')
+
+  markers.addLayer(well_270);
+  oms.addMarker(well_270);
+  
+
+  
+  var well_271 = L.marker(new L.LatLng(40.624389, -80.504667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-3b?zoom=' + map_current_zoom + '&lat=40.624389&lng=-80.504667';  
+    });
+  }).on('mouseover', function (e) {
+    well_271.openPopup()
+  });
+
+  
+    well_271.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_271.bindPopup('Bruce-Mansfield-MW-3B')
+
+  markers.addLayer(well_271);
+  oms.addMarker(well_271);
+  
+
+  
+
+  
+
+  
+  var well_274 = L.marker(new L.LatLng(40.622028, -80.499583)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-9a?zoom=' + map_current_zoom + '&lat=40.622028&lng=-80.499583';  
+    });
+  }).on('mouseover', function (e) {
+    well_274.openPopup()
+  });
+
+  
+    well_274.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_274.bindPopup('Bruce-Mansfield-S-9A')
+
+  markers.addLayer(well_274);
+  oms.addMarker(well_274);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_288 = L.marker(new L.LatLng(40.623028, -80.497556)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-18b?zoom=' + map_current_zoom + '&lat=40.623028&lng=-80.497556';  
+    });
+  }).on('mouseover', function (e) {
+    well_288.openPopup()
+  });
+
+  
+    well_288.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_288.bindPopup('Bruce-Mansfield-MW-18B')
+
+  markers.addLayer(well_288);
+  oms.addMarker(well_288);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_338 = L.marker(new L.LatLng(40.629472, -80.508361)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-16c?zoom=' + map_current_zoom + '&lat=40.629472&lng=-80.508361';  
+    });
+  }).on('mouseover', function (e) {
+    well_338.openPopup()
+  });
+
+  
+    well_338.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_338.bindPopup('Bruce-Mansfield-MW-16C')
+
+  markers.addLayer(well_338);
+  oms.addMarker(well_338);
+  
+
+  
+  var well_339 = L.marker(new L.LatLng(40.62947222, -80.508306)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-16b?zoom=' + map_current_zoom + '&lat=40.62947222&lng=-80.508306';  
+    });
+  }).on('mouseover', function (e) {
+    well_339.openPopup()
+  });
+
+  
+    well_339.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_339.bindPopup('Bruce-Mansfield-MW-16B')
+
+  markers.addLayer(well_339);
+  oms.addMarker(well_339);
+  
+
+  
+  var well_340 = L.marker(new L.LatLng(40.597411, -80.509889)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-dwq-04-1?zoom=' + map_current_zoom + '&lat=40.597411&lng=-80.509889';  
+    });
+  }).on('mouseover', function (e) {
+    well_340.openPopup()
+  });
+
+  
+    well_340.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_340.bindPopup('Bruce-Mansfield-DWQ-04-1')
+
+  markers.addLayer(well_340);
+  oms.addMarker(well_340);
+  
+
+  
+
+  
+
+  
+  var well_343 = L.marker(new L.LatLng(40.633028, -80.504361)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-20a?zoom=' + map_current_zoom + '&lat=40.633028&lng=-80.504361';  
+    });
+  }).on('mouseover', function (e) {
+    well_343.openPopup()
+  });
+
+  
+    well_343.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_343.bindPopup('Bruce-Mansfield-MW-20A')
+
+  markers.addLayer(well_343);
+  oms.addMarker(well_343);
+  
+
+  
+  var well_344 = L.marker(new L.LatLng(40.632972, -80.504389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-20b?zoom=' + map_current_zoom + '&lat=40.632972&lng=-80.504389';  
+    });
+  }).on('mouseover', function (e) {
+    well_344.openPopup()
+  });
+
+  
+    well_344.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_344.bindPopup('Bruce-Mansfield-MW-20B')
+
+  markers.addLayer(well_344);
+  oms.addMarker(well_344);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_420 = L.marker(new L.LatLng(40.614194, -80.532306)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-7a?zoom=' + map_current_zoom + '&lat=40.614194&lng=-80.532306';  
+    });
+  }).on('mouseover', function (e) {
+    well_420.openPopup()
+  });
+
+  
+    well_420.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_420.bindPopup('Bruce-Mansfield-MW-7A')
+
+  markers.addLayer(well_420);
+  oms.addMarker(well_420);
+  
+
+  
+  var well_421 = L.marker(new L.LatLng(40.614222, -80.532278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-7b?zoom=' + map_current_zoom + '&lat=40.614222&lng=-80.532278';  
+    });
+  }).on('mouseover', function (e) {
+    well_421.openPopup()
+  });
+
+  
+    well_421.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_421.bindPopup('Bruce-Mansfield-MW-7B')
+
+  markers.addLayer(well_421);
+  oms.addMarker(well_421);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_437 = L.marker(new L.LatLng(40.633, -80.519056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-23a?zoom=' + map_current_zoom + '&lat=40.633&lng=-80.519056';  
+    });
+  }).on('mouseover', function (e) {
+    well_437.openPopup()
+  });
+
+  
+    well_437.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_437.bindPopup('Bruce-Mansfield-MW-23A')
+
+  markers.addLayer(well_437);
+  oms.addMarker(well_437);
+  
+
+  
+
+  
+  var well_439 = L.marker(new L.LatLng(40.633056, -80.519056)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-23b?zoom=' + map_current_zoom + '&lat=40.633056&lng=-80.519056';  
+    });
+  }).on('mouseover', function (e) {
+    well_439.openPopup()
+  });
+
+  
+    well_439.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_439.bindPopup('Bruce-Mansfield-MW-23B')
+
+  markers.addLayer(well_439);
+  oms.addMarker(well_439);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_469 = L.marker(new L.LatLng(40.611528, -80.487417)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-11-mc?zoom=' + map_current_zoom + '&lat=40.611528&lng=-80.487417';  
+    });
+  }).on('mouseover', function (e) {
+    well_469.openPopup()
+  });
+
+  
+    well_469.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_469.bindPopup('Bruce-Mansfield-S-11-MC')
+
+  markers.addLayer(well_469);
+  oms.addMarker(well_469);
+  
+
+  
+  var well_470 = L.marker(new L.LatLng(40.611719, -80.541044)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mark&#39;s-run?zoom=' + map_current_zoom + '&lat=40.611719&lng=-80.541044';  
+    });
+  }).on('mouseover', function (e) {
+    well_470.openPopup()
+  });
+
+  
+    well_470.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_470.bindPopup('Bruce-Mansfield-Mark&#39;s-Run')
+
+  markers.addLayer(well_470);
+  oms.addMarker(well_470);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_485 = L.marker(new L.LatLng(40.624917, -80.517972)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-12c?zoom=' + map_current_zoom + '&lat=40.624917&lng=-80.517972';  
+    });
+  }).on('mouseover', function (e) {
+    well_485.openPopup()
+  });
+
+  
+    well_485.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_485.bindPopup('Bruce-Mansfield-MW-12C')
+
+  markers.addLayer(well_485);
+  oms.addMarker(well_485);
+  
+
+  
+  var well_486 = L.marker(new L.LatLng(40.624917, -80.518028)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-12b?zoom=' + map_current_zoom + '&lat=40.624917&lng=-80.518028';  
+    });
+  }).on('mouseover', function (e) {
+    well_486.openPopup()
+  });
+
+  
+    well_486.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_486.bindPopup('Bruce-Mansfield-MW-12B')
+
+  markers.addLayer(well_486);
+  oms.addMarker(well_486);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_520 = L.marker(new L.LatLng(40.632028, -80.517778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-2r?zoom=' + map_current_zoom + '&lat=40.632028&lng=-80.517778';  
+    });
+  }).on('mouseover', function (e) {
+    well_520.openPopup()
+  });
+
+  
+    well_520.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_520.bindPopup('Bruce-Mansfield-MW-2R')
+
+  markers.addLayer(well_520);
+  oms.addMarker(well_520);
+  
+
+  
+
+  
+
+  
+
+  
+  var well_524 = L.marker(new L.LatLng(40.630583, -80.502833)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-19a?zoom=' + map_current_zoom + '&lat=40.630583&lng=-80.502833';  
+    });
+  }).on('mouseover', function (e) {
+    well_524.openPopup()
+  });
+
+  
+    well_524.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_524.bindPopup('Bruce-Mansfield-MW-19A')
+
+  markers.addLayer(well_524);
+  oms.addMarker(well_524);
+  
+
+  
+  var well_525 = L.marker(new L.LatLng(40.630528, -80.502806)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-19b?zoom=' + map_current_zoom + '&lat=40.630528&lng=-80.502806';  
+    });
+  }).on('mouseover', function (e) {
+    well_525.openPopup()
+  });
+
+  
+    well_525.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_525.bindPopup('Bruce-Mansfield-MW-19B')
+
+  markers.addLayer(well_525);
+  oms.addMarker(well_525);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_533 = L.marker(new L.LatLng(40.623056, -80.497528)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-18a?zoom=' + map_current_zoom + '&lat=40.623056&lng=-80.497528';  
+    });
+  }).on('mouseover', function (e) {
+    well_533.openPopup()
+  });
+
+  
+    well_533.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_533.bindPopup('Bruce-Mansfield-MW-18A')
+
+  markers.addLayer(well_533);
+  oms.addMarker(well_533);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_551 = L.marker(new L.LatLng(40.598556, -80.507972)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-26?zoom=' + map_current_zoom + '&lat=40.598556&lng=-80.507972';  
+    });
+  }).on('mouseover', function (e) {
+    well_551.openPopup()
+  });
+
+  
+    well_551.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_551.bindPopup('Bruce-Mansfield-MW-26')
+
+  markers.addLayer(well_551);
+  oms.addMarker(well_551);
+  
+
+  
+
+  
+  var well_553 = L.marker(new L.LatLng(40.611333, -80.53225)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-24?zoom=' + map_current_zoom + '&lat=40.611333&lng=-80.53225';  
+    });
+  }).on('mouseover', function (e) {
+    well_553.openPopup()
+  });
+
+  
+    well_553.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_553.bindPopup('Bruce-Mansfield-MW-24')
+
+  markers.addLayer(well_553);
+  oms.addMarker(well_553);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_564 = L.marker(new L.LatLng(40.603778, -80.491111)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-35?zoom=' + map_current_zoom + '&lat=40.603778&lng=-80.491111';  
+    });
+  }).on('mouseover', function (e) {
+    well_564.openPopup()
+  });
+
+  
+    well_564.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_564.bindPopup('Bruce-Mansfield-S-35')
+
+  markers.addLayer(well_564);
+  oms.addMarker(well_564);
+  
+
+  
+  var well_565 = L.marker(new L.LatLng(40.610139, -80.5395)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-32?zoom=' + map_current_zoom + '&lat=40.610139&lng=-80.5395';  
+    });
+  }).on('mouseover', function (e) {
+    well_565.openPopup()
+  });
+
+  
+    well_565.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_565.bindPopup('Bruce-Mansfield-S-32')
+
+  markers.addLayer(well_565);
+  oms.addMarker(well_565);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_576 = L.marker(new L.LatLng(40.631139, -80.507833)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-17b?zoom=' + map_current_zoom + '&lat=40.631139&lng=-80.507833';  
+    });
+  }).on('mouseover', function (e) {
+    well_576.openPopup()
+  });
+
+  
+    well_576.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_576.bindPopup('Bruce-Mansfield-MW-17B')
+
+  markers.addLayer(well_576);
+  oms.addMarker(well_576);
+  
+
+  
+
+  
+  var well_578 = L.marker(new L.LatLng(40.631111, -80.507778)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-17a?zoom=' + map_current_zoom + '&lat=40.631111&lng=-80.507778';  
+    });
+  }).on('mouseover', function (e) {
+    well_578.openPopup()
+  });
+
+  
+    well_578.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_578.bindPopup('Bruce-Mansfield-MW-17A')
+
+  markers.addLayer(well_578);
+  oms.addMarker(well_578);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_599 = L.marker(new L.LatLng(40.614889, -80.505222)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-14ar?zoom=' + map_current_zoom + '&lat=40.614889&lng=-80.505222';  
+    });
+  }).on('mouseover', function (e) {
+    well_599.openPopup()
+  });
+
+  
+    well_599.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_599.bindPopup('Bruce-Mansfield-MW-14AR')
+
+  markers.addLayer(well_599);
+  oms.addMarker(well_599);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_658 = L.marker(new L.LatLng(40.615806, -80.535722)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-30?zoom=' + map_current_zoom + '&lat=40.615806&lng=-80.535722';  
+    });
+  }).on('mouseover', function (e) {
+    well_658.openPopup()
+  });
+
+  
+    well_658.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_658.bindPopup('Bruce-Mansfield-S-30')
+
+  markers.addLayer(well_658);
+  oms.addMarker(well_658);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_673 = L.marker(new L.LatLng(40.617361, -80.530611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-8?zoom=' + map_current_zoom + '&lat=40.617361&lng=-80.530611';  
+    });
+  }).on('mouseover', function (e) {
+    well_673.openPopup()
+  });
+
+  
+    well_673.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_673.bindPopup('Bruce-Mansfield-MW-8')
+
+  markers.addLayer(well_673);
+  oms.addMarker(well_673);
+  
+
+  
+
+  
+
+  
+  var well_676 = L.marker(new L.LatLng(40.604611, -80.52825)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-6?zoom=' + map_current_zoom + '&lat=40.604611&lng=-80.52825';  
+    });
+  }).on('mouseover', function (e) {
+    well_676.openPopup()
+  });
+
+  
+    well_676.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_676.bindPopup('Bruce-Mansfield-MW-6')
+
+  markers.addLayer(well_676);
+  oms.addMarker(well_676);
+  
+
+  
+
+  
+  var well_678 = L.marker(new L.LatLng(40.632, -80.51775)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-1?zoom=' + map_current_zoom + '&lat=40.632&lng=-80.51775';  
+    });
+  }).on('mouseover', function (e) {
+    well_678.openPopup()
+  });
+
+  
+    well_678.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_678.bindPopup('Bruce-Mansfield-MW-1')
+
+  markers.addLayer(well_678);
+  oms.addMarker(well_678);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_724 = L.marker(new L.LatLng(40.629889, -80.514972)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-13b?zoom=' + map_current_zoom + '&lat=40.629889&lng=-80.514972';  
+    });
+  }).on('mouseover', function (e) {
+    well_724.openPopup()
+  });
+
+  
+    well_724.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_724.bindPopup('Bruce-Mansfield-MW-13B')
+
+  markers.addLayer(well_724);
+  oms.addMarker(well_724);
+  
+
+  
+  var well_725 = L.marker(new L.LatLng(40.629944, -80.514889)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-13a?zoom=' + map_current_zoom + '&lat=40.629944&lng=-80.514889';  
+    });
+  }).on('mouseover', function (e) {
+    well_725.openPopup()
+  });
+
+  
+    well_725.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_725.bindPopup('Bruce-Mansfield-MW-13A')
+
+  markers.addLayer(well_725);
+  oms.addMarker(well_725);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_806 = L.marker(new L.LatLng(40.636194, -80.507944)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-22b?zoom=' + map_current_zoom + '&lat=40.636194&lng=-80.507944';  
+    });
+  }).on('mouseover', function (e) {
+    well_806.openPopup()
+  });
+
+  
+    well_806.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_806.bindPopup('Bruce-Mansfield-MW-22B')
+
+  markers.addLayer(well_806);
+  oms.addMarker(well_806);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_812 = L.marker(new L.LatLng(40.63352778, -80.51719444)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-16a?zoom=' + map_current_zoom + '&lat=40.63352778&lng=-80.51719444';  
+    });
+  }).on('mouseover', function (e) {
+    well_812.openPopup()
+  });
+
+  
+    well_812.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_812.bindPopup('Bruce-Mansfield-MW-16A')
+
+  markers.addLayer(well_812);
+  oms.addMarker(well_812);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_820 = L.marker(new L.LatLng(40.614944, -80.505111)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-14br?zoom=' + map_current_zoom + '&lat=40.614944&lng=-80.505111';  
+    });
+  }).on('mouseover', function (e) {
+    well_820.openPopup()
+  });
+
+  
+    well_820.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_820.bindPopup('Bruce-Mansfield-MW-14BR')
+
+  markers.addLayer(well_820);
+  oms.addMarker(well_820);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_833 = L.marker(new L.LatLng(40.596022, -80.505553)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-dwq-04-2?zoom=' + map_current_zoom + '&lat=40.596022&lng=-80.505553';  
+    });
+  }).on('mouseover', function (e) {
+    well_833.openPopup()
+  });
+
+  
+    well_833.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_833.bindPopup('Bruce-Mansfield-DWQ-04-2')
+
+  markers.addLayer(well_833);
+  oms.addMarker(well_833);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_839 = L.marker(new L.LatLng(40.611778, -80.540633)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-lr-2?zoom=' + map_current_zoom + '&lat=40.611778&lng=-80.540633';  
+    });
+  }).on('mouseover', function (e) {
+    well_839.openPopup()
+  });
+
+  
+    well_839.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_839.bindPopup('Bruce-Mansfield-LR-2')
+
+  markers.addLayer(well_839);
+  oms.addMarker(well_839);
+  
+
+  
+  var well_840 = L.marker(new L.LatLng(40.614975, -80.537389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-lr-1?zoom=' + map_current_zoom + '&lat=40.614975&lng=-80.537389';  
+    });
+  }).on('mouseover', function (e) {
+    well_840.openPopup()
+  });
+
+  
+    well_840.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_840.bindPopup('Bruce-Mansfield-LR-1')
+
+  markers.addLayer(well_840);
+  oms.addMarker(well_840);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_893 = L.marker(new L.LatLng(40.608694, -80.530667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-dwq-69?zoom=' + map_current_zoom + '&lat=40.608694&lng=-80.530667';  
+    });
+  }).on('mouseover', function (e) {
+    well_893.openPopup()
+  });
+
+  
+    well_893.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_893.bindPopup('Bruce-Mansfield-DWQ-69')
+
+  markers.addLayer(well_893);
+  oms.addMarker(well_893);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_910 = L.marker(new L.LatLng(40.623861, -80.523278)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-9br?zoom=' + map_current_zoom + '&lat=40.623861&lng=-80.523278';  
+    });
+  }).on('mouseover', function (e) {
+    well_910.openPopup()
+  });
+
+  
+    well_910.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_910.bindPopup('Bruce-Mansfield-MW-9BR')
+
+  markers.addLayer(well_910);
+  oms.addMarker(well_910);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_958 = L.marker(new L.LatLng(40.596222, -80.499389)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-5r?zoom=' + map_current_zoom + '&lat=40.596222&lng=-80.499389';  
+    });
+  }).on('mouseover', function (e) {
+    well_958.openPopup()
+  });
+
+  
+    well_958.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_958.bindPopup('Bruce-Mansfield-MW-5R')
+
+  markers.addLayer(well_958);
+  oms.addMarker(well_958);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_982 = L.marker(new L.LatLng(40.616861, -80.495611)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-8a?zoom=' + map_current_zoom + '&lat=40.616861&lng=-80.495611';  
+    });
+  }).on('mouseover', function (e) {
+    well_982.openPopup()
+  });
+
+  
+    well_982.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_982.bindPopup('Bruce-Mansfield-S-8A')
+
+  markers.addLayer(well_982);
+  oms.addMarker(well_982);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1039 = L.marker(new L.LatLng(40.632472, -80.509)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-15?zoom=' + map_current_zoom + '&lat=40.632472&lng=-80.509';  
+    });
+  }).on('mouseover', function (e) {
+    well_1039.openPopup()
+  });
+
+  
+    well_1039.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_1039.bindPopup('Bruce-Mansfield-S-15')
+
+  markers.addLayer(well_1039);
+  oms.addMarker(well_1039);
+  
+
+  
+  var well_1040 = L.marker(new L.LatLng(40.63175, -80.505139)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-17?zoom=' + map_current_zoom + '&lat=40.63175&lng=-80.505139';  
+    });
+  }).on('mouseover', function (e) {
+    well_1040.openPopup()
+  });
+
+  
+    well_1040.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_1040.bindPopup('Bruce-Mansfield-S-17')
+
+  markers.addLayer(well_1040);
+  oms.addMarker(well_1040);
+  
+
+  
+
+  
+
+  
+  var well_1043 = L.marker(new L.LatLng(40.633833, -80.507417)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-21b?zoom=' + map_current_zoom + '&lat=40.633833&lng=-80.507417';  
+    });
+  }).on('mouseover', function (e) {
+    well_1043.openPopup()
+  });
+
+  
+    well_1043.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_1043.bindPopup('Bruce-Mansfield-MW-21B')
+
+  markers.addLayer(well_1043);
+  oms.addMarker(well_1043);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1051 = L.marker(new L.LatLng(40.62855, -80.517925)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-10r2?zoom=' + map_current_zoom + '&lat=40.62855&lng=-80.517925';  
+    });
+  }).on('mouseover', function (e) {
+    well_1051.openPopup()
+  });
+
+  
+    well_1051.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_1051.bindPopup('Bruce-Mansfield-MW-10R2')
+
+  markers.addLayer(well_1051);
+  oms.addMarker(well_1051);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1064 = L.marker(new L.LatLng(40.6355, -80.503667)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-s-10-mc?zoom=' + map_current_zoom + '&lat=40.6355&lng=-80.503667';  
+    });
+  }).on('mouseover', function (e) {
+    well_1064.openPopup()
+  });
+
+  
+    well_1064.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_1064.bindPopup('Bruce-Mansfield-S-10-MC')
+
+  markers.addLayer(well_1064);
+  oms.addMarker(well_1064);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_1076 = L.marker(new L.LatLng(40.606889, -80.530361)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-mw-25?zoom=' + map_current_zoom + '&lat=40.606889&lng=-80.530361';  
+    });
+  }).on('mouseover', function (e) {
+    well_1076.openPopup()
+  });
+
+  
+    well_1076.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_1076.bindPopup('Bruce-Mansfield-MW-25')
+
+  markers.addLayer(well_1076);
+  oms.addMarker(well_1076);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(40.638056, -80.416111), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Well</strong> View <a class="close-well pull-right" href="/facilities/bruce-mansfield">&times;</a></h5>
+
+<h1>Bruce-Mansfield-MW-8</h1>
+
+
+<h4>Designation</h4>
+<h2>Downgradient</h2>
+
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaminant Status</h4>
+    <h2>Downgradient, In Compliance</h2>
+  </div>
+  <div class="col-sm-2">
+    
+    <div class="indicator compliance downgradient"><span class="caret"></span></div>
+    
+  </div>
+</div>
+
+<div class="content contaminants">
+
+
+
+<div class="contaminants">
+
+</div>
+
+
+
+
+</div>
+
+
+    
+      </main>
+    
+    
+
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47560197-1', 'ashtracker.org');
+      ga('send', 'pageview');
+
+    </script>
+    
+  </body>
+
+</html>
