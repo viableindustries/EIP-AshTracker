@@ -89,7 +89,7 @@ main h3.clear,
 
 .brand {
   background-color: rgb(242,242,242);
-  background-image: url(../img/eip-logo.png);
+  background-image: url(../img/ashtracker_light.png);
   background-position: 18px 6px;
   background-repeat: no-repeat;
   display: block;
@@ -306,6 +306,14 @@ main .statistic {
   font-weight: bold;
 }
 
+main .leader-heading {
+  text-transform: uppercase;
+  font-family: "HelventicaNeue-CondensedBold", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin: 24px 0 16px;
+}
+
 main .leaderboard {
   font-family: "proxima-nova", "HelventicaNeue-CondensedBold", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -340,12 +348,30 @@ main .facility-wells span.key {
   font-weight: bold;
 }
 
+main .unmapped {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid rgb(200,208,216);
+  border-radius: 2px;
+  font-weight: bold;
+  margin: 0 4px;
+}
+
 main h2 {
   font-size: 16px;
   line-height: 1;
   letter-spacing: 1px;
   margin: 0;
   padding-bottom: 16px;
+}
+
+main h2.well-count {
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid rgb(200,208,216);
+  border-radius: 4px;
+  margin: 4px 0 16px 0;
 }
 
 main .content h2 {
@@ -816,6 +842,10 @@ main .element-details .chemical-name h2:first-child {
   border-bottom-color: rgb(32,147,76);
 }
 
+.element.compliant:hover {
+  background-color: rgb(36,168,87);
+}
+
 .element.violation {
   background-color: rgb(169, 41, 9);
   color: rgb(252, 252, 252);
@@ -878,8 +908,12 @@ main .element-details .chemical-name h2:first-child {
   margin: 8px 0;
 }
 
-.magnitude {
-  color: rgb(189,41,58);
+.magnitude-false {
+  color: rgb(41,189,98);
+}
+
+.magnitude-true {
+  color: rgb(255,189,41);
 }
 
 /**

@@ -1,0 +1,6993 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Flint-Creek-Power-Plant-B-01B" />
+    <meta property="twitter:url" content="wells/flint_creek/2014-05-01-flint-creek-power-plant-b-01b" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="Ashtracker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="wells/flint_creek/2014-05-01-flint-creek-power-plant-b-01b" />
+    <meta property="og:title" content="Flint-Creek-Power-Plant-B-01B" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="wells/flint_creek/2014-05-01-flint-creek-power-plant-b-01b" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="Flint-Creek-Power-Plant-B-01B" />
+
+    <meta name="fragment" content="!" />
+
+    <title>Flint-Creek-Power-Plant-B-01B | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
+        
+    
+      <div id="map" class="site-map"></div>
+
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend">Legend</a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-2 col-xs-offset-1">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="upgradient indicator neutral"><span class="caret"></span></div>
+            <p>Upgradient</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="downgradient indicator neutral"><span class="caret"></span></div>
+            <p>Downgradient</p>
+          </div>          
+        </div>
+      </div>
+
+      <main role="content" class="site-content">
+        <a name="content-top" id="content-top"></a>
+    
+
+    
+
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 36.260697, params.lng || -94.513442],
+    mapbox_zoom    = params.zoom || 12;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_15 = L.marker(new L.LatLng(36.260697, -94.513442)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-01b?zoom=' + map_current_zoom + '&lat=36.260697&lng=-94.513442';  
+    });
+  }).on('mouseover', function (e) {
+    well_15.openPopup()
+  });
+
+  
+    well_15.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_15.bindPopup('Flint-Creek-Power-Plant-B-01B')
+
+  markers.addLayer(well_15);
+  oms.addMarker(well_15);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_41 = L.marker(new L.LatLng(36.261419, -94.513272)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-07a?zoom=' + map_current_zoom + '&lat=36.261419&lng=-94.513272';  
+    });
+  }).on('mouseover', function (e) {
+    well_41.openPopup()
+  });
+
+  
+    well_41.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_41.bindPopup('Flint-Creek-Power-Plant-B-07A')
+
+  markers.addLayer(well_41);
+  oms.addMarker(well_41);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_57 = L.marker(new L.LatLng(36.257278, -94.516972)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-08?zoom=' + map_current_zoom + '&lat=36.257278&lng=-94.516972';  
+    });
+  }).on('mouseover', function (e) {
+    well_57.openPopup()
+  });
+
+  
+    well_57.setIcon(L.icon(icon_upgradient_violation));
+  
+
+  well_57.bindPopup('Flint-Creek-Power-Plant-B-08')
+
+  markers.addLayer(well_57);
+  oms.addMarker(well_57);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_80 = L.marker(new L.LatLng(36.258858, -94.511693)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';  
+    });
+  }).on('mouseover', function (e) {
+    well_80.openPopup()
+  });
+
+  
+    well_80.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_80.bindPopup('Flint-Creek-Power-Plant-B-04')
+
+  markers.addLayer(well_80);
+  oms.addMarker(well_80);
+  
+
+  
+
+  
+  var well_82 = L.marker(new L.LatLng(36.257273, -94.513837)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';  
+    });
+  }).on('mouseover', function (e) {
+    well_82.openPopup()
+  });
+
+  
+    well_82.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_82.bindPopup('Flint-Creek-Power-Plant-B-05')
+
+  markers.addLayer(well_82);
+  oms.addMarker(well_82);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_166 = L.marker(new L.LatLng(36.259574, -94.517268)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-3?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517268';  
+    });
+  }).on('mouseover', function (e) {
+    well_166.openPopup()
+  });
+
+  
+    well_166.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_166.bindPopup('Flint-Creek-Power-Plant-NE-3')
+
+  markers.addLayer(well_166);
+  oms.addMarker(well_166);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_192 = L.marker(new L.LatLng(36.259364, -94.518575)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-5?zoom=' + map_current_zoom + '&lat=36.259364&lng=-94.518575';  
+    });
+  }).on('mouseover', function (e) {
+    well_192.openPopup()
+  });
+
+  
+    well_192.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_192.bindPopup('Flint-Creek-Power-Plant-NE-5')
+
+  markers.addLayer(well_192);
+  oms.addMarker(well_192);
+  
+
+  
+  var well_193 = L.marker(new L.LatLng(36.260234, -94.51734)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-4?zoom=' + map_current_zoom + '&lat=36.260234&lng=-94.51734';  
+    });
+  }).on('mouseover', function (e) {
+    well_193.openPopup()
+  });
+
+  
+    well_193.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_193.bindPopup('Flint-Creek-Power-Plant-NE-4')
+
+  markers.addLayer(well_193);
+  oms.addMarker(well_193);
+  
+
+  
+
+  
+  var well_195 = L.marker(new L.LatLng(36.259574, -94.517474)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-2?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517474';  
+    });
+  }).on('mouseover', function (e) {
+    well_195.openPopup()
+  });
+
+  
+    well_195.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_195.bindPopup('Flint-Creek-Power-Plant-NE-2')
+
+  markers.addLayer(well_195);
+  oms.addMarker(well_195);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_202 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-7d?zoom=' + map_current_zoom + '&lat=36.258296&lng=-94.518796';  
+    });
+  }).on('mouseover', function (e) {
+    well_202.openPopup()
+  });
+
+  
+    well_202.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_202.bindPopup('Flint-Creek-Power-Plant-NE-7D')
+
+  markers.addLayer(well_202);
+  oms.addMarker(well_202);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_221 = L.marker(new L.LatLng(36.258044, -94.518009)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-8?zoom=' + map_current_zoom + '&lat=36.258044&lng=-94.518009';  
+    });
+  }).on('mouseover', function (e) {
+    well_221.openPopup()
+  });
+
+  
+    well_221.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_221.bindPopup('Flint-Creek-Power-Plant-NE-8')
+
+  markers.addLayer(well_221);
+  oms.addMarker(well_221);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_245 = L.marker(new L.LatLng(36.260861, -94.516727)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-1?zoom=' + map_current_zoom + '&lat=36.260861&lng=-94.516727';  
+    });
+  }).on('mouseover', function (e) {
+    well_245.openPopup()
+  });
+
+  
+    well_245.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_245.bindPopup('Flint-Creek-Power-Plant-NE-1')
+
+  markers.addLayer(well_245);
+  oms.addMarker(well_245);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_665 = L.marker(new L.LatLng(36.258858, -94.518781)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-6?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.518781';  
+    });
+  }).on('mouseover', function (e) {
+    well_665.openPopup()
+  });
+
+  
+    well_665.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_665.bindPopup('Flint-Creek-Power-Plant-NE-6')
+
+  markers.addLayer(well_665);
+  oms.addMarker(well_665);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_672 = L.marker(new L.LatLng(36.259546, -94.516108)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-02?zoom=' + map_current_zoom + '&lat=36.259546&lng=-94.516108';  
+    });
+  }).on('mouseover', function (e) {
+    well_672.openPopup()
+  });
+
+  
+    well_672.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_672.bindPopup('Flint-Creek-Power-Plant-B-02')
+
+  markers.addLayer(well_672);
+  oms.addMarker(well_672);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_816 = L.marker(new L.LatLng(36.260864, -94.516081)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';  
+    });
+  }).on('mouseover', function (e) {
+    well_816.openPopup()
+  });
+
+  
+    well_816.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_816.bindPopup('Flint-Creek-Power-Plant-B-06')
+
+  markers.addLayer(well_816);
+  oms.addMarker(well_816);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_875 = L.marker(new L.LatLng(36.258295, -94.518834)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-7s?zoom=' + map_current_zoom + '&lat=36.258295&lng=-94.518834';  
+    });
+  }).on('mouseover', function (e) {
+    well_875.openPopup()
+  });
+
+  
+    well_875.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_875.bindPopup('Flint-Creek-Power-Plant-NE-7S')
+
+  markers.addLayer(well_875);
+  oms.addMarker(well_875);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(36.256268, -94.523592), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Well</strong> Profile <a class="close-well pull-right" href="/facilities/flint-creek">&times;</a></h5>
+
+<h1>B-01B</h1>
+
+
+<h4>Designation</h4>
+<h2>Downgradient</h2>
+
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaminant Status</h4>
+    <h2>Downgradient, In Compliance</h2>
+  </div>
+  <div class="col-sm-2">
+    
+    <div class="indicator compliance downgradient"><span class="caret"></span></div>
+    
+  </div>
+</div>
+
+<h4>Total Violations / Total Samples</h4>
+<h2>0 / 48 </h2>
+
+<div class="content contaminants">
+
+<h4 class="thin"><strong>Pollutant</strong> Details</h4>
+<br />
+
+
+
+<div class="contaminants">
+
+  
+      <div class="element not-tracked" data-toggle="element-NH3" rel="tooltip" data-placement="top" data-original-title="Ammonia is not monitored at this well">
+        
+        <span class="contaminant-symbol">NH<sub>3</sub></span>
+        
+        
+        <span class="contaminant-name">Ammonia</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="Antimony is not monitored at this well">
+        
+        <span class="contaminant-symbol">Sb</span>
+        
+        
+        <span class="contaminant-name">Antimony</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="No As violations at this well">
+        
+        <span class="contaminant-symbol">As</span>
+        
+        
+        <span class="contaminant-name">Arsenic</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="No Ba violations at this well">
+        
+        <span class="contaminant-symbol">Ba</span>
+        
+        
+        <span class="contaminant-name">Barium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Beryllium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Be</span>
+        
+        
+        <span class="contaminant-name">Beryllium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="No B violations at this well">
+        
+        <span class="contaminant-symbol">B</span>
+        
+        
+        <span class="contaminant-name">Boron</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="No Cd violations at this well">
+        
+        <span class="contaminant-symbol">Cd</span>
+        
+        
+        <span class="contaminant-name">Cadmium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Cr" rel="tooltip" data-placement="top" data-original-title="No Cr violations at this well">
+        
+        <span class="contaminant-symbol">Cr</span>
+        
+        
+        <span class="contaminant-name">Chromium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" data-original-title="Cobalt is not monitored at this well">
+        
+        <span class="contaminant-symbol">Co</span>
+        
+        
+        <span class="contaminant-name">Cobalt</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Cu" rel="tooltip" data-placement="top" data-original-title="No Cu violations at this well">
+        
+        <span class="contaminant-symbol">Cu</span>
+        
+        
+        <span class="contaminant-name">Copper</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" data-original-title="Cyanide is not monitored at this well">
+        
+        <span class="contaminant-symbol">CN</span>
+        
+        
+        <span class="contaminant-name">Cyanide</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-F" rel="tooltip" data-placement="top" data-original-title="No F violations at this well">
+        
+        <span class="contaminant-symbol">F</span>
+        
+        
+        <span class="contaminant-name">Fluoride</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this well">
+        
+        <span class="contaminant-symbol">GAP</span>
+        
+        
+        <span class="contaminant-name">Gross Alpha</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this well">
+        
+        <span class="contaminant-symbol">GBP</span>
+        
+        
+        <span class="contaminant-name">Gross Beta</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="No Pb violations at this well">
+        
+        <span class="contaminant-symbol">Pb</span>
+        
+        
+        <span class="contaminant-name">Lead</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="No Mn violations at this well">
+        
+        <span class="contaminant-symbol">Mn</span>
+        
+        
+        <span class="contaminant-name">Manganese</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" data-original-title="Mercury is not monitored at this well">
+        
+        <span class="contaminant-symbol">Hg</span>
+        
+        
+        <span class="contaminant-name">Mercury</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="No Mo violations at this well">
+        
+        <span class="contaminant-symbol">Mo</span>
+        
+        
+        <span class="contaminant-name">Molybdenum</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="No Ni violations at this well">
+        
+        <span class="contaminant-symbol">Ni</span>
+        
+        
+        <span class="contaminant-name">Nickel</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-NO3" rel="tooltip" data-placement="top" data-original-title="Nitrate is not monitored at this well">
+        
+        <span class="contaminant-symbol">NO<sub>3</sub></span>
+        
+        
+        <span class="contaminant-name">Nitrate</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" data-original-title="Nitrite is not monitored at this well">
+        
+        <span class="contaminant-symbol">NO<sub>2</sub></span>
+        
+        
+        <span class="contaminant-name">Nitrite</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Ra" rel="tooltip" data-placement="top" data-original-title="Radium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Ra</span>
+        
+        
+        <span class="contaminant-name">Radium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Se" rel="tooltip" data-placement="top" data-original-title="Selenium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Se</span>
+        
+        
+        <span class="contaminant-name">Selenium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Ag" rel="tooltip" data-placement="top" data-original-title="No Ag violations at this well">
+        
+        <span class="contaminant-symbol">Ag</span>
+        
+        
+        <span class="contaminant-name">Silver</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Sr" rel="tooltip" data-placement="top" data-original-title="No Sr violations at this well">
+        
+        <span class="contaminant-symbol">Sr</span>
+        
+        
+        <span class="contaminant-name">Strontium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-SO4" rel="tooltip" data-placement="top" data-original-title="No SO4 violations at this well">
+        
+        <span class="contaminant-symbol">SO<sub>4</sub></span>
+        
+        
+        <span class="contaminant-name">Sulfate</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Tl" rel="tooltip" data-placement="top" data-original-title="Thallium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Tl</span>
+        
+        
+        <span class="contaminant-name">Thallium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" data-original-title="Tritium is not monitored at this well">
+        
+        <span class="contaminant-symbol">T</span>
+        
+        
+        <span class="contaminant-name">Tritium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-U" rel="tooltip" data-placement="top" data-original-title="No U violations at this well">
+        
+        <span class="contaminant-symbol">U</span>
+        
+        
+        <span class="contaminant-name">Uranium</span>
+        
+      </div>
+  
+
+</div>
+
+
+  
+    
+  
+    
+  
+    
+    <div id="element-As" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-As">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>As</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Arsenic</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 4 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.01 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.0003 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.030</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">7/20/2011</div>
+        <div class="col-sm-4 history">0.0002 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.020</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0007 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.070</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0005 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.050</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Ba" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Ba">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Ba</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Barium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 5 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>2 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.122 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.061</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.125 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.063</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">7/20/2011</div>
+        <div class="col-sm-4 history">0.132 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.066</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.135 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.068</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.123 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.061</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+    <div id="element-B" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-B">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>B</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Boron</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 4 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>3 mg/L (CHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.0063 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.002</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0294 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.010</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.037 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.012</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0317 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.011</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Cd" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Cd">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Cd</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Cadmium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 2 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.005 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0003 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.060</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0002 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.040</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Cr" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Cr">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Cr</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Chromium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 3 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.1 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0008 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.008</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0006 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.006</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0015 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.015</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+    <div id="element-Cu" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Cu">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Cu</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Copper</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 5 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>1.3 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.0011 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.001</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0657 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.051</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">7/20/2011</div>
+        <div class="col-sm-4 history">0.0016 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.001</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.004 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.003</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0066 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.005</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+    <div id="element-F" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-F">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>F</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Fluoride</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>4 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.71 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.177</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+    <div id="element-Pb" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Pb">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Pb</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Lead</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 4 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.015 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.0005 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.033</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0004 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.027</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0013 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.087</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.002 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.133</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Mn" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mn">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Mn</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Manganese</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 5 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.3 mg/L (LHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.0112 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.037</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0113 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.038</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">7/20/2011</div>
+        <div class="col-sm-4 history">0.0303 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.101</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0603 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.201</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0268 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.089</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+    <div id="element-Mo" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mo">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Mo</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Molybdenum</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 4 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.04 mg/L (LHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">0.0008 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.020</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0012 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.030</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0029 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.072</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">0.0012 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.030</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Ni" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Ni">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Ni</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Nickel</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.1 mg/L (LHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.0074 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.074</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <div id="element-Ag" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Ag">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Ag</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Silver</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.1 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.046 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.460</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Sr" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Sr">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Sr</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Strontium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>4 mg/L (LHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">0.71 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.177</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-SO4" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-SO4">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>SO<sub>4</sub></h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Sulfate</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 5 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>500 mg/L (DWA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/24/2011</div>
+        <div class="col-sm-4 history">31 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.062</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/25/2011</div>
+        <div class="col-sm-4 history">25.4 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.051</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">7/20/2011</div>
+        <div class="col-sm-4 history">22.2 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.044</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">24.2 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.048</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">1/25/2012</div>
+        <div class="col-sm-4 history">24.5 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.049</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+    <div id="element-U" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-U">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>U</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Uranium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.03 mg/l (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">10/26/2011</div>
+        <div class="col-sm-4 history">0.0007 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.023</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+
+
+
+</div>
+
+
+    
+      </main>
+    
+    
+
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47560197-1', 'ashtracker.org');
+      ga('send', 'pageview');
+
+    </script>
+    
+  </body>
+
+</html>

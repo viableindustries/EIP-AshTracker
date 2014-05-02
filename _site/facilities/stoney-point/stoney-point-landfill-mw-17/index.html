@@ -1,0 +1,6312 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index,follow,archive" />
+
+    <meta name="google-site-verification" content="" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Stoney-Point-Landfill-MW-17" />
+    <meta property="twitter:url" content="wells/stoney_point/2014-05-01-stoney-point-landfill-mw-17" />
+
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="Ashtracker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="wells/stoney_point/2014-05-01-stoney-point-landfill-mw-17" />
+    <meta property="og:title" content="Stoney-Point-Landfill-MW-17" />
+
+    <meta name="dcterms.type" content="Text" />
+    <meta name="dcterms.identifier" content="wells/stoney_point/2014-05-01-stoney-point-landfill-mw-17" />
+    <meta name="dcterms.format" content="text/html" />
+    <meta name="dcterms.title" content="Stoney-Point-Landfill-MW-17" />
+
+    <meta name="fragment" content="!" />
+
+    <title>Stoney-Point-Landfill-MW-17 | Ashtracker</title>
+
+    <script src="/static/lib/mapbox/mapbox-1.4.0.min.js"></script>    
+    <script src="/static/lib/leaflet/leaflet.markercluster.min.js"></script>    
+    <script src="/static/lib/leaflet/oms.min.js"></script>    
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Commons Cloud -->
+    <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="/static/js/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="">
+    
+    <header class="site-header">
+      <div class="brand-container">
+        <a class="brand" href="/"></a>
+      </div>
+
+      <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+      <a class="map-area pull-left" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <ul class="nav nav-justified">
+            <li class="about"><a href="/index">About</a></li>
+            <li><a href="/facilities" class="facilities">Facility Data</a></li>
+            <!-- 
+              <li role="presentation"><a href="/downloads"><span class="glyphicon glyphicon-download"></span> Downloads</a></li>
+             -->
+            
+              <li role="presentation"><a href="/glossary"><span class="glyphicon glyphicon-book"></span> Glossary</a></li>
+            
+            
+              <li role="presentation"><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            
+          </ul>
+        </nav>
+       </div>
+   </header>
+
+        
+    
+      <div id="map" class="site-map"></div>
+
+      <a data-toggle="tooltip" data-placement="top" data-original-title="Legend" class="leaflet-control-legend toggle-legend" href="#" title="Show/Hide Legend">Legend</a>
+
+      <div class="site-legend element-invisible">
+        <div class="row">
+          <div class="legend-item col-xs-2 col-xs-offset-1">
+            <div class="leaflet-marker-icon marker-cluster marker-cluster-medium" style="position:relative;padding-top: 1px;display: inline;display: inline-block;"><div style="margin-top: 4px;"><span>1</span></div></div>
+            <p>Cluster of Wells</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png" alt="Green pin signifying a well that is in compliance or has no water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well In Compliance</p>
+          </div>
+
+          <div class="legend-item col-xs-2">
+            <img src="http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png" alt="Red pin signifying a well that is in not compliance or has water contaminant exceedences" style="margin-bottom: -36px;" />
+            <p>Well Not In Compliance</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="upgradient indicator neutral"><span class="caret"></span></div>
+            <p>Upgradient</p>
+          </div>          
+
+          <div class="legend-item col-xs-2">
+            <div class="downgradient indicator neutral"><span class="caret"></span></div>
+            <p>Downgradient</p>
+          </div>          
+        </div>
+      </div>
+
+      <main role="content" class="site-content">
+        <a name="content-top" id="content-top"></a>
+    
+
+    
+
+<script>
+
+var params, map;
+
+/**
+ * Grab all of the URL parameters so that we can begin using
+ * data from them to set the map extent om
+ */
+var get_url_parameters = function () {
+  params = {};
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+    params[key] = value;
+  });
+};
+
+get_url_parameters();
+
+
+/**
+ * Setup MapBox  loour default map so that we can begin
+ * placing the pins we need to display search results
+ */
+var mapbox_id      = "developedsimple.g7pfo3pa",
+    mapbox_mapid   = "map",
+    mapbox_extent  = [params.lat || 41.988671, params.lng || -91.735669],
+    mapbox_zoom    = params.zoom || 12;    
+
+map = L.mapbox.map(mapbox_mapid, mapbox_id, {maxZoom: 18}).setView(mapbox_extent, mapbox_zoom);
+
+map.scrollWheelZoom.disable();
+
+/**
+ * Setup marker clustering
+ */
+var markers = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18, spiderfyOnMaxZoom: true, showCoverageOnHover: false, zoomToBoundsOnClick: true });
+var oms = new OverlappingMarkerSpiderfier(map, {
+  keepSpiderfied: true
+});
+var popup = new L.Popup();
+
+
+/**
+ * Setup Markers
+ */
+var icon_upgradient_compliant = {
+  "iconUrl": "/static/img/pin-upgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-compliant"
+}
+
+var icon_other_compliant = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+29A909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-compliant"
+}
+
+var icon_upgradient_violation = {
+  "iconUrl": "/static/img/pin-upgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "upgradient-violation"
+}
+
+var icon_downgradient_compliant = {
+  "iconUrl": "/static/img/pin-downgradient-compliant.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-compliant"
+}
+
+var icon_downgradient_violation = {
+  "iconUrl": "/static/img/pin-downgradient-violation.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "downgradient-violation"
+}
+
+var icon_other_violation = {
+  "iconUrl": "http://a.tiles.mapbox.com/v3/marker/pin-l+A92909.png",
+  "iconSize": [35, 90],
+  "iconAnchor": [35, 35],
+  "popupAnchor": [-16, -35],
+  "className": "other-violation"
+}
+
+/**
+ * Add each of our wells to the list
+ */
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_35 = L.marker(new L.LatLng(41.98892, -91.736269)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-22?zoom=' + map_current_zoom + '&lat=41.98892&lng=-91.736269';  
+    });
+  }).on('mouseover', function (e) {
+    well_35.openPopup()
+  });
+
+  
+    well_35.setIcon(L.icon(icon_downgradient_compliant));
+  
+
+  well_35.bindPopup('Stoney-Point-Landfill-MW-22')
+
+  markers.addLayer(well_35);
+  oms.addMarker(well_35);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_107 = L.marker(new L.LatLng(41.988663, -91.735742)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-16?zoom=' + map_current_zoom + '&lat=41.988663&lng=-91.735742';  
+    });
+  }).on('mouseover', function (e) {
+    well_107.openPopup()
+  });
+
+  
+    well_107.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_107.bindPopup('Stoney-Point-Landfill-MW-16')
+
+  markers.addLayer(well_107);
+  oms.addMarker(well_107);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_126 = L.marker(new L.LatLng(41.988876, -91.737557)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-11?zoom=' + map_current_zoom + '&lat=41.988876&lng=-91.737557';  
+    });
+  }).on('mouseover', function (e) {
+    well_126.openPopup()
+  });
+
+  
+    well_126.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_126.bindPopup('Stoney-Point-Landfill-MW-11')
+
+  markers.addLayer(well_126);
+  oms.addMarker(well_126);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_482 = L.marker(new L.LatLng(41.988671, -91.735669)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-17?zoom=' + map_current_zoom + '&lat=41.988671&lng=-91.735669';  
+    });
+  }).on('mouseover', function (e) {
+    well_482.openPopup()
+  });
+
+  
+    well_482.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_482.bindPopup('Stoney-Point-Landfill-MW-17')
+
+  markers.addLayer(well_482);
+  oms.addMarker(well_482);
+  
+
+  
+  var well_483 = L.marker(new L.LatLng(41.988761, -91.736557)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-14?zoom=' + map_current_zoom + '&lat=41.988761&lng=-91.736557';  
+    });
+  }).on('mouseover', function (e) {
+    well_483.openPopup()
+  });
+
+  
+    well_483.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_483.bindPopup('Stoney-Point-Landfill-MW-14')
+
+  markers.addLayer(well_483);
+  oms.addMarker(well_483);
+  
+
+  
+
+  
+  var well_485 = L.marker(new L.LatLng(41.988883, -91.73748)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-12?zoom=' + map_current_zoom + '&lat=41.988883&lng=-91.73748';  
+    });
+  }).on('mouseover', function (e) {
+    well_485.openPopup()
+  });
+
+  
+    well_485.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_485.bindPopup('Stoney-Point-Landfill-MW-12')
+
+  markers.addLayer(well_485);
+  oms.addMarker(well_485);
+  
+
+  
+  var well_486 = L.marker(new L.LatLng(41.988766, -91.736589)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-13?zoom=' + map_current_zoom + '&lat=41.988766&lng=-91.736589';  
+    });
+  }).on('mouseover', function (e) {
+    well_486.openPopup()
+  });
+
+  
+    well_486.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_486.bindPopup('Stoney-Point-Landfill-MW-13')
+
+  markers.addLayer(well_486);
+  oms.addMarker(well_486);
+  
+
+  
+  var well_487 = L.marker(new L.LatLng(41.988872, -91.7376)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-10?zoom=' + map_current_zoom + '&lat=41.988872&lng=-91.7376';  
+    });
+  }).on('mouseover', function (e) {
+    well_487.openPopup()
+  });
+
+  
+    well_487.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_487.bindPopup('Stoney-Point-Landfill-MW-10')
+
+  markers.addLayer(well_487);
+  oms.addMarker(well_487);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_515 = L.marker(new L.LatLng(41.9889, -91.736369)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-23?zoom=' + map_current_zoom + '&lat=41.9889&lng=-91.736369';  
+    });
+  }).on('mouseover', function (e) {
+    well_515.openPopup()
+  });
+
+  
+    well_515.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_515.bindPopup('Stoney-Point-Landfill-MW-23')
+
+  markers.addLayer(well_515);
+  oms.addMarker(well_515);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_547 = L.marker(new L.LatLng(41.986231, -91.737658)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-3?zoom=' + map_current_zoom + '&lat=41.986231&lng=-91.737658';  
+    });
+  }).on('mouseover', function (e) {
+    well_547.openPopup()
+  });
+
+  
+    well_547.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_547.bindPopup('Stoney-Point-Landfill-MW-3')
+
+  markers.addLayer(well_547);
+  oms.addMarker(well_547);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_559 = L.marker(new L.LatLng(41.987372, -91.737728)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-9?zoom=' + map_current_zoom + '&lat=41.987372&lng=-91.737728';  
+    });
+  }).on('mouseover', function (e) {
+    well_559.openPopup()
+  });
+
+  
+    well_559.setIcon(L.icon(icon_other_compliant));  
+  
+
+  well_559.bindPopup('Stoney-Point-Landfill-MW-9')
+
+  markers.addLayer(well_559);
+  oms.addMarker(well_559);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_614 = L.marker(new L.LatLng(41.986046, -91.735641)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-2a?zoom=' + map_current_zoom + '&lat=41.986046&lng=-91.735641';  
+    });
+  }).on('mouseover', function (e) {
+    well_614.openPopup()
+  });
+
+  
+    well_614.setIcon(L.icon(icon_upgradient_compliant));
+  
+
+  well_614.bindPopup('Stoney-Point-Landfill-MW-2A')
+
+  markers.addLayer(well_614);
+  oms.addMarker(well_614);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_631 = L.marker(new L.LatLng(41.988693, -91.73564)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-18?zoom=' + map_current_zoom + '&lat=41.988693&lng=-91.73564';  
+    });
+  }).on('mouseover', function (e) {
+    well_631.openPopup()
+  });
+
+  
+    well_631.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_631.bindPopup('Stoney-Point-Landfill-MW-18')
+
+  markers.addLayer(well_631);
+  oms.addMarker(well_631);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_638 = L.marker(new L.LatLng(41.988936, -91.736315)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-21?zoom=' + map_current_zoom + '&lat=41.988936&lng=-91.736315';  
+    });
+  }).on('mouseover', function (e) {
+    well_638.openPopup()
+  });
+
+  
+    well_638.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_638.bindPopup('Stoney-Point-Landfill-MW-21')
+
+  markers.addLayer(well_638);
+  oms.addMarker(well_638);
+  
+
+  
+  var well_639 = L.marker(new L.LatLng(41.986124, -91.737616)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-20?zoom=' + map_current_zoom + '&lat=41.986124&lng=-91.737616';  
+    });
+  }).on('mouseover', function (e) {
+    well_639.openPopup()
+  });
+
+  
+    well_639.setIcon(L.icon(icon_other_violation));
+  
+
+  well_639.bindPopup('Stoney-Point-Landfill-MW-20')
+
+  markers.addLayer(well_639);
+  oms.addMarker(well_639);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_684 = L.marker(new L.LatLng(41.986186, -91.737623)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-8?zoom=' + map_current_zoom + '&lat=41.986186&lng=-91.737623';  
+    });
+  }).on('mouseover', function (e) {
+    well_684.openPopup()
+  });
+
+  
+    well_684.setIcon(L.icon(icon_other_violation));
+  
+
+  well_684.bindPopup('Stoney-Point-Landfill-MW-8')
+
+  markers.addLayer(well_684);
+  oms.addMarker(well_684);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  var well_710 = L.marker(new L.LatLng(41.988765, -91.736503)).on('click', function (e) {
+    oms.addListener('click', function(markers) {
+      var map_current_zoom = map.getZoom();
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-15?zoom=' + map_current_zoom + '&lat=41.988765&lng=-91.736503';  
+    });
+  }).on('mouseover', function (e) {
+    well_710.openPopup()
+  });
+
+  
+    well_710.setIcon(L.icon(icon_downgradient_violation));
+  
+
+  well_710.bindPopup('Stoney-Point-Landfill-MW-15')
+
+  markers.addLayer(well_710);
+  oms.addMarker(well_710);
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+
+      /**
+       * Add the facility to the marker list
+       */
+      var this_facility = L.marker(new L.LatLng(41.987522, -91.736781), {
+         icon: L.mapbox.marker.icon({
+           'marker-size': 'large',
+           'marker-color': '2984BD',
+           'marker-symbol': 'industrial'
+         })
+      });
+      map.addLayer(this_facility);
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+
+
+/**
+ * Add the marker list to the map
+ */
+map.addLayer(markers);
+
+</script>
+
+<h5><strong>Well</strong> Profile <a class="close-well pull-right" href="/facilities/stoney-point">&times;</a></h5>
+
+<h1>MW-17</h1>
+
+
+<h4>Designation</h4>
+<h2>Downgradient</h2>
+
+
+<div class="row content contaminant-status">
+  <div class="col-sm-10">
+    <h4>Contaminant Status</h4>
+    <h2>Downgradient, Not In Compliance</h2>
+  </div>
+  <div class="col-sm-2">
+    
+    <div class="indicator violation downgradient"><span class="caret"></span></div>
+    
+  </div>
+</div>
+
+<h4>Total Violations / Total Samples</h4>
+<h2>7 / 18 (39%)</h2>
+
+<div class="content contaminants">
+
+<h4 class="thin"><strong>Pollutant</strong> Details</h4>
+<br />
+
+
+
+<div class="contaminants">
+
+  
+      <div class="element not-tracked" data-toggle="element-NH3" rel="tooltip" data-placement="top" data-original-title="Ammonia is not monitored at this well">
+        
+        <span class="contaminant-symbol">NH<sub>3</sub></span>
+        
+        
+        <span class="contaminant-name">Ammonia</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="Antimony is not monitored at this well">
+        
+        <span class="contaminant-symbol">Sb</span>
+        
+        
+        <span class="contaminant-name">Antimony</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="No As violations at this well">
+        
+        <span class="contaminant-symbol">As</span>
+        
+        
+        <span class="contaminant-name">Arsenic</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="No Ba violations at this well">
+        
+        <span class="contaminant-symbol">Ba</span>
+        
+        
+        <span class="contaminant-name">Barium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Beryllium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Be</span>
+        
+        
+        <span class="contaminant-name">Beryllium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="No B violations at this well">
+        
+        <span class="contaminant-symbol">B</span>
+        
+        
+        <span class="contaminant-name">Boron</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="Cadmium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Cd</span>
+        
+        
+        <span class="contaminant-name">Cadmium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Cr" rel="tooltip" data-placement="top" data-original-title="Chromium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Cr</span>
+        
+        
+        <span class="contaminant-name">Chromium</span>
+        
+      </div>
+  
+      <div class="element element-clickable compliant" data-toggle="element-Co" rel="tooltip" data-placement="top" data-original-title="No Co violations at this well">
+        
+        <span class="contaminant-symbol">Co</span>
+        
+        
+        <span class="contaminant-name">Cobalt</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" data-original-title="Copper is not monitored at this well">
+        
+        <span class="contaminant-symbol">Cu</span>
+        
+        
+        <span class="contaminant-name">Copper</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" data-original-title="Cyanide is not monitored at this well">
+        
+        <span class="contaminant-symbol">CN</span>
+        
+        
+        <span class="contaminant-name">Cyanide</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-F" rel="tooltip" data-placement="top" data-original-title="Fluoride is not monitored at this well">
+        
+        <span class="contaminant-symbol">F</span>
+        
+        
+        <span class="contaminant-name">Fluoride</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this well">
+        
+        <span class="contaminant-symbol">GAP</span>
+        
+        
+        <span class="contaminant-name">Gross Alpha</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this well">
+        
+        <span class="contaminant-symbol">GBP</span>
+        
+        
+        <span class="contaminant-name">Gross Beta</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="Lead is not monitored at this well">
+        
+        <span class="contaminant-symbol">Pb</span>
+        
+        
+        <span class="contaminant-name">Lead</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="3 Manganese violations at this well" >
+        
+        <span class="contaminant-symbol">Mn</span>
+        
+        
+        <span class="contaminant-name">Manganese</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" data-original-title="Mercury is not monitored at this well">
+        
+        <span class="contaminant-symbol">Hg</span>
+        
+        
+        <span class="contaminant-name">Mercury</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="Molybdenum is not monitored at this well">
+        
+        <span class="contaminant-symbol">Mo</span>
+        
+        
+        <span class="contaminant-name">Molybdenum</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="Nickel is not monitored at this well">
+        
+        <span class="contaminant-symbol">Ni</span>
+        
+        
+        <span class="contaminant-name">Nickel</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-NO3" rel="tooltip" data-placement="top" data-original-title="Nitrate is not monitored at this well">
+        
+        <span class="contaminant-symbol">NO<sub>3</sub></span>
+        
+        
+        <span class="contaminant-name">Nitrate</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" data-original-title="Nitrite is not monitored at this well">
+        
+        <span class="contaminant-symbol">NO<sub>2</sub></span>
+        
+        
+        <span class="contaminant-name">Nitrite</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Ra" rel="tooltip" data-placement="top" data-original-title="Radium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Ra</span>
+        
+        
+        <span class="contaminant-name">Radium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Se" rel="tooltip" data-placement="top" data-original-title="Selenium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Se</span>
+        
+        
+        <span class="contaminant-name">Selenium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" data-original-title="Silver is not monitored at this well">
+        
+        <span class="contaminant-symbol">Ag</span>
+        
+        
+        <span class="contaminant-name">Silver</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" data-original-title="Strontium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Sr</span>
+        
+        
+        <span class="contaminant-name">Strontium</span>
+        
+      </div>
+  
+      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" data-original-title="4 Sulfate violations at this well" >
+        
+        <span class="contaminant-symbol">SO<sub>4</sub></span>
+        
+        
+        <span class="contaminant-name">Sulfate</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-Tl" rel="tooltip" data-placement="top" data-original-title="Thallium is not monitored at this well">
+        
+        <span class="contaminant-symbol">Tl</span>
+        
+        
+        <span class="contaminant-name">Thallium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" data-original-title="Tritium is not monitored at this well">
+        
+        <span class="contaminant-symbol">T</span>
+        
+        
+        <span class="contaminant-name">Tritium</span>
+        
+      </div>
+  
+      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" data-original-title="Uranium is not monitored at this well">
+        
+        <span class="contaminant-symbol">U</span>
+        
+        
+        <span class="contaminant-name">Uranium</span>
+        
+      </div>
+  
+
+</div>
+
+
+  
+    
+  
+    
+  
+    
+    <div id="element-As" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-As">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>As</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Arsenic</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.01 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/11/2013</div>
+        <div class="col-sm-4 history">0.0019 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.190</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Ba" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Ba">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Ba</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Barium</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 4 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>2 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/31/10</div>
+        <div class="col-sm-4 history">0.0953 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.048</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/13/11</div>
+        <div class="col-sm-4 history">0.103 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.051</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/18/2012</div>
+        <div class="col-sm-4 history">0.116 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.058</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/11/2013</div>
+        <div class="col-sm-4 history">0.116 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.058</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+    <div id="element-B" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-B">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>B</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Boron</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 4 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>3 mg/L (CHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/31/10</div>
+        <div class="col-sm-4 history">0.961 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.320</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/13/11</div>
+        <div class="col-sm-4 history">1.69 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.563</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/18/2012</div>
+        <div class="col-sm-4 history">2 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.667</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/11/2013</div>
+        <div class="col-sm-4 history">2.97 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.990</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+    <div id="element-Co" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Co">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Co</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Cobalt</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 1 </h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.0047 mg/l (RSL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/31/10</div>
+        <div class="col-sm-4 history">0.00357 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.760</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <div id="element-Mn" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Mn">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Mn</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Manganese</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>3 / 4 (75%)</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.3 mg/L (LHA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/31/10</div>
+        <div class="col-sm-4 history">0.274 mg/L</div>
+        <div class="col-sm-4 history magnitude-false">0.913</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/13/11</div>
+        <div class="col-sm-4 history">0.327 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.090</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/18/2012</div>
+        <div class="col-sm-4 history">0.355 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.183</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/11/2013</div>
+        <div class="col-sm-4 history">0.352 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.173</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <div id="element-SO4" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-SO4">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          <h4>Chemical Symbol</h4>
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>SO<sub>4</sub></h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Sulfate</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>4 / 4 (100%)</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>500 mg/L (DWA)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/31/10</div>
+        <div class="col-sm-4 history">702 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.404</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/13/11</div>
+        <div class="col-sm-4 history">691 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.382</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/18/2012</div>
+        <div class="col-sm-4 history">840 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.680</div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/11/2013</div>
+        <div class="col-sm-4 history">831 mg/L</div>
+        <div class="col-sm-4 history magnitude-true">1.662</div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+</div>
+
+
+    
+      </main>
+    
+    
+
+    <footer role="complementary" class="site-footer">
+      <div class="container">
+        <div class="row about">
+          <div class="col-sm-4">
+            <img src="/static/img/logo-inverse.png" alt="" title="" />
+          </div>
+
+          <div class="col-sm-4">
+            <address>
+              site_contact_street<br />
+              site_contact_city, site_contact_state site_contact_zipcode
+            </address>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              Phone: site_contact_phone<br />
+              Fax: site_contact_fax
+            </p>
+          </div>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-6">
+            <p>&copy; site_copyright Ashtracker, All rights reserved.</p>
+          </div>
+          <div class="col-sm-6">
+            <p><a class="pull-right" href="#" title="Read this applications Disclaimer and Use Policy">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/application.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47560197-1', 'ashtracker.org');
+      ga('send', 'pageview');
+
+    </script>
+    
+  </body>
+
+</html>
