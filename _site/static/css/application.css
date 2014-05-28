@@ -383,7 +383,8 @@ main .sample-bar {
 main .sample-bar span {
   display: block;
   height: 100%;
-  background: rgb(255,189,41);
+  /*background: rgb(255,189,41);*/
+  background: rgb(176,184,192);*/
 }
 
 main .percent-exceeded {
@@ -408,7 +409,7 @@ main h2 {
 main h2.well-count {
   display: inline-block;
   font-size: 16px;
-  padding: 8px;
+  padding: 4px 8px;
   border: 1px solid rgb(200,208,216);
   border-radius: 2px;
   margin: 4px 0 16px 0;
@@ -999,6 +1000,11 @@ main .element-details .chemical-name h2:first-child {
   margin: 16px 0;
 }
 
+.mon-label-left {
+  display: none;
+  font-weight: bold;
+}
+
 .history {
   margin: 8px 0;
 }
@@ -1020,12 +1026,14 @@ main .element-details .chemical-name h2:first-child {
   padding: 2px 4px;
   color: rgb(41,132,189);
   border: 1px solid rgb(41,132,189);
+  background: rgb(234,244,251);
   border-radius: 2px;
   cursor: default;
 }
 
 .magnitude span {
   padding: 2px 4px;
+  margin-right: 4px;
   border: 1px solid;
   border-radius: 3px;
   cursor: default;
@@ -1034,16 +1042,20 @@ main .element-details .chemical-name h2:first-child {
 .print-gray span {
   color: rgb(128,136,144);
   border-color: rgb(176,184,192);
+  background: rgb(240,240,240);
 }
 
 .print-green span {
   color: rgb(41,189,98);
   border-color: rgb(41,189,98);
+  background: rgb(234,251,241);
 }
 
-.print-yellow span {
-  color: rgb(255,189,41);
+.print-yellow span, .print-level-1 span, .print-level-2 span, .print-level-3 span, .print-level-4 span, .print-level-5 span {
+  /*color: rgb(255,189,41);*/
+  color: rgb(255,181,16);
   border-color: rgb(255,189,41);
+  background: rgb(255,243,218);
 }
 
 .wells {
@@ -1054,7 +1066,7 @@ main .element-details .chemical-name h2:first-child {
 .wells td {
   padding: 4px 0;
   vertical-align: middle;
-  /*width: 50%;*/
+  width: 33.33333333%;
 }
 
 .well-url, .well-url:hover, .well-url:focus {
@@ -1067,6 +1079,8 @@ main .element-details .chemical-name h2:first-child {
 .clean-well span {
   display: block;
   position: relative;
+  left: 50%;
+  margin-left: -8px;
   /*float: right;*/
   width: 16px;
   height: 16px;
@@ -1079,6 +1093,8 @@ main .element-details .chemical-name h2:first-child {
 .dirty-well span {
   display: block;
   position: relative;
+  left: 50%;
+  margin-left: -8px;
   /*float: right;*/
   width: 16px;
   height: 16px;
@@ -1086,10 +1102,6 @@ main .element-details .chemical-name h2:first-child {
   border-radius: 50%;
   /*background: rgb(189,41,58);*/
   text-indent: -9999px;
-}
-
-.data-align-center {
-  text-align: center;
 }
 
 /**
@@ -1184,6 +1196,24 @@ main .element-details .chemical-name h2:first-child {
  
   .indicator {
     display: none;
+  }
+
+  .mon-label-top {
+    display: none;
+  }
+
+  .mon-label-left {
+    display: inline;
+  }
+
+  .magnitude span:first-child {
+    padding: 0;
+    margin-right: 4px;
+    border: 0 none;
+    color: #333;
+    border-radius: 3px;
+    background: #f2f2f2;
+    cursor: default;
   }
 
 }
