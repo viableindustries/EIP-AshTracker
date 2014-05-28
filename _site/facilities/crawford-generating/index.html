@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -264,9 +269,10 @@ var icon_other_violation = {
 
   
   var well_11 = L.marker(new L.LatLng(41.830082, -87.722415)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/crawford-generating/crawford-generating-station-mw-1?zoom=' + map_current_zoom + '&lat=41.830082&lng=-87.722415';  
+      window.location.href = '/facilities/crawford-generating/crawford-generating-station-mw-1?zoom=' + map_current_zoom + '&lat=41.830082&lng=-87.722415';
     });
   }).on('mouseover', function (e) {
     well_11.openPopup()
@@ -1610,9 +1616,10 @@ var icon_other_violation = {
 
   
   var well_675 = L.marker(new L.LatLng(41.829858, -87.722663)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/crawford-generating/crawford-generating-station-mw-2?zoom=' + map_current_zoom + '&lat=41.829858&lng=-87.722663';  
+      window.location.href = '/facilities/crawford-generating/crawford-generating-station-mw-2?zoom=' + map_current_zoom + '&lat=41.829858&lng=-87.722663';
     });
   }).on('mouseover', function (e) {
     well_675.openPopup()
@@ -2266,12 +2273,47 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:100%"></span></div>
 <h2 class="well-count">2</h2><span> total with </span> 
-<h2 class="well-count">2</h2><span> out of compliance</span>
+<h2 class="well-count">2</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>30 / 264 (11%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="crawford-generating-station-mw-1/?zoom=18&amp;lat=41.830082&amp;lng=-87.722415">MW-1</a></td>
+      <td class="data-align-center">16</td>
+      
+      <td class="dirty-well data-align-center"><span>16</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="crawford-generating-station-mw-2/?zoom=18&amp;lat=41.829858&amp;lng=-87.722663">MW-2</a></td>
+      <td class="data-align-center">14</td>
+      
+      <td class="dirty-well data-align-center"><span>14</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:11%"></span></div>
+<h2>30 / 264 <span class="percent-exceeded">11%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2281,7 +2323,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2290,7 +2332,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" data-original-title="1 Antimony violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2299,7 +2341,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-As" data-placement="top" data-original-title="No As violations at this facility">
+      <div class="element compliant" data-toggle="element-As" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">As</span>
         
@@ -2308,7 +2350,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2317,7 +2359,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2326,7 +2368,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-B" data-placement="top" data-original-title="No B violations at this facility">
+      <div class="element compliant" data-toggle="element-B" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">B</span>
         
@@ -2335,7 +2377,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2344,7 +2386,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2353,7 +2395,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="5 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2362,7 +2404,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2371,7 +2413,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-CN" data-placement="top" data-original-title="No CN violations at this facility">
+      <div class="element compliant" data-toggle="element-CN" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2380,7 +2422,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2389,7 +2431,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2398,7 +2440,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2407,7 +2449,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Pb" data-placement="top" data-original-title="No Pb violations at this facility">
+      <div class="element compliant" data-toggle="element-Pb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2416,7 +2458,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="12 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="12 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2425,7 +2467,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Hg" data-placement="top" data-original-title="No Hg violations at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2434,7 +2476,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" data-original-title="Molybdenum is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2443,7 +2485,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ni" data-placement="top" data-original-title="No Ni violations at this facility">
+      <div class="element compliant" data-toggle="element-Ni" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2452,7 +2494,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2461,7 +2503,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO2" data-placement="top" data-original-title="No NO2 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO2" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2470,7 +2512,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2479,7 +2521,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2488,7 +2530,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ag" data-placement="top" data-original-title="No Ag violations at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2497,7 +2539,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2506,7 +2548,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="12 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="12 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2515,7 +2557,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Tl" data-placement="top" data-original-title="No Tl violations at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2524,7 +2566,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2533,7 +2575,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2554,7 +2596,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Crawford.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/crawford-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2608,6 +2650,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

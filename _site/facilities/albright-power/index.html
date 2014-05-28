@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -522,9 +527,10 @@ var icon_other_violation = {
 
   
   var well_140 = L.marker(new L.LatLng(39.48861111, -79.60194444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw206s?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.60194444';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw206s?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.60194444';
     });
   }).on('mouseover', function (e) {
     well_140.openPopup()
@@ -774,9 +780,10 @@ var icon_other_violation = {
 
   
   var well_257 = L.marker(new L.LatLng(39.48666667, -79.60972222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw201s2?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60972222';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw201s2?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60972222';
     });
   }).on('mouseover', function (e) {
     well_257.openPopup()
@@ -828,9 +835,10 @@ var icon_other_violation = {
 
   
   var well_275 = L.marker(new L.LatLng(39.4875, -79.60888889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw312s?zoom=' + map_current_zoom + '&lat=39.4875&lng=-79.60888889';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw312s?zoom=' + map_current_zoom + '&lat=39.4875&lng=-79.60888889';
     });
   }).on('mouseover', function (e) {
     well_275.openPopup()
@@ -864,9 +872,10 @@ var icon_other_violation = {
 
   
   var well_284 = L.marker(new L.LatLng(39.49333333, -79.59861111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw2?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.59861111';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw2?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.59861111';
     });
   }).on('mouseover', function (e) {
     well_284.openPopup()
@@ -884,9 +893,10 @@ var icon_other_violation = {
 
   
   var well_285 = L.marker(new L.LatLng(39.49333333, -79.66527778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw1?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.66527778';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw1?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.66527778';
     });
   }).on('mouseover', function (e) {
     well_285.openPopup()
@@ -908,9 +918,10 @@ var icon_other_violation = {
 
   
   var well_288 = L.marker(new L.LatLng(39.49333333, -79.59861111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw5?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.59861111';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw5?zoom=' + map_current_zoom + '&lat=39.49333333&lng=-79.59861111';
     });
   }).on('mouseover', function (e) {
     well_288.openPopup()
@@ -1052,9 +1063,10 @@ var icon_other_violation = {
 
   
   var well_351 = L.marker(new L.LatLng(39.48555556, -79.60166667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw301a?zoom=' + map_current_zoom + '&lat=39.48555556&lng=-79.60166667';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw301a?zoom=' + map_current_zoom + '&lat=39.48555556&lng=-79.60166667';
     });
   }).on('mouseover', function (e) {
     well_351.openPopup()
@@ -1312,9 +1324,10 @@ var icon_other_violation = {
 
   
   var well_472 = L.marker(new L.LatLng(39.485, -79.60694444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw205s?zoom=' + map_current_zoom + '&lat=39.485&lng=-79.60694444';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw205s?zoom=' + map_current_zoom + '&lat=39.485&lng=-79.60694444';
     });
   }).on('mouseover', function (e) {
     well_472.openPopup()
@@ -1336,9 +1349,10 @@ var icon_other_violation = {
 
   
   var well_475 = L.marker(new L.LatLng(39.48833333, -79.60833333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw311s?zoom=' + map_current_zoom + '&lat=39.48833333&lng=-79.60833333';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw311s?zoom=' + map_current_zoom + '&lat=39.48833333&lng=-79.60833333';
     });
   }).on('mouseover', function (e) {
     well_475.openPopup()
@@ -1514,9 +1528,10 @@ var icon_other_violation = {
 
   
   var well_555 = L.marker(new L.LatLng(39.49, -79.60527778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw318s?zoom=' + map_current_zoom + '&lat=39.49&lng=-79.60527778';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw318s?zoom=' + map_current_zoom + '&lat=39.49&lng=-79.60527778';
     });
   }).on('mouseover', function (e) {
     well_555.openPopup()
@@ -1610,9 +1625,10 @@ var icon_other_violation = {
 
   
   var well_594 = L.marker(new L.LatLng(39.48805556, -79.60972222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw313d1?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60972222';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw313d1?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60972222';
     });
   }).on('mouseover', function (e) {
     well_594.openPopup()
@@ -1820,9 +1836,10 @@ var icon_other_violation = {
 
   
   var well_690 = L.marker(new L.LatLng(39.48861111, -79.61083333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw314d?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.61083333';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw314d?zoom=' + map_current_zoom + '&lat=39.48861111&lng=-79.61083333';
     });
   }).on('mouseover', function (e) {
     well_690.openPopup()
@@ -2010,9 +2027,10 @@ var icon_other_violation = {
 
   
   var well_776 = L.marker(new L.LatLng(39.485, -79.58583333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw101?zoom=' + map_current_zoom + '&lat=39.485&lng=-79.58583333';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw101?zoom=' + map_current_zoom + '&lat=39.485&lng=-79.58583333';
     });
   }).on('mouseover', function (e) {
     well_776.openPopup()
@@ -2030,9 +2048,10 @@ var icon_other_violation = {
 
   
   var well_777 = L.marker(new L.LatLng(39.48527778, -79.60777778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw102?zoom=' + map_current_zoom + '&lat=39.48527778&lng=-79.60777778';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw102?zoom=' + map_current_zoom + '&lat=39.48527778&lng=-79.60777778';
     });
   }).on('mouseover', function (e) {
     well_777.openPopup()
@@ -2050,9 +2069,10 @@ var icon_other_violation = {
 
   
   var well_778 = L.marker(new L.LatLng(39.48722222, -79.60777778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw103?zoom=' + map_current_zoom + '&lat=39.48722222&lng=-79.60777778';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw103?zoom=' + map_current_zoom + '&lat=39.48722222&lng=-79.60777778';
     });
   }).on('mouseover', function (e) {
     well_778.openPopup()
@@ -2070,9 +2090,10 @@ var icon_other_violation = {
 
   
   var well_779 = L.marker(new L.LatLng(39.48666667, -79.60916667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw104?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60916667';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw104?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60916667';
     });
   }).on('mouseover', function (e) {
     well_779.openPopup()
@@ -2108,9 +2129,10 @@ var icon_other_violation = {
 
   
   var well_789 = L.marker(new L.LatLng(39.49083333, -79.60472222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw317s?zoom=' + map_current_zoom + '&lat=39.49083333&lng=-79.60472222';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw317s?zoom=' + map_current_zoom + '&lat=39.49083333&lng=-79.60472222';
     });
   }).on('mouseover', function (e) {
     well_789.openPopup()
@@ -2152,9 +2174,10 @@ var icon_other_violation = {
 
   
   var well_802 = L.marker(new L.LatLng(39.48805556, -79.60666667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw308d?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60666667';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw308d?zoom=' + map_current_zoom + '&lat=39.48805556&lng=-79.60666667';
     });
   }).on('mouseover', function (e) {
     well_802.openPopup()
@@ -2202,9 +2225,10 @@ var icon_other_violation = {
 
   
   var well_818 = L.marker(new L.LatLng(39.48777778, -79.60805556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw310d?zoom=' + map_current_zoom + '&lat=39.48777778&lng=-79.60805556';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw310d?zoom=' + map_current_zoom + '&lat=39.48777778&lng=-79.60805556';
     });
   }).on('mouseover', function (e) {
     well_818.openPopup()
@@ -2268,9 +2292,10 @@ var icon_other_violation = {
 
   
   var well_842 = L.marker(new L.LatLng(39.48666667, -79.60972222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw203s1?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60972222';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw203s1?zoom=' + map_current_zoom + '&lat=39.48666667&lng=-79.60972222';
     });
   }).on('mouseover', function (e) {
     well_842.openPopup()
@@ -2536,9 +2561,10 @@ var icon_other_violation = {
 
   
   var well_967 = L.marker(new L.LatLng(39.48472222, -79.605)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/albright-power/albright-power-station-mw208d?zoom=' + map_current_zoom + '&lat=39.48472222&lng=-79.605';  
+      window.location.href = '/facilities/albright-power/albright-power-station-mw208d?zoom=' + map_current_zoom + '&lat=39.48472222&lng=-79.605';
     });
   }).on('mouseover', function (e) {
     well_967.openPopup()
@@ -2608,14 +2634,201 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:81%"></span></div>
 <h2 class="well-count">27</h2><span> total with </span> 
-<h2 class="well-count">22</h2><span> out of compliance</span>
+<h2 class="well-count">22</h2><span> reporting at least one exceedance</span>
 
 <p><em>Please note that</em> <span class="unmapped">6</span> <em>wells at this facility are missing reliable coordinate data and therefore are not shown on the map.</em></p><br />
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>98 / 788 (12%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw1/?zoom=18&amp;lat=39.49333333&amp;lng=-79.66527778">MW1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw101/?zoom=18&amp;lat=39.485&amp;lng=-79.58583333">MW101</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw102/?zoom=18&amp;lat=39.48527778&amp;lng=-79.60777778">MW102</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw103/?zoom=18&amp;lat=39.48722222&amp;lng=-79.60777778">MW103</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw104/?zoom=18&amp;lat=39.48666667&amp;lng=-79.60916667">MW104</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw2/?zoom=18&amp;lat=39.49333333&amp;lng=-79.59861111">MW2</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw201s2/?zoom=18&amp;lat=39.48666667&amp;lng=-79.60972222">MW201S2</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw203s1/?zoom=18&amp;lat=39.48666667&amp;lng=-79.60972222">MW203S1</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw205s/?zoom=18&amp;lat=39.485&amp;lng=-79.60694444">MW205S</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw206s/?zoom=18&amp;lat=39.48861111&amp;lng=-79.60194444">MW206S</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw208d/?zoom=18&amp;lat=39.48472222&amp;lng=-79.605">MW208D</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw301a/?zoom=18&amp;lat=39.48555556&amp;lng=-79.60166667">MW301A</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw308d/?zoom=18&amp;lat=39.48805556&amp;lng=-79.60666667">MW308D</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw310d/?zoom=18&amp;lat=39.48777778&amp;lng=-79.60805556">MW310D</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw311s/?zoom=18&amp;lat=39.48833333&amp;lng=-79.60833333">MW311S</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw312s/?zoom=18&amp;lat=39.4875&amp;lng=-79.60888889">MW312S</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw313d1/?zoom=18&amp;lat=39.48805556&amp;lng=-79.60972222">MW313D1</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw314d/?zoom=18&amp;lat=39.48861111&amp;lng=-79.61083333">MW314D</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw317s/?zoom=18&amp;lat=39.49083333&amp;lng=-79.60472222">MW317S</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw318s/?zoom=18&amp;lat=39.49&amp;lng=-79.60527778">MW318S</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="albright-power-station-mw5/?zoom=18&amp;lat=39.49333333&amp;lng=-79.59861111">MW5</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:6%"></span></div>
+<h2>98 / 1,544 <span class="percent-exceeded">6%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2625,7 +2838,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2634,7 +2847,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" data-original-title="1 Antimony violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2643,7 +2856,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-As" data-placement="top" data-original-title="No As violations at this facility">
+      <div class="element compliant" data-toggle="element-As" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">As</span>
         
@@ -2652,7 +2865,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2661,7 +2874,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2670,7 +2883,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-B" data-placement="top" data-original-title="No B violations at this facility">
+      <div class="element compliant" data-toggle="element-B" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">B</span>
         
@@ -2679,7 +2892,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2688,7 +2901,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Cr" data-placement="top" data-original-title="2 Chromium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Cr" data-placement="top" title="2 exceedances at this facility" >
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2697,7 +2910,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Co" data-placement="top" data-original-title="Cobalt is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Co" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2706,7 +2919,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2715,7 +2928,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2724,7 +2937,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" data-placement="top" data-original-title="Fluoride is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-F" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2733,7 +2946,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2742,7 +2955,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2751,7 +2964,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" data-original-title="2 Lead violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" title="2 exceedances at this facility" >
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2760,7 +2973,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="78 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="78 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2769,7 +2982,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2778,7 +2991,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" data-original-title="Molybdenum is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2787,7 +3000,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" data-original-title="4 Nickel violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" title="4 exceedances at this facility" >
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2796,7 +3009,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" data-original-title="Nitrate is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2805,7 +3018,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2814,7 +3027,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2823,7 +3036,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2832,7 +3045,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2841,7 +3054,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2850,7 +3063,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-SO4" data-placement="top" data-original-title="No SO4 violations at this facility">
+      <div class="element compliant" data-toggle="element-SO4" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2859,7 +3072,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Tl" data-placement="top" data-original-title="11 Thallium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Tl" data-placement="top" title="11 exceedances at this facility" >
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2868,7 +3081,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2877,7 +3090,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2897,7 +3110,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Albright_Power_Station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/albright-power-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2951,6 +3164,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

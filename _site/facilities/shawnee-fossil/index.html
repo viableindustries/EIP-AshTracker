@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -372,9 +377,10 @@ var icon_other_violation = {
 
   
   var well_65 = L.marker(new L.LatLng(37.159933, -88.779711)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d30a?zoom=' + map_current_zoom + '&lat=37.159933&lng=-88.779711';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d30a?zoom=' + map_current_zoom + '&lat=37.159933&lng=-88.779711';
     });
   }).on('mouseover', function (e) {
     well_65.openPopup()
@@ -416,9 +422,10 @@ var icon_other_violation = {
 
   
   var well_78 = L.marker(new L.LatLng(37.160174, -88.779746)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d30b?zoom=' + map_current_zoom + '&lat=37.160174&lng=-88.779746';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d30b?zoom=' + map_current_zoom + '&lat=37.160174&lng=-88.779746';
     });
   }).on('mouseover', function (e) {
     well_78.openPopup()
@@ -456,9 +463,10 @@ var icon_other_violation = {
 
   
   var well_89 = L.marker(new L.LatLng(37.154088, -88.791851)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-d8a?zoom=' + map_current_zoom + '&lat=37.154088&lng=-88.791851';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-d8a?zoom=' + map_current_zoom + '&lat=37.154088&lng=-88.791851';
     });
   }).on('mouseover', function (e) {
     well_89.openPopup()
@@ -612,9 +620,10 @@ var icon_other_violation = {
 
   
   var well_158 = L.marker(new L.LatLng(37.151691, -88.773514)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-d77?zoom=' + map_current_zoom + '&lat=37.151691&lng=-88.773514';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-d77?zoom=' + map_current_zoom + '&lat=37.151691&lng=-88.773514';
     });
   }).on('mouseover', function (e) {
     well_158.openPopup()
@@ -1332,9 +1341,10 @@ var icon_other_violation = {
 
   
   var well_509 = L.marker(new L.LatLng(37.16092, -88.795061)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d75b?zoom=' + map_current_zoom + '&lat=37.16092&lng=-88.795061';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d75b?zoom=' + map_current_zoom + '&lat=37.16092&lng=-88.795061';
     });
   }).on('mouseover', function (e) {
     well_509.openPopup()
@@ -1352,9 +1362,10 @@ var icon_other_violation = {
 
   
   var well_510 = L.marker(new L.LatLng(37.16082, -88.795016)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d75a?zoom=' + map_current_zoom + '&lat=37.16082&lng=-88.795016';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d75a?zoom=' + map_current_zoom + '&lat=37.16082&lng=-88.795016';
     });
   }).on('mouseover', function (e) {
     well_510.openPopup()
@@ -1426,9 +1437,10 @@ var icon_other_violation = {
 
   
   var well_538 = L.marker(new L.LatLng(37.162524, -88.785198)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d74b?zoom=' + map_current_zoom + '&lat=37.162524&lng=-88.785198';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d74b?zoom=' + map_current_zoom + '&lat=37.162524&lng=-88.785198';
     });
   }).on('mouseover', function (e) {
     well_538.openPopup()
@@ -1726,9 +1738,10 @@ var icon_other_violation = {
 
   
   var well_679 = L.marker(new L.LatLng(37.167647, -88.794473)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d11?zoom=' + map_current_zoom + '&lat=37.167647&lng=-88.794473';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d11?zoom=' + map_current_zoom + '&lat=37.167647&lng=-88.794473';
     });
   }).on('mouseover', function (e) {
     well_679.openPopup()
@@ -1752,9 +1765,10 @@ var icon_other_violation = {
 
   
   var well_683 = L.marker(new L.LatLng(37.135892, -88.780693)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d19?zoom=' + map_current_zoom + '&lat=37.135892&lng=-88.780693';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d19?zoom=' + map_current_zoom + '&lat=37.135892&lng=-88.780693';
     });
   }).on('mouseover', function (e) {
     well_683.openPopup()
@@ -1836,9 +1850,10 @@ var icon_other_violation = {
 
   
   var well_716 = L.marker(new L.LatLng(37.16517, -88.789387)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d33a?zoom=' + map_current_zoom + '&lat=37.16517&lng=-88.789387';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d33a?zoom=' + map_current_zoom + '&lat=37.16517&lng=-88.789387';
     });
   }).on('mouseover', function (e) {
     well_716.openPopup()
@@ -1876,9 +1891,10 @@ var icon_other_violation = {
 
   
   var well_727 = L.marker(new L.LatLng(37.162448, -88.78496)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d74a?zoom=' + map_current_zoom + '&lat=37.162448&lng=-88.78496';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d74a?zoom=' + map_current_zoom + '&lat=37.162448&lng=-88.78496';
     });
   }).on('mouseover', function (e) {
     well_727.openPopup()
@@ -1936,9 +1952,10 @@ var icon_other_violation = {
 
   
   var well_748 = L.marker(new L.LatLng(37.167749, -88.794868)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d11b?zoom=' + map_current_zoom + '&lat=37.167749&lng=-88.794868';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d11b?zoom=' + map_current_zoom + '&lat=37.167749&lng=-88.794868';
     });
   }).on('mouseover', function (e) {
     well_748.openPopup()
@@ -1964,9 +1981,10 @@ var icon_other_violation = {
 
   
   var well_753 = L.marker(new L.LatLng(37.15704, -88.792885)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-d76a?zoom=' + map_current_zoom + '&lat=37.15704&lng=-88.792885';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-d76a?zoom=' + map_current_zoom + '&lat=37.15704&lng=-88.792885';
     });
   }).on('mouseover', function (e) {
     well_753.openPopup()
@@ -2394,9 +2412,10 @@ var icon_other_violation = {
 
   
   var well_959 = L.marker(new L.LatLng(37.148965, -88.782053)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d27?zoom=' + map_current_zoom + '&lat=37.148965&lng=-88.782053';  
+      window.location.href = '/facilities/shawnee-fossil/shawnee-fossil-plant-shf-d27?zoom=' + map_current_zoom + '&lat=37.148965&lng=-88.782053';
     });
   }).on('mouseover', function (e) {
     well_959.openPopup()
@@ -2482,12 +2501,143 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:93%"></span></div>
 <h2 class="well-count">14</h2><span> total with </span> 
-<h2 class="well-count">13</h2><span> out of compliance</span>
+<h2 class="well-count">13</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>137 / 606 (23%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-d76a/?zoom=18&amp;lat=37.15704&amp;lng=-88.792885">D76A</a></td>
+      <td class="data-align-center">24</td>
+      
+      <td class="dirty-well data-align-center"><span>24</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-d77/?zoom=18&amp;lat=37.151691&amp;lng=-88.773514">D77</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-d8a/?zoom=18&amp;lat=37.154088&amp;lng=-88.791851">D8A</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d11/?zoom=18&amp;lat=37.167647&amp;lng=-88.794473">SHF-D11</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d11b/?zoom=18&amp;lat=37.167749&amp;lng=-88.794868">SHF-D11B</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d19/?zoom=18&amp;lat=37.135892&amp;lng=-88.780693">SHF-D19</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d27/?zoom=18&amp;lat=37.148965&amp;lng=-88.782053">SHF-D27</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d30a/?zoom=18&amp;lat=37.159933&amp;lng=-88.779711">SHF-D30A</a></td>
+      <td class="data-align-center">14</td>
+      
+      <td class="dirty-well data-align-center"><span>14</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d30b/?zoom=18&amp;lat=37.160174&amp;lng=-88.779746">SHF-D30B</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d33a/?zoom=18&amp;lat=37.16517&amp;lng=-88.789387">SHF-D33A</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d74a/?zoom=18&amp;lat=37.162448&amp;lng=-88.78496">SHF-D74A</a></td>
+      <td class="data-align-center">17</td>
+      
+      <td class="dirty-well data-align-center"><span>17</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d74b/?zoom=18&amp;lat=37.162524&amp;lng=-88.785198">SHF-D74B</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d75a/?zoom=18&amp;lat=37.16082&amp;lng=-88.795016">SHF-D75A</a></td>
+      <td class="data-align-center">23</td>
+      
+      <td class="dirty-well data-align-center"><span>23</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="shawnee-fossil-plant-shf-d75b/?zoom=18&amp;lat=37.16092&amp;lng=-88.795061">SHF-D75B</a></td>
+      <td class="data-align-center">13</td>
+      
+      <td class="dirty-well data-align-center"><span>13</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:10%"></span></div>
+<h2>137 / 1,348 <span class="percent-exceeded">10%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2497,7 +2647,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2506,7 +2656,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Sb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2515,7 +2665,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="2 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="2 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2524,7 +2674,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2533,7 +2683,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Be" data-placement="top" data-original-title="1 Beryllium violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Be" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2542,7 +2692,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="40 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="40 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2551,7 +2701,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2560,7 +2710,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Cr" data-placement="top" data-original-title="1 Chromium violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Cr" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2569,7 +2719,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="17 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="17 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2578,7 +2728,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2587,7 +2737,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2596,7 +2746,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2605,7 +2755,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2614,7 +2764,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2623,7 +2773,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" data-original-title="1 Lead violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2632,7 +2782,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="53 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="53 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2641,7 +2791,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2650,7 +2800,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" data-original-title="9 Molybdenum violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" title="9 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2659,7 +2809,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" data-original-title="1 Nickel violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2668,7 +2818,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2677,7 +2827,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2686,7 +2836,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2695,7 +2845,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2704,7 +2854,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ag" data-placement="top" data-original-title="No Ag violations at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2713,7 +2863,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Sr" data-placement="top" data-original-title="No Sr violations at this facility">
+      <div class="element compliant" data-toggle="element-Sr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2722,7 +2872,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="12 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="12 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2731,7 +2881,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Tl" data-placement="top" data-original-title="No Tl violations at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2740,7 +2890,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2749,7 +2899,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2770,7 +2920,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Shawnee.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/shawnee-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2824,6 +2974,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -562,9 +567,10 @@ var icon_other_violation = {
 
   
   var well_160 = L.marker(new L.LatLng(35.892055, -84.511156)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g3b?zoom=' + map_current_zoom + '&lat=35.892055&lng=-84.511156';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g3b?zoom=' + map_current_zoom + '&lat=35.892055&lng=-84.511156';
     });
   }).on('mouseover', function (e) {
     well_160.openPopup()
@@ -700,9 +706,10 @@ var icon_other_violation = {
 
   
   var well_220 = L.marker(new L.LatLng(35.904124, -84.511698)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-ad-3?zoom=' + map_current_zoom + '&lat=35.904124&lng=-84.511698';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-ad-3?zoom=' + map_current_zoom + '&lat=35.904124&lng=-84.511698';
     });
   }).on('mouseover', function (e) {
     well_220.openPopup()
@@ -836,9 +843,10 @@ var icon_other_violation = {
 
   
   var well_279 = L.marker(new L.LatLng(35.891652, -84.508803)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g4b?zoom=' + map_current_zoom + '&lat=35.891652&lng=-84.508803';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g4b?zoom=' + map_current_zoom + '&lat=35.891652&lng=-84.508803';
     });
   }).on('mouseover', function (e) {
     well_279.openPopup()
@@ -1094,9 +1102,10 @@ var icon_other_violation = {
 
   
   var well_399 = L.marker(new L.LatLng(35.908929, -84.519528)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-ad-1?zoom=' + map_current_zoom + '&lat=35.908929&lng=-84.519528';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-ad-1?zoom=' + map_current_zoom + '&lat=35.908929&lng=-84.519528';
     });
   }).on('mouseover', function (e) {
     well_399.openPopup()
@@ -1262,9 +1271,10 @@ var icon_other_violation = {
 
   
   var well_474 = L.marker(new L.LatLng(35.891737, -84.506817)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g5a?zoom=' + map_current_zoom + '&lat=35.891737&lng=-84.506817';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g5a?zoom=' + map_current_zoom + '&lat=35.891737&lng=-84.506817';
     });
   }).on('mouseover', function (e) {
     well_474.openPopup()
@@ -1284,9 +1294,10 @@ var icon_other_violation = {
 
   
   var well_476 = L.marker(new L.LatLng(35.891727, -84.506776)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g5b?zoom=' + map_current_zoom + '&lat=35.891727&lng=-84.506776';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g5b?zoom=' + map_current_zoom + '&lat=35.891727&lng=-84.506776';
     });
   }).on('mouseover', function (e) {
     well_476.openPopup()
@@ -1556,9 +1567,10 @@ var icon_other_violation = {
 
   
   var well_603 = L.marker(new L.LatLng(35.902915, -84.51499)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-ad-2?zoom=' + map_current_zoom + '&lat=35.902915&lng=-84.51499';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-ad-2?zoom=' + map_current_zoom + '&lat=35.902915&lng=-84.51499';
     });
   }).on('mouseover', function (e) {
     well_603.openPopup()
@@ -1692,9 +1704,10 @@ var icon_other_violation = {
 
   
   var well_662 = L.marker(new L.LatLng(35.904582, -84.504883)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-6ar?zoom=' + map_current_zoom + '&lat=35.904582&lng=-84.504883';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-6ar?zoom=' + map_current_zoom + '&lat=35.904582&lng=-84.504883';
     });
   }).on('mouseover', function (e) {
     well_662.openPopup()
@@ -2042,9 +2055,10 @@ var icon_other_violation = {
 
   
   var well_828 = L.marker(new L.LatLng(35.892164, -84.504835)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g6b?zoom=' + map_current_zoom + '&lat=35.892164&lng=-84.504835';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g6b?zoom=' + map_current_zoom + '&lat=35.892164&lng=-84.504835';
     });
   }).on('mouseover', function (e) {
     well_828.openPopup()
@@ -2070,9 +2084,10 @@ var icon_other_violation = {
 
   
   var well_833 = L.marker(new L.LatLng(35.892068, -84.511094)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g3a?zoom=' + map_current_zoom + '&lat=35.892068&lng=-84.511094';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g3a?zoom=' + map_current_zoom + '&lat=35.892068&lng=-84.511094';
     });
   }).on('mouseover', function (e) {
     well_833.openPopup()
@@ -2332,9 +2347,10 @@ var icon_other_violation = {
 
   
   var well_955 = L.marker(new L.LatLng(35.909305, -84.504861)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-22?zoom=' + map_current_zoom + '&lat=35.909305&lng=-84.504861';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-22?zoom=' + map_current_zoom + '&lat=35.909305&lng=-84.504861';
     });
   }).on('mouseover', function (e) {
     well_955.openPopup()
@@ -2380,9 +2396,10 @@ var icon_other_violation = {
 
   
   var well_970 = L.marker(new L.LatLng(35.896094, -84.508262)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g1b?zoom=' + map_current_zoom + '&lat=35.896094&lng=-84.508262';  
+      window.location.href = '/facilities/kingston-fossil/kingston-fossil-plant-kif-g1b?zoom=' + map_current_zoom + '&lat=35.896094&lng=-84.508262';
     });
   }).on('mouseover', function (e) {
     well_970.openPopup()
@@ -2446,12 +2463,127 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:58%"></span></div>
 <h2 class="well-count">12</h2><span> total with </span> 
-<h2 class="well-count">7</h2><span> out of compliance</span>
+<h2 class="well-count">7</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>54 / 900 (6%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-22/?zoom=18&amp;lat=35.909305&amp;lng=-84.504861">22</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-6ar/?zoom=18&amp;lat=35.904582&amp;lng=-84.504883">6AR</a></td>
+      <td class="data-align-center">9</td>
+      
+      <td class="dirty-well data-align-center"><span>9</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-ad-1/?zoom=18&amp;lat=35.908929&amp;lng=-84.519528">AD-1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-ad-2/?zoom=18&amp;lat=35.902915&amp;lng=-84.51499">AD-2</a></td>
+      <td class="data-align-center">17</td>
+      
+      <td class="dirty-well data-align-center"><span>17</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-ad-3/?zoom=18&amp;lat=35.904124&amp;lng=-84.511698">AD-3</a></td>
+      <td class="data-align-center">9</td>
+      
+      <td class="dirty-well data-align-center"><span>9</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g1b/?zoom=18&amp;lat=35.896094&amp;lng=-84.508262">KIF-G1B</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g3a/?zoom=18&amp;lat=35.892068&amp;lng=-84.511094">KIF-G3A</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g3b/?zoom=18&amp;lat=35.892055&amp;lng=-84.511156">KIF-G3B</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g4b/?zoom=18&amp;lat=35.891652&amp;lng=-84.508803">KIF-G4B</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g5a/?zoom=18&amp;lat=35.891737&amp;lng=-84.506817">KIF-G5A</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g5b/?zoom=18&amp;lat=35.891727&amp;lng=-84.506776">KIF-G5B</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="kingston-fossil-plant-kif-g6b/?zoom=18&amp;lat=35.892164&amp;lng=-84.504835">KIF-G6B</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:2%"></span></div>
+<h2>54 / 2,592 <span class="percent-exceeded">2%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2461,7 +2593,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2470,7 +2602,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Sb" data-placement="top" data-original-title="No Sb violations at this facility">
+      <div class="element compliant" data-toggle="element-Sb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2479,7 +2611,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-As" data-placement="top" data-original-title="No As violations at this facility">
+      <div class="element compliant" data-toggle="element-As" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">As</span>
         
@@ -2488,7 +2620,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2497,7 +2629,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2506,7 +2638,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-B" data-placement="top" data-original-title="No B violations at this facility">
+      <div class="element compliant" data-toggle="element-B" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">B</span>
         
@@ -2515,7 +2647,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2524,7 +2656,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2533,7 +2665,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="23 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="23 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2542,7 +2674,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2551,7 +2683,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2560,7 +2692,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2569,7 +2701,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2578,7 +2710,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2587,7 +2719,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Pb" data-placement="top" data-original-title="No Pb violations at this facility">
+      <div class="element compliant" data-toggle="element-Pb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2596,7 +2728,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="13 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="13 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2605,7 +2737,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Hg" data-placement="top" data-original-title="No Hg violations at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2614,7 +2746,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Mo" data-placement="top" data-original-title="No Mo violations at this facility">
+      <div class="element compliant" data-toggle="element-Mo" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2623,7 +2755,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ni" data-placement="top" data-original-title="No Ni violations at this facility">
+      <div class="element compliant" data-toggle="element-Ni" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2632,7 +2764,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2641,7 +2773,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2650,7 +2782,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2659,7 +2791,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Se" data-placement="top" data-original-title="17 Selenium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Se" data-placement="top" title="17 exceedances at this facility" >
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2668,7 +2800,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2677,7 +2809,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Sr" data-placement="top" data-original-title="No Sr violations at this facility">
+      <div class="element compliant" data-toggle="element-Sr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2686,7 +2818,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="1 Sulfate violation at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2695,7 +2827,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Tl" data-placement="top" data-original-title="No Tl violations at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2704,7 +2836,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2713,7 +2845,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2734,7 +2866,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Kingston.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/kingston-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2788,6 +2920,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

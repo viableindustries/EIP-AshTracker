@@ -30,18 +30,18 @@
 
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Big-Bend-Station-B-18" />
-    <meta property="twitter:url" content="wells/big_bend_station/2014-05-01-big-bend-station-b-18" />
+    <meta property="twitter:url" content="wells/big_bend_station/2014-05-04-big-bend-station-b-18" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
     <meta property="og:site_name" content="Ashtracker" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="wells/big_bend_station/2014-05-01-big-bend-station-b-18" />
+    <meta property="og:url" content="wells/big_bend_station/2014-05-04-big-bend-station-b-18" />
     <meta property="og:title" content="Big-Bend-Station-B-18" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="wells/big_bend_station/2014-05-01-big-bend-station-b-18" />
+    <meta name="dcterms.identifier" content="wells/big_bend_station/2014-05-04-big-bend-station-b-18" />
     <meta name="dcterms.format" content="text/html" />
     <meta name="dcterms.title" content="Big-Bend-Station-B-18" />
 
@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -376,9 +381,10 @@ var icon_other_violation = {
 
   
   var well_67 = L.marker(new L.LatLng(27.8037517, -82.39427729)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-42?zoom=' + map_current_zoom + '&lat=27.8037517&lng=-82.39427729';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-42?zoom=' + map_current_zoom + '&lat=27.8037517&lng=-82.39427729';
     });
   }).on('mouseover', function (e) {
     well_67.openPopup()
@@ -396,9 +402,10 @@ var icon_other_violation = {
 
   
   var well_68 = L.marker(new L.LatLng(27.80116765, -82.39127192)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-43?zoom=' + map_current_zoom + '&lat=27.80116765&lng=-82.39127192';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-43?zoom=' + map_current_zoom + '&lat=27.80116765&lng=-82.39127192';
     });
   }).on('mouseover', function (e) {
     well_68.openPopup()
@@ -416,9 +423,10 @@ var icon_other_violation = {
 
   
   var well_69 = L.marker(new L.LatLng(27.79682449, -82.38840759)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-40?zoom=' + map_current_zoom + '&lat=27.79682449&lng=-82.38840759';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-40?zoom=' + map_current_zoom + '&lat=27.79682449&lng=-82.38840759';
     });
   }).on('mouseover', function (e) {
     well_69.openPopup()
@@ -436,9 +444,10 @@ var icon_other_violation = {
 
   
   var well_70 = L.marker(new L.LatLng(27.78514853, -82.39242828)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-41?zoom=' + map_current_zoom + '&lat=27.78514853&lng=-82.39242828';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-41?zoom=' + map_current_zoom + '&lat=27.78514853&lng=-82.39242828';
     });
   }).on('mouseover', function (e) {
     well_70.openPopup()
@@ -458,9 +467,10 @@ var icon_other_violation = {
 
   
   var well_72 = L.marker(new L.LatLng(27.78161142, -82.40050694)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-44?zoom=' + map_current_zoom + '&lat=27.78161142&lng=-82.40050694';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-44?zoom=' + map_current_zoom + '&lat=27.78161142&lng=-82.40050694';
     });
   }).on('mouseover', function (e) {
     well_72.openPopup()
@@ -482,9 +492,10 @@ var icon_other_violation = {
 
   
   var well_75 = L.marker(new L.LatLng(27.79839681, -82.39415816)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-49?zoom=' + map_current_zoom + '&lat=27.79839681&lng=-82.39415816';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-49?zoom=' + map_current_zoom + '&lat=27.79839681&lng=-82.39415816';
     });
   }).on('mouseover', function (e) {
     well_75.openPopup()
@@ -556,9 +567,10 @@ var icon_other_violation = {
 
   
   var well_103 = L.marker(new L.LatLng(27.78395055, -82.38525524)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-4r?zoom=' + map_current_zoom + '&lat=27.78395055&lng=-82.38525524';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-4r?zoom=' + map_current_zoom + '&lat=27.78395055&lng=-82.38525524';
     });
   }).on('mouseover', function (e) {
     well_103.openPopup()
@@ -850,9 +862,10 @@ var icon_other_violation = {
 
   
   var well_241 = L.marker(new L.LatLng(27.78518333, -82.40067778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-5?zoom=' + map_current_zoom + '&lat=27.78518333&lng=-82.40067778';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-5?zoom=' + map_current_zoom + '&lat=27.78518333&lng=-82.40067778';
     });
   }).on('mouseover', function (e) {
     well_241.openPopup()
@@ -870,9 +883,10 @@ var icon_other_violation = {
 
   
   var well_242 = L.marker(new L.LatLng(27.790175, -82.4006)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-7?zoom=' + map_current_zoom + '&lat=27.790175&lng=-82.4006';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-7?zoom=' + map_current_zoom + '&lat=27.790175&lng=-82.4006';
     });
   }).on('mouseover', function (e) {
     well_242.openPopup()
@@ -890,9 +904,10 @@ var icon_other_violation = {
 
   
   var well_243 = L.marker(new L.LatLng(27.78946111, -82.4006)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-6?zoom=' + map_current_zoom + '&lat=27.78946111&lng=-82.4006';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-6?zoom=' + map_current_zoom + '&lat=27.78946111&lng=-82.4006';
     });
   }).on('mouseover', function (e) {
     well_243.openPopup()
@@ -910,16 +925,17 @@ var icon_other_violation = {
 
   
   var well_244 = L.marker(new L.LatLng(27.78086667, -82.39565833)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-1?zoom=' + map_current_zoom + '&lat=27.78086667&lng=-82.39565833';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-1?zoom=' + map_current_zoom + '&lat=27.78086667&lng=-82.39565833';
     });
   }).on('mouseover', function (e) {
     well_244.openPopup()
   });
 
   
-    well_244.setIcon(L.icon(icon_other_compliant));  
+    well_244.setIcon(L.icon(icon_other_violation));
   
 
   well_244.bindPopup('Big-Bend-Station-B-1')
@@ -932,9 +948,10 @@ var icon_other_violation = {
 
   
   var well_246 = L.marker(new L.LatLng(27.78189167, -82.40009444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-2?zoom=' + map_current_zoom + '&lat=27.78189167&lng=-82.40009444';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-2?zoom=' + map_current_zoom + '&lat=27.78189167&lng=-82.40009444';
     });
   }).on('mouseover', function (e) {
     well_246.openPopup()
@@ -1060,9 +1077,10 @@ var icon_other_violation = {
 
   
   var well_301 = L.marker(new L.LatLng(27.78985358, -82.39362218)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-17r?zoom=' + map_current_zoom + '&lat=27.78985358&lng=-82.39362218';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-17r?zoom=' + map_current_zoom + '&lat=27.78985358&lng=-82.39362218';
     });
   }).on('mouseover', function (e) {
     well_301.openPopup()
@@ -1288,9 +1306,10 @@ var icon_other_violation = {
 
   
   var well_406 = L.marker(new L.LatLng(27.79311224, -82.39938742)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-8r?zoom=' + map_current_zoom + '&lat=27.79311224&lng=-82.39938742';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-8r?zoom=' + map_current_zoom + '&lat=27.79311224&lng=-82.39938742';
     });
   }).on('mouseover', function (e) {
     well_406.openPopup()
@@ -1384,9 +1403,10 @@ var icon_other_violation = {
 
   
   var well_445 = L.marker(new L.LatLng(27.80018118, -82.39435031)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-33?zoom=' + map_current_zoom + '&lat=27.80018118&lng=-82.39435031';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-33?zoom=' + map_current_zoom + '&lat=27.80018118&lng=-82.39435031';
     });
   }).on('mouseover', function (e) {
     well_445.openPopup()
@@ -1404,9 +1424,10 @@ var icon_other_violation = {
 
   
   var well_446 = L.marker(new L.LatLng(27.80214, -82.39644)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-32?zoom=' + map_current_zoom + '&lat=27.80214&lng=-82.39644';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-32?zoom=' + map_current_zoom + '&lat=27.80214&lng=-82.39644';
     });
   }).on('mouseover', function (e) {
     well_446.openPopup()
@@ -1424,9 +1445,10 @@ var icon_other_violation = {
 
   
   var well_447 = L.marker(new L.LatLng(27.79365679, -82.40767858)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-30?zoom=' + map_current_zoom + '&lat=27.79365679&lng=-82.40767858';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-30?zoom=' + map_current_zoom + '&lat=27.79365679&lng=-82.40767858';
     });
   }).on('mouseover', function (e) {
     well_447.openPopup()
@@ -1444,9 +1466,10 @@ var icon_other_violation = {
 
   
   var well_448 = L.marker(new L.LatLng(27.78194066, -82.39739978)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-37?zoom=' + map_current_zoom + '&lat=27.78194066&lng=-82.39739978';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-37?zoom=' + map_current_zoom + '&lat=27.78194066&lng=-82.39739978';
     });
   }).on('mouseover', function (e) {
     well_448.openPopup()
@@ -1464,9 +1487,10 @@ var icon_other_violation = {
 
   
   var well_449 = L.marker(new L.LatLng(27.79219113, -82.39680363)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-36?zoom=' + map_current_zoom + '&lat=27.79219113&lng=-82.39680363';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-36?zoom=' + map_current_zoom + '&lat=27.79219113&lng=-82.39680363';
     });
   }).on('mouseover', function (e) {
     well_449.openPopup()
@@ -1484,9 +1508,10 @@ var icon_other_violation = {
 
   
   var well_450 = L.marker(new L.LatLng(27.78999449, -82.39650413)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-35?zoom=' + map_current_zoom + '&lat=27.78999449&lng=-82.39650413';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-35?zoom=' + map_current_zoom + '&lat=27.78999449&lng=-82.39650413';
     });
   }).on('mouseover', function (e) {
     well_450.openPopup()
@@ -1504,9 +1529,10 @@ var icon_other_violation = {
 
   
   var well_451 = L.marker(new L.LatLng(27.78556002, -82.39843292)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-34?zoom=' + map_current_zoom + '&lat=27.78556002&lng=-82.39843292';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-34?zoom=' + map_current_zoom + '&lat=27.78556002&lng=-82.39843292';
     });
   }).on('mouseover', function (e) {
     well_451.openPopup()
@@ -1526,9 +1552,10 @@ var icon_other_violation = {
 
   
   var well_453 = L.marker(new L.LatLng(27.80599386, -82.38352102)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-39?zoom=' + map_current_zoom + '&lat=27.80599386&lng=-82.38352102';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-39?zoom=' + map_current_zoom + '&lat=27.80599386&lng=-82.38352102';
     });
   }).on('mouseover', function (e) {
     well_453.openPopup()
@@ -1546,9 +1573,10 @@ var icon_other_violation = {
 
   
   var well_454 = L.marker(new L.LatLng(27.78231954, -82.39465936)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-38?zoom=' + map_current_zoom + '&lat=27.78231954&lng=-82.39465936';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-38?zoom=' + map_current_zoom + '&lat=27.78231954&lng=-82.39465936';
     });
   }).on('mouseover', function (e) {
     well_454.openPopup()
@@ -1656,9 +1684,10 @@ var icon_other_violation = {
 
   
   var well_500 = L.marker(new L.LatLng(27.80042808, -82.39732069)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-14r?zoom=' + map_current_zoom + '&lat=27.80042808&lng=-82.39732069';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-14r?zoom=' + map_current_zoom + '&lat=27.80042808&lng=-82.39732069';
     });
   }).on('mouseover', function (e) {
     well_500.openPopup()
@@ -1890,9 +1919,10 @@ var icon_other_violation = {
 
   
   var well_608 = L.marker(new L.LatLng(27.79362899, -82.40524547)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-60?zoom=' + map_current_zoom + '&lat=27.79362899&lng=-82.40524547';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-60?zoom=' + map_current_zoom + '&lat=27.79362899&lng=-82.40524547';
     });
   }).on('mouseover', function (e) {
     well_608.openPopup()
@@ -1990,9 +2020,10 @@ var icon_other_violation = {
 
   
   var well_649 = L.marker(new L.LatLng(27.80602308, -82.38360756)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-56-uf?zoom=' + map_current_zoom + '&lat=27.80602308&lng=-82.38360756';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-56-uf?zoom=' + map_current_zoom + '&lat=27.80602308&lng=-82.38360756';
     });
   }).on('mouseover', function (e) {
     well_649.openPopup()
@@ -2234,9 +2265,10 @@ var icon_other_violation = {
 
   
   var well_762 = L.marker(new L.LatLng(27.79946918, -82.39215246)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-51?zoom=' + map_current_zoom + '&lat=27.79946918&lng=-82.39215246';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-51?zoom=' + map_current_zoom + '&lat=27.79946918&lng=-82.39215246';
     });
   }).on('mouseover', function (e) {
     well_762.openPopup()
@@ -2254,9 +2286,10 @@ var icon_other_violation = {
 
   
   var well_763 = L.marker(new L.LatLng(27.79654365, -82.39419893)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-50?zoom=' + map_current_zoom + '&lat=27.79654365&lng=-82.39419893';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-50?zoom=' + map_current_zoom + '&lat=27.79654365&lng=-82.39419893';
     });
   }).on('mouseover', function (e) {
     well_763.openPopup()
@@ -2274,9 +2307,10 @@ var icon_other_violation = {
 
   
   var well_764 = L.marker(new L.LatLng(27.79673657, -82.38864734)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-53?zoom=' + map_current_zoom + '&lat=27.79673657&lng=-82.38864734';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-53?zoom=' + map_current_zoom + '&lat=27.79673657&lng=-82.38864734';
     });
   }).on('mouseover', function (e) {
     well_764.openPopup()
@@ -2294,9 +2328,10 @@ var icon_other_violation = {
 
   
   var well_765 = L.marker(new L.LatLng(27.79873315, -82.39200933)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-52?zoom=' + map_current_zoom + '&lat=27.79873315&lng=-82.39200933';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-52?zoom=' + map_current_zoom + '&lat=27.79873315&lng=-82.39200933';
     });
   }).on('mouseover', function (e) {
     well_765.openPopup()
@@ -2314,9 +2349,10 @@ var icon_other_violation = {
 
   
   var well_766 = L.marker(new L.LatLng(27.79647233, -82.40036807)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-54?zoom=' + map_current_zoom + '&lat=27.79647233&lng=-82.40036807';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-54?zoom=' + map_current_zoom + '&lat=27.79647233&lng=-82.40036807';
     });
   }).on('mouseover', function (e) {
     well_766.openPopup()
@@ -2334,9 +2370,10 @@ var icon_other_violation = {
 
   
   var well_767 = L.marker(new L.LatLng(27.79242998, -82.39960464)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-57?zoom=' + map_current_zoom + '&lat=27.79242998&lng=-82.39960464';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-57?zoom=' + map_current_zoom + '&lat=27.79242998&lng=-82.39960464';
     });
   }).on('mouseover', function (e) {
     well_767.openPopup()
@@ -2356,9 +2393,10 @@ var icon_other_violation = {
 
   
   var well_769 = L.marker(new L.LatLng(27.7874927, -82.39653718)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-58?zoom=' + map_current_zoom + '&lat=27.7874927&lng=-82.39653718';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-58?zoom=' + map_current_zoom + '&lat=27.7874927&lng=-82.39653718';
     });
   }).on('mouseover', function (e) {
     well_769.openPopup()
@@ -2582,9 +2620,10 @@ var icon_other_violation = {
 
   
   var well_873 = L.marker(new L.LatLng(27.80015431, -82.39427339)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-59-uf?zoom=' + map_current_zoom + '&lat=27.80015431&lng=-82.39427339';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-59-uf?zoom=' + map_current_zoom + '&lat=27.80015431&lng=-82.39427339';
     });
   }).on('mouseover', function (e) {
     well_873.openPopup()
@@ -2626,9 +2665,10 @@ var icon_other_violation = {
 
   
   var well_886 = L.marker(new L.LatLng(27.79238611, -82.40038056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-18?zoom=' + map_current_zoom + '&lat=27.79238611&lng=-82.40038056';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-18?zoom=' + map_current_zoom + '&lat=27.79238611&lng=-82.40038056';
     });
   }).on('mouseover', function (e) {
     well_886.openPopup()
@@ -2650,9 +2690,10 @@ var icon_other_violation = {
 
   
   var well_889 = L.marker(new L.LatLng(27.80170556, -82.39250278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-15?zoom=' + map_current_zoom + '&lat=27.80170556&lng=-82.39250278';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-15?zoom=' + map_current_zoom + '&lat=27.80170556&lng=-82.39250278';
     });
   }).on('mouseover', function (e) {
     well_889.openPopup()
@@ -2670,9 +2711,10 @@ var icon_other_violation = {
 
   
   var well_890 = L.marker(new L.LatLng(27.80111667, -82.39643889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-14?zoom=' + map_current_zoom + '&lat=27.80111667&lng=-82.39643889';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-14?zoom=' + map_current_zoom + '&lat=27.80111667&lng=-82.39643889';
     });
   }).on('mouseover', function (e) {
     well_890.openPopup()
@@ -2690,9 +2732,10 @@ var icon_other_violation = {
 
   
   var well_891 = L.marker(new L.LatLng(27.79681389, -82.39253056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-11?zoom=' + map_current_zoom + '&lat=27.79681389&lng=-82.39253056';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-11?zoom=' + map_current_zoom + '&lat=27.79681389&lng=-82.39253056';
     });
   }).on('mouseover', function (e) {
     well_891.openPopup()
@@ -2710,9 +2753,10 @@ var icon_other_violation = {
 
   
   var well_892 = L.marker(new L.LatLng(27.79743611, -82.39897778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-10?zoom=' + map_current_zoom + '&lat=27.79743611&lng=-82.39897778';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-10?zoom=' + map_current_zoom + '&lat=27.79743611&lng=-82.39897778';
     });
   }).on('mouseover', function (e) {
     well_892.openPopup()
@@ -2730,9 +2774,10 @@ var icon_other_violation = {
 
   
   var well_893 = L.marker(new L.LatLng(27.79993333, -82.39246111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-station/big-bend-station-b-12?zoom=' + map_current_zoom + '&lat=27.79993333&lng=-82.39246111';  
+      window.location.href = '/facilities/big-bend-station/big-bend-station-b-12?zoom=' + map_current_zoom + '&lat=27.79993333&lng=-82.39246111';
     });
   }).on('mouseover', function (e) {
     well_893.openPopup()
@@ -5857,7 +5902,9 @@ map.addLayer(markers);
 <div class="row content contaminant-status">
   <div class="col-sm-10">
     <h4>Contaminant Status</h4>
-    <h2>Other Designation, Not In Compliance</h2>
+    
+    <h2 class="exceedance-count">41</h2><span> exceedances found</span>
+    
   </div>
   <div class="col-sm-2">
     
@@ -5866,8 +5913,11 @@ map.addLayer(markers);
   </div>
 </div>
 
-<h4>Total Violations / Total Samples</h4>
-<h2>34 / 90 (38%)</h2>
+<h4>Total Exceedances / Total Samples</h4>
+
+<div class="sample-bar"><span style="width:40%"></span></div>
+
+<h2>41 / 103 <span class="percent-exceeded">40%</span></h2>
 
 <div class="content contaminants">
 
@@ -5879,7 +5929,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" rel="tooltip" data-placement="top" data-original-title="Ammonia is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-NH3" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -5888,7 +5938,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="No Sb violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Sb" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -5897,7 +5947,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="8 Arsenic violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" title="8 exceedances at this well" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -5906,7 +5956,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="Barium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ba" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -5915,7 +5965,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Beryllium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -5924,7 +5974,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="8 Boron violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-B" rel="tooltip" data-placement="top" title="8 exceedances at this well" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -5933,7 +5983,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="Cadmium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cd" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -5942,7 +5992,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cr" rel="tooltip" data-placement="top" data-original-title="Chromium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cr" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -5951,7 +6001,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" data-original-title="Cobalt is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -5960,7 +6010,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" data-original-title="Copper is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -5969,7 +6019,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" data-original-title="Cyanide is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -5978,7 +6028,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-F" rel="tooltip" data-placement="top" data-original-title="No F violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-F" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">F</span>
         
@@ -5987,7 +6037,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this well">
+      <div class="element element-clickable exceeded" data-toggle="element-GAP" rel="tooltip" data-placement="top" title="7 exceedances at this well" >
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -5996,7 +6046,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -6005,7 +6055,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="No Pb violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Pb" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -6014,7 +6064,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="No Mn violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Mn" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -6023,7 +6073,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" data-original-title="Mercury is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -6032,7 +6082,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="No Mo violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Mo" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -6041,7 +6091,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="Nickel is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -6050,7 +6100,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-NO3" rel="tooltip" data-placement="top" data-original-title="No NO3 violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-NO3" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -6059,7 +6109,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" data-original-title="Nitrite is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -6068,7 +6118,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-Ra" rel="tooltip" data-placement="top" data-original-title="10 Radium violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-Ra" rel="tooltip" data-placement="top" title="10 exceedances at this well" >
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -6077,7 +6127,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Se" rel="tooltip" data-placement="top" data-original-title="Selenium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Se" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -6086,7 +6136,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" data-original-title="Silver is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -6095,7 +6145,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" data-original-title="Strontium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -6104,7 +6154,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" data-original-title="8 Sulfate violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" title="8 exceedances at this well" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -6113,7 +6163,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Tl" rel="tooltip" data-placement="top" data-original-title="No Tl violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Tl" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -6122,7 +6172,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" data-original-title="Tritium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">T</span>
         
@@ -6131,7 +6181,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" data-original-title="Uranium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">U</span>
         
@@ -6154,7 +6204,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6180,7 +6232,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 4 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6202,27 +6254,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">2/10/2010</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.0006</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/5/2010</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.0006</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/11/2010</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.0006</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/11/2010</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.003</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.500</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.0006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.100</div>
+        
+        <div class="col-sm-4 history "><span>0.0006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.0006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.100</div>
+        
+        <div class="col-sm-4 history "><span>0.0006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.0006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.100</div>
+        
+        <div class="col-sm-4 history "><span>0.0006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.0006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.100</div>
+        
+        <div class="col-sm-4 history "><span>0.0006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.100</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6239,7 +6331,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6265,7 +6359,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>8 / 8 (100%)</h2>
+          <h2>8 / 8 <span class="percent-exceeded">100%</span></h2>
         </div>
       </div>
 
@@ -6288,50 +6382,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">0.01392 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.392</div>
+        
+        <div class="col-sm-4 history "><span>0.01392</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.392</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">0.0278 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.780</div>
+        
+        <div class="col-sm-4 history "><span>0.0278</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">2.780</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">0.02006 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.006</div>
+        
+        <div class="col-sm-4 history "><span>0.02006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">2.006</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">0.0181 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.810</div>
+        
+        <div class="col-sm-4 history "><span>0.0181</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.810</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.0183 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.830</div>
+        
+        <div class="col-sm-4 history "><span>0.0183</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.830</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.0176 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.760</div>
+        
+        <div class="col-sm-4 history "><span>0.0176</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.760</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.0168 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.680</div>
+        
+        <div class="col-sm-4 history "><span>0.0168</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.680</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.0147 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.470</div>
+        
+        <div class="col-sm-4 history "><span>0.0147</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.470</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6352,7 +6462,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6378,7 +6490,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>8 / 8 (100%)</h2>
+          <h2>8 / 8 <span class="percent-exceeded">100%</span></h2>
         </div>
       </div>
 
@@ -6401,50 +6513,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">17.6 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">5.867</div>
+        
+        <div class="col-sm-4 history "><span>17.6</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">5.867</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">14.36 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">4.787</div>
+        
+        <div class="col-sm-4 history "><span>14.36</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">4.787</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">20.5 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">6.833</div>
+        
+        <div class="col-sm-4 history "><span>20.5</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">6.833</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">18.46 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">6.153</div>
+        
+        <div class="col-sm-4 history "><span>18.46</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">6.153</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">21.4 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">7.133</div>
+        
+        <div class="col-sm-4 history "><span>21.4</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-3"><span title="Reading did not yield a concentration for B">7.133</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">15.6 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">5.200</div>
+        
+        <div class="col-sm-4 history "><span>15.6</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">5.200</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">18.8 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">6.267</div>
+        
+        <div class="col-sm-4 history "><span>18.8</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">6.267</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">17.6 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">5.867</div>
+        
+        <div class="col-sm-4 history "><span>17.6</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for B">5.867</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6471,7 +6599,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6497,7 +6627,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 7 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6519,45 +6649,194 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">2/10/2010</div>
+        
+        <div title="Concentration below detectable limit for F" class="col-sm-4 history"><span class="below-detectable"><span>0.1</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.025</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">0.14 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.035</div>
+        
+        <div class="col-sm-4 history "><span>0.14</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.035</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">0.18 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.045</div>
+        
+        <div class="col-sm-4 history "><span>0.18</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.045</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">0.15 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.037</div>
+        
+        <div class="col-sm-4 history "><span>0.15</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.037</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.1 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.025</div>
+        
+        <div class="col-sm-4 history "><span>0.1</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.025</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.102 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.025</div>
+        
+        <div class="col-sm-4 history "><span>0.102</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.025</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.058 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.015</div>
+        
+        <div class="col-sm-4 history "><span>0.058</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.015</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.11 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.028</div>
+        
+        <div class="col-sm-4 history "><span>0.11</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.028</span></div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-GAP" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-GAP">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          
+          <h4>Chemical Symbol</h4>
+          
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>GAP</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Gross Alpha Particle Activity</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>7 / 8 <span class="percent-exceeded">88%</span></h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>15 pCi/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/10/2010</div>
+        
+        <div class="col-sm-4 history "><span>45</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for GAP">3.000</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/5/2010</div>
+        
+        <div class="col-sm-4 history "><span>40</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for GAP">2.667</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/11/2010</div>
+        
+        <div class="col-sm-4 history "><span>68</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for GAP">4.533</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/11/2010</div>
+        
+        <div class="col-sm-4 history "><span>55</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for GAP">3.667</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/12/2011</div>
+        
+        <div class="col-sm-4 history "><span>6.3</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for GAP" >0.420</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/17/2011</div>
+        
+        <div class="col-sm-4 history "><span>43</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for GAP">2.867</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/16/11</div>
+        
+        <div class="col-sm-4 history "><span>78</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for GAP">5.200</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">2/6/2012</div>
+        
+        <div class="col-sm-4 history "><span>45</span> pCi/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for GAP">3.000</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6570,15 +6849,15 @@ map.addLayer(markers);
     
   
     
-  
-    
     <div id="element-Pb" class="element-details">
       <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Pb">&times;</a></h5>
     <div class="element-content">
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6604,7 +6883,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 5 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6626,33 +6905,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">2/10/2010</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>8e-05</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.005</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/5/2010</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>8e-05</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.005</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">0.00552 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.368</div>
+        
+        <div class="col-sm-4 history "><span>0.00552</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.368</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/11/2010</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.0004</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.027</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.000253 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.017</div>
+        
+        <div class="col-sm-4 history "><span>0.000253</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.017</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.00143 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.095</div>
+        
+        <div class="col-sm-4 history "><span>0.00143</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.095</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.000199 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.013</div>
+        
+        <div class="col-sm-4 history "><span>0.000199</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.013</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.00008 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.005</div>
+        
+        <div class="col-sm-4 history "><span>8e-05</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.005</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6669,7 +6982,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6695,7 +7010,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6718,50 +7033,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">0.116 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.387</div>
+        
+        <div class="col-sm-4 history "><span>0.116</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.387</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">0.126 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.420</div>
+        
+        <div class="col-sm-4 history "><span>0.126</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.420</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">0.1263 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.421</div>
+        
+        <div class="col-sm-4 history "><span>0.1263</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.421</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">0.135 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.450</div>
+        
+        <div class="col-sm-4 history "><span>0.135</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.450</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.135 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.450</div>
+        
+        <div class="col-sm-4 history "><span>0.135</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.450</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.124 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.413</div>
+        
+        <div class="col-sm-4 history "><span>0.124</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.413</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.116 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.387</div>
+        
+        <div class="col-sm-4 history "><span>0.116</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.387</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.109 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.363</div>
+        
+        <div class="col-sm-4 history "><span>0.109</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.363</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6780,7 +7111,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6806,7 +7139,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6829,50 +7162,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">0.0189 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.472</div>
+        
+        <div class="col-sm-4 history "><span>0.0189</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.472</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">0.0223 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.557</div>
+        
+        <div class="col-sm-4 history "><span>0.0223</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.557</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">0.0201 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.502</div>
+        
+        <div class="col-sm-4 history "><span>0.0201</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.502</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">0.0207 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.517</div>
+        
+        <div class="col-sm-4 history "><span>0.0207</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.517</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.0273 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.682</div>
+        
+        <div class="col-sm-4 history "><span>0.0273</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.682</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.0216 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.540</div>
+        
+        <div class="col-sm-4 history "><span>0.0216</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.540</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.0204 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.510</div>
+        
+        <div class="col-sm-4 history "><span>0.0204</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.510</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.0196 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.490</div>
+        
+        <div class="col-sm-4 history "><span>0.0196</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.490</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6891,7 +7240,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
-          <h4>Chemical Symbol</h4>
+          
+          <h4>Chemical Formula</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6917,7 +7268,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 4 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6939,27 +7290,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">2/10/2010</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>0.1</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.010</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">5/5/2010</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>0.02</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/11/2010</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>0.02</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/11/2010</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>0.02</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.1 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.010</div>
+        
+        <div class="col-sm-4 history "><span>0.1</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.010</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.02 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.002</div>
+        
+        <div class="col-sm-4 history "><span>0.02</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.02 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.002</div>
+        
+        <div class="col-sm-4 history "><span>0.02</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.02 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.002</div>
+        
+        <div class="col-sm-4 history "><span>0.02</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6978,7 +7369,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -7004,7 +7397,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>10 / 15 (67%)</h2>
+          <h2>10 / 15 <span class="percent-exceeded">67%</span></h2>
         </div>
       </div>
 
@@ -7027,92 +7420,122 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">28 pCi/l</div>
-        <div class="col-sm-4 history magnitude-true">5.600</div>
+        
+        <div class="col-sm-4 history "><span>28</span> pCi/L <span class="special" title="Sampled as combined radium 226 & 228">(226 & 228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">5.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">26 pCi/l</div>
-        <div class="col-sm-4 history magnitude-true">5.200</div>
+        
+        <div class="col-sm-4 history "><span>26</span> pCi/L <span class="special" title="Sampled as radium 226">(226)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">5.200</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">1.5 pCi/l</div>
-        <div class="col-sm-4 history magnitude-false">0.300</div>
+        
+        <div class="col-sm-4 history "><span>1.5</span> pCi/L <span class="special" title="Sampled as radium 228">(228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ra" >0.300</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">37 pCi/l</div>
-        <div class="col-sm-4 history magnitude-true">7.400</div>
+        
+        <div class="col-sm-4 history "><span>37</span> pCi/L <span class="special" title="Sampled as combined radium 226 & 228">(226 & 228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-3"><span title="Reading did not yield a concentration for Ra">7.400</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">36 pCi/l</div>
-        <div class="col-sm-4 history magnitude-true">7.200</div>
+        
+        <div class="col-sm-4 history "><span>36</span> pCi/L <span class="special" title="Sampled as radium 226">(226)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-3"><span title="Reading did not yield a concentration for Ra">7.200</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">1 pCi/l</div>
-        <div class="col-sm-4 history magnitude-false">0.200</div>
+        
+        <div class="col-sm-4 history "><span>1</span> pCi/L <span class="special" title="Sampled as radium 228">(228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ra" >0.200</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">35 pCi/l</div>
-        <div class="col-sm-4 history magnitude-true">7.000</div>
+        
+        <div class="col-sm-4 history "><span>35</span> pCi/L <span class="special" title="Sampled as combined radium 226 & 228">(226 & 228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">7.000</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">33 pCi/l</div>
-        <div class="col-sm-4 history magnitude-true">6.600</div>
+        
+        <div class="col-sm-4 history "><span>33</span> pCi/L <span class="special" title="Sampled as radium 226">(226)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">6.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">1.5 pCi/l</div>
-        <div class="col-sm-4 history magnitude-false">0.300</div>
+        
+        <div class="col-sm-4 history "><span>1.5</span> pCi/L <span class="special" title="Sampled as radium 228">(228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ra" >0.300</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">31 pCi/L</div>
-        <div class="col-sm-4 history magnitude-true">6.200</div>
+        
+        <div class="col-sm-4 history "><span>31</span> pCi/L <span class="special" title="Sampled as combined radium 226 & 228">(226 & 228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">6.200</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">29 pCi/L</div>
-        <div class="col-sm-4 history magnitude-true">5.800</div>
+        
+        <div class="col-sm-4 history "><span>29</span> pCi/L <span class="special" title="Sampled as radium 226">(226)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">5.800</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">1.5 pCi/L</div>
-        <div class="col-sm-4 history magnitude-false">0.300</div>
+        
+        <div class="col-sm-4 history "><span>1.5</span> pCi/L <span class="special" title="Sampled as radium 228">(228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ra" >0.300</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">35 pCi/L</div>
-        <div class="col-sm-4 history magnitude-true">7.000</div>
+        
+        <div class="col-sm-4 history "><span>35</span> pCi/L <span class="special" title="Sampled as combined radium 226 & 228">(226 & 228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">7.000</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">33 pCi/L</div>
-        <div class="col-sm-4 history magnitude-true">6.600</div>
+        
+        <div class="col-sm-4 history "><span>33</span> pCi/L <span class="special" title="Sampled as radium 226">(226)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-level-2"><span title="Reading did not yield a concentration for Ra">6.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">1.5 pCi/L</div>
-        <div class="col-sm-4 history magnitude-false">0.300</div>
+        
+        <div class="col-sm-4 history "><span>1.5</span> pCi/L <span class="special" title="Sampled as radium 228">(228)</span></div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ra" >0.300</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -7135,7 +7558,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
-          <h4>Chemical Symbol</h4>
+          
+          <h4>Chemical Formula</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -7161,7 +7586,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>8 / 8 (100%)</h2>
+          <h2>8 / 8 <span class="percent-exceeded">100%</span></h2>
         </div>
       </div>
 
@@ -7184,50 +7609,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">1040 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.080</div>
+        
+        <div class="col-sm-4 history "><span>1040</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.080</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">1090 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.180</div>
+        
+        <div class="col-sm-4 history "><span>1090</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.180</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">1060 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.120</div>
+        
+        <div class="col-sm-4 history "><span>1060</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.120</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/11/2010</div>
-        <div class="col-sm-4 history">1030 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.060</div>
+        
+        <div class="col-sm-4 history "><span>1030</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.060</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">1110 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.220</div>
+        
+        <div class="col-sm-4 history "><span>1110</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.220</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">1050 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.100</div>
+        
+        <div class="col-sm-4 history "><span>1050</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.100</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">931 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.862</div>
+        
+        <div class="col-sm-4 history "><span>931</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">1.862</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">896 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.792</div>
+        
+        <div class="col-sm-4 history "><span>896</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">1.792</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -7244,7 +7685,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -7270,7 +7713,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 7 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -7293,44 +7736,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">2/10/2010</div>
-        <div class="col-sm-4 history">0.00008 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.040</div>
+        
+        <div class="col-sm-4 history "><span>8e-05</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.040</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/5/2010</div>
-        <div class="col-sm-4 history">0.00006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.030</div>
+        
+        <div class="col-sm-4 history "><span>6e-05</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.030</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/11/2010</div>
-        <div class="col-sm-4 history">0.00003 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.015</div>
+        
+        <div class="col-sm-4 history "><span>3e-05</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.015</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/11/2010</div>
+        
+        <div title="Concentration below detectable limit for Tl" class="col-sm-4 history"><span class="below-detectable"><span>0.0005</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.250</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">5/12/2011</div>
-        <div class="col-sm-4 history">0.0001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.0001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.050</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/17/2011</div>
-        <div class="col-sm-4 history">0.0001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.0001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.050</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/16/11</div>
-        <div class="col-sm-4 history">0.0001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.0001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.050</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">2/6/2012</div>
-        <div class="col-sm-4 history">0.0001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.0001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Tl" >0.050</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -7399,6 +7864,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

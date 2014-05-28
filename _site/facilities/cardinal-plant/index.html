@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -268,9 +273,10 @@ var icon_other_violation = {
 
   
   var well_13 = L.marker(new L.LatLng(40.27273333, -80.65882778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-8?zoom=' + map_current_zoom + '&lat=40.27273333&lng=-80.65882778';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-8?zoom=' + map_current_zoom + '&lat=40.27273333&lng=-80.65882778';
     });
   }).on('mouseover', function (e) {
     well_13.openPopup()
@@ -288,9 +294,10 @@ var icon_other_violation = {
 
   
   var well_14 = L.marker(new L.LatLng(40.26448333, -80.64905)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-9?zoom=' + map_current_zoom + '&lat=40.26448333&lng=-80.64905';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-9?zoom=' + map_current_zoom + '&lat=40.26448333&lng=-80.64905';
     });
   }).on('mouseover', function (e) {
     well_14.openPopup()
@@ -362,9 +369,10 @@ var icon_other_violation = {
 
   
   var well_42 = L.marker(new L.LatLng(40.27947222, -80.64883889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-16?zoom=' + map_current_zoom + '&lat=40.27947222&lng=-80.64883889';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-16?zoom=' + map_current_zoom + '&lat=40.27947222&lng=-80.64883889';
     });
   }).on('mouseover', function (e) {
     well_42.openPopup()
@@ -382,9 +390,10 @@ var icon_other_violation = {
 
   
   var well_43 = L.marker(new L.LatLng(40.27492222, -80.6616)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.6616';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.6616';
     });
   }).on('mouseover', function (e) {
     well_43.openPopup()
@@ -402,9 +411,10 @@ var icon_other_violation = {
 
   
   var well_44 = L.marker(new L.LatLng(40.27260278, -80.63699444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-14?zoom=' + map_current_zoom + '&lat=40.27260278&lng=-80.63699444';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-14?zoom=' + map_current_zoom + '&lat=40.27260278&lng=-80.63699444';
     });
   }).on('mouseover', function (e) {
     well_44.openPopup()
@@ -422,9 +432,10 @@ var icon_other_violation = {
 
   
   var well_45 = L.marker(new L.LatLng(40.27393056, -80.64272222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-15?zoom=' + map_current_zoom + '&lat=40.27393056&lng=-80.64272222';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-15?zoom=' + map_current_zoom + '&lat=40.27393056&lng=-80.64272222';
     });
   }).on('mouseover', function (e) {
     well_45.openPopup()
@@ -442,9 +453,10 @@ var icon_other_violation = {
 
   
   var well_46 = L.marker(new L.LatLng(40.27291944, -80.65074722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-12?zoom=' + map_current_zoom + '&lat=40.27291944&lng=-80.65074722';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-12?zoom=' + map_current_zoom + '&lat=40.27291944&lng=-80.65074722';
     });
   }).on('mouseover', function (e) {
     well_46.openPopup()
@@ -462,9 +474,10 @@ var icon_other_violation = {
 
   
   var well_47 = L.marker(new L.LatLng(40.26889444, -80.6422)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-13?zoom=' + map_current_zoom + '&lat=40.26889444&lng=-80.6422';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-13?zoom=' + map_current_zoom + '&lat=40.26889444&lng=-80.6422';
     });
   }).on('mouseover', function (e) {
     well_47.openPopup()
@@ -482,9 +495,10 @@ var icon_other_violation = {
 
   
   var well_48 = L.marker(new L.LatLng(40.26640556, -80.64364722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-10?zoom=' + map_current_zoom + '&lat=40.26640556&lng=-80.64364722';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-10?zoom=' + map_current_zoom + '&lat=40.26640556&lng=-80.64364722';
     });
   }).on('mouseover', function (e) {
     well_48.openPopup()
@@ -512,9 +526,10 @@ var icon_other_violation = {
 
   
   var well_54 = L.marker(new L.LatLng(40.27041389, -80.65886389)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-18?zoom=' + map_current_zoom + '&lat=40.27041389&lng=-80.65886389';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-18?zoom=' + map_current_zoom + '&lat=40.27041389&lng=-80.65886389';
     });
   }).on('mouseover', function (e) {
     well_54.openPopup()
@@ -532,9 +547,10 @@ var icon_other_violation = {
 
   
   var well_55 = L.marker(new L.LatLng(40.26683333, -80.65751944)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-19?zoom=' + map_current_zoom + '&lat=40.26683333&lng=-80.65751944';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-19?zoom=' + map_current_zoom + '&lat=40.26683333&lng=-80.65751944';
     });
   }).on('mouseover', function (e) {
     well_55.openPopup()
@@ -898,9 +914,10 @@ var icon_other_violation = {
 
   
   var well_229 = L.marker(new L.LatLng(40.261275, -80.64891667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-4?zoom=' + map_current_zoom + '&lat=40.261275&lng=-80.64891667';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-4?zoom=' + map_current_zoom + '&lat=40.261275&lng=-80.64891667';
     });
   }).on('mouseover', function (e) {
     well_229.openPopup()
@@ -918,9 +935,10 @@ var icon_other_violation = {
 
   
   var well_230 = L.marker(new L.LatLng(40.27736389, -80.66036667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-3?zoom=' + map_current_zoom + '&lat=40.27736389&lng=-80.66036667';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-3?zoom=' + map_current_zoom + '&lat=40.27736389&lng=-80.66036667';
     });
   }).on('mouseover', function (e) {
     well_230.openPopup()
@@ -938,9 +956,10 @@ var icon_other_violation = {
 
   
   var well_231 = L.marker(new L.LatLng(40.26160556, -80.64506944)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-2?zoom=' + map_current_zoom + '&lat=40.26160556&lng=-80.64506944';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-2?zoom=' + map_current_zoom + '&lat=40.26160556&lng=-80.64506944';
     });
   }).on('mouseover', function (e) {
     well_231.openPopup()
@@ -958,9 +977,10 @@ var icon_other_violation = {
 
   
   var well_232 = L.marker(new L.LatLng(40.264025, -80.64380556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-1?zoom=' + map_current_zoom + '&lat=40.264025&lng=-80.64380556';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-1?zoom=' + map_current_zoom + '&lat=40.264025&lng=-80.64380556';
     });
   }).on('mouseover', function (e) {
     well_232.openPopup()
@@ -1112,9 +1132,10 @@ var icon_other_violation = {
 
   
   var well_300 = L.marker(new L.LatLng(40.277425, -80.65890556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-4?zoom=' + map_current_zoom + '&lat=40.277425&lng=-80.65890556';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-4?zoom=' + map_current_zoom + '&lat=40.277425&lng=-80.65890556';
     });
   }).on('mouseover', function (e) {
     well_300.openPopup()
@@ -1134,9 +1155,10 @@ var icon_other_violation = {
 
   
   var well_302 = L.marker(new L.LatLng(40.26966944, -80.64791389)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-6?zoom=' + map_current_zoom + '&lat=40.26966944&lng=-80.64791389';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-6?zoom=' + map_current_zoom + '&lat=40.26966944&lng=-80.64791389';
     });
   }).on('mouseover', function (e) {
     well_302.openPopup()
@@ -1158,9 +1180,10 @@ var icon_other_violation = {
 
   
   var well_305 = L.marker(new L.LatLng(40.26853056, -80.65382222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382222';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382222';
     });
   }).on('mouseover', function (e) {
     well_305.openPopup()
@@ -1178,9 +1201,10 @@ var icon_other_violation = {
 
   
   var well_306 = L.marker(new L.LatLng(40.27696944, -80.661175)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-2?zoom=' + map_current_zoom + '&lat=40.27696944&lng=-80.661175';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-2?zoom=' + map_current_zoom + '&lat=40.27696944&lng=-80.661175';
     });
   }).on('mouseover', function (e) {
     well_306.openPopup()
@@ -1198,9 +1222,10 @@ var icon_other_violation = {
 
   
   var well_307 = L.marker(new L.LatLng(40.27795556, -80.66169722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-3?zoom=' + map_current_zoom + '&lat=40.27795556&lng=-80.66169722';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-3?zoom=' + map_current_zoom + '&lat=40.27795556&lng=-80.66169722';
     });
   }).on('mouseover', function (e) {
     well_307.openPopup()
@@ -1222,9 +1247,10 @@ var icon_other_violation = {
 
   
   var well_310 = L.marker(new L.LatLng(40.261575, -80.64505556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-8?zoom=' + map_current_zoom + '&lat=40.261575&lng=-80.64505556';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-8?zoom=' + map_current_zoom + '&lat=40.261575&lng=-80.64505556';
     });
   }).on('mouseover', function (e) {
     well_310.openPopup()
@@ -1242,9 +1268,10 @@ var icon_other_violation = {
 
   
   var well_311 = L.marker(new L.LatLng(40.26421667, -80.64123056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-9?zoom=' + map_current_zoom + '&lat=40.26421667&lng=-80.64123056';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-9?zoom=' + map_current_zoom + '&lat=40.26421667&lng=-80.64123056';
     });
   }).on('mouseover', function (e) {
     well_311.openPopup()
@@ -1274,9 +1301,10 @@ var icon_other_violation = {
 
   
   var well_318 = L.marker(new L.LatLng(40.26415556, -80.64350278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-23?zoom=' + map_current_zoom + '&lat=40.26415556&lng=-80.64350278';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-23?zoom=' + map_current_zoom + '&lat=40.26415556&lng=-80.64350278';
     });
   }).on('mouseover', function (e) {
     well_318.openPopup()
@@ -1294,9 +1322,10 @@ var icon_other_violation = {
 
   
   var well_319 = L.marker(new L.LatLng(40.26688889, -80.63894444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-22?zoom=' + map_current_zoom + '&lat=40.26688889&lng=-80.63894444';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-22?zoom=' + map_current_zoom + '&lat=40.26688889&lng=-80.63894444';
     });
   }).on('mouseover', function (e) {
     well_319.openPopup()
@@ -1314,9 +1343,10 @@ var icon_other_violation = {
 
   
   var well_320 = L.marker(new L.LatLng(40.26558333, -80.64941111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64941111';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64941111';
     });
   }).on('mouseover', function (e) {
     well_320.openPopup()
@@ -1334,9 +1364,10 @@ var icon_other_violation = {
 
   
   var well_321 = L.marker(new L.LatLng(40.26704444, -80.65188611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-20?zoom=' + map_current_zoom + '&lat=40.26704444&lng=-80.65188611';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-20?zoom=' + map_current_zoom + '&lat=40.26704444&lng=-80.65188611';
     });
   }).on('mouseover', function (e) {
     well_321.openPopup()
@@ -1360,9 +1391,10 @@ var icon_other_violation = {
 
   
   var well_325 = L.marker(new L.LatLng(40.26448889, -80.64905)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-11?zoom=' + map_current_zoom + '&lat=40.26448889&lng=-80.64905';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-11?zoom=' + map_current_zoom + '&lat=40.26448889&lng=-80.64905';
     });
   }).on('mouseover', function (e) {
     well_325.openPopup()
@@ -1402,9 +1434,10 @@ var icon_other_violation = {
 
   
   var well_337 = L.marker(new L.LatLng(40.26558333, -80.64940556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64940556';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-21?zoom=' + map_current_zoom + '&lat=40.26558333&lng=-80.64940556';
     });
   }).on('mouseover', function (e) {
     well_337.openPopup()
@@ -1490,9 +1523,10 @@ var icon_other_violation = {
 
   
   var well_372 = L.marker(new L.LatLng(40.27260556, -80.637)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-14?zoom=' + map_current_zoom + '&lat=40.27260556&lng=-80.637';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-14?zoom=' + map_current_zoom + '&lat=40.27260556&lng=-80.637';
     });
   }).on('mouseover', function (e) {
     well_372.openPopup()
@@ -1510,9 +1544,10 @@ var icon_other_violation = {
 
   
   var well_373 = L.marker(new L.LatLng(40.27392222, -80.64273333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-15?zoom=' + map_current_zoom + '&lat=40.27392222&lng=-80.64273333';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-15?zoom=' + map_current_zoom + '&lat=40.27392222&lng=-80.64273333';
     });
   }).on('mouseover', function (e) {
     well_373.openPopup()
@@ -1530,9 +1565,10 @@ var icon_other_violation = {
 
   
   var well_374 = L.marker(new L.LatLng(40.27946944, -80.64883056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-16?zoom=' + map_current_zoom + '&lat=40.27946944&lng=-80.64883056';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-16?zoom=' + map_current_zoom + '&lat=40.27946944&lng=-80.64883056';
     });
   }).on('mouseover', function (e) {
     well_374.openPopup()
@@ -1550,9 +1586,10 @@ var icon_other_violation = {
 
   
   var well_375 = L.marker(new L.LatLng(40.27492222, -80.66158056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.66158056';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-17?zoom=' + map_current_zoom + '&lat=40.27492222&lng=-80.66158056';
     });
   }).on('mouseover', function (e) {
     well_375.openPopup()
@@ -1570,9 +1607,10 @@ var icon_other_violation = {
 
   
   var well_376 = L.marker(new L.LatLng(40.26959444, -80.64864722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-10?zoom=' + map_current_zoom + '&lat=40.26959444&lng=-80.64864722';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-10?zoom=' + map_current_zoom + '&lat=40.26959444&lng=-80.64864722';
     });
   }).on('mouseover', function (e) {
     well_376.openPopup()
@@ -1590,9 +1628,10 @@ var icon_other_violation = {
 
   
   var well_377 = L.marker(new L.LatLng(40.27291389, -80.65076389)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-11?zoom=' + map_current_zoom + '&lat=40.27291389&lng=-80.65076389';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-11?zoom=' + map_current_zoom + '&lat=40.27291389&lng=-80.65076389';
     });
   }).on('mouseover', function (e) {
     well_377.openPopup()
@@ -1610,9 +1649,10 @@ var icon_other_violation = {
 
   
   var well_378 = L.marker(new L.LatLng(40.26888889, -80.64220278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-13?zoom=' + map_current_zoom + '&lat=40.26888889&lng=-80.64220278';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-13?zoom=' + map_current_zoom + '&lat=40.26888889&lng=-80.64220278';
     });
   }).on('mouseover', function (e) {
     well_378.openPopup()
@@ -1632,9 +1672,10 @@ var icon_other_violation = {
 
   
   var well_380 = L.marker(new L.LatLng(40.27040833, -80.65886944)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-18?zoom=' + map_current_zoom + '&lat=40.27040833&lng=-80.65886944';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-18?zoom=' + map_current_zoom + '&lat=40.27040833&lng=-80.65886944';
     });
   }).on('mouseover', function (e) {
     well_380.openPopup()
@@ -1770,9 +1811,10 @@ var icon_other_violation = {
 
   
   var well_440 = L.marker(new L.LatLng(40.26060556, -80.64869722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-5?zoom=' + map_current_zoom + '&lat=40.26060556&lng=-80.64869722';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-cr-5?zoom=' + map_current_zoom + '&lat=40.26060556&lng=-80.64869722';
     });
   }).on('mouseover', function (e) {
     well_440.openPopup()
@@ -1832,9 +1874,10 @@ var icon_other_violation = {
 
   
   var well_462 = L.marker(new L.LatLng(40.27742222, -80.6589)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-6?zoom=' + map_current_zoom + '&lat=40.27742222&lng=-80.6589';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-6?zoom=' + map_current_zoom + '&lat=40.27742222&lng=-80.6589';
     });
   }).on('mouseover', function (e) {
     well_462.openPopup()
@@ -1852,9 +1895,10 @@ var icon_other_violation = {
 
   
   var well_463 = L.marker(new L.LatLng(40.26971944, -80.64825278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-7?zoom=' + map_current_zoom + '&lat=40.26971944&lng=-80.64825278';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-7?zoom=' + map_current_zoom + '&lat=40.26971944&lng=-80.64825278';
     });
   }).on('mouseover', function (e) {
     well_463.openPopup()
@@ -1872,9 +1916,10 @@ var icon_other_violation = {
 
   
   var well_464 = L.marker(new L.LatLng(40.27695278, -80.661175)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-4?zoom=' + map_current_zoom + '&lat=40.27695278&lng=-80.661175';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-4?zoom=' + map_current_zoom + '&lat=40.27695278&lng=-80.661175';
     });
   }).on('mouseover', function (e) {
     well_464.openPopup()
@@ -1892,9 +1937,10 @@ var icon_other_violation = {
 
   
   var well_465 = L.marker(new L.LatLng(40.27796667, -80.66169167)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-5?zoom=' + map_current_zoom + '&lat=40.27796667&lng=-80.66169167';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-5?zoom=' + map_current_zoom + '&lat=40.27796667&lng=-80.66169167';
     });
   }).on('mouseover', function (e) {
     well_465.openPopup()
@@ -1912,9 +1958,10 @@ var icon_other_violation = {
 
   
   var well_466 = L.marker(new L.LatLng(40.26768611, -80.65524167)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-2?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65524167';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-2?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65524167';
     });
   }).on('mouseover', function (e) {
     well_466.openPopup()
@@ -1934,9 +1981,10 @@ var icon_other_violation = {
 
   
   var well_468 = L.marker(new L.LatLng(40.26853056, -80.65382778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382778';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-1?zoom=' + map_current_zoom + '&lat=40.26853056&lng=-80.65382778';
     });
   }).on('mouseover', function (e) {
     well_468.openPopup()
@@ -2068,9 +2116,10 @@ var icon_other_violation = {
 
   
   var well_526 = L.marker(new L.LatLng(40.26704722, -80.65189722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-20?zoom=' + map_current_zoom + '&lat=40.26704722&lng=-80.65189722';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-20?zoom=' + map_current_zoom + '&lat=40.26704722&lng=-80.65189722';
     });
   }).on('mouseover', function (e) {
     well_526.openPopup()
@@ -2088,9 +2137,10 @@ var icon_other_violation = {
 
   
   var well_527 = L.marker(new L.LatLng(40.26688333, -80.63893611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-22?zoom=' + map_current_zoom + '&lat=40.26688333&lng=-80.63893611';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-s-22?zoom=' + map_current_zoom + '&lat=40.26688333&lng=-80.63893611';
     });
   }).on('mouseover', function (e) {
     well_527.openPopup()
@@ -2828,9 +2878,10 @@ var icon_other_violation = {
 
   
   var well_888 = L.marker(new L.LatLng(40.26768611, -80.65522778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-5?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65522778';  
+      window.location.href = '/facilities/cardinal-plant/cardinal-plant-m-5?zoom=' + map_current_zoom + '&lat=40.26768611&lng=-80.65522778';
     });
   }).on('mouseover', function (e) {
     well_888.openPopup()
@@ -3058,14 +3109,401 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:66%"></span></div>
 <h2 class="well-count">70</h2><span> total with </span> 
-<h2 class="well-count">46</h2><span> out of compliance</span>
+<h2 class="well-count">46</h2><span> reporting at least one exceedance</span>
 
 <p><em>Please note that</em> <span class="unmapped">24</span> <em>wells at this facility are missing reliable coordinate data and therefore are not shown on the map.</em></p><br />
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>387 / 2132 (18%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-cr-1/?zoom=18&amp;lat=40.264025&amp;lng=-80.64380556">CR-1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-cr-2/?zoom=18&amp;lat=40.26160556&amp;lng=-80.64506944">CR-2</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-cr-3/?zoom=18&amp;lat=40.27736389&amp;lng=-80.66036667">CR-3</a></td>
+      <td class="data-align-center">15</td>
+      
+      <td class="dirty-well data-align-center"><span>15</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-cr-4/?zoom=18&amp;lat=40.261275&amp;lng=-80.64891667">CR-4</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-cr-5/?zoom=18&amp;lat=40.26060556&amp;lng=-80.64869722">CR-5</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-1/?zoom=18&amp;lat=40.26853056&amp;lng=-80.65382222">M-1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-10/?zoom=18&amp;lat=40.26640556&amp;lng=-80.64364722">M-10</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-11/?zoom=18&amp;lat=40.26448889&amp;lng=-80.64905">M-11</a></td>
+      <td class="data-align-center">16</td>
+      
+      <td class="dirty-well data-align-center"><span>16</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-12/?zoom=18&amp;lat=40.27291944&amp;lng=-80.65074722">M-12</a></td>
+      <td class="data-align-center">12</td>
+      
+      <td class="dirty-well data-align-center"><span>12</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-13/?zoom=18&amp;lat=40.26889444&amp;lng=-80.6422">M-13</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-14/?zoom=18&amp;lat=40.27260278&amp;lng=-80.63699444">M-14</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-15/?zoom=18&amp;lat=40.27393056&amp;lng=-80.64272222">M-15</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-16/?zoom=18&amp;lat=40.27947222&amp;lng=-80.64883889">M-16</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-17/?zoom=18&amp;lat=40.27492222&amp;lng=-80.6616">M-17</a></td>
+      <td class="data-align-center">15</td>
+      
+      <td class="dirty-well data-align-center"><span>15</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-18/?zoom=18&amp;lat=40.27041389&amp;lng=-80.65886389">M-18</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-19/?zoom=18&amp;lat=40.26683333&amp;lng=-80.65751944">M-19</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-2/?zoom=18&amp;lat=40.27696944&amp;lng=-80.661175">M-2</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-20/?zoom=18&amp;lat=40.26704444&amp;lng=-80.65188611">M-20</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-21/?zoom=18&amp;lat=40.26558333&amp;lng=-80.64941111">M-21</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-22/?zoom=18&amp;lat=40.26688889&amp;lng=-80.63894444">M-22</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-23/?zoom=18&amp;lat=40.26415556&amp;lng=-80.64350278">M-23</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-3/?zoom=18&amp;lat=40.27795556&amp;lng=-80.66169722">M-3</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-4/?zoom=18&amp;lat=40.277425&amp;lng=-80.65890556">M-4</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-5/?zoom=18&amp;lat=40.26768611&amp;lng=-80.65522778">M-5</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-6/?zoom=18&amp;lat=40.26966944&amp;lng=-80.64791389">M-6</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-8/?zoom=18&amp;lat=40.261575&amp;lng=-80.64505556">M-8</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-m-9/?zoom=18&amp;lat=40.26421667&amp;lng=-80.64123056">M-9</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-1/?zoom=18&amp;lat=40.26853056&amp;lng=-80.65382778">S-1</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-10/?zoom=18&amp;lat=40.26959444&amp;lng=-80.64864722">S-10</a></td>
+      <td class="data-align-center">9</td>
+      
+      <td class="dirty-well data-align-center"><span>9</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-11/?zoom=18&amp;lat=40.27291389&amp;lng=-80.65076389">S-11</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-13/?zoom=18&amp;lat=40.26888889&amp;lng=-80.64220278">S-13</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-14/?zoom=18&amp;lat=40.27260556&amp;lng=-80.637">S-14</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-15/?zoom=18&amp;lat=40.27392222&amp;lng=-80.64273333">S-15</a></td>
+      <td class="data-align-center">14</td>
+      
+      <td class="dirty-well data-align-center"><span>14</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-16/?zoom=18&amp;lat=40.27946944&amp;lng=-80.64883056">S-16</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-17/?zoom=18&amp;lat=40.27492222&amp;lng=-80.66158056">S-17</a></td>
+      <td class="data-align-center">14</td>
+      
+      <td class="dirty-well data-align-center"><span>14</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-18/?zoom=18&amp;lat=40.27040833&amp;lng=-80.65886944">S-18</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-2/?zoom=18&amp;lat=40.26768611&amp;lng=-80.65524167">S-2</a></td>
+      <td class="data-align-center">16</td>
+      
+      <td class="dirty-well data-align-center"><span>16</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-20/?zoom=18&amp;lat=40.26704722&amp;lng=-80.65189722">S-20</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-21/?zoom=18&amp;lat=40.26558333&amp;lng=-80.64940556">S-21</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-22/?zoom=18&amp;lat=40.26688333&amp;lng=-80.63893611">S-22</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-4/?zoom=18&amp;lat=40.27695278&amp;lng=-80.661175">S-4</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-5/?zoom=18&amp;lat=40.27796667&amp;lng=-80.66169167">S-5</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-6/?zoom=18&amp;lat=40.27742222&amp;lng=-80.6589">S-6</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-7/?zoom=18&amp;lat=40.26971944&amp;lng=-80.64825278">S-7</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-8/?zoom=18&amp;lat=40.27273333&amp;lng=-80.65882778">S-8</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="cardinal-plant-s-9/?zoom=18&amp;lat=40.26448333&amp;lng=-80.64905">S-9</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:10%"></span></div>
+<h2>385 / 3,759 <span class="percent-exceeded">10%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -3075,7 +3513,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -3084,7 +3522,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" data-original-title="3 Antimony violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" title="3 exceedances at this facility" >
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -3093,7 +3531,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="57 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="57 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -3102,7 +3540,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Ba" data-placement="top" data-original-title="13 Barium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Ba" data-placement="top" title="13 exceedances at this facility" >
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -3111,7 +3549,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Be" data-placement="top" data-original-title="2 Beryllium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Be" data-placement="top" title="2 exceedances at this facility" >
         
         <span class="contaminant-symbol">Be</span>
         
@@ -3120,7 +3558,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="15 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="15 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -3129,7 +3567,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Cd" data-placement="top" data-original-title="3 Cadmium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Cd" data-placement="top" title="3 exceedances at this facility" >
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -3138,7 +3576,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -3147,7 +3585,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="27 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="27 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -3156,7 +3594,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -3165,7 +3603,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -3174,7 +3612,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" data-placement="top" data-original-title="Fluoride is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-F" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -3183,7 +3621,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -3192,7 +3630,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -3201,7 +3639,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" data-original-title="3 Lead violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" title="3 exceedances at this facility" >
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -3210,7 +3648,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="79 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="79 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -3219,7 +3657,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Hg" data-placement="top" data-original-title="No Hg violations at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -3228,7 +3666,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" data-original-title="24 Molybdenum violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" title="24 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -3237,7 +3675,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" data-original-title="5 Nickel violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -3246,7 +3684,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" data-original-title="Nitrate is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -3255,7 +3693,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -3264,7 +3702,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -3273,7 +3711,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -3282,7 +3720,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ag" data-placement="top" data-original-title="No Ag violations at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -3291,7 +3729,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Sr" data-placement="top" data-original-title="50 Strontium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Sr" data-placement="top" title="50 exceedances at this facility" >
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -3300,7 +3738,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="105 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="105 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -3309,7 +3747,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -3318,7 +3756,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -3327,7 +3765,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-U" data-placement="top" data-original-title="1 Uranium violation at this facility" >
+      <div class="element exceeded" data-toggle="element-U" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">U</span>
         
@@ -3347,7 +3785,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Cardinal.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/cardinal-plant.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -3401,6 +3839,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

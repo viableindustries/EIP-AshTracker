@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -468,9 +473,10 @@ var icon_other_violation = {
 
   
   var well_113 = L.marker(new L.LatLng(47.22770278, -101.7888111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-green-6?zoom=' + map_current_zoom + '&lat=47.22770278&lng=-101.7888111';  
+      window.location.href = '/facilities/coyote-station/coyote-station-green-6?zoom=' + map_current_zoom + '&lat=47.22770278&lng=-101.7888111';
     });
   }).on('mouseover', function (e) {
     well_113.openPopup()
@@ -514,9 +520,10 @@ var icon_other_violation = {
 
   
   var well_127 = L.marker(new L.LatLng(47.21731667, -101.8093556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-a1?zoom=' + map_current_zoom + '&lat=47.21731667&lng=-101.8093556';  
+      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-a1?zoom=' + map_current_zoom + '&lat=47.21731667&lng=-101.8093556';
     });
   }).on('mouseover', function (e) {
     well_127.openPopup()
@@ -580,9 +587,10 @@ var icon_other_violation = {
 
   
   var well_151 = L.marker(new L.LatLng(47.22068056, -101.8007028)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-black-1726?zoom=' + map_current_zoom + '&lat=47.22068056&lng=-101.8007028';  
+      window.location.href = '/facilities/coyote-station/coyote-station-black-1726?zoom=' + map_current_zoom + '&lat=47.22068056&lng=-101.8007028';
     });
   }).on('mouseover', function (e) {
     well_151.openPopup()
@@ -688,9 +696,10 @@ var icon_other_violation = {
 
   
   var well_196 = L.marker(new L.LatLng(47.22345278, -101.7970083)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-black-bp2-a?zoom=' + map_current_zoom + '&lat=47.22345278&lng=-101.7970083';  
+      window.location.href = '/facilities/coyote-station/coyote-station-black-bp2-a?zoom=' + map_current_zoom + '&lat=47.22345278&lng=-101.7970083';
     });
   }).on('mouseover', function (e) {
     well_196.openPopup()
@@ -726,9 +735,10 @@ var icon_other_violation = {
 
   
   var well_206 = L.marker(new L.LatLng(47.22738333, -101.7861139)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-green-5-1?zoom=' + map_current_zoom + '&lat=47.22738333&lng=-101.7861139';  
+      window.location.href = '/facilities/coyote-station/coyote-station-green-5-1?zoom=' + map_current_zoom + '&lat=47.22738333&lng=-101.7861139';
     });
   }).on('mouseover', function (e) {
     well_206.openPopup()
@@ -1042,9 +1052,10 @@ var icon_other_violation = {
 
   
   var well_355 = L.marker(new L.LatLng(47.22196667, -101.7937111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-black-1463?zoom=' + map_current_zoom + '&lat=47.22196667&lng=-101.7937111';  
+      window.location.href = '/facilities/coyote-station/coyote-station-black-1463?zoom=' + map_current_zoom + '&lat=47.22196667&lng=-101.7937111';
     });
   }).on('mouseover', function (e) {
     well_355.openPopup()
@@ -1398,9 +1409,10 @@ var icon_other_violation = {
 
   
   var well_524 = L.marker(new L.LatLng(47.20898056, -101.7863889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-blue-13?zoom=' + map_current_zoom + '&lat=47.20898056&lng=-101.7863889';  
+      window.location.href = '/facilities/coyote-station/coyote-station-blue-13?zoom=' + map_current_zoom + '&lat=47.20898056&lng=-101.7863889';
     });
   }).on('mouseover', function (e) {
     well_524.openPopup()
@@ -1632,9 +1644,10 @@ var icon_other_violation = {
 
   
   var well_632 = L.marker(new L.LatLng(47.21967778, -101.813975)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-n1?zoom=' + map_current_zoom + '&lat=47.21967778&lng=-101.813975';  
+      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-n1?zoom=' + map_current_zoom + '&lat=47.21967778&lng=-101.813975';
     });
   }).on('mouseover', function (e) {
     well_632.openPopup()
@@ -1670,9 +1683,10 @@ var icon_other_violation = {
 
   
   var well_642 = L.marker(new L.LatLng(47.21781389, -101.8088556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-6?zoom=' + map_current_zoom + '&lat=47.21781389&lng=-101.8088556';  
+      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-6?zoom=' + map_current_zoom + '&lat=47.21781389&lng=-101.8088556';
     });
   }).on('mouseover', function (e) {
     well_642.openPopup()
@@ -1740,9 +1754,10 @@ var icon_other_violation = {
 
   
   var well_668 = L.marker(new L.LatLng(47.21894167, -101.8109889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-a6?zoom=' + map_current_zoom + '&lat=47.21894167&lng=-101.8109889';  
+      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-a6?zoom=' + map_current_zoom + '&lat=47.21894167&lng=-101.8109889';
     });
   }).on('mouseover', function (e) {
     well_668.openPopup()
@@ -1830,9 +1845,10 @@ var icon_other_violation = {
 
   
   var well_704 = L.marker(new L.LatLng(47.22556667, -101.7885222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-green-7?zoom=' + map_current_zoom + '&lat=47.22556667&lng=-101.7885222';  
+      window.location.href = '/facilities/coyote-station/coyote-station-green-7?zoom=' + map_current_zoom + '&lat=47.22556667&lng=-101.7885222';
     });
   }).on('mouseover', function (e) {
     well_704.openPopup()
@@ -1990,9 +2006,10 @@ var icon_other_violation = {
 
   
   var well_775 = L.marker(new L.LatLng(47.2123, -101.7942917)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-blue-6?zoom=' + map_current_zoom + '&lat=47.2123&lng=-101.7942917';  
+      window.location.href = '/facilities/coyote-station/coyote-station-blue-6?zoom=' + map_current_zoom + '&lat=47.2123&lng=-101.7942917';
     });
   }).on('mouseover', function (e) {
     well_775.openPopup()
@@ -2098,9 +2115,10 @@ var icon_other_violation = {
 
   
   var well_820 = L.marker(new L.LatLng(47.22054167, -101.8133639)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-n3?zoom=' + map_current_zoom + '&lat=47.22054167&lng=-101.8133639';  
+      window.location.href = '/facilities/coyote-station/coyote-station-ash-pond-n3?zoom=' + map_current_zoom + '&lat=47.22054167&lng=-101.8133639';
     });
   }).on('mouseover', function (e) {
     well_820.openPopup()
@@ -2120,9 +2138,10 @@ var icon_other_violation = {
 
   
   var well_822 = L.marker(new L.LatLng(47.21487778, -101.7935306)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-blue-7?zoom=' + map_current_zoom + '&lat=47.21487778&lng=-101.7935306';  
+      window.location.href = '/facilities/coyote-station/coyote-station-blue-7?zoom=' + map_current_zoom + '&lat=47.21487778&lng=-101.7935306';
     });
   }).on('mouseover', function (e) {
     well_822.openPopup()
@@ -2170,9 +2189,10 @@ var icon_other_violation = {
 
   
   var well_838 = L.marker(new L.LatLng(47.20938611, -101.7892)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-blue-12?zoom=' + map_current_zoom + '&lat=47.20938611&lng=-101.7892';  
+      window.location.href = '/facilities/coyote-station/coyote-station-blue-12?zoom=' + map_current_zoom + '&lat=47.20938611&lng=-101.7892';
     });
   }).on('mouseover', function (e) {
     well_838.openPopup()
@@ -2236,9 +2256,10 @@ var icon_other_violation = {
 
   
   var well_862 = L.marker(new L.LatLng(47.21921111, -101.7999917)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-black-1715?zoom=' + map_current_zoom + '&lat=47.21921111&lng=-101.7999917';  
+      window.location.href = '/facilities/coyote-station/coyote-station-black-1715?zoom=' + map_current_zoom + '&lat=47.21921111&lng=-101.7999917';
     });
   }).on('mouseover', function (e) {
     well_862.openPopup()
@@ -2256,9 +2277,10 @@ var icon_other_violation = {
 
   
   var well_863 = L.marker(new L.LatLng(47.21963889, -101.7977028)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/coyote-station/coyote-station-black-1718?zoom=' + map_current_zoom + '&lat=47.21963889&lng=-101.7977028';  
+      window.location.href = '/facilities/coyote-station/coyote-station-black-1718?zoom=' + map_current_zoom + '&lat=47.21963889&lng=-101.7977028';
     });
   }).on('mouseover', function (e) {
     well_863.openPopup()
@@ -2536,12 +2558,167 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:94%"></span></div>
 <h2 class="well-count">17</h2><span> total with </span> 
-<h2 class="well-count">16</h2><span> out of compliance</span>
+<h2 class="well-count">16</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>129 / 512 (25%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-ash-pond-6/?zoom=18&amp;lat=47.21781389&amp;lng=-101.8088556">ASH POND 6</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-ash-pond-a1/?zoom=18&amp;lat=47.21731667&amp;lng=-101.8093556">ASH POND A1</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-ash-pond-a6/?zoom=18&amp;lat=47.21894167&amp;lng=-101.8109889">ASH POND A6</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-ash-pond-n1/?zoom=18&amp;lat=47.21967778&amp;lng=-101.813975">ASH POND N1</a></td>
+      <td class="data-align-center">10</td>
+      
+      <td class="dirty-well data-align-center"><span>10</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-ash-pond-n3/?zoom=18&amp;lat=47.22054167&amp;lng=-101.8133639">ASH POND N3</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-black-1463/?zoom=18&amp;lat=47.22196667&amp;lng=-101.7937111">BLACK 1463</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-black-1715/?zoom=18&amp;lat=47.21921111&amp;lng=-101.7999917">BLACK 1715</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-black-1718/?zoom=18&amp;lat=47.21963889&amp;lng=-101.7977028">BLACK 1718</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-black-1726/?zoom=18&amp;lat=47.22068056&amp;lng=-101.8007028">BLACK 1726</a></td>
+      <td class="data-align-center">14</td>
+      
+      <td class="dirty-well data-align-center"><span>14</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-black-bp2-a/?zoom=18&amp;lat=47.22345278&amp;lng=-101.7970083">BLACK BP2-A</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-blue-12/?zoom=18&amp;lat=47.20938611&amp;lng=-101.7892">BLUE 12</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-blue-13/?zoom=18&amp;lat=47.20898056&amp;lng=-101.7863889">BLUE 13</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-blue-6/?zoom=18&amp;lat=47.2123&amp;lng=-101.7942917">BLUE 6</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-blue-7/?zoom=18&amp;lat=47.21487778&amp;lng=-101.7935306">BLUE 7</a></td>
+      <td class="data-align-center">10</td>
+      
+      <td class="dirty-well data-align-center"><span>10</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-green-5-1/?zoom=18&amp;lat=47.22738333&amp;lng=-101.7861139">GREEN 5-1</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-green-6/?zoom=18&amp;lat=47.22770278&amp;lng=-101.7888111">GREEN 6</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="coyote-station-green-7/?zoom=18&amp;lat=47.22556667&amp;lng=-101.7885222">GREEN 7</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:11%"></span></div>
+<h2>129 / 1,148 <span class="percent-exceeded">11%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2551,7 +2728,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2560,7 +2737,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2569,7 +2746,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-As" data-placement="top" data-original-title="No As violations at this facility">
+      <div class="element compliant" data-toggle="element-As" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">As</span>
         
@@ -2578,7 +2755,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2587,7 +2764,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Be" data-placement="top" data-original-title="Beryllium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Be" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2596,7 +2773,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="8 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="8 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2605,7 +2782,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2614,7 +2791,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2623,7 +2800,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Co" data-placement="top" data-original-title="Cobalt is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Co" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2632,7 +2809,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cu" data-placement="top" data-original-title="Copper is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Cu" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2641,7 +2818,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2650,7 +2827,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2659,7 +2836,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2668,7 +2845,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2677,7 +2854,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Pb" data-placement="top" data-original-title="Lead is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Pb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2686,7 +2863,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="37 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="37 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2695,7 +2872,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Hg" data-placement="top" data-original-title="No Hg violations at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2704,7 +2881,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Mo" data-placement="top" data-original-title="No Mo violations at this facility">
+      <div class="element compliant" data-toggle="element-Mo" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2713,7 +2890,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" data-original-title="Nickel is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2722,7 +2899,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-NO3" data-placement="top" data-original-title="4 Nitrate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-NO3" data-placement="top" title="4 exceedances at this facility" >
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2731,7 +2908,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2740,7 +2917,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2749,7 +2926,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Se" data-placement="top" data-original-title="2 Selenium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Se" data-placement="top" title="2 exceedances at this facility" >
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2758,7 +2935,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2767,7 +2944,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2776,7 +2953,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="78 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="78 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2785,7 +2962,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2794,7 +2971,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2803,7 +2980,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2822,7 +2999,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Coyote.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/coyote-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2876,6 +3053,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

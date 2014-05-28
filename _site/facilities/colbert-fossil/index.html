@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -246,9 +251,10 @@ var icon_other_violation = {
 
   
   var well_2 = L.marker(new L.LatLng(34.7343944, -87.8535519)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc4?zoom=' + map_current_zoom + '&lat=34.7343944&lng=-87.8535519';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc4?zoom=' + map_current_zoom + '&lat=34.7343944&lng=-87.8535519';
     });
   }).on('mouseover', function (e) {
     well_2.openPopup()
@@ -268,9 +274,10 @@ var icon_other_violation = {
 
   
   var well_4 = L.marker(new L.LatLng(34.7343256, -87.8537344)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc1?zoom=' + map_current_zoom + '&lat=34.7343256&lng=-87.8537344';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc1?zoom=' + map_current_zoom + '&lat=34.7343256&lng=-87.8537344';
     });
   }).on('mouseover', function (e) {
     well_4.openPopup()
@@ -354,9 +361,10 @@ var icon_other_violation = {
 
   
   var well_38 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca6?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca6?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';
     });
   }).on('mouseover', function (e) {
     well_38.openPopup()
@@ -374,9 +382,10 @@ var icon_other_violation = {
 
   
   var well_39 = L.marker(new L.LatLng(34.7263889, -87.8480556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca5?zoom=' + map_current_zoom + '&lat=34.7263889&lng=-87.8480556';
     });
   }).on('mouseover', function (e) {
     well_39.openPopup()
@@ -412,9 +421,10 @@ var icon_other_violation = {
 
   
   var well_49 = L.marker(new L.LatLng(34.7317492, -87.8436472)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca12a?zoom=' + map_current_zoom + '&lat=34.7317492&lng=-87.8436472';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca12a?zoom=' + map_current_zoom + '&lat=34.7317492&lng=-87.8436472';
     });
   }).on('mouseover', function (e) {
     well_49.openPopup()
@@ -598,9 +608,10 @@ var icon_other_violation = {
 
   
   var well_133 = L.marker(new L.LatLng(34.7394842, -87.8384236)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca22b?zoom=' + map_current_zoom + '&lat=34.7394842&lng=-87.8384236';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca22b?zoom=' + map_current_zoom + '&lat=34.7394842&lng=-87.8384236';
     });
   }).on('mouseover', function (e) {
     well_133.openPopup()
@@ -752,9 +763,10 @@ var icon_other_violation = {
 
   
   var well_201 = L.marker(new L.LatLng(34.7500397, -87.8595886)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca27br?zoom=' + map_current_zoom + '&lat=34.7500397&lng=-87.8595886';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca27br?zoom=' + map_current_zoom + '&lat=34.7500397&lng=-87.8595886';
     });
   }).on('mouseover', function (e) {
     well_201.openPopup()
@@ -824,9 +836,10 @@ var icon_other_violation = {
 
   
   var well_228 = L.marker(new L.LatLng(34.7275, -87.8333333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca21b?zoom=' + map_current_zoom + '&lat=34.7275&lng=-87.8333333';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca21b?zoom=' + map_current_zoom + '&lat=34.7275&lng=-87.8333333';
     });
   }).on('mouseover', function (e) {
     well_228.openPopup()
@@ -1032,9 +1045,10 @@ var icon_other_violation = {
 
   
   var well_323 = L.marker(new L.LatLng(34.7330908, -87.8537867)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc5a?zoom=' + map_current_zoom + '&lat=34.7330908&lng=-87.8537867';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc5a?zoom=' + map_current_zoom + '&lat=34.7330908&lng=-87.8537867';
     });
   }).on('mouseover', function (e) {
     well_323.openPopup()
@@ -1138,9 +1152,10 @@ var icon_other_violation = {
 
   
   var well_367 = L.marker(new L.LatLng(34.7347222, -87.8472222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca17a?zoom=' + map_current_zoom + '&lat=34.7347222&lng=-87.8472222';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca17a?zoom=' + map_current_zoom + '&lat=34.7347222&lng=-87.8472222';
     });
   }).on('mouseover', function (e) {
     well_367.openPopup()
@@ -1158,9 +1173,10 @@ var icon_other_violation = {
 
   
   var well_368 = L.marker(new L.LatLng(34.7346303, -87.8471814)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca17b?zoom=' + map_current_zoom + '&lat=34.7346303&lng=-87.8471814';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca17b?zoom=' + map_current_zoom + '&lat=34.7346303&lng=-87.8471814';
     });
   }).on('mouseover', function (e) {
     well_368.openPopup()
@@ -1246,9 +1262,10 @@ var icon_other_violation = {
 
   
   var well_403 = L.marker(new L.LatLng(34.7319944, -87.8547247)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca29ar?zoom=' + map_current_zoom + '&lat=34.7319944&lng=-87.8547247';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca29ar?zoom=' + map_current_zoom + '&lat=34.7319944&lng=-87.8547247';
     });
   }).on('mouseover', function (e) {
     well_403.openPopup()
@@ -1276,9 +1293,10 @@ var icon_other_violation = {
 
   
   var well_409 = L.marker(new L.LatLng(34.7369053, -87.8362842)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca19b?zoom=' + map_current_zoom + '&lat=34.7369053&lng=-87.8362842';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca19b?zoom=' + map_current_zoom + '&lat=34.7369053&lng=-87.8362842';
     });
   }).on('mouseover', function (e) {
     well_409.openPopup()
@@ -1332,9 +1350,10 @@ var icon_other_violation = {
 
   
   var well_428 = L.marker(new L.LatLng(34.7313303, -87.8287664)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca20b?zoom=' + map_current_zoom + '&lat=34.7313303&lng=-87.8287664';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca20b?zoom=' + map_current_zoom + '&lat=34.7313303&lng=-87.8287664';
     });
   }).on('mouseover', function (e) {
     well_428.openPopup()
@@ -1352,9 +1371,10 @@ var icon_other_violation = {
 
   
   var well_429 = L.marker(new L.LatLng(34.7309681, -87.8292878)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca20a?zoom=' + map_current_zoom + '&lat=34.7309681&lng=-87.8292878';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca20a?zoom=' + map_current_zoom + '&lat=34.7309681&lng=-87.8292878';
     });
   }).on('mouseover', function (e) {
     well_429.openPopup()
@@ -1390,9 +1410,10 @@ var icon_other_violation = {
 
   
   var well_439 = L.marker(new L.LatLng(34.7390842, -87.8508211)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca31a?zoom=' + map_current_zoom + '&lat=34.7390842&lng=-87.8508211';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca31a?zoom=' + map_current_zoom + '&lat=34.7390842&lng=-87.8508211';
     });
   }).on('mouseover', function (e) {
     well_439.openPopup()
@@ -1630,9 +1651,10 @@ var icon_other_violation = {
 
   
   var well_550 = L.marker(new L.LatLng(34.7350739, -87.8348989)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca9r?zoom=' + map_current_zoom + '&lat=34.7350739&lng=-87.8348989';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca9r?zoom=' + map_current_zoom + '&lat=34.7350739&lng=-87.8348989';
     });
   }).on('mouseover', function (e) {
     well_550.openPopup()
@@ -1894,9 +1916,10 @@ var icon_other_violation = {
 
   
   var well_673 = L.marker(new L.LatLng(34.7492969, -87.8537656)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca28b?zoom=' + map_current_zoom + '&lat=34.7492969&lng=-87.8537656';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca28b?zoom=' + map_current_zoom + '&lat=34.7492969&lng=-87.8537656';
     });
   }).on('mouseover', function (e) {
     well_673.openPopup()
@@ -1918,9 +1941,10 @@ var icon_other_violation = {
 
   
   var well_676 = L.marker(new L.LatLng(34.7330361, -87.8538172)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc5c?zoom=' + map_current_zoom + '&lat=34.7330361&lng=-87.8538172';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-mc5c?zoom=' + map_current_zoom + '&lat=34.7330361&lng=-87.8538172';
     });
   }).on('mouseover', function (e) {
     well_676.openPopup()
@@ -2078,9 +2102,10 @@ var icon_other_violation = {
 
   
   var well_747 = L.marker(new L.LatLng(34.7320456, -87.8546719)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca29br?zoom=' + map_current_zoom + '&lat=34.7320456&lng=-87.8546719';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca29br?zoom=' + map_current_zoom + '&lat=34.7320456&lng=-87.8546719';
     });
   }).on('mouseover', function (e) {
     well_747.openPopup()
@@ -2250,9 +2275,10 @@ var icon_other_violation = {
 
   
   var well_824 = L.marker(new L.LatLng(34.7312728, -87.8452033)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca30b?zoom=' + map_current_zoom + '&lat=34.7312728&lng=-87.8452033';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca30b?zoom=' + map_current_zoom + '&lat=34.7312728&lng=-87.8452033';
     });
   }).on('mouseover', function (e) {
     well_824.openPopup()
@@ -2312,9 +2338,10 @@ var icon_other_violation = {
 
   
   var well_846 = L.marker(new L.LatLng(34.7226878, -87.8210783)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-p8?zoom=' + map_current_zoom + '&lat=34.7226878&lng=-87.8210783';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-p8?zoom=' + map_current_zoom + '&lat=34.7226878&lng=-87.8210783';
     });
   }).on('mouseover', function (e) {
     well_846.openPopup()
@@ -2334,9 +2361,10 @@ var icon_other_violation = {
 
   
   var well_848 = L.marker(new L.LatLng(34.7368547, -87.8305219)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-p2?zoom=' + map_current_zoom + '&lat=34.7368547&lng=-87.8305219';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-p2?zoom=' + map_current_zoom + '&lat=34.7368547&lng=-87.8305219';
     });
   }).on('mouseover', function (e) {
     well_848.openPopup()
@@ -2354,9 +2382,10 @@ var icon_other_violation = {
 
   
   var well_849 = L.marker(new L.LatLng(34.7291667, -87.8402778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca16?zoom=' + map_current_zoom + '&lat=34.7291667&lng=-87.8402778';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca16?zoom=' + map_current_zoom + '&lat=34.7291667&lng=-87.8402778';
     });
   }).on('mouseover', function (e) {
     well_849.openPopup()
@@ -2378,9 +2407,10 @@ var icon_other_violation = {
 
   
   var well_852 = L.marker(new L.LatLng(34.7262258, -87.8283206)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca11?zoom=' + map_current_zoom + '&lat=34.7262258&lng=-87.8283206';  
+      window.location.href = '/facilities/colbert-fossil/colbert-fossil-plant-cof-ca11?zoom=' + map_current_zoom + '&lat=34.7262258&lng=-87.8283206';
     });
   }).on('mouseover', function (e) {
     well_852.openPopup()
@@ -2680,12 +2710,231 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:80%"></span></div>
 <h2 class="well-count">25</h2><span> total with </span> 
-<h2 class="well-count">20</h2><span> out of compliance</span>
+<h2 class="well-count">20</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>163 / 1367 (12%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca11/?zoom=18&amp;lat=34.7262258&amp;lng=-87.8283206">COF-CA11</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca12a/?zoom=18&amp;lat=34.7317492&amp;lng=-87.8436472">COF-CA12A</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca16/?zoom=18&amp;lat=34.7291667&amp;lng=-87.8402778">COF-CA16</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca17a/?zoom=18&amp;lat=34.7347222&amp;lng=-87.8472222">COF-CA17A</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca17b/?zoom=18&amp;lat=34.7346303&amp;lng=-87.8471814">COF-CA17B</a></td>
+      <td class="data-align-center">12</td>
+      
+      <td class="dirty-well data-align-center"><span>12</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca19b/?zoom=18&amp;lat=34.7369053&amp;lng=-87.8362842">COF-CA19B</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca20a/?zoom=18&amp;lat=34.7309681&amp;lng=-87.8292878">COF-CA20A</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca20b/?zoom=18&amp;lat=34.7313303&amp;lng=-87.8287664">COF-CA20B</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca21b/?zoom=18&amp;lat=34.7275&amp;lng=-87.8333333">COF-CA21B</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca22b/?zoom=18&amp;lat=34.7394842&amp;lng=-87.8384236">COF-CA22B</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca27br/?zoom=18&amp;lat=34.7500397&amp;lng=-87.8595886">COF-CA27BR</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca28b/?zoom=18&amp;lat=34.7492969&amp;lng=-87.8537656">COF-CA28B</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca29ar/?zoom=18&amp;lat=34.7319944&amp;lng=-87.8547247">COF-CA29AR</a></td>
+      <td class="data-align-center">9</td>
+      
+      <td class="dirty-well data-align-center"><span>9</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca29br/?zoom=18&amp;lat=34.7320456&amp;lng=-87.8546719">COF-CA29BR</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca30b/?zoom=18&amp;lat=34.7312728&amp;lng=-87.8452033">COF-CA30B</a></td>
+      <td class="data-align-center">10</td>
+      
+      <td class="dirty-well data-align-center"><span>10</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca31a/?zoom=18&amp;lat=34.7390842&amp;lng=-87.8508211">COF-CA31A</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca5/?zoom=18&amp;lat=34.7263889&amp;lng=-87.8480556">COF-CA5</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca6/?zoom=18&amp;lat=34.7263889&amp;lng=-87.8480556">COF-CA6</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-ca9r/?zoom=18&amp;lat=34.7350739&amp;lng=-87.8348989">COF-CA9R</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-mc1/?zoom=18&amp;lat=34.7343256&amp;lng=-87.8537344">COF-MC1</a></td>
+      <td class="data-align-center">27</td>
+      
+      <td class="dirty-well data-align-center"><span>27</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-mc4/?zoom=18&amp;lat=34.7343944&amp;lng=-87.8535519">COF-MC4</a></td>
+      <td class="data-align-center">25</td>
+      
+      <td class="dirty-well data-align-center"><span>25</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-mc5a/?zoom=18&amp;lat=34.7330908&amp;lng=-87.8537867">COF-MC5A</a></td>
+      <td class="data-align-center">25</td>
+      
+      <td class="dirty-well data-align-center"><span>25</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-mc5c/?zoom=18&amp;lat=34.7330361&amp;lng=-87.8538172">COF-MC5C</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-p2/?zoom=18&amp;lat=34.7368547&amp;lng=-87.8305219">COF-P2</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="colbert-fossil-plant-cof-p8/?zoom=18&amp;lat=34.7226878&amp;lng=-87.8210783">COF-P8</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:5%"></span></div>
+<h2>163 / 3,250 <span class="percent-exceeded">5%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2695,7 +2944,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2704,7 +2953,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" data-original-title="24 Antimony violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Sb" data-placement="top" title="24 exceedances at this facility" >
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2713,7 +2962,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="21 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="21 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2722,7 +2971,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2731,7 +2980,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2740,7 +2989,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="23 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="23 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2749,7 +2998,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2758,7 +3007,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Cr" data-placement="top" data-original-title="1 Chromium violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Cr" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2767,7 +3016,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="9 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="9 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2776,7 +3025,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2785,7 +3034,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2794,7 +3043,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2803,7 +3052,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2812,7 +3061,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2821,7 +3070,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" data-original-title="5 Lead violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2830,7 +3079,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="27 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="27 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2839,7 +3088,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2848,7 +3097,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" data-original-title="49 Molybdenum violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" title="49 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2857,7 +3106,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" data-original-title="1 Nickel violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Ni" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2866,7 +3115,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2875,7 +3124,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2884,7 +3133,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2893,7 +3142,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2902,7 +3151,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ag" data-placement="top" data-original-title="No Ag violations at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2911,7 +3160,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Sr" data-placement="top" data-original-title="No Sr violations at this facility">
+      <div class="element compliant" data-toggle="element-Sr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2920,7 +3169,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="3 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="3 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2929,7 +3178,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Tl" data-placement="top" data-original-title="No Tl violations at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2938,7 +3187,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2947,7 +3196,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2967,7 +3216,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Colbert.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/colbert-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -3021,6 +3270,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

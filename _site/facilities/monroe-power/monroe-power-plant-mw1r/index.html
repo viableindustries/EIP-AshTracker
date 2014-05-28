@@ -30,18 +30,18 @@
 
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Monroe-Power-Plant-MW1R" />
-    <meta property="twitter:url" content="wells/monroe_power/2014-05-01-monroe-power-plant-mw1r" />
+    <meta property="twitter:url" content="wells/monroe_power/2014-05-04-monroe-power-plant-mw1r" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
     <meta property="og:site_name" content="Ashtracker" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="wells/monroe_power/2014-05-01-monroe-power-plant-mw1r" />
+    <meta property="og:url" content="wells/monroe_power/2014-05-04-monroe-power-plant-mw1r" />
     <meta property="og:title" content="Monroe-Power-Plant-MW1R" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="wells/monroe_power/2014-05-01-monroe-power-plant-mw1r" />
+    <meta name="dcterms.identifier" content="wells/monroe_power/2014-05-04-monroe-power-plant-mw1r" />
     <meta name="dcterms.format" content="text/html" />
     <meta name="dcterms.title" content="Monroe-Power-Plant-MW1R" />
 
@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -1256,9 +1261,10 @@ var icon_other_violation = {
 
   
   var well_507 = L.marker(new L.LatLng(41.8877111, -83.3704889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/monroe-power/monroe-power-plant-mw1r?zoom=' + map_current_zoom + '&lat=41.8877111&lng=-83.3704889';  
+      window.location.href = '/facilities/monroe-power/monroe-power-plant-mw1r?zoom=' + map_current_zoom + '&lat=41.8877111&lng=-83.3704889';
     });
   }).on('mouseover', function (e) {
     well_507.openPopup()
@@ -5155,7 +5161,9 @@ map.addLayer(markers);
 <div class="row content contaminant-status">
   <div class="col-sm-10">
     <h4>Contaminant Status</h4>
-    <h2>Other Designation, Not In Compliance</h2>
+    
+    <h2 class="exceedance-count">10</h2><span> exceedances found</span>
+    
   </div>
   <div class="col-sm-2">
     
@@ -5164,8 +5172,11 @@ map.addLayer(markers);
   </div>
 </div>
 
-<h4>Total Violations / Total Samples</h4>
-<h2>10 / 55 (18%)</h2>
+<h4>Total Exceedances / Total Samples</h4>
+
+<div class="sample-bar"><span style="width:11%"></span></div>
+
+<h2>10 / 89 <span class="percent-exceeded">11%</span></h2>
 
 <div class="content contaminants">
 
@@ -5177,7 +5188,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" rel="tooltip" data-placement="top" data-original-title="Ammonia is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-NH3" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -5186,7 +5197,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="Antimony is not monitored at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Sb" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -5195,7 +5206,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="1 Arsenic violation at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" title="1 exceedance at this well" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -5204,7 +5215,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="No Ba violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Ba" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -5213,7 +5224,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Beryllium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -5222,7 +5233,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="No B violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-B" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">B</span>
         
@@ -5231,7 +5242,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="No Cd violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Cd" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -5240,7 +5251,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Cr" rel="tooltip" data-placement="top" data-original-title="No Cr violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Cr" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -5249,7 +5260,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" data-original-title="Cobalt is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -5258,7 +5269,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" data-original-title="Copper is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -5267,7 +5278,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" data-original-title="Cyanide is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -5276,7 +5287,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" rel="tooltip" data-placement="top" data-original-title="Fluoride is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-F" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">F</span>
         
@@ -5285,7 +5296,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -5294,7 +5305,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -5303,7 +5314,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="No Pb violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Pb" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -5312,7 +5323,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="No Mn violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Mn" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -5321,7 +5332,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" data-original-title="Mercury is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -5330,7 +5341,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="No Mo violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Mo" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -5339,7 +5350,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="Nickel is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -5348,7 +5359,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO3" rel="tooltip" data-placement="top" data-original-title="Nitrate is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-NO3" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -5357,7 +5368,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" data-original-title="Nitrite is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -5366,7 +5377,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" rel="tooltip" data-placement="top" data-original-title="Radium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ra" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -5375,7 +5386,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-Se" rel="tooltip" data-placement="top" data-original-title="1 Selenium violation at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-Se" rel="tooltip" data-placement="top" title="1 exceedance at this well" >
         
         <span class="contaminant-symbol">Se</span>
         
@@ -5384,7 +5395,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" data-original-title="Silver is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -5393,7 +5404,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" data-original-title="Strontium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -5402,7 +5413,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" data-original-title="8 Sulfate violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" title="8 exceedances at this well" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -5411,7 +5422,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" rel="tooltip" data-placement="top" data-original-title="Thallium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Tl" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -5420,7 +5431,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" data-original-title="Tritium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">T</span>
         
@@ -5429,7 +5440,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" data-original-title="Uranium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">U</span>
         
@@ -5446,6 +5457,131 @@ map.addLayer(markers);
     
   
     
+    <div id="element-Sb" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Sb">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          
+          <h4>Chemical Symbol</h4>
+          
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Sb</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Antimony</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.006 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/3/2010</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/13/2010</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/15/2011</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/8/11</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/6/2012</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/11/2012</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/10/2013</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/3/2013</div>
+        
+        <div title="Concentration below detectable limit for Sb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Sb" >0.167</span></div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
   
     
     <div id="element-As" class="element-details">
@@ -5454,7 +5590,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -5480,7 +5618,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>1 / 2 (50%)</h2>
+          <h2>1 / 8 <span class="percent-exceeded">13%</span></h2>
         </div>
       </div>
 
@@ -5502,15 +5640,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">6/3/2010</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/13/2010</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.020</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/15/2011</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.025 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.500</div>
+        
+        <div class="col-sm-4 history "><span>0.025</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">2.500</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/6/2012</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/11/2012</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/10/2013</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.100</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.003 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.300</div>
+        
+        <div class="col-sm-4 history "><span>0.003</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.300</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -5527,7 +5717,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -5553,7 +5745,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -5576,50 +5768,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">6/3/2010</div>
-        <div class="col-sm-4 history">0.006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.003</div>
+        
+        <div class="col-sm-4 history "><span>0.006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.003</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/13/2010</div>
-        <div class="col-sm-4 history">0.008 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.004</div>
+        
+        <div class="col-sm-4 history "><span>0.008</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.004</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/2011</div>
-        <div class="col-sm-4 history">0.008 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.004</div>
+        
+        <div class="col-sm-4 history "><span>0.008</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.004</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.008 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.004</div>
+        
+        <div class="col-sm-4 history "><span>0.008</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.004</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.014 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.007</div>
+        
+        <div class="col-sm-4 history "><span>0.014</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.007</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">0.007 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.004</div>
+        
+        <div class="col-sm-4 history "><span>0.007</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.004</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/10/2013</div>
-        <div class="col-sm-4 history">0.006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.003</div>
+        
+        <div class="col-sm-4 history "><span>0.006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.003</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.003</div>
+        
+        <div class="col-sm-4 history "><span>0.006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Ba" >0.003</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -5638,7 +5846,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -5664,7 +5874,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -5687,50 +5897,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">6/3/2010</div>
-        <div class="col-sm-4 history">0.13 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.043</div>
+        
+        <div class="col-sm-4 history "><span>0.13</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.043</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/13/2010</div>
-        <div class="col-sm-4 history">0.279 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.093</div>
+        
+        <div class="col-sm-4 history "><span>0.279</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.093</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/2011</div>
-        <div class="col-sm-4 history">0.28 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.093</div>
+        
+        <div class="col-sm-4 history "><span>0.28</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.093</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.28 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.093</div>
+        
+        <div class="col-sm-4 history "><span>0.28</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.093</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.62 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.207</div>
+        
+        <div class="col-sm-4 history "><span>0.62</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.207</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">0.18 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.060</div>
+        
+        <div class="col-sm-4 history "><span>0.18</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.060</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/10/2013</div>
-        <div class="col-sm-4 history">0.14 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.047</div>
+        
+        <div class="col-sm-4 history "><span>0.14</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.047</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.24 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.080</div>
+        
+        <div class="col-sm-4 history "><span>0.24</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.080</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -5747,7 +5973,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -5773,7 +6001,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 1 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -5795,9 +6023,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">6/3/2010</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/13/2010</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/15/2011</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/8/11</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.0002 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.040</div>
+        
+        <div class="col-sm-4 history "><span>0.0002</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/11/2012</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/10/2013</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.400</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/3/2013</div>
+        
+        <div title="Concentration below detectable limit for Cd" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cd" >0.040</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -5814,7 +6100,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -5840,7 +6128,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 7 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -5863,44 +6151,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">6/3/2010</div>
-        <div class="col-sm-4 history">0.008 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.080</div>
+        
+        <div class="col-sm-4 history "><span>0.008</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.080</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/13/2010</div>
+        
+        <div title="Concentration below detectable limit for Cr" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.010</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/2011</div>
-        <div class="col-sm-4 history">0.006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.060</div>
+        
+        <div class="col-sm-4 history "><span>0.006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.060</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.009 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.090</div>
+        
+        <div class="col-sm-4 history "><span>0.009</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.090</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.074 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.740</div>
+        
+        <div class="col-sm-4 history "><span>0.074</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.740</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">0.005 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.005</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.050</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/10/2013</div>
-        <div class="col-sm-4 history">0.006 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.060</div>
+        
+        <div class="col-sm-4 history "><span>0.006</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.060</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.007 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.070</div>
+        
+        <div class="col-sm-4 history "><span>0.007</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Cr" >0.070</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -5929,7 +6239,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -5955,7 +6267,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 2 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -5977,15 +6289,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">6/3/2010</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/13/2010</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/15/2011</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.067</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/6/2012</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/11/2012</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/10/2013</div>
+        
+        <div title="Concentration below detectable limit for Pb" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.067</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Pb" >0.067</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6002,7 +6366,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6028,7 +6394,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6051,50 +6417,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">6/3/2010</div>
-        <div class="col-sm-4 history">0.046 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.153</div>
+        
+        <div class="col-sm-4 history "><span>0.046</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.153</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/13/2010</div>
-        <div class="col-sm-4 history">0.086 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.287</div>
+        
+        <div class="col-sm-4 history "><span>0.086</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.287</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/2011</div>
-        <div class="col-sm-4 history">0.117 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.390</div>
+        
+        <div class="col-sm-4 history "><span>0.117</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.390</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.066 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.220</div>
+        
+        <div class="col-sm-4 history "><span>0.066</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.220</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.11 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.367</div>
+        
+        <div class="col-sm-4 history "><span>0.11</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.367</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">0.091 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.303</div>
+        
+        <div class="col-sm-4 history "><span>0.091</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.303</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/10/2013</div>
-        <div class="col-sm-4 history">0.092 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.307</div>
+        
+        <div class="col-sm-4 history "><span>0.092</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.307</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.086 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.287</div>
+        
+        <div class="col-sm-4 history "><span>0.086</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mn" >0.287</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6113,7 +6495,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6139,7 +6523,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 9 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6161,51 +6545,75 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">6/3/2010</div>
+        
+        <div title="Concentration below detectable limit for Mo" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.025</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">12/13/2010</div>
-        <div class="col-sm-4 history">0.005 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.125</div>
+        
+        <div class="col-sm-4 history "><span>0.005</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.125</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/11</div>
-        <div class="col-sm-4 history">0.002 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.002</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.050</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/2011</div>
-        <div class="col-sm-4 history">0.002 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.050</div>
+        
+        <div class="col-sm-4 history "><span>0.002</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.050</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">0.0013 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.033</div>
+        
+        <div class="col-sm-4 history "><span>0.0013</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.033</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.025</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.025</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.025</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.025</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/10/2013</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.025</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.025</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.025</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Mo" >0.025</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6230,7 +6638,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6256,7 +6666,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>1 / 3 (33%)</h2>
+          <h2>1 / 8 <span class="percent-exceeded">13%</span></h2>
         </div>
       </div>
 
@@ -6278,21 +6688,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">6/3/2010</div>
+        
+        <div title="Concentration below detectable limit for Se" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.020</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">12/13/2010</div>
-        <div class="col-sm-4 history">0.014 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.280</div>
+        
+        <div class="col-sm-4 history "><span>0.014</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.280</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/15/2011</div>
+        
+        <div title="Concentration below detectable limit for Se" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.020</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/8/11</div>
+        
+        <div title="Concentration below detectable limit for Se" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.020</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">0.063 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.260</div>
+        
+        <div class="col-sm-4 history "><span>0.063</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Se">1.260</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">0.001 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.020</div>
+        
+        <div class="col-sm-4 history "><span>0.001</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.020</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/10/2013</div>
+        
+        <div title="Concentration below detectable limit for Se" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.020</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/3/2013</div>
+        
+        <div title="Concentration below detectable limit for Se" class="col-sm-4 history"><span class="below-detectable"><span>0.001</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Se" >0.020</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6313,7 +6769,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
-          <h4>Chemical Symbol</h4>
+          
+          <h4>Chemical Formula</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6339,7 +6797,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>8 / 8 (100%)</h2>
+          <h2>8 / 8 <span class="percent-exceeded">100%</span></h2>
         </div>
       </div>
 
@@ -6362,50 +6820,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">6/3/2010</div>
-        <div class="col-sm-4 history">1200 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.400</div>
+        
+        <div class="col-sm-4 history "><span>1200</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.400</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/13/2010</div>
-        <div class="col-sm-4 history">1300 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.600</div>
+        
+        <div class="col-sm-4 history "><span>1300</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/15/2011</div>
-        <div class="col-sm-4 history">1200 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.400</div>
+        
+        <div class="col-sm-4 history "><span>1200</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.400</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/8/11</div>
-        <div class="col-sm-4 history">1300 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.600</div>
+        
+        <div class="col-sm-4 history "><span>1300</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/6/2012</div>
-        <div class="col-sm-4 history">1200 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.400</div>
+        
+        <div class="col-sm-4 history "><span>1200</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.400</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/11/2012</div>
-        <div class="col-sm-4 history">1200 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.400</div>
+        
+        <div class="col-sm-4 history "><span>1200</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.400</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/10/2013</div>
-        <div class="col-sm-4 history">1300 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.600</div>
+        
+        <div class="col-sm-4 history "><span>1300</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/3/2013</div>
-        <div class="col-sm-4 history">1200 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.400</div>
+        
+        <div class="col-sm-4 history "><span>1200</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.400</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6476,6 +6950,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

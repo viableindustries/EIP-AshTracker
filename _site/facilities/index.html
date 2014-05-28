@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -2611,7 +2616,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/albright-power">Albright Power Station</a></h2>
         <h4>Preston County, WV</h4>
         
-        <a class="button download small" href="/static/data/Albright_Power_Station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/albright-power-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -2666,7 +2671,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/allen-fossil">Allen Fossil Plant</a></h2>
         <h4>Shelby County, TN</h4>
         
-        <a class="button download small" href="/static/data/Allen_Fossil_Plant_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/allen-fossil-plant.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -2689,7 +2694,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/big-bend-landfill">Big Bend Landfill</a></h2>
         <h4>Linn County, IA</h4>
         
-        <a class="button download small" href="/static/data/Big_Bend_Landfill_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/big-bend-landfill.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -2702,7 +2707,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/big-bend-station">Big Bend Station</a></h2>
         <h4>Hillsborough County, FL</h4>
         
-        <a class="button download small" href="/static/data/Big_Bend_Station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/big-bend-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -2825,7 +2830,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/brame-energy">Brame Energy Center</a></h2>
         <h4>Rapides County, LA</h4>
         
-        <a class="button download small" href="/static/data/Brame_Energy_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/brame-energy.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -2880,7 +2885,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/bruce-mansfield">Bruce Mansfield Power Plant</a></h2>
         <h4>Beaver &amp; Hancock County, PA</h4>
         
-        <a class="button download small" href="/static/data/Bruce_Mansfield.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/bruce-mansfield.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -2989,7 +2994,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/bull-run">Bull Run Fossil Plant</a></h2>
         <h4>Anderson County, TN</h4>
         
-        <a class="button download small" href="/static/data/Bull_Run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/bull-run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -3026,7 +3031,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/cane-run">Cane Run Station</a></h2>
         <h4>Jefferson County, KY</h4>
         
-        <a class="button download small" href="/static/data/Cane_Run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/cane-run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -3067,7 +3072,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/cardinal-plant">Cardinal Plant</a></h2>
         <h4>Jefferson County, OH</h4>
         
-        <a class="button download small" href="/static/data/Cardinal.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/cardinal-plant.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -3172,7 +3177,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/colbert-fossil">Colbert Fossil Plant</a></h2>
         <h4>Colbert County, AL</h4>
         
-        <a class="button download small" href="/static/data/Colbert.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/colbert-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -3235,7 +3240,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/colstrip-steam">Colstrip Steam Electric Station</a></h2>
         <h4>Rosebud County, MT</h4>
         
-        <a class="button download small" href="/static/data/Colstrip.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/colstrip-steam.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4172,7 +4177,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/coyote-station">Coyote Station</a></h2>
         <h4>Mercer County, ND</h4>
         
-        <a class="button download small" href="/static/data/Coyote.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/coyote-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4219,7 +4224,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/crawford-generating">Crawford Generating Station</a></h2>
         <h4>Cook County, IL</h4>
         
-        <a class="button download small" href="/static/data/Crawford.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/crawford-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4236,7 +4241,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/cumberland-fossil">Cumberland Fossil Plant</a></h2>
         <h4>Stewart County, TN</h4>
         
-        <a class="button download small" href="/static/data/Cumberland.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/cumberland-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4269,7 +4274,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/flint-creek">Flint Creek Power Plant</a></h2>
         <h4>Benton County, AR</h4>
         
-        <a class="button download small" href="/static/data/Flint_Creek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/flint-creek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4314,7 +4319,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/gallatin-fossil">Gallatin Fossil Plant</a></h2>
         <h4>Sumner County, TN</h4>
         
-        <a class="button download small" href="/static/data/Gallatin.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/gallatin-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4345,7 +4350,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/hatfields-ferry">Hatfield&#39;s Ferry Power Station</a></h2>
         <h4>Greene County, PA</h4>
         
-        <a class="button download small" href="/static/data/Hatfields.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/hatfields-ferry.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4386,7 +4391,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/holcomb-station">Holcomb Station</a></h2>
         <h4>Finney County, KS</h4>
         
-        <a class="button download small" href="/static/data/Holcomb.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/holcomb-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4425,7 +4430,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/humboldt-station">Humboldt Station Landfill</a></h2>
         <h4>Humboldt County, IA</h4>
         
-        <a class="button download small" href="/static/data/Humboldt.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/humboldt-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4450,7 +4455,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/jh-campbell">JH Campbell Generating Complex</a></h2>
         <h4>Ottawa County, MI</h4>
         
-        <a class="button download small" href="/static/data/JH_Campbell.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/jh-campbell.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4531,7 +4536,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/john-sevier">John Sevier Fossil Plant</a></h2>
         <h4>Hawkins County, TN</h4>
         
-        <a class="button download small" href="/static/data/John_Sevier.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/john-sevier.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4560,7 +4565,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/johnsonville-fossil">Johnsonville Fossil Plant</a></h2>
         <h4>Humphreys County, TN</h4>
         
-        <a class="button download small" href="/static/data/Johnsonville.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/johnsonville-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4601,7 +4606,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/kingston-fossil">Kingston Fossil Plant</a></h2>
         <h4>Roane County, TN</h4>
         
-        <a class="button download small" href="/static/data/Kingston.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/kingston-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4638,7 +4643,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/leland-olds">Leland Olds Station</a></h2>
         <h4>Mercer County, ND</h4>
         
-        <a class="button download small" href="/static/data/Leland.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/leland-olds.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4685,7 +4690,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/mcmeekin-station">McMeekin Station</a></h2>
         <h4>Lexington County, SC</h4>
         
-        <a class="button download small" href="/static/data/McMeekin.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/mcmeekin-station.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4712,7 +4717,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/monroe-power">Monroe Power Plant</a></h2>
         <h4>Monroe County, MI</h4>
         
-        <a class="button download small" href="/static/data/Monroe.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/monroe-power.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4727,7 +4732,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/paradise-fossil">Paradise Fossil Plant</a></h2>
         <h4>Muhlenberg County, KY</h4>
         
-        <a class="button download small" href="/static/data/Paradise.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/paradise-fossil-plant.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4766,7 +4771,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/shawnee-fossil">Shawnee Fossil Plant</a></h2>
         <h4>McCracken County, KY</h4>
         
-        <a class="button download small" href="/static/data/Shawnee.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/shawnee-fossil.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4807,7 +4812,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/stoney-point">Stoney Point Landfill</a></h2>
         <h4>Linn County County, IA</h4>
         
-        <a class="button download small" href="/static/data/Stoney.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/stoney-point.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4854,7 +4859,7 @@ map.addLayer(markers);
         <h2><a href="/facilities/widows-creek">Widows Creek Fossil Plant</a></h2>
         <h4>Jackson County, AL</h4>
         
-        <a class="button download small" href="/static/data/Widows.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a>
+        <a class="button download small" href="/static/data/widows-creek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a>
         
       </div>
     </div>
@@ -4926,6 +4931,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

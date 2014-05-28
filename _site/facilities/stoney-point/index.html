@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -312,9 +317,10 @@ var icon_other_violation = {
 
   
   var well_35 = L.marker(new L.LatLng(41.98892, -91.736269)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-22?zoom=' + map_current_zoom + '&lat=41.98892&lng=-91.736269';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-22?zoom=' + map_current_zoom + '&lat=41.98892&lng=-91.736269';
     });
   }).on('mouseover', function (e) {
     well_35.openPopup()
@@ -474,9 +480,10 @@ var icon_other_violation = {
 
   
   var well_107 = L.marker(new L.LatLng(41.988663, -91.735742)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-16?zoom=' + map_current_zoom + '&lat=41.988663&lng=-91.735742';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-16?zoom=' + map_current_zoom + '&lat=41.988663&lng=-91.735742';
     });
   }).on('mouseover', function (e) {
     well_107.openPopup()
@@ -530,9 +537,10 @@ var icon_other_violation = {
 
   
   var well_126 = L.marker(new L.LatLng(41.988876, -91.737557)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-11?zoom=' + map_current_zoom + '&lat=41.988876&lng=-91.737557';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-11?zoom=' + map_current_zoom + '&lat=41.988876&lng=-91.737557';
     });
   }).on('mouseover', function (e) {
     well_126.openPopup()
@@ -1260,9 +1268,10 @@ var icon_other_violation = {
 
   
   var well_482 = L.marker(new L.LatLng(41.988671, -91.735669)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-17?zoom=' + map_current_zoom + '&lat=41.988671&lng=-91.735669';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-17?zoom=' + map_current_zoom + '&lat=41.988671&lng=-91.735669';
     });
   }).on('mouseover', function (e) {
     well_482.openPopup()
@@ -1280,9 +1289,10 @@ var icon_other_violation = {
 
   
   var well_483 = L.marker(new L.LatLng(41.988761, -91.736557)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-14?zoom=' + map_current_zoom + '&lat=41.988761&lng=-91.736557';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-14?zoom=' + map_current_zoom + '&lat=41.988761&lng=-91.736557';
     });
   }).on('mouseover', function (e) {
     well_483.openPopup()
@@ -1302,9 +1312,10 @@ var icon_other_violation = {
 
   
   var well_485 = L.marker(new L.LatLng(41.988883, -91.73748)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-12?zoom=' + map_current_zoom + '&lat=41.988883&lng=-91.73748';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-12?zoom=' + map_current_zoom + '&lat=41.988883&lng=-91.73748';
     });
   }).on('mouseover', function (e) {
     well_485.openPopup()
@@ -1322,9 +1333,10 @@ var icon_other_violation = {
 
   
   var well_486 = L.marker(new L.LatLng(41.988766, -91.736589)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-13?zoom=' + map_current_zoom + '&lat=41.988766&lng=-91.736589';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-13?zoom=' + map_current_zoom + '&lat=41.988766&lng=-91.736589';
     });
   }).on('mouseover', function (e) {
     well_486.openPopup()
@@ -1342,9 +1354,10 @@ var icon_other_violation = {
 
   
   var well_487 = L.marker(new L.LatLng(41.988872, -91.7376)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-10?zoom=' + map_current_zoom + '&lat=41.988872&lng=-91.7376';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-10?zoom=' + map_current_zoom + '&lat=41.988872&lng=-91.7376';
     });
   }).on('mouseover', function (e) {
     well_487.openPopup()
@@ -1416,9 +1429,10 @@ var icon_other_violation = {
 
   
   var well_515 = L.marker(new L.LatLng(41.9889, -91.736369)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-23?zoom=' + map_current_zoom + '&lat=41.9889&lng=-91.736369';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-23?zoom=' + map_current_zoom + '&lat=41.9889&lng=-91.736369';
     });
   }).on('mouseover', function (e) {
     well_515.openPopup()
@@ -1498,9 +1512,10 @@ var icon_other_violation = {
 
   
   var well_547 = L.marker(new L.LatLng(41.986231, -91.737658)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-3?zoom=' + map_current_zoom + '&lat=41.986231&lng=-91.737658';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-3?zoom=' + map_current_zoom + '&lat=41.986231&lng=-91.737658';
     });
   }).on('mouseover', function (e) {
     well_547.openPopup()
@@ -1540,9 +1555,10 @@ var icon_other_violation = {
 
   
   var well_559 = L.marker(new L.LatLng(41.987372, -91.737728)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-9?zoom=' + map_current_zoom + '&lat=41.987372&lng=-91.737728';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-9?zoom=' + map_current_zoom + '&lat=41.987372&lng=-91.737728';
     });
   }).on('mouseover', function (e) {
     well_559.openPopup()
@@ -1668,9 +1684,10 @@ var icon_other_violation = {
 
   
   var well_614 = L.marker(new L.LatLng(41.986046, -91.735641)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-2a?zoom=' + map_current_zoom + '&lat=41.986046&lng=-91.735641';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-2a?zoom=' + map_current_zoom + '&lat=41.986046&lng=-91.735641';
     });
   }).on('mouseover', function (e) {
     well_614.openPopup()
@@ -1720,9 +1737,10 @@ var icon_other_violation = {
 
   
   var well_631 = L.marker(new L.LatLng(41.988693, -91.73564)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-18?zoom=' + map_current_zoom + '&lat=41.988693&lng=-91.73564';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-18?zoom=' + map_current_zoom + '&lat=41.988693&lng=-91.73564';
     });
   }).on('mouseover', function (e) {
     well_631.openPopup()
@@ -1752,9 +1770,10 @@ var icon_other_violation = {
 
   
   var well_638 = L.marker(new L.LatLng(41.988936, -91.736315)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-21?zoom=' + map_current_zoom + '&lat=41.988936&lng=-91.736315';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-21?zoom=' + map_current_zoom + '&lat=41.988936&lng=-91.736315';
     });
   }).on('mouseover', function (e) {
     well_638.openPopup()
@@ -1772,9 +1791,10 @@ var icon_other_violation = {
 
   
   var well_639 = L.marker(new L.LatLng(41.986124, -91.737616)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-20?zoom=' + map_current_zoom + '&lat=41.986124&lng=-91.737616';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-20?zoom=' + map_current_zoom + '&lat=41.986124&lng=-91.737616';
     });
   }).on('mouseover', function (e) {
     well_639.openPopup()
@@ -1880,9 +1900,10 @@ var icon_other_violation = {
 
   
   var well_684 = L.marker(new L.LatLng(41.986186, -91.737623)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-8?zoom=' + map_current_zoom + '&lat=41.986186&lng=-91.737623';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-8?zoom=' + map_current_zoom + '&lat=41.986186&lng=-91.737623';
     });
   }).on('mouseover', function (e) {
     well_684.openPopup()
@@ -1950,9 +1971,10 @@ var icon_other_violation = {
 
   
   var well_710 = L.marker(new L.LatLng(41.988765, -91.736503)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-15?zoom=' + map_current_zoom + '&lat=41.988765&lng=-91.736503';  
+      window.location.href = '/facilities/stoney-point/stoney-point-landfill-mw-15?zoom=' + map_current_zoom + '&lat=41.988765&lng=-91.736503';
     });
   }).on('mouseover', function (e) {
     well_710.openPopup()
@@ -2536,14 +2558,169 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:79%"></span></div>
 <h2 class="well-count">19</h2><span> total with </span> 
-<h2 class="well-count">15</h2><span> out of compliance</span>
+<h2 class="well-count">15</h2><span> reporting at least one exceedance</span>
 
 <p><em>Please note that</em> <span class="unmapped">2</span> <em>wells at this facility are missing reliable coordinate data and therefore are not shown on the map.</em></p><br />
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>124 / 445 (28%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-10/?zoom=18&amp;lat=41.988872&amp;lng=-91.7376">MW-10</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-11/?zoom=18&amp;lat=41.988876&amp;lng=-91.737557">MW-11</a></td>
+      <td class="data-align-center">10</td>
+      
+      <td class="dirty-well data-align-center"><span>10</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-12/?zoom=18&amp;lat=41.988883&amp;lng=-91.73748">MW-12</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-13/?zoom=18&amp;lat=41.988766&amp;lng=-91.736589">MW-13</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-14/?zoom=18&amp;lat=41.988761&amp;lng=-91.736557">MW-14</a></td>
+      <td class="data-align-center">13</td>
+      
+      <td class="dirty-well data-align-center"><span>13</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-15/?zoom=18&amp;lat=41.988765&amp;lng=-91.736503">MW-15</a></td>
+      <td class="data-align-center">16</td>
+      
+      <td class="dirty-well data-align-center"><span>16</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-16/?zoom=18&amp;lat=41.988663&amp;lng=-91.735742">MW-16</a></td>
+      <td class="data-align-center">12</td>
+      
+      <td class="dirty-well data-align-center"><span>12</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-17/?zoom=18&amp;lat=41.988671&amp;lng=-91.735669">MW-17</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-18/?zoom=18&amp;lat=41.988693&amp;lng=-91.73564">MW-18</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-20/?zoom=18&amp;lat=41.986124&amp;lng=-91.737616">MW-20</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-21/?zoom=18&amp;lat=41.988936&amp;lng=-91.736315">MW-21</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-22/?zoom=18&amp;lat=41.98892&amp;lng=-91.736269">MW-22</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-23/?zoom=18&amp;lat=41.9889&amp;lng=-91.736369">MW-23</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-2a/?zoom=18&amp;lat=41.986046&amp;lng=-91.735641">MW-2A</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-3/?zoom=18&amp;lat=41.986231&amp;lng=-91.737658">MW-3</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-8/?zoom=18&amp;lat=41.986186&amp;lng=-91.737623">MW-8</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="stoney-point-landfill-mw-9/?zoom=18&amp;lat=41.987372&amp;lng=-91.737728">MW-9</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:20%"></span></div>
+<h2>124 / 607 <span class="percent-exceeded">20%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2553,7 +2730,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2562,7 +2739,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2571,7 +2748,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="8 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="8 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2580,7 +2757,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2589,7 +2766,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Be" data-placement="top" data-original-title="4 Beryllium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Be" data-placement="top" title="4 exceedances at this facility" >
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2598,7 +2775,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="28 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="28 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2607,7 +2784,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cd" data-placement="top" data-original-title="Cadmium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Cd" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2616,7 +2793,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cr" data-placement="top" data-original-title="Chromium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Cr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2625,7 +2802,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="14 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="14 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2634,7 +2811,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2643,7 +2820,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2652,7 +2829,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" data-placement="top" data-original-title="Fluoride is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-F" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2661,7 +2838,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2670,7 +2847,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2679,7 +2856,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Pb" data-placement="top" data-original-title="No Pb violations at this facility">
+      <div class="element compliant" data-toggle="element-Pb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2688,7 +2865,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="28 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="28 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2697,7 +2874,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2706,7 +2883,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" data-original-title="Molybdenum is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2715,7 +2892,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" data-original-title="Nickel is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2724,7 +2901,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" data-original-title="Nitrate is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2733,7 +2910,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2742,7 +2919,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2751,7 +2928,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2760,7 +2937,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2769,7 +2946,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2778,7 +2955,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="42 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="42 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2787,7 +2964,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2796,7 +2973,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2805,7 +2982,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2825,7 +3002,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Stoney.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/stoney-point.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2879,6 +3056,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

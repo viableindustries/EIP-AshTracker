@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -304,9 +309,10 @@ var icon_other_violation = {
 
   
   var well_31 = L.marker(new L.LatLng(36.024839, -84.144651)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-f45r?zoom=' + map_current_zoom + '&lat=36.024839&lng=-84.144651';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-f45r?zoom=' + map_current_zoom + '&lat=36.024839&lng=-84.144651';
     });
   }).on('mouseover', function (e) {
     well_31.openPopup()
@@ -460,9 +466,10 @@ var icon_other_violation = {
 
   
   var well_100 = L.marker(new L.LatLng(36.009988, -84.153322)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-1?zoom=' + map_current_zoom + '&lat=36.009988&lng=-84.153322';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-1?zoom=' + map_current_zoom + '&lat=36.009988&lng=-84.153322';
     });
   }).on('mouseover', function (e) {
     well_100.openPopup()
@@ -534,9 +541,10 @@ var icon_other_violation = {
 
   
   var well_128 = L.marker(new L.LatLng(36.000738, -84.151325)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-10-52?zoom=' + map_current_zoom + '&lat=36.000738&lng=-84.151325';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-10-52?zoom=' + map_current_zoom + '&lat=36.000738&lng=-84.151325';
     });
   }).on('mouseover', function (e) {
     well_128.openPopup()
@@ -554,9 +562,10 @@ var icon_other_violation = {
 
   
   var well_129 = L.marker(new L.LatLng(36.001707, -84.155369)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-10-51?zoom=' + map_current_zoom + '&lat=36.001707&lng=-84.155369';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-10-51?zoom=' + map_current_zoom + '&lat=36.001707&lng=-84.155369';
     });
   }).on('mouseover', function (e) {
     well_129.openPopup()
@@ -1340,9 +1349,10 @@ var icon_other_violation = {
 
   
   var well_513 = L.marker(new L.LatLng(36.011728, -84.159639)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-47?zoom=' + map_current_zoom + '&lat=36.011728&lng=-84.159639';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-47?zoom=' + map_current_zoom + '&lat=36.011728&lng=-84.159639';
     });
   }).on('mouseover', function (e) {
     well_513.openPopup()
@@ -1364,9 +1374,10 @@ var icon_other_violation = {
 
   
   var well_516 = L.marker(new L.LatLng(36.008866, -84.157722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-48?zoom=' + map_current_zoom + '&lat=36.008866&lng=-84.157722';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-48?zoom=' + map_current_zoom + '&lat=36.008866&lng=-84.157722';
     });
   }).on('mouseover', function (e) {
     well_516.openPopup()
@@ -1384,9 +1395,10 @@ var icon_other_violation = {
 
   
   var well_517 = L.marker(new L.LatLng(36.00599, -84.156632)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-49?zoom=' + map_current_zoom + '&lat=36.00599&lng=-84.156632';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-49?zoom=' + map_current_zoom + '&lat=36.00599&lng=-84.156632';
     });
   }).on('mouseover', function (e) {
     well_517.openPopup()
@@ -1806,9 +1818,10 @@ var icon_other_violation = {
 
   
   var well_719 = L.marker(new L.LatLng(35.997643, -84.154651)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-s?zoom=' + map_current_zoom + '&lat=35.997643&lng=-84.154651';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-s?zoom=' + map_current_zoom + '&lat=35.997643&lng=-84.154651';
     });
   }).on('mouseover', function (e) {
     well_719.openPopup()
@@ -1834,9 +1847,10 @@ var icon_other_violation = {
 
   
   var well_724 = L.marker(new L.LatLng(36.025073, -84.142817)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-g?zoom=' + map_current_zoom + '&lat=36.025073&lng=-84.142817';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-g?zoom=' + map_current_zoom + '&lat=36.025073&lng=-84.142817';
     });
   }).on('mouseover', function (e) {
     well_724.openPopup()
@@ -1862,9 +1876,10 @@ var icon_other_violation = {
 
   
   var well_729 = L.marker(new L.LatLng(36.02865, -84.146354)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-i?zoom=' + map_current_zoom + '&lat=36.02865&lng=-84.146354';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-i?zoom=' + map_current_zoom + '&lat=36.02865&lng=-84.146354';
     });
   }).on('mouseover', function (e) {
     well_729.openPopup()
@@ -1882,9 +1897,10 @@ var icon_other_violation = {
 
   
   var well_730 = L.marker(new L.LatLng(36.02307, -84.14695)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-j?zoom=' + map_current_zoom + '&lat=36.02307&lng=-84.14695';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-j?zoom=' + map_current_zoom + '&lat=36.02307&lng=-84.14695';
     });
   }).on('mouseover', function (e) {
     well_730.openPopup()
@@ -2036,9 +2052,10 @@ var icon_other_violation = {
 
   
   var well_798 = L.marker(new L.LatLng(36.003465, -84.155778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-50?zoom=' + map_current_zoom + '&lat=36.003465&lng=-84.155778';  
+      window.location.href = '/facilities/bull-run/bull-run-fossil-plant-brf-50?zoom=' + map_current_zoom + '&lat=36.003465&lng=-84.155778';
     });
   }).on('mouseover', function (e) {
     well_798.openPopup()
@@ -2446,12 +2463,127 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:67%"></span></div>
 <h2 class="well-count">12</h2><span> total with </span> 
-<h2 class="well-count">8</h2><span> out of compliance</span>
+<h2 class="well-count">8</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>54 / 397 (14%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-10-51/?zoom=18&amp;lat=36.001707&amp;lng=-84.155369">Oct-51</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-10-52/?zoom=18&amp;lat=36.000738&amp;lng=-84.151325">Oct-52</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-brf-1/?zoom=18&amp;lat=36.009988&amp;lng=-84.153322">BRF-1</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-brf-47/?zoom=18&amp;lat=36.011728&amp;lng=-84.159639">BRF-47</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-brf-48/?zoom=18&amp;lat=36.008866&amp;lng=-84.157722">BRF-48</a></td>
+      <td class="data-align-center">12</td>
+      
+      <td class="dirty-well data-align-center"><span>12</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-brf-49/?zoom=18&amp;lat=36.00599&amp;lng=-84.156632">BRF-49</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-brf-50/?zoom=18&amp;lat=36.003465&amp;lng=-84.155778">BRF-50</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-f45r/?zoom=18&amp;lat=36.024839&amp;lng=-84.144651">F45R</a></td>
+      <td class="data-align-center">13</td>
+      
+      <td class="dirty-well data-align-center"><span>13</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-g/?zoom=18&amp;lat=36.025073&amp;lng=-84.142817">G</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-i/?zoom=18&amp;lat=36.02865&amp;lng=-84.146354">I</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-j/?zoom=18&amp;lat=36.02307&amp;lng=-84.14695">J</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="bull-run-fossil-plant-s/?zoom=18&amp;lat=35.997643&amp;lng=-84.154651">S</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:4%"></span></div>
+<h2>54 / 1,306 <span class="percent-exceeded">4%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2461,7 +2593,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2470,7 +2602,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Sb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2479,7 +2611,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="5 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2488,7 +2620,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2497,7 +2629,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2506,7 +2638,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="3 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="3 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2515,7 +2647,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2524,7 +2656,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2533,7 +2665,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="15 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="15 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2542,7 +2674,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2551,7 +2683,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2560,7 +2692,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2569,7 +2701,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2578,7 +2710,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2587,7 +2719,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Pb" data-placement="top" data-original-title="No Pb violations at this facility">
+      <div class="element compliant" data-toggle="element-Pb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2596,7 +2728,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="15 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="15 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2605,7 +2737,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2614,7 +2746,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" data-original-title="5 Molybdenum violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2623,7 +2755,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ni" data-placement="top" data-original-title="No Ni violations at this facility">
+      <div class="element compliant" data-toggle="element-Ni" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2632,7 +2764,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2641,7 +2773,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2650,7 +2782,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2659,7 +2791,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2668,7 +2800,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ag" data-placement="top" data-original-title="No Ag violations at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2677,7 +2809,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Sr" data-placement="top" data-original-title="3 Strontium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Sr" data-placement="top" title="3 exceedances at this facility" >
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2686,7 +2818,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="8 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="8 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2695,7 +2827,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2704,7 +2836,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2713,7 +2845,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2733,7 +2865,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Bull_Run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/bull-run.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2787,6 +2919,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

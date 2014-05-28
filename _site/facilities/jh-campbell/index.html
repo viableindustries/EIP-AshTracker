@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -244,9 +249,10 @@ var icon_other_violation = {
 
   
   var well_1 = L.marker(new L.LatLng(42.910875, -86.17788889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw1?zoom=' + map_current_zoom + '&lat=42.910875&lng=-86.17788889';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw1?zoom=' + map_current_zoom + '&lat=42.910875&lng=-86.17788889';
     });
   }).on('mouseover', function (e) {
     well_1.openPopup()
@@ -364,9 +370,10 @@ var icon_other_violation = {
 
   
   var well_52 = L.marker(new L.LatLng(42.90992778, -86.17738056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw5?zoom=' + map_current_zoom + '&lat=42.90992778&lng=-86.17738056';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw5?zoom=' + map_current_zoom + '&lat=42.90992778&lng=-86.17738056';
     });
   }).on('mouseover', function (e) {
     well_52.openPopup()
@@ -520,9 +527,10 @@ var icon_other_violation = {
 
   
   var well_121 = L.marker(new L.LatLng(42.90915278, -86.17841944)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw9d?zoom=' + map_current_zoom + '&lat=42.90915278&lng=-86.17841944';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw9d?zoom=' + map_current_zoom + '&lat=42.90915278&lng=-86.17841944';
     });
   }).on('mouseover', function (e) {
     well_121.openPopup()
@@ -672,9 +680,10 @@ var icon_other_violation = {
 
   
   var well_188 = L.marker(new L.LatLng(42.91038056, -86.17777222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw4?zoom=' + map_current_zoom + '&lat=42.91038056&lng=-86.17777222';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw4?zoom=' + map_current_zoom + '&lat=42.91038056&lng=-86.17777222';
     });
   }).on('mouseover', function (e) {
     well_188.openPopup()
@@ -728,9 +737,10 @@ var icon_other_violation = {
 
   
   var well_207 = L.marker(new L.LatLng(42.91075556, -86.17804722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw2?zoom=' + map_current_zoom + '&lat=42.91075556&lng=-86.17804722';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw2?zoom=' + map_current_zoom + '&lat=42.91075556&lng=-86.17804722';
     });
   }).on('mouseover', function (e) {
     well_207.openPopup()
@@ -840,9 +850,10 @@ var icon_other_violation = {
 
   
   var well_254 = L.marker(new L.LatLng(42.91291111, -86.18175278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb4?zoom=' + map_current_zoom + '&lat=42.91291111&lng=-86.18175278';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb4?zoom=' + map_current_zoom + '&lat=42.91291111&lng=-86.18175278';
     });
   }).on('mouseover', function (e) {
     well_254.openPopup()
@@ -860,9 +871,10 @@ var icon_other_violation = {
 
   
   var well_255 = L.marker(new L.LatLng(42.91296667, -86.180125)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb5?zoom=' + map_current_zoom + '&lat=42.91296667&lng=-86.180125';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb5?zoom=' + map_current_zoom + '&lat=42.91296667&lng=-86.180125';
     });
   }).on('mouseover', function (e) {
     well_255.openPopup()
@@ -886,9 +898,10 @@ var icon_other_violation = {
 
   
   var well_259 = L.marker(new L.LatLng(42.91269167, -86.18754722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb1?zoom=' + map_current_zoom + '&lat=42.91269167&lng=-86.18754722';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb1?zoom=' + map_current_zoom + '&lat=42.91269167&lng=-86.18754722';
     });
   }).on('mouseover', function (e) {
     well_259.openPopup()
@@ -908,9 +921,10 @@ var icon_other_violation = {
 
   
   var well_261 = L.marker(new L.LatLng(42.91285278, -86.18374722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb3?zoom=' + map_current_zoom + '&lat=42.91285278&lng=-86.18374722';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb3?zoom=' + map_current_zoom + '&lat=42.91285278&lng=-86.18374722';
     });
   }).on('mouseover', function (e) {
     well_261.openPopup()
@@ -950,9 +964,10 @@ var icon_other_violation = {
 
   
   var well_273 = L.marker(new L.LatLng(42.913175, -86.17563611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb7?zoom=' + map_current_zoom + '&lat=42.913175&lng=-86.17563611';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb7?zoom=' + map_current_zoom + '&lat=42.913175&lng=-86.17563611';
     });
   }).on('mouseover', function (e) {
     well_273.openPopup()
@@ -1134,9 +1149,10 @@ var icon_other_violation = {
 
   
   var well_356 = L.marker(new L.LatLng(42.914675, -86.19635833)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw-st1?zoom=' + map_current_zoom + '&lat=42.914675&lng=-86.19635833';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw-st1?zoom=' + map_current_zoom + '&lat=42.914675&lng=-86.19635833';
     });
   }).on('mouseover', function (e) {
     well_356.openPopup()
@@ -1230,9 +1246,10 @@ var icon_other_violation = {
 
   
   var well_395 = L.marker(new L.LatLng(42.90515833, -86.18235278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw13?zoom=' + map_current_zoom + '&lat=42.90515833&lng=-86.18235278';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw13?zoom=' + map_current_zoom + '&lat=42.90515833&lng=-86.18235278';
     });
   }).on('mouseover', function (e) {
     well_395.openPopup()
@@ -1250,9 +1267,10 @@ var icon_other_violation = {
 
   
   var well_396 = L.marker(new L.LatLng(42.90683889, -86.17808056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw12?zoom=' + map_current_zoom + '&lat=42.90683889&lng=-86.17808056';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw12?zoom=' + map_current_zoom + '&lat=42.90683889&lng=-86.17808056';
     });
   }).on('mouseover', function (e) {
     well_396.openPopup()
@@ -1272,9 +1290,10 @@ var icon_other_violation = {
 
   
   var well_398 = L.marker(new L.LatLng(42.90415278, -86.18255556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw14?zoom=' + map_current_zoom + '&lat=42.90415278&lng=-86.18255556';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw14?zoom=' + map_current_zoom + '&lat=42.90415278&lng=-86.18255556';
     });
   }).on('mouseover', function (e) {
     well_398.openPopup()
@@ -1302,9 +1321,10 @@ var icon_other_violation = {
 
   
   var well_404 = L.marker(new L.LatLng(42.91991944, -86.18439444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw3?zoom=' + map_current_zoom + '&lat=42.91991944&lng=-86.18439444';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw3?zoom=' + map_current_zoom + '&lat=42.91991944&lng=-86.18439444';
     });
   }).on('mouseover', function (e) {
     well_404.openPopup()
@@ -1326,9 +1346,10 @@ var icon_other_violation = {
 
   
   var well_407 = L.marker(new L.LatLng(42.918125, -86.18020278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw4?zoom=' + map_current_zoom + '&lat=42.918125&lng=-86.18020278';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw4?zoom=' + map_current_zoom + '&lat=42.918125&lng=-86.18020278';
     });
   }).on('mouseover', function (e) {
     well_407.openPopup()
@@ -1522,9 +1543,10 @@ var icon_other_violation = {
 
   
   var well_496 = L.marker(new L.LatLng(42.91047778, -86.17756389)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw6?zoom=' + map_current_zoom + '&lat=42.91047778&lng=-86.17756389';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw6?zoom=' + map_current_zoom + '&lat=42.91047778&lng=-86.17756389';
     });
   }).on('mouseover', function (e) {
     well_496.openPopup()
@@ -1668,9 +1690,10 @@ var icon_other_violation = {
 
   
   var well_560 = L.marker(new L.LatLng(42.90236389, -86.18981667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz40?zoom=' + map_current_zoom + '&lat=42.90236389&lng=-86.18981667';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz40?zoom=' + map_current_zoom + '&lat=42.90236389&lng=-86.18981667';
     });
   }).on('mouseover', function (e) {
     well_560.openPopup()
@@ -1806,9 +1829,10 @@ var icon_other_violation = {
 
   
   var well_620 = L.marker(new L.LatLng(42.90265, -86.18542222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz24?zoom=' + map_current_zoom + '&lat=42.90265&lng=-86.18542222';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz24?zoom=' + map_current_zoom + '&lat=42.90265&lng=-86.18542222';
     });
   }).on('mouseover', function (e) {
     well_620.openPopup()
@@ -1826,9 +1850,10 @@ var icon_other_violation = {
 
   
   var well_621 = L.marker(new L.LatLng(42.91274167, -86.18568333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb2?zoom=' + map_current_zoom + '&lat=42.91274167&lng=-86.18568333';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb2?zoom=' + map_current_zoom + '&lat=42.91274167&lng=-86.18568333';
     });
   }).on('mouseover', function (e) {
     well_621.openPopup()
@@ -1950,9 +1975,10 @@ var icon_other_violation = {
 
   
   var well_674 = L.marker(new L.LatLng(42.91637778, -86.19117778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw1?zoom=' + map_current_zoom + '&lat=42.91637778&lng=-86.19117778';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw1?zoom=' + map_current_zoom + '&lat=42.91637778&lng=-86.19117778';
     });
   }).on('mouseover', function (e) {
     well_674.openPopup()
@@ -2076,9 +2102,10 @@ var icon_other_violation = {
 
   
   var well_728 = L.marker(new L.LatLng(42.91819722, -86.17835278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw5?zoom=' + map_current_zoom + '&lat=42.91819722&lng=-86.17835278';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw5?zoom=' + map_current_zoom + '&lat=42.91819722&lng=-86.17835278';
     });
   }).on('mouseover', function (e) {
     well_728.openPopup()
@@ -2244,9 +2271,10 @@ var icon_other_violation = {
 
   
   var well_803 = L.marker(new L.LatLng(42.91348333, -86.19639167)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw8?zoom=' + map_current_zoom + '&lat=42.91348333&lng=-86.19639167';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw8?zoom=' + map_current_zoom + '&lat=42.91348333&lng=-86.19639167';
     });
   }).on('mouseover', function (e) {
     well_803.openPopup()
@@ -2338,9 +2366,10 @@ var icon_other_violation = {
 
   
   var well_841 = L.marker(new L.LatLng(42.91745833, -86.19421667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz3?zoom=' + map_current_zoom + '&lat=42.91745833&lng=-86.19421667';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz3?zoom=' + map_current_zoom + '&lat=42.91745833&lng=-86.19421667';
     });
   }).on('mouseover', function (e) {
     well_841.openPopup()
@@ -2382,9 +2411,10 @@ var icon_other_violation = {
 
   
   var well_854 = L.marker(new L.LatLng(42.91304722, -86.17803056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb6?zoom=' + map_current_zoom + '&lat=42.91304722&lng=-86.17803056';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwb6?zoom=' + map_current_zoom + '&lat=42.91304722&lng=-86.17803056';
     });
   }).on('mouseover', function (e) {
     well_854.openPopup()
@@ -2422,9 +2452,10 @@ var icon_other_violation = {
 
   
   var well_865 = L.marker(new L.LatLng(42.91468056, -86.19558056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw-st2?zoom=' + map_current_zoom + '&lat=42.91468056&lng=-86.19558056';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw-st2?zoom=' + map_current_zoom + '&lat=42.91468056&lng=-86.19558056';
     });
   }).on('mouseover', function (e) {
     well_865.openPopup()
@@ -2444,9 +2475,10 @@ var icon_other_violation = {
 
   
   var well_867 = L.marker(new L.LatLng(42.90641389, -86.18357222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw10b?zoom=' + map_current_zoom + '&lat=42.90641389&lng=-86.18357222';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw10b?zoom=' + map_current_zoom + '&lat=42.90641389&lng=-86.18357222';
     });
   }).on('mouseover', function (e) {
     well_867.openPopup()
@@ -2542,9 +2574,10 @@ var icon_other_violation = {
 
   
   var well_907 = L.marker(new L.LatLng(42.90934722, -86.19809444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz37?zoom=' + map_current_zoom + '&lat=42.90934722&lng=-86.19809444';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz37?zoom=' + map_current_zoom + '&lat=42.90934722&lng=-86.19809444';
     });
   }).on('mouseover', function (e) {
     well_907.openPopup()
@@ -2588,9 +2621,10 @@ var icon_other_violation = {
 
   
   var well_921 = L.marker(new L.LatLng(42.90487222, -86.19575556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz23?zoom=' + map_current_zoom + '&lat=42.90487222&lng=-86.19575556';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-pz23?zoom=' + map_current_zoom + '&lat=42.90487222&lng=-86.19575556';
     });
   }).on('mouseover', function (e) {
     well_921.openPopup()
@@ -2608,9 +2642,10 @@ var icon_other_violation = {
 
   
   var well_922 = L.marker(new L.LatLng(42.91513333, -86.18733611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwa1?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18733611';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwa1?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18733611';
     });
   }).on('mouseover', function (e) {
     well_922.openPopup()
@@ -2666,9 +2701,10 @@ var icon_other_violation = {
 
   
   var well_942 = L.marker(new L.LatLng(42.91020278, -86.17681944)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw3?zoom=' + map_current_zoom + '&lat=42.91020278&lng=-86.17681944';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-rw3?zoom=' + map_current_zoom + '&lat=42.91020278&lng=-86.17681944';
     });
   }).on('mouseover', function (e) {
     well_942.openPopup()
@@ -2730,9 +2766,10 @@ var icon_other_violation = {
 
   
   var well_965 = L.marker(new L.LatLng(42.91513333, -86.18409722)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwa3?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18409722';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwa3?zoom=' + map_current_zoom + '&lat=42.91513333&lng=-86.18409722';
     });
   }).on('mouseover', function (e) {
     well_965.openPopup()
@@ -2750,9 +2787,10 @@ var icon_other_violation = {
 
   
   var well_966 = L.marker(new L.LatLng(42.915125, -86.18563333)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwa2?zoom=' + map_current_zoom + '&lat=42.915125&lng=-86.18563333';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mwa2?zoom=' + map_current_zoom + '&lat=42.915125&lng=-86.18563333';
     });
   }).on('mouseover', function (e) {
     well_966.openPopup()
@@ -2774,9 +2812,10 @@ var icon_other_violation = {
 
   
   var well_969 = L.marker(new L.LatLng(42.90959444, -86.17742778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw11a?zoom=' + map_current_zoom + '&lat=42.90959444&lng=-86.17742778';  
+      window.location.href = '/facilities/jh-campbell/jh-campbell-generating-complex-mw11a?zoom=' + map_current_zoom + '&lat=42.90959444&lng=-86.17742778';
     });
   }).on('mouseover', function (e) {
     well_969.openPopup()
@@ -2842,14 +2881,305 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:40%"></span></div>
 <h2 class="well-count">47</h2><span> total with </span> 
-<h2 class="well-count">19</h2><span> out of compliance</span>
+<h2 class="well-count">19</h2><span> reporting at least one exceedance</span>
 
 <p><em>Please note that</em> <span class="unmapped">13</span> <em>wells at this facility are missing reliable coordinate data and therefore are not shown on the map.</em></p><br />
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>57 / 317 (18%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw1/?zoom=18&amp;lat=42.91637778&amp;lng=-86.19117778">MW1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw10b/?zoom=18&amp;lat=42.90641389&amp;lng=-86.18357222">MW10b</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw11a/?zoom=18&amp;lat=42.90959444&amp;lng=-86.17742778">MW11a</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw12/?zoom=18&amp;lat=42.90683889&amp;lng=-86.17808056">MW12</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw13/?zoom=18&amp;lat=42.90515833&amp;lng=-86.18235278">MW13</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw14/?zoom=18&amp;lat=42.90415278&amp;lng=-86.18255556">MW14</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw3/?zoom=18&amp;lat=42.91991944&amp;lng=-86.18439444">MW3</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw4/?zoom=18&amp;lat=42.918125&amp;lng=-86.18020278">MW4</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw5/?zoom=18&amp;lat=42.91819722&amp;lng=-86.17835278">MW5</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw8/?zoom=18&amp;lat=42.91348333&amp;lng=-86.19639167">MW8</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw9d/?zoom=18&amp;lat=42.90915278&amp;lng=-86.17841944">MW9d</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwa1/?zoom=18&amp;lat=42.91513333&amp;lng=-86.18733611">MWA1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwa2/?zoom=18&amp;lat=42.915125&amp;lng=-86.18563333">MWA2</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwa3/?zoom=18&amp;lat=42.91513333&amp;lng=-86.18409722">MWA3</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb1/?zoom=18&amp;lat=42.91269167&amp;lng=-86.18754722">MWB1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb2/?zoom=18&amp;lat=42.91274167&amp;lng=-86.18568333">MWB2</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb3/?zoom=18&amp;lat=42.91285278&amp;lng=-86.18374722">MWB3</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb4/?zoom=18&amp;lat=42.91291111&amp;lng=-86.18175278">MWB4</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb5/?zoom=18&amp;lat=42.91296667&amp;lng=-86.180125">MWB5</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb6/?zoom=18&amp;lat=42.91304722&amp;lng=-86.17803056">MWB6</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mwb7/?zoom=18&amp;lat=42.913175&amp;lng=-86.17563611">MWB7</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw-st1/?zoom=18&amp;lat=42.914675&amp;lng=-86.19635833">MW-ST1</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-mw-st2/?zoom=18&amp;lat=42.91468056&amp;lng=-86.19558056">MW-ST2</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-pz23/?zoom=18&amp;lat=42.90487222&amp;lng=-86.19575556">PZ23</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-pz24/?zoom=18&amp;lat=42.90265&amp;lng=-86.18542222">PZ24</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-pz3/?zoom=18&amp;lat=42.91745833&amp;lng=-86.19421667">PZ3</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-pz37/?zoom=18&amp;lat=42.90934722&amp;lng=-86.19809444">PZ37</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-pz40/?zoom=18&amp;lat=42.90236389&amp;lng=-86.18981667">PZ40</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-rw1/?zoom=18&amp;lat=42.910875&amp;lng=-86.17788889">RW1</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-rw2/?zoom=18&amp;lat=42.91075556&amp;lng=-86.17804722">RW2</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-rw3/?zoom=18&amp;lat=42.91020278&amp;lng=-86.17681944">RW3</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-rw4/?zoom=18&amp;lat=42.91038056&amp;lng=-86.17777222">RW4</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-rw5/?zoom=18&amp;lat=42.90992778&amp;lng=-86.17738056">RW5</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="jh-campbell-generating-complex-rw6/?zoom=18&amp;lat=42.91047778&amp;lng=-86.17756389">RW6</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:19%"></span></div>
+<h2>57 / 308 <span class="percent-exceeded">19%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2859,7 +3189,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element compliant" data-toggle="element-NH3" data-placement="top" data-original-title="No NH3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NH3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2868,7 +3198,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Sb" data-placement="top" data-original-title="No Sb violations at this facility">
+      <div class="element compliant" data-toggle="element-Sb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2877,7 +3207,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="4 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="4 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2886,7 +3216,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2895,7 +3225,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Be" data-placement="top" data-original-title="Beryllium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Be" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2904,7 +3234,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="16 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="16 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2913,7 +3243,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2922,7 +3252,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2931,7 +3261,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Co" data-placement="top" data-original-title="No Co violations at this facility">
+      <div class="element compliant" data-toggle="element-Co" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2940,7 +3270,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2949,7 +3279,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2958,7 +3288,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" data-placement="top" data-original-title="Fluoride is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-F" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2967,7 +3297,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2976,7 +3306,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2985,7 +3315,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Pb" data-placement="top" data-original-title="Lead is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Pb" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2994,7 +3324,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Mn" data-placement="top" data-original-title="No Mn violations at this facility">
+      <div class="element compliant" data-toggle="element-Mn" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -3003,7 +3333,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -3012,7 +3342,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" data-original-title="10 Molybdenum violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" title="10 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -3021,7 +3351,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ni" data-placement="top" data-original-title="No Ni violations at this facility">
+      <div class="element compliant" data-toggle="element-Ni" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -3030,7 +3360,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -3039,7 +3369,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO2" data-placement="top" data-original-title="No NO2 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO2" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -3048,7 +3378,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -3057,7 +3387,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Se" data-placement="top" data-original-title="27 Selenium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Se" data-placement="top" title="27 exceedances at this facility" >
         
         <span class="contaminant-symbol">Se</span>
         
@@ -3066,7 +3396,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -3075,7 +3405,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -3084,7 +3414,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-SO4" data-placement="top" data-original-title="No SO4 violations at this facility">
+      <div class="element compliant" data-toggle="element-SO4" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -3093,7 +3423,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Tl" data-placement="top" data-original-title="No Tl violations at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -3102,7 +3432,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -3111,7 +3441,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -3130,7 +3460,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/JH_Campbell.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/jh-campbell.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -3184,6 +3514,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

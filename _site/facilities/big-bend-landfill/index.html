@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -898,9 +903,10 @@ var icon_other_violation = {
 
   
   var well_328 = L.marker(new L.LatLng(41.949595, -91.592076)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-25?zoom=' + map_current_zoom + '&lat=41.949595&lng=-91.592076';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-25?zoom=' + map_current_zoom + '&lat=41.949595&lng=-91.592076';
     });
   }).on('mouseover', function (e) {
     well_328.openPopup()
@@ -918,9 +924,10 @@ var icon_other_violation = {
 
   
   var well_329 = L.marker(new L.LatLng(41.950005, -91.594532)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-24?zoom=' + map_current_zoom + '&lat=41.950005&lng=-91.594532';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-24?zoom=' + map_current_zoom + '&lat=41.950005&lng=-91.594532';
     });
   }).on('mouseover', function (e) {
     well_329.openPopup()
@@ -938,9 +945,10 @@ var icon_other_violation = {
 
   
   var well_330 = L.marker(new L.LatLng(41.949973, -91.59463)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-23?zoom=' + map_current_zoom + '&lat=41.949973&lng=-91.59463';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-23?zoom=' + map_current_zoom + '&lat=41.949973&lng=-91.59463';
     });
   }).on('mouseover', function (e) {
     well_330.openPopup()
@@ -960,9 +968,10 @@ var icon_other_violation = {
 
   
   var well_332 = L.marker(new L.LatLng(41.94854, -91.591522)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-21?zoom=' + map_current_zoom + '&lat=41.94854&lng=-91.591522';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-21?zoom=' + map_current_zoom + '&lat=41.94854&lng=-91.591522';
     });
   }).on('mouseover', function (e) {
     well_332.openPopup()
@@ -980,9 +989,10 @@ var icon_other_violation = {
 
   
   var well_333 = L.marker(new L.LatLng(41.949109, -91.592073)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-20?zoom=' + map_current_zoom + '&lat=41.949109&lng=-91.592073';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-20?zoom=' + map_current_zoom + '&lat=41.949109&lng=-91.592073';
     });
   }).on('mouseover', function (e) {
     well_333.openPopup()
@@ -1174,9 +1184,10 @@ var icon_other_violation = {
 
   
   var well_421 = L.marker(new L.LatLng(41.949697, -91.594398)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-15ar?zoom=' + map_current_zoom + '&lat=41.949697&lng=-91.594398';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-15ar?zoom=' + map_current_zoom + '&lat=41.949697&lng=-91.594398';
     });
   }).on('mouseover', function (e) {
     well_421.openPopup()
@@ -1266,9 +1277,10 @@ var icon_other_violation = {
 
   
   var well_458 = L.marker(new L.LatLng(41.94973, -91.592549)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-2?zoom=' + map_current_zoom + '&lat=41.94973&lng=-91.592549';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-2?zoom=' + map_current_zoom + '&lat=41.94973&lng=-91.592549';
     });
   }).on('mouseover', function (e) {
     well_458.openPopup()
@@ -1286,9 +1298,10 @@ var icon_other_violation = {
 
   
   var well_459 = L.marker(new L.LatLng(41.948913, -91.593593)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-5?zoom=' + map_current_zoom + '&lat=41.948913&lng=-91.593593';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-5?zoom=' + map_current_zoom + '&lat=41.948913&lng=-91.593593';
     });
   }).on('mouseover', function (e) {
     well_459.openPopup()
@@ -1306,9 +1319,10 @@ var icon_other_violation = {
 
   
   var well_460 = L.marker(new L.LatLng(41.948859, -91.5936)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-6?zoom=' + map_current_zoom + '&lat=41.948859&lng=-91.5936';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-6?zoom=' + map_current_zoom + '&lat=41.948859&lng=-91.5936';
     });
   }).on('mouseover', function (e) {
     well_460.openPopup()
@@ -1326,9 +1340,10 @@ var icon_other_violation = {
 
   
   var well_461 = L.marker(new L.LatLng(41.949035, -91.595845)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-7?zoom=' + map_current_zoom + '&lat=41.949035&lng=-91.595845';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-7?zoom=' + map_current_zoom + '&lat=41.949035&lng=-91.595845';
     });
   }).on('mouseover', function (e) {
     well_461.openPopup()
@@ -1612,9 +1627,10 @@ var icon_other_violation = {
 
   
   var well_595 = L.marker(new L.LatLng(41.948958, -91.591771)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-12?zoom=' + map_current_zoom + '&lat=41.948958&lng=-91.591771';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-12?zoom=' + map_current_zoom + '&lat=41.948958&lng=-91.591771';
     });
   }).on('mouseover', function (e) {
     well_595.openPopup()
@@ -1634,9 +1650,10 @@ var icon_other_violation = {
 
   
   var well_597 = L.marker(new L.LatLng(41.949643, -91.594271)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-10?zoom=' + map_current_zoom + '&lat=41.949643&lng=-91.594271';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-10?zoom=' + map_current_zoom + '&lat=41.949643&lng=-91.594271';
     });
   }).on('mouseover', function (e) {
     well_597.openPopup()
@@ -1654,9 +1671,10 @@ var icon_other_violation = {
 
   
   var well_598 = L.marker(new L.LatLng(41.949699, -91.592621)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-11?zoom=' + map_current_zoom + '&lat=41.949699&lng=-91.592621';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-11?zoom=' + map_current_zoom + '&lat=41.949699&lng=-91.592621';
     });
   }).on('mouseover', function (e) {
     well_598.openPopup()
@@ -1674,9 +1692,10 @@ var icon_other_violation = {
 
   
   var well_599 = L.marker(new L.LatLng(41.949494, -91.59618)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-16?zoom=' + map_current_zoom + '&lat=41.949494&lng=-91.59618';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-16?zoom=' + map_current_zoom + '&lat=41.949494&lng=-91.59618';
     });
   }).on('mouseover', function (e) {
     well_599.openPopup()
@@ -1694,9 +1713,10 @@ var icon_other_violation = {
 
   
   var well_600 = L.marker(new L.LatLng(41.948975, -91.591962)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-14?zoom=' + map_current_zoom + '&lat=41.948975&lng=-91.591962';  
+      window.location.href = '/facilities/big-bend-landfill/big-bend-landfill-mw-14?zoom=' + map_current_zoom + '&lat=41.948975&lng=-91.591962';
     });
   }).on('mouseover', function (e) {
     well_600.openPopup()
@@ -2500,12 +2520,151 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:60%"></span></div>
 <h2 class="well-count">15</h2><span> total with </span> 
-<h2 class="well-count">9</h2><span> out of compliance</span>
+<h2 class="well-count">9</h2><span> reporting at least one exceedance</span>
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>24 / 242 (10%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-10/?zoom=18&amp;lat=41.949643&amp;lng=-91.594271">MW-10</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-11/?zoom=18&amp;lat=41.949699&amp;lng=-91.592621">MW-11</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-12/?zoom=18&amp;lat=41.948958&amp;lng=-91.591771">MW-12</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-14/?zoom=18&amp;lat=41.948975&amp;lng=-91.591962">MW-14</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-15ar/?zoom=18&amp;lat=41.949697&amp;lng=-91.594398">MW-15AR</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-16/?zoom=18&amp;lat=41.949494&amp;lng=-91.59618">MW-16</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-2/?zoom=18&amp;lat=41.94973&amp;lng=-91.592549">MW-2</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-20/?zoom=18&amp;lat=41.949109&amp;lng=-91.592073">MW-20</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-21/?zoom=18&amp;lat=41.94854&amp;lng=-91.591522">MW-21</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-23/?zoom=18&amp;lat=41.949973&amp;lng=-91.59463">MW-23</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-24/?zoom=18&amp;lat=41.950005&amp;lng=-91.594532">MW-24</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-25/?zoom=18&amp;lat=41.949595&amp;lng=-91.592076">MW-25</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-5/?zoom=18&amp;lat=41.948913&amp;lng=-91.593593">MW-5</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-6/?zoom=18&amp;lat=41.948859&amp;lng=-91.5936">MW-6</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="big-bend-landfill-mw-7/?zoom=18&amp;lat=41.949035&amp;lng=-91.595845">MW-7</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:4%"></span></div>
+<h2>24 / 543 <span class="percent-exceeded">4%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2515,7 +2674,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2524,7 +2683,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2533,7 +2692,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-As" data-placement="top" data-original-title="No As violations at this facility">
+      <div class="element compliant" data-toggle="element-As" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">As</span>
         
@@ -2542,7 +2701,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2551,7 +2710,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2560,7 +2719,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-B" data-placement="top" data-original-title="13 Boron violations at this facility" >
+      <div class="element exceeded" data-toggle="element-B" data-placement="top" title="13 exceedances at this facility" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -2569,7 +2728,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cd" data-placement="top" data-original-title="Cadmium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Cd" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2578,7 +2737,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cr" data-placement="top" data-original-title="Chromium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Cr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2587,7 +2746,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Co" data-placement="top" data-original-title="6 Cobalt violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Co" data-placement="top" title="6 exceedances at this facility" >
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2596,7 +2755,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cu" data-placement="top" data-original-title="Copper is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2605,7 +2764,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2614,7 +2773,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" data-placement="top" data-original-title="Fluoride is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-F" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2623,7 +2782,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2632,7 +2791,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2641,7 +2800,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Pb" data-placement="top" data-original-title="Lead is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Pb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2650,7 +2809,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="5 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2659,7 +2818,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2668,7 +2827,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" data-original-title="Molybdenum is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Mo" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2677,7 +2836,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" data-original-title="Nickel is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2686,7 +2845,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" data-original-title="Nitrate is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2695,7 +2854,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2704,7 +2863,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2713,7 +2872,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Se" data-placement="top" data-original-title="No Se violations at this facility">
+      <div class="element compliant" data-toggle="element-Se" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2722,7 +2881,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2731,7 +2890,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2740,7 +2899,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-SO4" data-placement="top" data-original-title="No SO4 violations at this facility">
+      <div class="element compliant" data-toggle="element-SO4" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2749,7 +2908,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2758,7 +2917,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2767,7 +2926,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2787,7 +2946,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Big_Bend_Landfill_DD.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/big-bend-landfill.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2841,6 +3000,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

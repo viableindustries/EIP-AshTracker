@@ -30,18 +30,18 @@
 
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:title" content="Bruce-Mansfield-Power-Plant-MW-13A" />
-    <meta property="twitter:url" content="wells/bruce_mansfield/2014-05-01-bruce-mansfield-power-plant-mw-13a" />
+    <meta property="twitter:url" content="wells/bruce_mansfield/2014-05-04-bruce-mansfield-power-plant-mw-13a" />
 
     <meta name="author" content="" />
     <meta name="description" content="" />
 
     <meta property="og:site_name" content="Ashtracker" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="wells/bruce_mansfield/2014-05-01-bruce-mansfield-power-plant-mw-13a" />
+    <meta property="og:url" content="wells/bruce_mansfield/2014-05-04-bruce-mansfield-power-plant-mw-13a" />
     <meta property="og:title" content="Bruce-Mansfield-Power-Plant-MW-13A" />
 
     <meta name="dcterms.type" content="Text" />
-    <meta name="dcterms.identifier" content="wells/bruce_mansfield/2014-05-01-bruce-mansfield-power-plant-mw-13a" />
+    <meta name="dcterms.identifier" content="wells/bruce_mansfield/2014-05-04-bruce-mansfield-power-plant-mw-13a" />
     <meta name="dcterms.format" content="text/html" />
     <meta name="dcterms.title" content="Bruce-Mansfield-Power-Plant-MW-13A" />
 
@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -252,9 +257,10 @@ var icon_other_violation = {
 
   
   var well_5 = L.marker(new L.LatLng(40.632972, -80.504389)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-20b?zoom=' + map_current_zoom + '&lat=40.632972&lng=-80.504389';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-20b?zoom=' + map_current_zoom + '&lat=40.632972&lng=-80.504389';
     });
   }).on('mouseover', function (e) {
     well_5.openPopup()
@@ -274,9 +280,10 @@ var icon_other_violation = {
 
   
   var well_7 = L.marker(new L.LatLng(40.631139, -80.507833)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-17b?zoom=' + map_current_zoom + '&lat=40.631139&lng=-80.507833';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-17b?zoom=' + map_current_zoom + '&lat=40.631139&lng=-80.507833';
     });
   }).on('mouseover', function (e) {
     well_7.openPopup()
@@ -298,9 +305,10 @@ var icon_other_violation = {
 
   
   var well_10 = L.marker(new L.LatLng(40.631111, -80.507778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-17a?zoom=' + map_current_zoom + '&lat=40.631111&lng=-80.507778';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-17a?zoom=' + map_current_zoom + '&lat=40.631111&lng=-80.507778';
     });
   }).on('mouseover', function (e) {
     well_10.openPopup()
@@ -334,9 +342,10 @@ var icon_other_violation = {
 
   
   var well_19 = L.marker(new L.LatLng(40.608389, -80.50475)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-4a?zoom=' + map_current_zoom + '&lat=40.608389&lng=-80.50475';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-4a?zoom=' + map_current_zoom + '&lat=40.608389&lng=-80.50475';
     });
   }).on('mouseover', function (e) {
     well_19.openPopup()
@@ -354,9 +363,10 @@ var icon_other_violation = {
 
   
   var well_20 = L.marker(new L.LatLng(40.608222, -80.505)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-4b?zoom=' + map_current_zoom + '&lat=40.608222&lng=-80.505';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-4b?zoom=' + map_current_zoom + '&lat=40.608222&lng=-80.505';
     });
   }).on('mouseover', function (e) {
     well_20.openPopup()
@@ -456,9 +466,10 @@ var icon_other_violation = {
 
   
   var well_62 = L.marker(new L.LatLng(40.608694, -80.530667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-69?zoom=' + map_current_zoom + '&lat=40.608694&lng=-80.530667';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-69?zoom=' + map_current_zoom + '&lat=40.608694&lng=-80.530667';
     });
   }).on('mouseover', function (e) {
     well_62.openPopup()
@@ -586,9 +597,10 @@ var icon_other_violation = {
 
   
   var well_118 = L.marker(new L.LatLng(40.632028, -80.517778)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-2r?zoom=' + map_current_zoom + '&lat=40.632028&lng=-80.517778';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-2r?zoom=' + map_current_zoom + '&lat=40.632028&lng=-80.517778';
     });
   }).on('mouseover', function (e) {
     well_118.openPopup()
@@ -902,9 +914,10 @@ var icon_other_violation = {
 
   
   var well_267 = L.marker(new L.LatLng(40.633833, -80.507417)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-21b?zoom=' + map_current_zoom + '&lat=40.633833&lng=-80.507417';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-21b?zoom=' + map_current_zoom + '&lat=40.633833&lng=-80.507417';
     });
   }).on('mouseover', function (e) {
     well_267.openPopup()
@@ -1040,9 +1053,10 @@ var icon_other_violation = {
 
   
   var well_327 = L.marker(new L.LatLng(40.62855, -80.517925)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-10r2?zoom=' + map_current_zoom + '&lat=40.62855&lng=-80.517925';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-10r2?zoom=' + map_current_zoom + '&lat=40.62855&lng=-80.517925';
     });
   }).on('mouseover', function (e) {
     well_327.openPopup()
@@ -1086,9 +1100,10 @@ var icon_other_violation = {
 
   
   var well_341 = L.marker(new L.LatLng(40.62375, -80.504917)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-3a?zoom=' + map_current_zoom + '&lat=40.62375&lng=-80.504917';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-3a?zoom=' + map_current_zoom + '&lat=40.62375&lng=-80.504917';
     });
   }).on('mouseover', function (e) {
     well_341.openPopup()
@@ -1106,9 +1121,10 @@ var icon_other_violation = {
 
   
   var well_342 = L.marker(new L.LatLng(40.624389, -80.504667)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-3b?zoom=' + map_current_zoom + '&lat=40.624389&lng=-80.504667';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-3b?zoom=' + map_current_zoom + '&lat=40.624389&lng=-80.504667';
     });
   }).on('mouseover', function (e) {
     well_342.openPopup()
@@ -1208,9 +1224,10 @@ var icon_other_violation = {
 
   
   var well_384 = L.marker(new L.LatLng(40.608333, -80.501611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-3?zoom=' + map_current_zoom + '&lat=40.608333&lng=-80.501611';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-3?zoom=' + map_current_zoom + '&lat=40.608333&lng=-80.501611';
     });
   }).on('mouseover', function (e) {
     well_384.openPopup()
@@ -1284,9 +1301,10 @@ var icon_other_violation = {
 
   
   var well_413 = L.marker(new L.LatLng(40.608194, -80.521611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-11a?zoom=' + map_current_zoom + '&lat=40.608194&lng=-80.521611';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-11a?zoom=' + map_current_zoom + '&lat=40.608194&lng=-80.521611';
     });
   }).on('mouseover', function (e) {
     well_413.openPopup()
@@ -1304,9 +1322,10 @@ var icon_other_violation = {
 
   
   var well_414 = L.marker(new L.LatLng(40.60875, -80.518417)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-11b?zoom=' + map_current_zoom + '&lat=40.60875&lng=-80.518417';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-11b?zoom=' + map_current_zoom + '&lat=40.60875&lng=-80.518417';
     });
   }).on('mouseover', function (e) {
     well_414.openPopup()
@@ -1354,9 +1373,10 @@ var icon_other_violation = {
 
   
   var well_430 = L.marker(new L.LatLng(40.623028, -80.497556)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-18b?zoom=' + map_current_zoom + '&lat=40.623028&lng=-80.497556';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-18b?zoom=' + map_current_zoom + '&lat=40.623028&lng=-80.497556';
     });
   }).on('mouseover', function (e) {
     well_430.openPopup()
@@ -1374,9 +1394,10 @@ var icon_other_violation = {
 
   
   var well_431 = L.marker(new L.LatLng(40.623056, -80.497528)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-18a?zoom=' + map_current_zoom + '&lat=40.623056&lng=-80.497528';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-18a?zoom=' + map_current_zoom + '&lat=40.623056&lng=-80.497528';
     });
   }).on('mouseover', function (e) {
     well_431.openPopup()
@@ -1406,9 +1427,10 @@ var icon_other_violation = {
 
   
   var well_438 = L.marker(new L.LatLng(40.614889, -80.505222)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-14ar?zoom=' + map_current_zoom + '&lat=40.614889&lng=-80.505222';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-14ar?zoom=' + map_current_zoom + '&lat=40.614889&lng=-80.505222';
     });
   }).on('mouseover', function (e) {
     well_438.openPopup()
@@ -1436,9 +1458,10 @@ var icon_other_violation = {
 
   
   var well_444 = L.marker(new L.LatLng(40.614194, -80.532306)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-7a?zoom=' + map_current_zoom + '&lat=40.614194&lng=-80.532306';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-7a?zoom=' + map_current_zoom + '&lat=40.614194&lng=-80.532306';
     });
   }).on('mouseover', function (e) {
     well_444.openPopup()
@@ -1480,9 +1503,10 @@ var icon_other_violation = {
 
   
   var well_457 = L.marker(new L.LatLng(40.633028, -80.504361)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-20a?zoom=' + map_current_zoom + '&lat=40.633028&lng=-80.504361';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-20a?zoom=' + map_current_zoom + '&lat=40.633028&lng=-80.504361';
     });
   }).on('mouseover', function (e) {
     well_457.openPopup()
@@ -1644,9 +1668,10 @@ var icon_other_violation = {
 
   
   var well_530 = L.marker(new L.LatLng(40.633528, -80.51725)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-15a?zoom=' + map_current_zoom + '&lat=40.633528&lng=-80.51725';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-15a?zoom=' + map_current_zoom + '&lat=40.633528&lng=-80.51725';
     });
   }).on('mouseover', function (e) {
     well_530.openPopup()
@@ -1664,9 +1689,10 @@ var icon_other_violation = {
 
   
   var well_531 = L.marker(new L.LatLng(40.633528, -80.517194)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-15b?zoom=' + map_current_zoom + '&lat=40.633528&lng=-80.517194';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-15b?zoom=' + map_current_zoom + '&lat=40.633528&lng=-80.517194';
     });
   }).on('mouseover', function (e) {
     well_531.openPopup()
@@ -1688,9 +1714,10 @@ var icon_other_violation = {
 
   
   var well_534 = L.marker(new L.LatLng(40.597411, -80.509889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-04-1?zoom=' + map_current_zoom + '&lat=40.597411&lng=-80.509889';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-04-1?zoom=' + map_current_zoom + '&lat=40.597411&lng=-80.509889';
     });
   }).on('mouseover', function (e) {
     well_534.openPopup()
@@ -1708,9 +1735,10 @@ var icon_other_violation = {
 
   
   var well_535 = L.marker(new L.LatLng(40.596022, -80.505553)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-04-2?zoom=' + map_current_zoom + '&lat=40.596022&lng=-80.505553';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dwq-04-2?zoom=' + map_current_zoom + '&lat=40.596022&lng=-80.505553';
     });
   }).on('mouseover', function (e) {
     well_535.openPopup()
@@ -1730,9 +1758,10 @@ var icon_other_violation = {
 
   
   var well_537 = L.marker(new L.LatLng(40.614944, -80.505111)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-14br?zoom=' + map_current_zoom + '&lat=40.614944&lng=-80.505111';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-14br?zoom=' + map_current_zoom + '&lat=40.614944&lng=-80.505111';
     });
   }).on('mouseover', function (e) {
     well_537.openPopup()
@@ -1754,9 +1783,10 @@ var icon_other_violation = {
 
   
   var well_540 = L.marker(new L.LatLng(40.620444, -80.506028)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dw-74?zoom=' + map_current_zoom + '&lat=40.620444&lng=-80.506028';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dw-74?zoom=' + map_current_zoom + '&lat=40.620444&lng=-80.506028';
     });
   }).on('mouseover', function (e) {
     well_540.openPopup()
@@ -1782,9 +1812,10 @@ var icon_other_violation = {
 
   
   var well_545 = L.marker(new L.LatLng(40.620444, -80.506028)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dw-72?zoom=' + map_current_zoom + '&lat=40.620444&lng=-80.506028';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-dw-72?zoom=' + map_current_zoom + '&lat=40.620444&lng=-80.506028';
     });
   }).on('mouseover', function (e) {
     well_545.openPopup()
@@ -1854,9 +1885,10 @@ var icon_other_violation = {
 
   
   var well_572 = L.marker(new L.LatLng(40.598556, -80.507972)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-26?zoom=' + map_current_zoom + '&lat=40.598556&lng=-80.507972';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-26?zoom=' + map_current_zoom + '&lat=40.598556&lng=-80.507972';
     });
   }).on('mouseover', function (e) {
     well_572.openPopup()
@@ -1874,9 +1906,10 @@ var icon_other_violation = {
 
   
   var well_573 = L.marker(new L.LatLng(40.606889, -80.530361)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-25?zoom=' + map_current_zoom + '&lat=40.606889&lng=-80.530361';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-25?zoom=' + map_current_zoom + '&lat=40.606889&lng=-80.530361';
     });
   }).on('mouseover', function (e) {
     well_573.openPopup()
@@ -1894,9 +1927,10 @@ var icon_other_violation = {
 
   
   var well_574 = L.marker(new L.LatLng(40.611333, -80.53225)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-24?zoom=' + map_current_zoom + '&lat=40.611333&lng=-80.53225';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-24?zoom=' + map_current_zoom + '&lat=40.611333&lng=-80.53225';
     });
   }).on('mouseover', function (e) {
     well_574.openPopup()
@@ -1994,9 +2028,10 @@ var icon_other_violation = {
 
   
   var well_615 = L.marker(new L.LatLng(40.623861, -80.523278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-9br?zoom=' + map_current_zoom + '&lat=40.623861&lng=-80.523278';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-9br?zoom=' + map_current_zoom + '&lat=40.623861&lng=-80.523278';
     });
   }).on('mouseover', function (e) {
     well_615.openPopup()
@@ -2048,9 +2083,10 @@ var icon_other_violation = {
 
   
   var well_633 = L.marker(new L.LatLng(40.624917, -80.517972)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-12c?zoom=' + map_current_zoom + '&lat=40.624917&lng=-80.517972';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-12c?zoom=' + map_current_zoom + '&lat=40.624917&lng=-80.517972';
     });
   }).on('mouseover', function (e) {
     well_633.openPopup()
@@ -2068,9 +2104,10 @@ var icon_other_violation = {
 
   
   var well_634 = L.marker(new L.LatLng(40.624917, -80.518028)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-12b?zoom=' + map_current_zoom + '&lat=40.624917&lng=-80.518028';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-12b?zoom=' + map_current_zoom + '&lat=40.624917&lng=-80.518028';
     });
   }).on('mouseover', function (e) {
     well_634.openPopup()
@@ -2192,9 +2229,10 @@ var icon_other_violation = {
 
   
   var well_687 = L.marker(new L.LatLng(40.630583, -80.502833)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-19a?zoom=' + map_current_zoom + '&lat=40.630583&lng=-80.502833';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-19a?zoom=' + map_current_zoom + '&lat=40.630583&lng=-80.502833';
     });
   }).on('mouseover', function (e) {
     well_687.openPopup()
@@ -2212,9 +2250,10 @@ var icon_other_violation = {
 
   
   var well_688 = L.marker(new L.LatLng(40.630528, -80.502806)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-19b?zoom=' + map_current_zoom + '&lat=40.630528&lng=-80.502806';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-19b?zoom=' + map_current_zoom + '&lat=40.630528&lng=-80.502806';
     });
   }).on('mouseover', function (e) {
     well_688.openPopup()
@@ -2238,9 +2277,10 @@ var icon_other_violation = {
 
   
   var well_692 = L.marker(new L.LatLng(40.633, -80.519056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-23a?zoom=' + map_current_zoom + '&lat=40.633&lng=-80.519056';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-23a?zoom=' + map_current_zoom + '&lat=40.633&lng=-80.519056';
     });
   }).on('mouseover', function (e) {
     well_692.openPopup()
@@ -2262,9 +2302,10 @@ var icon_other_violation = {
 
   
   var well_695 = L.marker(new L.LatLng(40.633056, -80.519056)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-23b?zoom=' + map_current_zoom + '&lat=40.633056&lng=-80.519056';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-23b?zoom=' + map_current_zoom + '&lat=40.633056&lng=-80.519056';
     });
   }).on('mouseover', function (e) {
     well_695.openPopup()
@@ -2286,9 +2327,10 @@ var icon_other_violation = {
 
   
   var well_698 = L.marker(new L.LatLng(40.617361, -80.530611)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-8?zoom=' + map_current_zoom + '&lat=40.617361&lng=-80.530611';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-8?zoom=' + map_current_zoom + '&lat=40.617361&lng=-80.530611';
     });
   }).on('mouseover', function (e) {
     well_698.openPopup()
@@ -2306,9 +2348,10 @@ var icon_other_violation = {
 
   
   var well_699 = L.marker(new L.LatLng(40.604611, -80.52825)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-6?zoom=' + map_current_zoom + '&lat=40.604611&lng=-80.52825';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-6?zoom=' + map_current_zoom + '&lat=40.604611&lng=-80.52825';
     });
   }).on('mouseover', function (e) {
     well_699.openPopup()
@@ -2326,9 +2369,10 @@ var icon_other_violation = {
 
   
   var well_700 = L.marker(new L.LatLng(40.632, -80.51775)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-1?zoom=' + map_current_zoom + '&lat=40.632&lng=-80.51775';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-1?zoom=' + map_current_zoom + '&lat=40.632&lng=-80.51775';
     });
   }).on('mouseover', function (e) {
     well_700.openPopup()
@@ -2406,9 +2450,10 @@ var icon_other_violation = {
 
   
   var well_731 = L.marker(new L.LatLng(40.599272, -80.521022)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-stipec?zoom=' + map_current_zoom + '&lat=40.599272&lng=-80.521022';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-stipec?zoom=' + map_current_zoom + '&lat=40.599272&lng=-80.521022';
     });
   }).on('mouseover', function (e) {
     well_731.openPopup()
@@ -2466,9 +2511,10 @@ var icon_other_violation = {
 
   
   var well_752 = L.marker(new L.LatLng(40.63352778, -80.51719444)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-16a?zoom=' + map_current_zoom + '&lat=40.63352778&lng=-80.51719444';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-16a?zoom=' + map_current_zoom + '&lat=40.63352778&lng=-80.51719444';
     });
   }).on('mouseover', function (e) {
     well_752.openPopup()
@@ -2488,9 +2534,10 @@ var icon_other_violation = {
 
   
   var well_754 = L.marker(new L.LatLng(40.629472, -80.508361)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-16c?zoom=' + map_current_zoom + '&lat=40.629472&lng=-80.508361';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-16c?zoom=' + map_current_zoom + '&lat=40.629472&lng=-80.508361';
     });
   }).on('mouseover', function (e) {
     well_754.openPopup()
@@ -2508,9 +2555,10 @@ var icon_other_violation = {
 
   
   var well_755 = L.marker(new L.LatLng(40.62947222, -80.508306)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-16b?zoom=' + map_current_zoom + '&lat=40.62947222&lng=-80.508306';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-16b?zoom=' + map_current_zoom + '&lat=40.62947222&lng=-80.508306';
     });
   }).on('mouseover', function (e) {
     well_755.openPopup()
@@ -2552,9 +2600,10 @@ var icon_other_violation = {
 
   
   var well_768 = L.marker(new L.LatLng(40.596222, -80.499389)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-5r?zoom=' + map_current_zoom + '&lat=40.596222&lng=-80.499389';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-5r?zoom=' + map_current_zoom + '&lat=40.596222&lng=-80.499389';
     });
   }).on('mouseover', function (e) {
     well_768.openPopup()
@@ -2750,9 +2799,10 @@ var icon_other_violation = {
 
   
   var well_858 = L.marker(new L.LatLng(40.629889, -80.514972)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-13b?zoom=' + map_current_zoom + '&lat=40.629889&lng=-80.514972';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-13b?zoom=' + map_current_zoom + '&lat=40.629889&lng=-80.514972';
     });
   }).on('mouseover', function (e) {
     well_858.openPopup()
@@ -2772,9 +2822,10 @@ var icon_other_violation = {
 
   
   var well_860 = L.marker(new L.LatLng(40.629944, -80.514889)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-13a?zoom=' + map_current_zoom + '&lat=40.629944&lng=-80.514889';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-13a?zoom=' + map_current_zoom + '&lat=40.629944&lng=-80.514889';
     });
   }).on('mouseover', function (e) {
     well_860.openPopup()
@@ -2890,9 +2941,10 @@ var icon_other_violation = {
 
   
   var well_910 = L.marker(new L.LatLng(40.636194, -80.507944)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-22b?zoom=' + map_current_zoom + '&lat=40.636194&lng=-80.507944';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-22b?zoom=' + map_current_zoom + '&lat=40.636194&lng=-80.507944';
     });
   }).on('mouseover', function (e) {
     well_910.openPopup()
@@ -2922,9 +2974,10 @@ var icon_other_violation = {
 
   
   var well_917 = L.marker(new L.LatLng(40.614222, -80.532278)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-7b?zoom=' + map_current_zoom + '&lat=40.614222&lng=-80.532278';  
+      window.location.href = '/facilities/bruce-mansfield/bruce-mansfield-power-plant-mw-7b?zoom=' + map_current_zoom + '&lat=40.614222&lng=-80.532278';
     });
   }).on('mouseover', function (e) {
     well_917.openPopup()
@@ -6001,7 +6054,9 @@ map.addLayer(markers);
 <div class="row content contaminant-status">
   <div class="col-sm-10">
     <h4>Contaminant Status</h4>
-    <h2>Downgradient, Not In Compliance</h2>
+    
+    <h2 class="exceedance-count">20</h2><span> exceedances found</span>
+    
   </div>
   <div class="col-sm-2">
     
@@ -6010,8 +6065,11 @@ map.addLayer(markers);
   </div>
 </div>
 
-<h4>Total Violations / Total Samples</h4>
-<h2>20 / 46 (43%)</h2>
+<h4>Total Exceedances / Total Samples</h4>
+
+<div class="sample-bar"><span style="width:31%"></span></div>
+
+<h2>20 / 64 <span class="percent-exceeded">31%</span></h2>
 
 <div class="content contaminants">
 
@@ -6023,7 +6081,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element element-clickable compliant" data-toggle="element-NH3" rel="tooltip" data-placement="top" data-original-title="No NH3 violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-NH3" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -6032,7 +6090,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" rel="tooltip" data-placement="top" data-original-title="Antimony is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Sb" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -6041,7 +6099,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" data-original-title="3 Arsenic violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-As" rel="tooltip" data-placement="top" title="3 exceedances at this well" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -6050,7 +6108,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ba" rel="tooltip" data-placement="top" data-original-title="Barium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ba" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -6059,7 +6117,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" data-original-title="Beryllium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Be" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -6068,7 +6126,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-B" rel="tooltip" data-placement="top" data-original-title="1 Boron violation at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-B" rel="tooltip" data-placement="top" title="1 exceedance at this well" >
         
         <span class="contaminant-symbol">B</span>
         
@@ -6077,7 +6135,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cd" rel="tooltip" data-placement="top" data-original-title="Cadmium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cd" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -6086,7 +6144,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cr" rel="tooltip" data-placement="top" data-original-title="Chromium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cr" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -6095,7 +6153,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" data-original-title="Cobalt is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Co" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -6104,7 +6162,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" data-original-title="Copper is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Cu" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -6113,7 +6171,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" data-original-title="Cyanide is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-CN" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -6122,7 +6180,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-F" rel="tooltip" data-placement="top" data-original-title="No F violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-F" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">F</span>
         
@@ -6131,7 +6189,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-GAP" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -6140,7 +6198,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-GBP" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -6149,7 +6207,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Pb" rel="tooltip" data-placement="top" data-original-title="Lead is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Pb" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -6158,7 +6216,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-Mn" rel="tooltip" data-placement="top" data-original-title="8 Manganese violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-Mn" rel="tooltip" data-placement="top" title="8 exceedances at this well" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -6167,7 +6225,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" rel="tooltip" data-placement="top" data-original-title="Mercury is not monitored at this well">
+      <div class="element element-clickable compliant" data-toggle="element-Hg" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -6176,7 +6234,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Mo" rel="tooltip" data-placement="top" data-original-title="Molybdenum is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Mo" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -6185,7 +6243,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" data-original-title="Nickel is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ni" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -6194,7 +6252,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable compliant" data-toggle="element-NO3" rel="tooltip" data-placement="top" data-original-title="No NO3 violations at this well">
+      <div class="element element-clickable compliant" data-toggle="element-NO3" rel="tooltip" data-placement="top" title="No exceedances at this well">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -6203,7 +6261,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" data-original-title="Nitrite is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-NO2" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -6212,7 +6270,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" rel="tooltip" data-placement="top" data-original-title="Radium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ra" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -6221,7 +6279,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Se" rel="tooltip" data-placement="top" data-original-title="Selenium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Se" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Se</span>
         
@@ -6230,7 +6288,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" data-original-title="Silver is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Ag" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -6239,7 +6297,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" data-original-title="Strontium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Sr" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -6248,7 +6306,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" data-original-title="8 Sulfate violations at this well" >
+      <div class="element element-clickable exceeded" data-toggle="element-SO4" rel="tooltip" data-placement="top" title="8 exceedances at this well" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -6257,7 +6315,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" rel="tooltip" data-placement="top" data-original-title="Thallium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-Tl" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -6266,7 +6324,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" data-original-title="Tritium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-T" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">T</span>
         
@@ -6275,7 +6333,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" data-original-title="Uranium is not monitored at this well">
+      <div class="element not-tracked" data-toggle="element-U" rel="tooltip" data-placement="top" title="Not monitored at this well">
         
         <span class="contaminant-symbol">U</span>
         
@@ -6296,7 +6354,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
-          <h4>Chemical Symbol</h4>
+          
+          <h4>Chemical Formula</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6322,7 +6382,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 8 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6345,50 +6405,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">3/3/2010</div>
-        <div class="col-sm-4 history">2.8 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.093</div>
+        
+        <div class="col-sm-4 history "><span>2.8</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.093</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/8/2010</div>
-        <div class="col-sm-4 history">3.52 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.117</div>
+        
+        <div class="col-sm-4 history "><span>3.52</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.117</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">9/1/2010</div>
-        <div class="col-sm-4 history">3.66 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.122</div>
+        
+        <div class="col-sm-4 history "><span>3.66</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.122</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/2/2010</div>
-        <div class="col-sm-4 history">3.16 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.105</div>
+        
+        <div class="col-sm-4 history "><span>3.16</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.105</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">3/10/2011</div>
-        <div class="col-sm-4 history">3 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.100</div>
+        
+        <div class="col-sm-4 history "><span>3</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.100</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/2/2011</div>
-        <div class="col-sm-4 history">3.29 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.110</div>
+        
+        <div class="col-sm-4 history "><span>3.29</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.110</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/30/2011</div>
-        <div class="col-sm-4 history">3.2 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.107</div>
+        
+        <div class="col-sm-4 history "><span>3.2</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.107</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/28/2011</div>
-        <div class="col-sm-4 history">3.56 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.119</div>
+        
+        <div class="col-sm-4 history "><span>3.56</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NH3" >0.119</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6407,7 +6483,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6433,7 +6511,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>3 / 5 (60%)</h2>
+          <h2>3 / 8 <span class="percent-exceeded">38%</span></h2>
         </div>
       </div>
 
@@ -6456,32 +6534,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">3/3/2010</div>
-        <div class="col-sm-4 history">0.03 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">3.000</div>
+        
+        <div class="col-sm-4 history "><span>0.03</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">3.000</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/8/2010</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.0046</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.460</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/1/2010</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.0046</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.460</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/2/2010</div>
+        
+        <div title="Concentration below detectable limit for As" class="col-sm-4 history"><span class="below-detectable"><span>0.0046</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.460</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">3/10/2011</div>
-        <div class="col-sm-4 history">0.0089 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.890</div>
+        
+        <div class="col-sm-4 history "><span>0.0089</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.890</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/2/2011</div>
-        <div class="col-sm-4 history">0.014 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.400</div>
+        
+        <div class="col-sm-4 history "><span>0.014</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">1.400</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/30/2011</div>
-        <div class="col-sm-4 history">0.0067 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.670</div>
+        
+        <div class="col-sm-4 history "><span>0.0067</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for As" >0.670</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/28/2011</div>
-        <div class="col-sm-4 history">0.021 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.100</div>
+        
+        <div class="col-sm-4 history "><span>0.021</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for As">2.100</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6502,7 +6614,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6528,7 +6642,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>1 / 8 (13%)</h2>
+          <h2>1 / 8 <span class="percent-exceeded">13%</span></h2>
         </div>
       </div>
 
@@ -6551,50 +6665,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">3/3/2010</div>
-        <div class="col-sm-4 history">2.38 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.793</div>
+        
+        <div class="col-sm-4 history "><span>2.38</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.793</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/8/2010</div>
-        <div class="col-sm-4 history">2.6 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.867</div>
+        
+        <div class="col-sm-4 history "><span>2.6</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.867</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">9/1/2010</div>
-        <div class="col-sm-4 history">2.41 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.803</div>
+        
+        <div class="col-sm-4 history "><span>2.41</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.803</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/2/2010</div>
-        <div class="col-sm-4 history">2.65 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.883</div>
+        
+        <div class="col-sm-4 history "><span>2.65</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.883</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">3/10/2011</div>
-        <div class="col-sm-4 history">2.77 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.923</div>
+        
+        <div class="col-sm-4 history "><span>2.77</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.923</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/2/2011</div>
-        <div class="col-sm-4 history">2.81 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.937</div>
+        
+        <div class="col-sm-4 history "><span>2.81</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.937</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/30/2011</div>
-        <div class="col-sm-4 history">2.88 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.960</div>
+        
+        <div class="col-sm-4 history "><span>2.88</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for B" >0.960</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/28/2011</div>
-        <div class="col-sm-4 history">3.05 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.017</div>
+        
+        <div class="col-sm-4 history "><span>3.05</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for B">1.017</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6621,7 +6751,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6647,7 +6779,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 7 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6669,45 +6801,67 @@ map.addLayer(markers);
       </div>
       
       <div class="row samples">
+        <div class="col-sm-4 history">3/3/2010</div>
+        
+        <div title="Concentration below detectable limit for F" class="col-sm-4 history"><span class="below-detectable"><span>0.1</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.025</span></div>
+      </div>
+      
+      <div class="row samples">
         <div class="col-sm-4 history">6/8/2010</div>
-        <div class="col-sm-4 history">0.591 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.148</div>
+        
+        <div class="col-sm-4 history "><span>0.591</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.148</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">9/1/2010</div>
-        <div class="col-sm-4 history">0.46 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.115</div>
+        
+        <div class="col-sm-4 history "><span>0.46</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.115</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/2/2010</div>
-        <div class="col-sm-4 history">0.615 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.154</div>
+        
+        <div class="col-sm-4 history "><span>0.615</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.154</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">3/10/2011</div>
-        <div class="col-sm-4 history">0.556 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.139</div>
+        
+        <div class="col-sm-4 history "><span>0.556</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.139</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/2/2011</div>
-        <div class="col-sm-4 history">0.633 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.158</div>
+        
+        <div class="col-sm-4 history "><span>0.633</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.158</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/30/2011</div>
-        <div class="col-sm-4 history">0.48 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.120</div>
+        
+        <div class="col-sm-4 history "><span>0.48</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.120</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/28/2011</div>
-        <div class="col-sm-4 history">0.625 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.156</div>
+        
+        <div class="col-sm-4 history "><span>0.625</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for F" >0.156</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6730,7 +6884,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
+          
           <h4>Chemical Symbol</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6756,7 +6912,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>8 / 8 (100%)</h2>
+          <h2>8 / 8 <span class="percent-exceeded">100%</span></h2>
         </div>
       </div>
 
@@ -6779,50 +6935,193 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">3/3/2010</div>
-        <div class="col-sm-4 history">0.48 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.600</div>
+        
+        <div class="col-sm-4 history "><span>0.48</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.600</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/8/2010</div>
-        <div class="col-sm-4 history">0.495 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.650</div>
+        
+        <div class="col-sm-4 history "><span>0.495</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.650</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">9/1/2010</div>
-        <div class="col-sm-4 history">0.452 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.507</div>
+        
+        <div class="col-sm-4 history "><span>0.452</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.507</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/2/2010</div>
-        <div class="col-sm-4 history">0.478 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.593</div>
+        
+        <div class="col-sm-4 history "><span>0.478</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.593</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">3/10/2011</div>
-        <div class="col-sm-4 history">0.476 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.587</div>
+        
+        <div class="col-sm-4 history "><span>0.476</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.587</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/2/2011</div>
-        <div class="col-sm-4 history">0.459 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.530</div>
+        
+        <div class="col-sm-4 history "><span>0.459</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.530</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/30/2011</div>
-        <div class="col-sm-4 history">0.467 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.557</div>
+        
+        <div class="col-sm-4 history "><span>0.467</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.557</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/28/2011</div>
-        <div class="col-sm-4 history">0.482 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">1.607</div>
+        
+        <div class="col-sm-4 history "><span>0.482</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for Mn">1.607</span></div>
+      </div>
+      
+      <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
+
+    </div>
+  
+    </div>
+    
+  
+    
+    <div id="element-Hg" class="element-details">
+      <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-Hg">&times;</a></h5>
+    <div class="element-content">
+      
+      <div class="row chemical-symbol">
+        <div class="col-sm-6">
+          
+          <h4>Chemical Symbol</h4>
+          
+        </div>
+        <div class="col-sm-6">
+          
+          <h2>Hg</h2>
+          
+        </div>
+      </div>
+
+      <div class="row chemical-name">
+        <div class="col-sm-6">
+          <h4>Chemical Name</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>Mercury</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>
+            No. Exceedances /<br />
+            Monitoring Measurements
+          </h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
+        </div>
+      </div>
+
+      <div class="row other">
+        <div class="col-sm-6">
+          <h4>Health-Based Standard</h4>
+        </div>
+        <div class="col-sm-6">
+          <h2>0.002 mg/L (MCL)</h2>
+        </div>
+      </div>
+
+      <p class="mon-history"><strong>Monitoring History</strong></p>
+
+      <div class="row">
+        <div class="col-sm-4"><strong>Date</strong></div>
+        <div class="col-sm-4"><strong>Concentration</strong></div>
+        <div class="col-sm-4"><strong>Magnitude</strong><sup>1</sup></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">3/3/2010</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/8/2010</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/1/2010</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/2/2010</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">3/10/2011</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/2/2011</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/30/2011</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/28/2011</div>
+        
+        <div title="Concentration below detectable limit for Hg" class="col-sm-4 history"><span class="below-detectable"><span>0.0002</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for Hg" >0.100</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6837,15 +7136,15 @@ map.addLayer(markers);
     
   
     
-  
-    
     <div id="element-NO3" class="element-details">
       <h5><strong>Contaminant</strong> View <a class="close-element close-well pull-right" href="#" data-toggle="element-NO3">&times;</a></h5>
     <div class="element-content">
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
-          <h4>Chemical Symbol</h4>
+          
+          <h4>Chemical Formula</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6871,7 +7170,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>0 / 2 </h2>
+          <h2>0 / 8 <span class="percent-exceeded">0%</h2>
         </div>
       </div>
 
@@ -6894,14 +7193,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">3/3/2010</div>
-        <div class="col-sm-4 history">1.21 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.121</div>
+        
+        <div class="col-sm-4 history "><span>1.21</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.121</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/8/2010</div>
-        <div class="col-sm-4 history">1.83 mg/L</div>
-        <div class="col-sm-4 history magnitude-false">0.183</div>
+        
+        <div class="col-sm-4 history "><span>1.83</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.183</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">9/1/2010</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>0.022</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">12/2/2010</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>0.022</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.002</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">3/10/2011</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>2.2</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.220</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">6/2/2011</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>5.5</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.550</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">8/30/2011</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>1.1</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.110</span></div>
+      </div>
+      
+      <div class="row samples">
+        <div class="col-sm-4 history">11/28/2011</div>
+        
+        <div title="Concentration below detectable limit for NO3" class="col-sm-4 history"><span class="below-detectable"><span>1.1</span> mg/L</span> </div>
+        
+        <div class="col-sm-4 history magnitude print-green"><span title="Reading below health-based standard for NO3" >0.110</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -6928,7 +7279,9 @@ map.addLayer(markers);
       
       <div class="row chemical-symbol">
         <div class="col-sm-6">
-          <h4>Chemical Symbol</h4>
+          
+          <h4>Chemical Formula</h4>
+          
         </div>
         <div class="col-sm-6">
           
@@ -6954,7 +7307,7 @@ map.addLayer(markers);
           </h4>
         </div>
         <div class="col-sm-6">
-          <h2>8 / 8 (100%)</h2>
+          <h2>8 / 8 <span class="percent-exceeded">100%</span></h2>
         </div>
       </div>
 
@@ -6977,50 +7330,66 @@ map.addLayer(markers);
       
       <div class="row samples">
         <div class="col-sm-4 history">3/3/2010</div>
-        <div class="col-sm-4 history">1340 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.680</div>
+        
+        <div class="col-sm-4 history "><span>1340</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.680</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/8/2010</div>
-        <div class="col-sm-4 history">1290 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.580</div>
+        
+        <div class="col-sm-4 history "><span>1290</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.580</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">9/1/2010</div>
-        <div class="col-sm-4 history">1290 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.580</div>
+        
+        <div class="col-sm-4 history "><span>1290</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.580</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">12/2/2010</div>
-        <div class="col-sm-4 history">1410 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.820</div>
+        
+        <div class="col-sm-4 history "><span>1410</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.820</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">3/10/2011</div>
-        <div class="col-sm-4 history">1440 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.880</div>
+        
+        <div class="col-sm-4 history "><span>1440</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.880</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">6/2/2011</div>
-        <div class="col-sm-4 history">1410 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">2.820</div>
+        
+        <div class="col-sm-4 history "><span>1410</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">2.820</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">8/30/2011</div>
-        <div class="col-sm-4 history">1560 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">3.120</div>
+        
+        <div class="col-sm-4 history "><span>1560</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">3.120</span></div>
       </div>
       
       <div class="row samples">
         <div class="col-sm-4 history">11/28/2011</div>
-        <div class="col-sm-4 history">1560 mg/L</div>
-        <div class="col-sm-4 history magnitude-true">3.120</div>
+        
+        <div class="col-sm-4 history "><span>1560</span> mg/L </div>
+        
+        <div class="col-sm-4 history magnitude print-level-1"><span title="Reading did not yield a concentration for SO4">3.120</span></div>
       </div>
       
       <p><small><sup>1</sup>Calculated by dividing the sample concentration by the health-based standard.</small></p>
@@ -7091,6 +7460,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

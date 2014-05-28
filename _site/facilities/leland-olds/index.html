@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -414,9 +419,10 @@ var icon_other_violation = {
 
   
   var well_86 = L.marker(new L.LatLng(47.2773207, -101.300045)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-daa2?zoom=' + map_current_zoom + '&lat=47.2773207&lng=-101.300045';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-daa2?zoom=' + map_current_zoom + '&lat=47.2773207&lng=-101.300045';
     });
   }).on('mouseover', function (e) {
     well_86.openPopup()
@@ -436,9 +442,10 @@ var icon_other_violation = {
 
   
   var well_88 = L.marker(new L.LatLng(47.277298, -101.3000413)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-daa1?zoom=' + map_current_zoom + '&lat=47.277298&lng=-101.3000413';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-daa1?zoom=' + map_current_zoom + '&lat=47.277298&lng=-101.3000413';
     });
   }).on('mouseover', function (e) {
     well_88.openPopup()
@@ -480,9 +487,10 @@ var icon_other_violation = {
 
   
   var well_101 = L.marker(new L.LatLng(47.242896, -101.360963)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-32-ccd?zoom=' + map_current_zoom + '&lat=47.242896&lng=-101.360963';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-32-ccd?zoom=' + map_current_zoom + '&lat=47.242896&lng=-101.360963';
     });
   }).on('mouseover', function (e) {
     well_101.openPopup()
@@ -660,9 +668,10 @@ var icon_other_violation = {
 
   
   var well_182 = L.marker(new L.LatLng(47.247852, -101.368728)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-dba?zoom=' + map_current_zoom + '&lat=47.247852&lng=-101.368728';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-dba?zoom=' + map_current_zoom + '&lat=47.247852&lng=-101.368728';
     });
   }).on('mouseover', function (e) {
     well_182.openPopup()
@@ -746,9 +755,10 @@ var icon_other_violation = {
 
   
   var well_216 = L.marker(new L.LatLng(47.2702683, -101.3142793)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-27-bab?zoom=' + map_current_zoom + '&lat=47.2702683&lng=-101.3142793';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-27-bab?zoom=' + map_current_zoom + '&lat=47.2702683&lng=-101.3142793';
     });
   }).on('mouseover', function (e) {
     well_216.openPopup()
@@ -938,9 +948,10 @@ var icon_other_violation = {
 
   
   var well_303 = L.marker(new L.LatLng(47.2816219, -101.3079805)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-abc3?zoom=' + map_current_zoom + '&lat=47.2816219&lng=-101.3079805';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-abc3?zoom=' + map_current_zoom + '&lat=47.2816219&lng=-101.3079805';
     });
   }).on('mouseover', function (e) {
     well_303.openPopup()
@@ -1408,9 +1419,10 @@ var icon_other_violation = {
 
   
   var well_529 = L.marker(new L.LatLng(47.2773448, -101.3000483)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-daa3?zoom=' + map_current_zoom + '&lat=47.2773448&lng=-101.3000483';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-daa3?zoom=' + map_current_zoom + '&lat=47.2773448&lng=-101.3000483';
     });
   }).on('mouseover', function (e) {
     well_529.openPopup()
@@ -1628,9 +1640,10 @@ var icon_other_violation = {
 
   
   var well_630 = L.marker(new L.LatLng(47.281601, -101.3079836)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-abc1?zoom=' + map_current_zoom + '&lat=47.281601&lng=-101.3079836';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-abc1?zoom=' + map_current_zoom + '&lat=47.281601&lng=-101.3079836';
     });
   }).on('mouseover', function (e) {
     well_630.openPopup()
@@ -1678,9 +1691,10 @@ var icon_other_violation = {
 
   
   var well_646 = L.marker(new L.LatLng(47.2816499, -101.3079679)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-abc2?zoom=' + map_current_zoom + '&lat=47.2816499&lng=-101.3079679';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-abc2?zoom=' + map_current_zoom + '&lat=47.2816499&lng=-101.3079679';
     });
   }).on('mouseover', function (e) {
     well_646.openPopup()
@@ -1698,9 +1712,10 @@ var icon_other_violation = {
 
   
   var well_647 = L.marker(new L.LatLng(47.2802222, -101.3025)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-adb?zoom=' + map_current_zoom + '&lat=47.2802222&lng=-101.3025';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-adb?zoom=' + map_current_zoom + '&lat=47.2802222&lng=-101.3025';
     });
   }).on('mouseover', function (e) {
     well_647.openPopup()
@@ -1912,9 +1927,10 @@ var icon_other_violation = {
 
   
   var well_745 = L.marker(new L.LatLng(47.245034, -101.35791)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-32-cdb?zoom=' + map_current_zoom + '&lat=47.245034&lng=-101.35791';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-32-cdb?zoom=' + map_current_zoom + '&lat=47.245034&lng=-101.35791';
     });
   }).on('mouseover', function (e) {
     well_745.openPopup()
@@ -2162,9 +2178,10 @@ var icon_other_violation = {
 
   
   var well_861 = L.marker(new L.LatLng(47.281479, -101.3133991)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-bac2?zoom=' + map_current_zoom + '&lat=47.281479&lng=-101.3133991';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-bac2?zoom=' + map_current_zoom + '&lat=47.281479&lng=-101.3133991';
     });
   }).on('mouseover', function (e) {
     well_861.openPopup()
@@ -2190,9 +2207,10 @@ var icon_other_violation = {
 
   
   var well_866 = L.marker(new L.LatLng(47.248272, -101.360332)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-32-cba?zoom=' + map_current_zoom + '&lat=47.248272&lng=-101.360332';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-32-cba?zoom=' + map_current_zoom + '&lat=47.248272&lng=-101.360332';
     });
   }).on('mouseover', function (e) {
     well_866.openPopup()
@@ -2234,9 +2252,10 @@ var icon_other_violation = {
 
   
   var well_879 = L.marker(new L.LatLng(47.25067, -101.364044)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-add?zoom=' + map_current_zoom + '&lat=47.25067&lng=-101.364044';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-add?zoom=' + map_current_zoom + '&lat=47.25067&lng=-101.364044';
     });
   }).on('mouseover', function (e) {
     well_879.openPopup()
@@ -2258,9 +2277,10 @@ var icon_other_violation = {
 
   
   var well_882 = L.marker(new L.LatLng(47.250636, -101.369341)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-adc?zoom=' + map_current_zoom + '&lat=47.250636&lng=-101.369341';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-adc?zoom=' + map_current_zoom + '&lat=47.250636&lng=-101.369341';
     });
   }).on('mouseover', function (e) {
     well_882.openPopup()
@@ -2278,9 +2298,10 @@ var icon_other_violation = {
 
   
   var well_883 = L.marker(new L.LatLng(47.251216, -101.365519)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-ada?zoom=' + map_current_zoom + '&lat=47.251216&lng=-101.365519';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-31-ada?zoom=' + map_current_zoom + '&lat=47.251216&lng=-101.365519';
     });
   }).on('mouseover', function (e) {
     well_883.openPopup()
@@ -2392,9 +2413,10 @@ var icon_other_violation = {
 
   
   var well_931 = L.marker(new L.LatLng(47.2814767, -101.3134329)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-bac1?zoom=' + map_current_zoom + '&lat=47.2814767&lng=-101.3134329';  
+      window.location.href = '/facilities/leland-olds/leland-olds-station-144-84-22-bac1?zoom=' + map_current_zoom + '&lat=47.2814767&lng=-101.3134329';
     });
   }).on('mouseover', function (e) {
     well_931.openPopup()
@@ -2536,14 +2558,169 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:91%"></span></div>
 <h2 class="well-count">23</h2><span> total with </span> 
-<h2 class="well-count">21</h2><span> out of compliance</span>
+<h2 class="well-count">21</h2><span> reporting at least one exceedance</span>
 
 <p><em>Please note that</em> <span class="unmapped">6</span> <em>wells at this facility are missing reliable coordinate data and therefore are not shown on the map.</em></p><br />
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>123 / 208 (59%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-abc1/?zoom=18&amp;lat=47.281601&amp;lng=-101.3079836">144 84 22 ABC1</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-abc2/?zoom=18&amp;lat=47.2816499&amp;lng=-101.3079679">144 84 22 ABC2</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-abc3/?zoom=18&amp;lat=47.2816219&amp;lng=-101.3079805">144 84 22 ABC3</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-adb/?zoom=18&amp;lat=47.2802222&amp;lng=-101.3025">144 84 22 ADB</a></td>
+      <td class="data-align-center">8</td>
+      
+      <td class="dirty-well data-align-center"><span>8</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-bac1/?zoom=18&amp;lat=47.2814767&amp;lng=-101.3134329">144 84 22 BAC1</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-bac2/?zoom=18&amp;lat=47.281479&amp;lng=-101.3133991">144 84 22 BAC2</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-daa1/?zoom=18&amp;lat=47.277298&amp;lng=-101.3000413">144 84 22 DAA1</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-daa2/?zoom=18&amp;lat=47.2773207&amp;lng=-101.300045">144 84 22 DAA2</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-22-daa3/?zoom=18&amp;lat=47.2773448&amp;lng=-101.3000483">144 84 22 DAA3</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-27-bab/?zoom=18&amp;lat=47.2702683&amp;lng=-101.3142793">144 84 27 BAB</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-31-ada/?zoom=18&amp;lat=47.251216&amp;lng=-101.365519">144 84 31 ADA</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-31-adc/?zoom=18&amp;lat=47.250636&amp;lng=-101.369341">144 84 31 ADC</a></td>
+      <td class="data-align-center">9</td>
+      
+      <td class="dirty-well data-align-center"><span>9</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-31-add/?zoom=18&amp;lat=47.25067&amp;lng=-101.364044">144 84 31 ADD</a></td>
+      <td class="data-align-center">12</td>
+      
+      <td class="dirty-well data-align-center"><span>12</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-31-dba/?zoom=18&amp;lat=47.247852&amp;lng=-101.368728">144 84 31 DBA</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-32-cba/?zoom=18&amp;lat=47.248272&amp;lng=-101.360332">144 84 32 CBA</a></td>
+      <td class="data-align-center">6</td>
+      
+      <td class="dirty-well data-align-center"><span>6</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-32-ccd/?zoom=18&amp;lat=47.242896&amp;lng=-101.360963">144 84 32 CCD</a></td>
+      <td class="data-align-center">15</td>
+      
+      <td class="dirty-well data-align-center"><span>15</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="leland-olds-station-144-84-32-cdb/?zoom=18&amp;lat=47.245034&amp;lng=-101.35791">144 84 32 CDB</a></td>
+      <td class="data-align-center">12</td>
+      
+      <td class="dirty-well data-align-center"><span>12</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:45%"></span></div>
+<h2>123 / 275 <span class="percent-exceeded">45%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2553,7 +2730,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2562,7 +2739,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2571,7 +2748,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="25 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="25 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2580,7 +2757,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2589,7 +2766,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Be" data-placement="top" data-original-title="Beryllium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Be" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2598,7 +2775,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-B" data-placement="top" data-original-title="No B violations at this facility">
+      <div class="element compliant" data-toggle="element-B" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">B</span>
         
@@ -2607,7 +2784,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2616,7 +2793,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cr" data-placement="top" data-original-title="Chromium is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2625,7 +2802,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Co" data-placement="top" data-original-title="Cobalt is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Co" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2634,7 +2811,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Cu" data-placement="top" data-original-title="Copper is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Cu" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2643,7 +2820,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2652,7 +2829,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-F" data-placement="top" data-original-title="Fluoride is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-F" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2661,7 +2838,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2670,7 +2847,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2679,7 +2856,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" data-original-title="1 Lead violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2688,7 +2865,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="32 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="32 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2697,7 +2874,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2706,7 +2883,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Mo" data-placement="top" data-original-title="No Mo violations at this facility">
+      <div class="element compliant" data-toggle="element-Mo" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2715,7 +2892,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" data-original-title="Nickel is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ni" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2724,7 +2901,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-NO3" data-placement="top" data-original-title="No NO3 violations at this facility">
+      <div class="element compliant" data-toggle="element-NO3" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2733,7 +2910,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2742,7 +2919,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2751,7 +2928,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Se" data-placement="top" data-original-title="2 Selenium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Se" data-placement="top" title="2 exceedances at this facility" >
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2760,7 +2937,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" data-original-title="Silver is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ag" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2769,7 +2946,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" data-original-title="Strontium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Sr" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2778,7 +2955,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="63 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="63 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2787,7 +2964,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2796,7 +2973,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2805,7 +2982,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-U" data-placement="top" data-original-title="Uranium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-U" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2827,7 +3004,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Leland.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/leland-olds.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2881,6 +3058,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 

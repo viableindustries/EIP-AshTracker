@@ -54,6 +54,8 @@
     <script src="/static/lib/leaflet/oms.min.js"></script>    
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="/static/lib/jquery/jquery.dataTables.js"></script>
+    <!--<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>-->
     
     <!-- Typekit -->
     <script type="text/javascript" src="//use.typekit.net/pjg5jkf.js"></script>
@@ -62,6 +64,9 @@
     <!-- Commons Cloud -->
     <link href="/static/lib/mapbox/mapbox-1.4.0.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/application.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Data Tables -->
+    <link href="/static/css/dataTables.css" rel="stylesheet" type="text/css" />
 
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
@@ -73,7 +78,7 @@
     
     <header class="site-header">
       <div class="brand-container">
-        <a class="brand" href="/"></a>
+        <a class="brand" href="/">Ashtracker</a>
       </div>
 
       <a class="info_area pull-left" href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
@@ -272,9 +277,10 @@ var icon_other_violation = {
 
   
   var well_15 = L.marker(new L.LatLng(36.260697, -94.513442)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-01b?zoom=' + map_current_zoom + '&lat=36.260697&lng=-94.513442';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-01b?zoom=' + map_current_zoom + '&lat=36.260697&lng=-94.513442';
     });
   }).on('mouseover', function (e) {
     well_15.openPopup()
@@ -342,9 +348,10 @@ var icon_other_violation = {
 
   
   var well_41 = L.marker(new L.LatLng(36.261419, -94.513272)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-07a?zoom=' + map_current_zoom + '&lat=36.261419&lng=-94.513272';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-07a?zoom=' + map_current_zoom + '&lat=36.261419&lng=-94.513272';
     });
   }).on('mouseover', function (e) {
     well_41.openPopup()
@@ -392,9 +399,10 @@ var icon_other_violation = {
 
   
   var well_57 = L.marker(new L.LatLng(36.257278, -94.516972)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-08?zoom=' + map_current_zoom + '&lat=36.257278&lng=-94.516972';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-08?zoom=' + map_current_zoom + '&lat=36.257278&lng=-94.516972';
     });
   }).on('mouseover', function (e) {
     well_57.openPopup()
@@ -456,9 +464,10 @@ var icon_other_violation = {
 
   
   var well_80 = L.marker(new L.LatLng(36.258858, -94.511693)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-04?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.511693';
     });
   }).on('mouseover', function (e) {
     well_80.openPopup()
@@ -478,9 +487,10 @@ var icon_other_violation = {
 
   
   var well_82 = L.marker(new L.LatLng(36.257273, -94.513837)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-05?zoom=' + map_current_zoom + '&lat=36.257273&lng=-94.513837';
     });
   }).on('mouseover', function (e) {
     well_82.openPopup()
@@ -664,9 +674,10 @@ var icon_other_violation = {
 
   
   var well_166 = L.marker(new L.LatLng(36.259574, -94.517268)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-3?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517268';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-3?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517268';
     });
   }).on('mouseover', function (e) {
     well_166.openPopup()
@@ -734,9 +745,10 @@ var icon_other_violation = {
 
   
   var well_192 = L.marker(new L.LatLng(36.259364, -94.518575)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-5?zoom=' + map_current_zoom + '&lat=36.259364&lng=-94.518575';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-5?zoom=' + map_current_zoom + '&lat=36.259364&lng=-94.518575';
     });
   }).on('mouseover', function (e) {
     well_192.openPopup()
@@ -754,9 +766,10 @@ var icon_other_violation = {
 
   
   var well_193 = L.marker(new L.LatLng(36.260234, -94.51734)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-4?zoom=' + map_current_zoom + '&lat=36.260234&lng=-94.51734';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-4?zoom=' + map_current_zoom + '&lat=36.260234&lng=-94.51734';
     });
   }).on('mouseover', function (e) {
     well_193.openPopup()
@@ -776,9 +789,10 @@ var icon_other_violation = {
 
   
   var well_195 = L.marker(new L.LatLng(36.259574, -94.517474)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-2?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517474';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-2?zoom=' + map_current_zoom + '&lat=36.259574&lng=-94.517474';
     });
   }).on('mouseover', function (e) {
     well_195.openPopup()
@@ -808,9 +822,10 @@ var icon_other_violation = {
 
   
   var well_202 = L.marker(new L.LatLng(36.258296, -94.518796)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-7d?zoom=' + map_current_zoom + '&lat=36.258296&lng=-94.518796';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-7d?zoom=' + map_current_zoom + '&lat=36.258296&lng=-94.518796';
     });
   }).on('mouseover', function (e) {
     well_202.openPopup()
@@ -864,9 +879,10 @@ var icon_other_violation = {
 
   
   var well_221 = L.marker(new L.LatLng(36.258044, -94.518009)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-8?zoom=' + map_current_zoom + '&lat=36.258044&lng=-94.518009';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-8?zoom=' + map_current_zoom + '&lat=36.258044&lng=-94.518009';
     });
   }).on('mouseover', function (e) {
     well_221.openPopup()
@@ -930,16 +946,17 @@ var icon_other_violation = {
 
   
   var well_245 = L.marker(new L.LatLng(36.260861, -94.516727)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-1?zoom=' + map_current_zoom + '&lat=36.260861&lng=-94.516727';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-1?zoom=' + map_current_zoom + '&lat=36.260861&lng=-94.516727';
     });
   }).on('mouseover', function (e) {
     well_245.openPopup()
   });
 
   
-    well_245.setIcon(L.icon(icon_downgradient_compliant));
+    well_245.setIcon(L.icon(icon_downgradient_violation));
   
 
   well_245.bindPopup('Flint-Creek-Power-Plant-NE-1')
@@ -1788,9 +1805,10 @@ var icon_other_violation = {
 
   
   var well_665 = L.marker(new L.LatLng(36.258858, -94.518781)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-6?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.518781';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-6?zoom=' + map_current_zoom + '&lat=36.258858&lng=-94.518781';
     });
   }).on('mouseover', function (e) {
     well_665.openPopup()
@@ -1820,9 +1838,10 @@ var icon_other_violation = {
 
   
   var well_672 = L.marker(new L.LatLng(36.259546, -94.516108)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-02?zoom=' + map_current_zoom + '&lat=36.259546&lng=-94.516108';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-02?zoom=' + map_current_zoom + '&lat=36.259546&lng=-94.516108';
     });
   }).on('mouseover', function (e) {
     well_672.openPopup()
@@ -2126,9 +2145,10 @@ var icon_other_violation = {
 
   
   var well_816 = L.marker(new L.LatLng(36.260864, -94.516081)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-b-06?zoom=' + map_current_zoom + '&lat=36.260864&lng=-94.516081';
     });
   }).on('mouseover', function (e) {
     well_816.openPopup()
@@ -2262,9 +2282,10 @@ var icon_other_violation = {
 
   
   var well_875 = L.marker(new L.LatLng(36.258295, -94.518834)).on('click', function (e) {
+
     oms.addListener('click', function(markers) {
       var map_current_zoom = map.getZoom();
-      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-7s?zoom=' + map_current_zoom + '&lat=36.258295&lng=-94.518834';  
+      window.location.href = '/facilities/flint-creek/flint-creek-power-plant-ne-7s?zoom=' + map_current_zoom + '&lat=36.258295&lng=-94.518834';
     });
   }).on('mouseover', function (e) {
     well_875.openPopup()
@@ -2518,14 +2539,161 @@ map.addLayer(markers);
 
 
 <h4>Well Count</h4>
+<div class="sample-bar"><span style="width:59%"></span></div>
 <h2 class="well-count">17</h2><span> total with </span> 
-<h2 class="well-count">9</h2><span> out of compliance</span>
+<h2 class="well-count">10</h2><span> reporting at least one exceedance</span>
 
 <p><em>Please note that</em> <span class="unmapped">1</span> <em>wells at this facility are missing reliable coordinate data and therefore are not shown on the map.</em></p><br />
 
 
-<h4>Total Violations / Total Samples</h4>
-<h2>43 / 588 (7%)</h2><br />
+
+<table class="wells row-border">
+  <thead>
+    <tr>
+      <th><span>Well ID</span></th>
+      <th><span>Exceedances</span></th>
+      <th><span>Status</span></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-01b/?zoom=18&amp;lat=36.260697&amp;lng=-94.513442">B-01B</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-02/?zoom=18&amp;lat=36.259546&amp;lng=-94.516108">B-02</a></td>
+      <td class="data-align-center">10</td>
+      
+      <td class="dirty-well data-align-center"><span>10</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-04/?zoom=18&amp;lat=36.258858&amp;lng=-94.511693">B-04</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-05/?zoom=18&amp;lat=36.257273&amp;lng=-94.513837">B-05</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-06/?zoom=18&amp;lat=36.260864&amp;lng=-94.516081">B-06</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-07a/?zoom=18&amp;lat=36.261419&amp;lng=-94.513272">B-07A</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-b-08/?zoom=18&amp;lat=36.257278&amp;lng=-94.516972">B-08</a></td>
+      <td class="data-align-center">2</td>
+      
+      <td class="dirty-well data-align-center"><span>2</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-1/?zoom=18&amp;lat=36.260861&amp;lng=-94.516727">NE-1</a></td>
+      <td class="data-align-center">1</td>
+      
+      <td class="dirty-well data-align-center"><span>1</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-2/?zoom=18&amp;lat=36.259574&amp;lng=-94.517474">NE-2</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-3/?zoom=18&amp;lat=36.259574&amp;lng=-94.517268">NE-3</a></td>
+      <td class="data-align-center">11</td>
+      
+      <td class="dirty-well data-align-center"><span>11</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-4/?zoom=18&amp;lat=36.260234&amp;lng=-94.51734">NE-4</a></td>
+      <td class="data-align-center">0</td>
+      
+      <td class="clean-well data-align-center"><span>0</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-5/?zoom=18&amp;lat=36.259364&amp;lng=-94.518575">NE-5</a></td>
+      <td class="data-align-center">7</td>
+      
+      <td class="dirty-well data-align-center"><span>7</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-6/?zoom=18&amp;lat=36.258858&amp;lng=-94.518781">NE-6</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-7d/?zoom=18&amp;lat=36.258296&amp;lng=-94.518796">NE-7D</a></td>
+      <td class="data-align-center">5</td>
+      
+      <td class="dirty-well data-align-center"><span>5</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-7s/?zoom=18&amp;lat=36.258295&amp;lng=-94.518834">NE-7S</a></td>
+      <td class="data-align-center">4</td>
+      
+      <td class="dirty-well data-align-center"><span>4</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td><a class="well-url" href="flint-creek-power-plant-ne-8/?zoom=18&amp;lat=36.258044&amp;lng=-94.518009">NE-8</a></td>
+      <td class="data-align-center">3</td>
+      
+      <td class="dirty-well data-align-center"><span>3</span></td>
+      
+    </tr>
+  
+
+  </tbody>
+</table>
+
+
+<h4>Total Exceedances / Total Samples</h4>
+<div class="sample-bar"><span style="width:5%"></span></div>
+<h2>49 / 1,015 <span class="percent-exceeded">5%</span></h2><br />
 
 
 <h4 class="thin"><strong>Pollutant</strong> Details</h4>
@@ -2535,7 +2703,7 @@ map.addLayer(markers);
 <div class="contaminants">
 
   
-      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" data-original-title="Ammonia is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NH3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NH<sub>3</sub></span>
         
@@ -2544,7 +2712,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Sb" data-placement="top" data-original-title="Antimony is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Sb" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sb</span>
         
@@ -2553,7 +2721,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-As" data-placement="top" data-original-title="5 Arsenic violations at this facility" >
+      <div class="element exceeded" data-toggle="element-As" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">As</span>
         
@@ -2562,7 +2730,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ba" data-placement="top" data-original-title="No Ba violations at this facility">
+      <div class="element compliant" data-toggle="element-Ba" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ba</span>
         
@@ -2571,7 +2739,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Be" data-placement="top" data-original-title="No Be violations at this facility">
+      <div class="element compliant" data-toggle="element-Be" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Be</span>
         
@@ -2580,7 +2748,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-B" data-placement="top" data-original-title="No B violations at this facility">
+      <div class="element compliant" data-toggle="element-B" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">B</span>
         
@@ -2589,7 +2757,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cd" data-placement="top" data-original-title="No Cd violations at this facility">
+      <div class="element compliant" data-toggle="element-Cd" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cd</span>
         
@@ -2598,7 +2766,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cr" data-placement="top" data-original-title="No Cr violations at this facility">
+      <div class="element compliant" data-toggle="element-Cr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cr</span>
         
@@ -2607,7 +2775,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Co" data-placement="top" data-original-title="No Co violations at this facility">
+      <div class="element compliant" data-toggle="element-Co" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Co</span>
         
@@ -2616,7 +2784,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Cu" data-placement="top" data-original-title="No Cu violations at this facility">
+      <div class="element compliant" data-toggle="element-Cu" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Cu</span>
         
@@ -2625,7 +2793,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" data-original-title="Cyanide is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-CN" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">CN</span>
         
@@ -2634,7 +2802,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-F" data-placement="top" data-original-title="No F violations at this facility">
+      <div class="element compliant" data-toggle="element-F" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">F</span>
         
@@ -2643,7 +2811,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GAP" data-placement="top" data-original-title="Gross Alpha Particle Activity is not monitored at this facility">
+      <div class="element exceeded" data-toggle="element-GAP" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">GAP</span>
         
@@ -2652,7 +2820,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-GBP" data-placement="top" data-original-title="Gross Beta Particle Activity is not monitored at this facility">
+      <div class="element exceeded" data-toggle="element-GBP" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">GBP</span>
         
@@ -2661,7 +2829,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" data-original-title="5 Lead violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Pb" data-placement="top" title="5 exceedances at this facility" >
         
         <span class="contaminant-symbol">Pb</span>
         
@@ -2670,7 +2838,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" data-original-title="12 Manganese violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Mn" data-placement="top" title="12 exceedances at this facility" >
         
         <span class="contaminant-symbol">Mn</span>
         
@@ -2679,7 +2847,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Hg" data-placement="top" data-original-title="Mercury is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Hg" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Hg</span>
         
@@ -2688,7 +2856,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" data-original-title="1 Molybdenum violation at this facility" >
+      <div class="element exceeded" data-toggle="element-Mo" data-placement="top" title="1 exceedance at this facility" >
         
         <span class="contaminant-symbol">Mo</span>
         
@@ -2697,7 +2865,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ni" data-placement="top" data-original-title="No Ni violations at this facility">
+      <div class="element compliant" data-toggle="element-Ni" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ni</span>
         
@@ -2706,7 +2874,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" data-original-title="Nitrate is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO3" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>3</sub></span>
         
@@ -2715,7 +2883,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" data-original-title="Nitrite is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-NO2" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">NO<sub>2</sub></span>
         
@@ -2724,7 +2892,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" data-original-title="Radium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-Ra" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">Ra</span>
         
@@ -2733,7 +2901,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-Se" data-placement="top" data-original-title="10 Selenium violations at this facility" >
+      <div class="element exceeded" data-toggle="element-Se" data-placement="top" title="10 exceedances at this facility" >
         
         <span class="contaminant-symbol">Se</span>
         
@@ -2742,7 +2910,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Ag" data-placement="top" data-original-title="No Ag violations at this facility">
+      <div class="element compliant" data-toggle="element-Ag" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Ag</span>
         
@@ -2751,7 +2919,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-Sr" data-placement="top" data-original-title="No Sr violations at this facility">
+      <div class="element compliant" data-toggle="element-Sr" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Sr</span>
         
@@ -2760,7 +2928,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" data-original-title="10 Sulfate violations at this facility" >
+      <div class="element exceeded" data-toggle="element-SO4" data-placement="top" title="10 exceedances at this facility" >
         
         <span class="contaminant-symbol">SO<sub>4</sub></span>
         
@@ -2769,7 +2937,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-Tl" data-placement="top" data-original-title="Thallium is not monitored at this facility">
+      <div class="element compliant" data-toggle="element-Tl" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">Tl</span>
         
@@ -2778,7 +2946,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element not-tracked" data-toggle="element-T" data-placement="top" data-original-title="Tritium is not monitored at this facility">
+      <div class="element not-tracked" data-toggle="element-T" data-placement="top" title="Not monitored at this facility">
         
         <span class="contaminant-symbol">T</span>
         
@@ -2787,7 +2955,7 @@ map.addLayer(markers);
         
       </div>
   
-      <div class="element compliant" data-toggle="element-U" data-placement="top" data-original-title="No U violations at this facility">
+      <div class="element compliant" data-toggle="element-U" data-placement="top" title="No exceedances at this facility">
         
         <span class="contaminant-symbol">U</span>
         
@@ -2806,7 +2974,7 @@ map.addLayer(markers);
 
 
 <h4 class="clear">Download Data</h4>
-<p><a class="button download" href="/static/data/Flint_Creek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Well &amp; Facility Data</a></p>
+<p><a class="button download" href="/static/data/flint-creek.xlsx.zip" title=""><span class="glyphicon glyphicon-download"></span> Download Monitoring Data</a></p>
 
 
 
@@ -2860,6 +3028,20 @@ map.addLayer(markers);
       ga('send', 'pageview');
 
     </script>
+
+    <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5385c0d2eddd5b0538003b55');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
     
   </body>
 
